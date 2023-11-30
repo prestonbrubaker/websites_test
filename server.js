@@ -4,9 +4,14 @@ const app = express();
 // Define the port to run the server on
 const PORT = 80;
 
+// Function to check the hostname
+const checkHostname = (hostname, req) => {
+    return req.hostname === hostname || req.hostname === `www.${hostname}`;
+};
+
 // Define the response for "prestonbrubaker.com"
 app.use((req, res, next) => {
-    if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'http://prestonbrubaker.com') {
+    if (checkHostname('prestonbrubaker.com', req)) {
         res.send('Welcome to Preston Brubaker\'s website!');
     } else {
         next();
@@ -15,7 +20,7 @@ app.use((req, res, next) => {
 
 // Define the response for "willohrobbins.com"
 app.use((req, res, next) => {
-    if (req.hostname === 'willohrobbins.com' || req.hostname === 'http://willohrobbins.com') {
+    if (checkHostname('willohrobbins.com', req)) {
         res.send('Welcome to Willoh Robbins\' website!');
     } else {
         next();
