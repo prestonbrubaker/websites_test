@@ -4,32 +4,9 @@ const app = express();
 // Define the port to run the server on
 const PORT = 80;
 
-// Function to check the hostname (for both www and non-www versions)
-const checkHostname = (hostname, req) => {
-    return [hostname, `www.${hostname}`].includes(req.hostname);
-};
-
-// Define the response for "prestonbrubaker.com"
-app.use((req, res, next) => {
-    if (checkHostname('prestonbrubaker.com', req)) {
-        res.send('Welcome to Preston Brubaker\'s website!');
-    } else {
-        next();
-    }
-});
-
-// Define the response for "willohrobbins.com"
-app.use((req, res, next) => {
-    if (checkHostname('willohrobbins.com', req)) {
-        res.send('Welcome to Willoh Robbins\' website!');
-    } else {
-        next();
-    }
-});
-
-// Fallback for any other requests
+// A simple route that responds to any request
 app.use((req, res) => {
-    res.send('This is a generic response for other domains or requests.');
+    res.send('Welcome to the server accessible via IP address 73.166.159.150!');
 });
 
 // Start the server and listen on all network interfaces
