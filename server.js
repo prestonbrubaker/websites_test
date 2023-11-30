@@ -6,7 +6,7 @@ const PORT = 58500;
 
 // A simple route that responds to any request
 app.use((req, res) => {
-    res.send('Welcome to the server accessible via IP address 73.166.159.150!');
+    res.send('Welcome to the server accessible via IP address 73.166.159.150 on port 58500!');
 });
 
 // Start the server and listen on all network interfaces
