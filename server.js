@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 // Fallback for any other requests
 app.use((req, res) => {
-    res.status(404).send('Website not found');
+    res.send('Neither Preston or Willoh');
 });
 
 // Start the server
