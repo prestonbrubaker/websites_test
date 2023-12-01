@@ -15,7 +15,7 @@ function incrementHue() {
     var lightness = 50;
 
     // Increment the hue
-    hue += 0.1
+    hue += .00000001
 
     // Update the element's color
     element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
