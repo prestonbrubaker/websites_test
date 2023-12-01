@@ -15,12 +15,12 @@ function incrementHue() {
     var lightness = 50;
 
     // Increment the hue
-    hue = (hue + 1) % 360; // Ensure the hue value stays within the 0-359 range
+    hue = (hue + .1) % 360; // Ensure the hue value stays within the 0-359 range
 
     // Update the element's color
     element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
 // Call incrementHue every 100 milliseconds (0.1 seconds)
-setInterval(incrementHue, 100);
+setInterval(incrementHue, 10);
 
