@@ -11,8 +11,8 @@ function incrementHue() {
     var color = window.getComputedStyle(element).color;
     var hsl = color.match(/\d+/g); // This extracts numbers from the RGB color
     var hue = parseInt(hsl[0]);
-    var saturation = parseInt(hsl[1]);
-    var lightness = parseInt(hsl[2]);
+    var saturation = 50;
+    var lightness = 50;
 
     // Increment the hue
     hue = (hue + 1) % 360; // Ensure the hue value stays within the 0-359 range
