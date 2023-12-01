@@ -1,12 +1,9 @@
 html {
-    background: 'img.jpg';
+    background: url('img.jpg'); /* Use url() for background images */
+    background-size: cover; /* Optional: Cover the entire area */
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-
-
-
 
 header, main, footer {
     text-align: center;
@@ -19,6 +16,7 @@ h1, h2 {
 
 a {
     color: #4A90E2;
+    text-decoration: none; /* Optional: Removes underline from links */
 }
 
 ul {
