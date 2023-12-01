@@ -1,14 +1,14 @@
 @font-face {
     font-family: "pixel1";
-    src: url("pixel1.ttf");
+    src: url("elegant.ttf");
 }
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'pixel1', sans-serif;
-    text-shadow: -0.05rem 0.05rem gray;
-    background-color: lightskyblue;
+    text-shadow: -0.05rem 0.05rem tan;
+    background-color: floralwhite;
     display: flex;
     flex-direction: column;
   }
@@ -37,9 +37,8 @@ body, html {
   .name {
     font-size: 6rem;
     display: flex;
-    justify-content: flex-start;
-    padding: 2rem;
-    text-shadow: -0.25rem 0.3rem gray;
+    justify-content: center;
+    text-shadow: -0.25rem 0.3rem lightgoldenrodyellow;
   }
 
   .socials {
