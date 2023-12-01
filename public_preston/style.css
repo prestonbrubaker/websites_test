@@ -1,16 +1,11 @@
 body {
-    /* This assumes that the CSS file and the image are in the same directory */
-    background: url('background_image.png') no-repeat center center / cover;
-
-    /* Adding an overlay for text readability */
-    background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (0.5) as necessary for readability */
-
-    /* Other body styles */
+    /* Adjust the path relative to the CSS file location */
+    background: url('../background_image.png') no-repeat center center / cover;
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333333; /* Adjust text color for better visibility */
+    color: #333; /* Ensure text visibility */
 }
+
 
 
 header, main, footer {
