@@ -27,10 +27,9 @@ function incrementHue() {
     element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 
 
-
     // Set the fill color using HSL
     // Example: HSL with 200 hue, 100% saturation, 50% lightness
-    var color_rect = 'hsl(' + 200 + '%, 100%, 50%)';
+    var color_rect = "hsl(" + 200 + "%, 100%, 50%)";
     ctx.fillStyle = color_rect;
     
     // Draw a rectangle
