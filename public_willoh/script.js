@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
+    var x = 20;
+    var y = 20;
     
     // Get the element
     var element = document.getElementById("dynamic-color");
@@ -18,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Accessing the canvas element
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
+
+    var maxW = canvas1.width;
+    var maxH = canvas1.height;
+
+    ctx.fillStyle = "#777777";
+    ctx.fillRect(0, 0, maxW, maxH);
 
     function incrementHue() {
         // Increment the hue
