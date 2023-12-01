@@ -1,9 +1,18 @@
+const https = require('https');
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const path = require('path');
 
+// SSL/TLS certificate paths
+const options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/fullchain.pem'),
+  ca: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/chain.pem')
+};
+
 // Define the port to run the server on
-const PORT = 80;
+const PORT = 443;
 
 // Middleware to serve files from the correct folder based on the hostname
 app.use((req, res, next) => {
