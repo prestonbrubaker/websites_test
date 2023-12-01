@@ -1,6 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
+    
+    // Get the element
+    var element = document.getElementById("dynamic-color");
 
+    // Extract the current hue value from the element's color
+    var color = window.getComputedStyle(element).color;
+    var hsl = color.match(/\d+/g); // This extracts numbers from the RGB color
+    var saturation = 50;
+    var lightness = 50;
+
+    // Increment the hue
+    hue += 1
+
+    // Update the element's color
+    element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
     // Accessing the canvas element
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
