@@ -1,14 +1,17 @@
-html {
- background: url('background_image.png') no-repeat center center / cover;
+body {
+    /* This assumes that the CSS file and the image are in the same directory */
+    background: url('background_image.png') no-repeat center center / cover;
+
+    /* Adding an overlay for text readability */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha value (0.5) as necessary for readability */
+
+    /* Other body styles */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333333; /* Adjust text color for better visibility */
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('public_preston/background_image.png') no-repeat center center / cover;
-    color: #333;
-}
 
 header, main, footer {
     text-align: center;
