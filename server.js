@@ -5,11 +5,11 @@ const path = require('path');
 
 const app = express();
 
-// SSL/TLS certificate paths
+// Update the SSL/TLS certificate paths to the new location
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/fullchain.pem'),
-  ca: fs.readFileSync('/etc/letsencrypt/live/prestonbrubaker.com/chain.pem')
+  key: fs.readFileSync(path.join(__dirname, 'ssl_certs/privkey.pem')),
+  cert: fs.readFileSync(path.join(__dirname, 'ssl_certs/fullchain.pem')),
+  ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
 };
 
 // Define the port to run the server on
