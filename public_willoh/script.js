@@ -15,7 +15,7 @@ function incrementHue() {
     var lightness = 50;
 
     // Increment the hue
-    hue = (hue + .1) % 360; // Ensure the hue value stays within the 0-359 range
+    hue = (hue + .001) % 360; // Ensure the hue value stays within the 0-359 range
 
     // Update the element's color
     element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
