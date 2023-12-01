@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // JavaScript code goes here
 });
 
+var hue = 0
+
+
 function incrementHue() {
     // Get the element
     var element = document.getElementById("dynamic-color");
@@ -10,7 +13,6 @@ function incrementHue() {
     // Extract the current hue value from the element's color
     var color = window.getComputedStyle(element).color;
     var hsl = color.match(/\d+/g); // This extracts numbers from the RGB color
-    var hue = parseInt(hsl[0]);
     var saturation = 50;
     var lightness = 50;
 
