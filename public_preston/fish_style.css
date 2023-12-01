@@ -44,24 +44,30 @@ footer {
 }
 
 .word-art {
-    font-size: 40px;
-    font-family: 'Arial', sans-serif;
-    color: #FF6347; /* Tomato color */
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Adding some depth with text-shadow */
+    font-family: 'Courier New', monospace; /* A monospaced font gives a technical appearance */
+    color: #0077cc; /* A blue that matches the image's color scheme */
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.5); /* A subtle white glow for a high-tech feel */
+    background-image: linear-gradient(45deg, #0055aa, #0099ff); /* Gradient that matches the image colors */
+    display: inline-block; /* Block display allows for padding and margin adjustments */
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1px solid #0077cc; /* A border that complements the color scheme */
+    border-radius: 5px; /* Slight rounding of corners */
     
-    /* Transformations */
-    transform: rotate(-10deg) skew(10deg);
+    /* Additional stylistic choices for a techy feel */
+    letter-spacing: 1px; /* Spacing out letters for a more digital look */
+    word-spacing: 2px; /* Increasing the space between words */
     
-    /* Gradient Text (optional) */
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    color: transparent;
-
-    /* Additional Styling */
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid #FF6347;
-    border-radius: 10px;
-    text-align: center;
+    /* CSS Transform for a slight perspective */
+    transform: perspective(500px) rotateX(10deg);
+    
+    /* Transition for a hover effect */
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
+
+.word-art:hover {
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.2); /* Changing text-shadow on hover for dynamic feel */
+    transform: perspective(500px) rotateX(0deg); /* Flatten on hover for interaction */
+}
+
 
