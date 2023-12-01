@@ -44,6 +44,7 @@ footer {
 }
 
 .word-art {
+    text-align: center; /* Centering content horizontally */
     font-family: 'Courier New', monospace; /* A monospaced font gives a technical appearance */
     color: #0077cc; /* A blue that matches the image's color scheme */
     text-shadow: 1px 1px 3px rgba(255,255,255,0.5); /* A subtle white glow for a high-tech feel */
