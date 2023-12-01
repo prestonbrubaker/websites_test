@@ -1,22 +1,30 @@
-html {
-    background: url('https://th.bing.com/th/id/R.60682a658227eb0f08f9a7406f12039d?rik=vf6UgZDy6q9m6Q&riu=http%3a%2f%2fcaprockhealthsystem.com%2fwp-content%2fuploads%2f2018%2f07%2flaboratory.jpg&ehk=XQlkRZL%2fsSZ5b3P2pnX6Ts9mYpWTLTvo1uJOkpJj8T4%3d&risl=&pid=ImgRaw&r=0'); /* Use url() for background images */
-    background-size: cover; /* Optional: Cover the entire area */
+/* resume.css */
+html, body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    background: url('image.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333; /* Adjust text color for readability */
 }
 
 header, main, footer {
     text-align: center;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #4A90E2; /* Example color */
 }
 
 a {
     color: #4A90E2;
-    text-decoration: none; /* Optional: Removes underline from links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 ul {
