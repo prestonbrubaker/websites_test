@@ -30,22 +30,12 @@ cr_hue = [20, 100, 200, 300];
 
 
 const bgHue = "#777777";
-var pCX = Math.floor(maxW / pixS - 0);  // count of pixels across the screen
-var pCY = Math.floor(maxH / pixS + 1);  // count of pixels across the screen
+var pCX = Math.floor(maxW / pixS );  // count of pixels across the screen
+var pCY = Math.floor(maxH / pixS );  // count of pixels across the screen
 var maxW_OG = maxW;
 var maxH_OG = maxH;
 
 
-function resizeCanvas() {
-    if (isFullscreen) {
-        c.width = window.innerWidth;
-        c.height = window.innerHeight;
-    } else {
-        c.width = window.innerWidth * 0.8;
-        c.height = window.innerHeight * 0.8;
-    }
-    updateWorld();
-}
 
 function updateWorld() {
     maxW = c.width;
@@ -53,31 +43,7 @@ function updateWorld() {
     pixS = maxW / maxW_OG * pixS_OG;
 }
 
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-document.addEventListener('fullscreenchange', function() {
-    isFullscreen = !!document.fullscreenElement;
-    resizeCanvas();
-});
 
-// Fullscreen Button Action
-document.getElementById("fullscreen").addEventListener("click", function() {
-    var fullscreenButton = document.getElementById("fullscreen");
-    if (fullscreenButton) {
-        fullscreenButton.addEventListener("click", function() {
-        var canvas = document.getElementById("canvas1");
-        if (canvas.requestFullscreen) {
-            canvas.requestFullscreen();
-        } else if (canvas.mozRequestFullScreen) { /* Firefox */
-            canvas.mozRequestFullScreen();
-        } else if (canvas.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            canvas.webkitRequestFullscreen();
-        } else if (canvas.msRequestFullscreen) { /* IE/Edge */
-            canvas.msRequestFullscreen();
-        }
-        });
-    };
-});
 
 var pA = new Array(pCY);
 
@@ -134,7 +100,7 @@ function tick() {
             ctx.fillStyle = "hsl(" + Math.abs(pA[y][x]) * 360 / max_i_love_willoh + ", 10%, 30%)"; // Blue color
             ctx.fillRect(x * pixS, y * pixS, pixS, pixS);
             total_food += pA[y][x];
-            pA[y][x] += Math.random() * 0.1;
+            pA[y][x] += Math.random() * Math.random() * 0.08;
             
         }
     }
@@ -153,16 +119,16 @@ function tick() {
             x = 0;
             cr_v_x[i] *= -.1;
         }
-        if(x > pCX * pixS){
-            x = pCX * pixS;
+        if(x > pCX * pixS - cr_size){
+            x = pCX * pixS - cr_size;
             cr_v_x[i] *= -.1;
         }
         if(y < 0){
             y = 0;
             cr_v_y[i] *= -.1;
         }
-        if(y > pCY * pixS){
-            y = pCY * pixS;
+        if(y > pCY * pixS - cr_size){
+            y = pCY * pixS - cr_size;
             cr_v_y[i] *= -.1;
         }
 

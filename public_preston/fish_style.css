@@ -1,25 +1,27 @@
-/* resume.css */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('img.jpg'); 
     background-size: cover;
-    color: #333; /* Adjust text color for readability */
+    color: black; /* All text in black */
+}
+
+.content {
+    text-align: center; /* Centering content horizontally */
 }
 
 header, main, footer {
-    text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
 
 h1, h2, h3 {
-    color: #4A90E2; /* Example color */
+    color: black;
 }
 
 a {
-    color: #4A90E2;
+    color: black;
     text-decoration: none;
 }
 
@@ -38,5 +40,44 @@ li {
 
 footer {
     margin-top: 30px;
-    color: #888;
+    color: black;
 }
+
+.word-art-container {
+    text-align: center; /* This will center the .word-art div */
+    margin-top: 20px; /* Adjust as needed for spacing */
+}
+
+.word-art {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    font-weight: bold; /* Make the text bolder */
+    color: white; /* High contrast color */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); /* Stronger text shadow for depth */
+    padding: 10px 20px;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #cccccc, #333333); /* Grey gradient background */
+    border: 3px solid black; /* Thicker black border */
+    border-radius: 5px;
+    
+    /* Additional stylistic choices for a techy feel */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    
+    /* CSS Transform for a slight perspective */
+    transform: perspective(500px) rotateX(10deg);
+    
+    /* Transition for a hover effect */
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+
+
+#canvas1 {
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: 20px auto; /* Adds margin to the top and bottom, centers horizontally */
+    border: 1px solid #333; /* Optional: adds a border for visibility */
+    /* Set the width and height if not set inline in the HTML */
+}
+
