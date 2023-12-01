@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
-    var x = 20;
-    var y = 20;
+    var x = 78;
+    var y = 35;
     var xV = 5;
     var yV = 5;
     var blockS = 20;
@@ -59,5 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Call incrementHue every 100 milliseconds (0.1 seconds)
-    setInterval(incrementHue, 100);
+    setInterval(incrementHue, 10);
 });
