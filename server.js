@@ -1,38 +1,27 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 // Define the port to run the server on
 const PORT = 80;
 
-// Function to check the hostname (for both www and non-www versions)
-const checkHostname = (hostname, req) => {
-    return [hostname, `www.${hostname}`].includes(req.hostname);
-};
-
-// Define the response for "prestonbrubaker.com"
+// Middleware to serve files from the correct folder based on the hostname
 app.use((req, res, next) => {
-    if (checkHostname('prestonbrubaker.com', req)) {
-        res.send('Welcome to Preston Brubaker\'s website!');
+    if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'www.prestonbrubaker.com') {
+        express.static(path.join(__dirname, 'public_preston'))(req, res, next);
+    } else if (req.hostname === 'willohrobbins.com' || req.hostname === 'www.willohrobbins.com') {
+        express.static(path.join(__dirname, 'public_willoh'))(req, res, next);
     } else {
-        next();
-    }
-});
-
-// Define the response for "willohrobbins.com"
-app.use((req, res, next) => {
-    if (checkHostname('willohrobbins.com', req)) {
-        res.send('Welcome to Willoh Robbins\' website!');
-    } else {
-        next();
+        next(); // Continue to the next middleware if neither domain matches
     }
 });
 
 // Fallback for any other requests
 app.use((req, res) => {
-    res.send('This is a generic response for other domains or requests.');
+    res.status(404).send('Page not found');
 });
 
-// Start the server and listen on all network interfaces
+// Start the server
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 });
