@@ -35,12 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Set the fill color using HSL
         var color_rect = "hsl(" + hue + ", 100%, 50%)";
-        ctx.fillStyle = color_rect;
+        
 
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
+        ctx.fillStyle = "#777777";
         ctx.fillRect(0, 0, maxW, maxH);
-        
+
+
+        ctx.fillStyle = color_rect;
         ctx.fillRect(x, y, 100, 100);
 
         x += xV;
