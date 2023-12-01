@@ -30,8 +30,8 @@ cr_hue = [20, 100, 200, 300];
 
 
 const bgHue = "#777777";
-var pCX = Math.floor(maxW / pixS - 0);  // count of pixels across the screen
-var pCY = Math.floor(maxH / pixS + 1);  // count of pixels across the screen
+var pCX = Math.floor(maxW / pixS );  // count of pixels across the screen
+var pCY = Math.floor(maxH / pixS );  // count of pixels across the screen
 var maxW_OG = maxW;
 var maxH_OG = maxH;
 
