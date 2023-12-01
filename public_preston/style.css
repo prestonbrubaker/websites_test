@@ -1,5 +1,5 @@
 html {
-    background: url('OIP.jpg'); /* Use url() for background images */
+    background: url('https://th.bing.com/th/id/R.60682a658227eb0f08f9a7406f12039d?rik=vf6UgZDy6q9m6Q&riu=http%3a%2f%2fcaprockhealthsystem.com%2fwp-content%2fuploads%2f2018%2f07%2flaboratory.jpg&ehk=XQlkRZL%2fsSZ5b3P2pnX6Ts9mYpWTLTvo1uJOkpJj8T4%3d&risl=&pid=ImgRaw&r=0'); /* Use url() for background images */
     background-size: cover; /* Optional: Cover the entire area */
     margin: 0;
     font-family: Arial, sans-serif;
