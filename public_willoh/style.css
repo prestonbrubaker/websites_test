@@ -1,8 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+html, body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('willoh.jpg'); 
+    background-size: cover;
+    color: #333; /* Adjust text color for readability */
 }
 
 header {
