@@ -42,3 +42,26 @@ footer {
     margin-top: 30px;
     color: black;
 }
+
+.word-art {
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #FF6347; /* Tomato color */
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Adding some depth with text-shadow */
+    
+    /* Transformations */
+    transform: rotate(-10deg) skew(10deg);
+    
+    /* Gradient Text (optional) */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    /* Additional Styling */
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #FF6347;
+    border-radius: 10px;
+    text-align: center;
+}
+
