@@ -1,41 +1,54 @@
-html, body {
+@font-face {
+    font-family: "pixel1";
+    src: url("pixel1.ttf");
+}
+
+body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('willoh.jpg'); 
-    background-size: contain;
-    color: #FFF; /* Adjust text color for readability */
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header nav ul {
+    font-family: 'pixel1', sans-serif;
+    text-shadow: -0.05rem 0.05rem gray;
+    background-color: lightskyblue;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+  }
+  
+  .navigation nav ul {
     list-style: none;
-    padding: 0;
-}
+    text-align: right;
+  }
 
-header nav ul li {
+  .navigation nav ul li {
     display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
+    padding: 1.5rem;
+  }
+  
+  .navigation nav ul li a {
     text-decoration: none;
-}
+    color: #333;
+  }
+  
+  .name {
+    font-size: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem;
+    text-shadow: -0.25rem 0.3rem gray;
+  }
 
-main {
-    padding: 20px;
-}
+  .socials {
+    display: flex;
+    flex-direction: column;
+  }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-}
 
+  /* Flexbox for sections */
+  .section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }

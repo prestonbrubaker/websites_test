@@ -2,58 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willoh's Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="navigation">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe/about.html">About Me</a></li>
+                <li><a href="projects/projects.html">Projects</a></li>
+                <li><a href="skillsdoesn'texistyet">Skills</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="home">
-            <h1>Welcome to Willoh's Website</h1>
-            <p id="dynamic-color">Willoh is a ground girl. She should code on a desk...</p>
-            <canvas id="canvas1" width="400" height="400"></canvas>
-        </section>
+    <section id="Introduction">
+        <h1 class="name">Willoh <br>Robbins</h1>
+    </section>
 
-        <section id="about">
-            <h2>About This</h2>
-            <p>I am not sure why this is done, but here is ChatGPT's guess:</p>
-            <p>There could be several reasons why a 23-year-old woman might choose to sit or lay on the ground to code instead of using a chair and desk, even when they are available:</p>
-            <p>1. Comfort and Preference: Some people find it more comfortable to sit on the floor, especially if they are accustomed to it. It can feel more relaxed and less formal than sitting at a desk.</p>
-            <p>2. Physical Health Reasons: Sitting on the floor can sometimes be beneficial for posture or back health. It encourages a more natural spine alignment and can strengthen the muscles used for sitting upright.</p>
-            <p>3. Change of Perspective: Changing physical positions can sometimes help with mental blocks or creativity. Sitting on the floor might provide a different perspective or a more relaxed mindset that could aid in problem-solving or coding.</p>
-            <p>4. Space and Environment: The floor might offer more space, especially if the desk area is cluttered or confined. Additionally, the surrounding environment might be more conducive to concentration and comfort when sitting on the floor.</p>
-            <p>5. Habit or Cultural Influence: She might have a habit of sitting on the floor due to cultural influences or personal upbringing where floor-sitting is common.</p>
-            <p>6. Variety and Break from Routine: Using alternative seating arrangements can be a way to break the monotony of a routine. It can make the coding process more interesting or enjoyable.</p>
-            <p>7. Health Concerns with Traditional Seating: Traditional desk chairs can sometimes lead to health issues like lower back pain or poor circulation, and sitting on the floor might alleviate these problems.</p>
-            <p>Each person has their own unique preferences and reasons for choosing their working posture, and it can vary widely based on personal comfort, health considerations, and environmental factors.</p>
-        </section>
-        <img src="seal.png" alt="ChatGPT Approved Seal" width="300" height="300">
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>markoviandevelopments@gmail.com</p>
-            <p>brubakerpreston@gmail.com</p>
-            <p>willoh_robbins@outlook.com</p>
-            <form>
-                <!-- Form content goes here -->
-            </form>
-        </section>
-    </main>
+    <nav class="socials">
+        <ul>
+            <a href="https://x.com/Preston32268903?s=20" target="_blank">
+                <img src="x_white.png" alt="x link" class="x"/>
+            </a>
+            <a href="https://github.com/prestonbrubaker" target="_blank">
+                <img src="github_white.png" alt="prestongit" class="github"/>
+            </a>
+            <a href="https://www.linkedin.com/in/preston-brubaker-05a73b189/" target="_blank">
+                <img src="linkdin.png" alt="linkdin" class="linkdin"/>
+            </a>
+            <a href="mailto:brubakerpreston@gmail.com" class="email" target="blank">
+                @
+            </a>
+        </ul>
+    </nav>
 
-    <footer>
-        <p>A website by Markovian Developments / Preston and Willoh 2023</p>
-    </footer>
 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
