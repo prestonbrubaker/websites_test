@@ -9,6 +9,8 @@ body, html {
     font-family: 'pixel1', sans-serif;
     text-shadow: -0.05rem 0.05rem gray;
     background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
   }
   
   header {
@@ -51,4 +53,9 @@ body, html {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+  }
+  
+  #gameCanvas {
+    position: absolute;
+    bottom: 0;
   }

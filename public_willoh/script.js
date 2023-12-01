@@ -1,63 +1,118 @@
-document.addEventListener('DOMContentLoaded', () => {
-    var hue = 0;
-    var x = 78;
-    var y = 235;
-    var xV = 5;
-    var yV = 5;
-    var blockS = 20;
-    
-    // Get the element
-    var element = document.getElementById("dynamic-color");
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
 
-    // Extract the current hue value from the element's color
-    var color = window.getComputedStyle(element).color;
-    var hsl = color.match(/\d+/g); // This extracts numbers from the RGB color
-    var saturation = 50;
-    var lightness = 50;
+let player = { x: 50, width: 50, height: 50, dy: 0 };
+let gravity = 0.5;
+let obstacles = [];
+let isJumping = false;
+let score = 0;
+let groundLevel;
+let maxJumpHeight = 100; // Maximum height the player can reach above the ground
 
-    // Increment the hue
-    hue += 1
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
-    // Update the element's color
-    element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-    // Accessing the canvas element
-    var canvas = document.getElementById('canvas1');
-    var ctx = canvas.getContext('2d');
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight * 0.3; // Increased frame height
+  groundLevel = canvas.height - 40; // Taller ground/grass area
+  player.y = groundLevel - player.height;
+}
 
-    var maxW = canvas1.width;
-    var maxH = canvas1.height;
+function drawPlayer() {
+  ctx.fillStyle = 'black';
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+}
 
-    ctx.fillStyle = "#777777";
-    ctx.fillRect(0, 0, maxW, maxH);
+function updatePlayer() {
+  if (isJumping) {
+    player.dy = -10;
+    isJumping = false;
+  }
 
-    function incrementHue() {
-        // Increment the hue
-        hue = (hue + 1) % 360; // This will cycle hue from 0 to 359
+  player.y += player.dy;
+  player.dy += gravity;
 
-        // Set the fill color using HSL
-        var color_rect = "hsl(" + hue + ", 100%, 50%)";
-        
+  // Limit the jump height
+  if (player.y < groundLevel - player.height - maxJumpHeight) {
+    player.dy = gravity;
+  }
 
-        // Clear the canvas and draw a new rectangle
-        ctx.clearRect(0, 0, maxW, maxH);
-        ctx.fillStyle = "#777777";
-        ctx.fillRect(0, 0, maxW, maxH);
+  // Prevent player from going below the ground
+  if (player.y > groundLevel - player.height) {
+    player.y = groundLevel - player.height;
+    player.dy = 0;
+  }
+}
 
+function drawGround() {
+  // Enhanced ground/grass appearance
+  ctx.fillStyle = '#0a8021'; // Darker green for the grass
+  ctx.fillRect(0, groundLevel, canvas.width, 40); // Taller grass area
+  // Add more details to the grass if needed
+}
 
-        ctx.fillStyle = color_rect;
-        ctx.fillRect(x, y, blockS, blockS);
+function drawObstacles() {
+  ctx.fillStyle = 'red';
+  obstacles.forEach(obstacle => {
+    ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+  });
+}
 
-        x += xV;
-        y += yV;
+function updateObstacles() {
+  if (Math.random() < 0.02) { // Adjust the frequency of obstacles
+    obstacles.push({ x: canvas.width, y: groundLevel - 50, width: 20, height: 50 });
+  }
 
-        if(x > maxW - blockS || x < 0){
-            xV *= -1;
-        }
-        if(y > maxH - blockS || y < 0){
-            yV *= -1;
-        }
+  obstacles.forEach(obstacle => {
+    obstacle.x -= 5; // Adjust the speed of obstacles
+  });
+
+  obstacles = obstacles.filter(obstacle => obstacle.x + obstacle.width > 0);
+}
+
+function checkCollision() {
+  obstacles.forEach(obstacle => {
+    if (player.x < obstacle.x + obstacle.width &&
+        player.x + player.width > obstacle.x &&
+        player.y < obstacle.y + obstacle.height &&
+        player.y + player.height > obstacle.y) {
+      resetGame(); // Reset the game on collision
     }
+  });
+}
 
-    // Call incrementHue every 100 milliseconds (0.1 seconds)
-    setInterval(incrementHue, 10);
-});
+function resetGame() {
+  score = 0;
+  obstacles = [];
+}
+
+function drawScore() {
+  ctx.fillStyle = 'black';
+  ctx.font = '20px Arial';
+  ctx.fillText(`Score: ${score}`, 10, 30);
+}
+
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  drawGround();
+  drawPlayer();
+  updatePlayer();
+  drawObstacles();
+  updateObstacles();
+  checkCollision();
+  drawScore();
+
+  score++;
+
+  requestAnimationFrame(gameLoop);
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' && player.y >= groundLevel - player.height) {
+      isJumping = true;
+    }
+  });
+  
+gameLoop();
