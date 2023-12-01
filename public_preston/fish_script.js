@@ -153,16 +153,16 @@ function tick() {
             x = 0;
             cr_v_x[i] *= -.1;
         }
-        if(x > pCX * pixS){
-            x = pCX * pixS;
+        if(x > pCX * pixS - cr_size){
+            x = pCX * pixS - cr_size;
             cr_v_x[i] *= -.1;
         }
         if(y < 0){
             y = 0;
             cr_v_y[i] *= -.1;
         }
-        if(y > pCY * pixS){
-            y = pCY * pixS;
+        if(y > pCY * pixS - cr_size){
+            y = pCY * pixS - cr_size;
             cr_v_y[i] *= -.1;
         }
 
