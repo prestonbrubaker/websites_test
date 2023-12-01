@@ -43,32 +43,25 @@ footer {
     color: black;
 }
 
+.word-art-container {
+    text-align: center; /* This will center the .word-art div */
+    margin-top: 20px; /* Adjust as needed for spacing */
+}
+
 .word-art {
-    text-align: center; /* Centering content horizontally */
-    font-family: 'Courier New', monospace; /* A monospaced font gives a technical appearance */
-    color: #0077cc; /* A blue that matches the image's color scheme */
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.5); /* A subtle white glow for a high-tech feel */
-    background-image: linear-gradient(45deg, #0055aa, #0099ff); /* Gradient that matches the image colors */
-    display: inline-block; /* Block display allows for padding and margin adjustments */
+    display: inline-block; /* Allows block-level styles like margin, but flows like inline */
+    font-family: 'Courier New', monospace; /* A technical looking font */
+    font-size: 2em;
+    color: black; /* Or use a color to match the word art image */
     padding: 10px 20px;
-    margin: 10px;
-    border: 1px solid #0077cc; /* A border that complements the color scheme */
-    border-radius: 5px; /* Slight rounding of corners */
-    
-    /* Additional stylistic choices for a techy feel */
-    letter-spacing: 1px; /* Spacing out letters for a more digital look */
-    word-spacing: 2px; /* Increasing the space between words */
-    
-    /* CSS Transform for a slight perspective */
-    transform: perspective(500px) rotateX(10deg);
-    
-    /* Transition for a hover effect */
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    margin: 0; /* Remove default margin */
+    /* Add the other styles from earlier for the metallic/chrome effect */
 }
 
-.word-art:hover {
-    text-shadow: 3px 3px 3px rgba(0,0,0,0.2); /* Changing text-shadow on hover for dynamic feel */
-    transform: perspective(500px) rotateX(0deg); /* Flatten on hover for interaction */
+#canvas1 {
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: 20px auto; /* Adds margin to the top and bottom, centers horizontally */
+    border: 1px solid #333; /* Optional: adds a border for visibility */
+    /* Set the width and height if not set inline in the HTML */
 }
-
 
