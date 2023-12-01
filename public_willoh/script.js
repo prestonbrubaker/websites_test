@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
     var x = 20;
     var y = 20;
-    var xV = 1;
-    var yV = 1;
+    var xV = 5;
+    var yV = 5;
+    var blockS = 20;
     
     // Get the element
     var element = document.getElementById("dynamic-color");
@@ -44,15 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         ctx.fillStyle = color_rect;
-        ctx.fillRect(x, y, 100, 100);
+        ctx.fillRect(x, y, blockS, blockS);
 
         x += xV;
         y += yV;
 
-        if(x > maxW || x < 0){
+        if(x > maxW - blockS || x < 0){
             xV *= -1;
         }
-        if(y > maxH || y < 0){
+        if(y > maxH - blockS || y < 0){
             yV *= -1;
         }
     }
