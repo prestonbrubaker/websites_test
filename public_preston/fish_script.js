@@ -100,7 +100,7 @@ function tick() {
             ctx.fillStyle = "hsl(" + Math.abs(pA[y][x]) * 360 / max_i_love_willoh + ", 10%, 30%)"; // Blue color
             ctx.fillRect(x * pixS, y * pixS, pixS, pixS);
             total_food += pA[y][x];
-            pA[y][x] += Math.random() * Math.random() * 0.13;
+            pA[y][x] += Math.random() * Math.random() * 0.08;
             
         }
     }
