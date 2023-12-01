@@ -15,15 +15,24 @@ const options = {
 // Define the port to run the server on
 const PORT = 443;
 
-// Serve files from public_preston and public_willoh based on hostname
+// Function to determine the correct directory based on the hostname
+const chooseStaticDir = (req) => {
+  if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'www.prestonbrubaker.com') {
+    return 'public_preston';
+  } else if (req.hostname === 'willohrobbins.com' || req.hostname === 'www.willohrobbins.com') {
+    return 'public_willoh';
+  }
+  return null;
+};
+
+// Use a middleware to serve files from the correct directory
 app.use((req, res, next) => {
-    if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'www.prestonbrubaker.com') {
-        express.static(path.join(__dirname, 'public_preston'))(req, res, next);
-    } else if (req.hostname === 'willohrobbins.com' || req.hostname === 'www.willohrobbins.com') {
-        express.static(path.join(__dirname, 'public_willoh'))(req, res, next);
-    } else {
-        next(); // Continue to the next middleware if neither domain matches
-    }
+  const staticDir = chooseStaticDir(req);
+  if (staticDir) {
+    express.static(path.join(__dirname, staticDir))(req, res, next);
+  } else {
+    next(); // Continue to the next middleware if neither domain matches
+  }
 });
 
 // Fallback for any other requests
