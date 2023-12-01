@@ -54,11 +54,11 @@ footer {
     font-size: 2em;
     font-weight: bold; /* Make the text bolder */
     color: white; /* High contrast color */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Stronger text shadow for depth */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); /* Stronger text shadow for depth */
     padding: 10px 20px;
     margin: 0;
-    /* Removed background-image for better readability */
-    border: 1px solid #0077cc;
+    background-image: linear-gradient(to bottom, #cccccc, #333333); /* Grey gradient background */
+    border: 3px solid black; /* Thicker black border */
     border-radius: 5px;
     
     /* Additional stylistic choices for a techy feel */
@@ -71,6 +71,7 @@ footer {
     /* Transition for a hover effect */
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
+
 
 
 #canvas1 {
