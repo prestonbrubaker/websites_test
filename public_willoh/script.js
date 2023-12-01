@@ -17,12 +17,12 @@ function incrementHue() {
     var lightness = 50;
 
     // Increment the hue
-    hue += .00000000
+    hue += .01
 
     // Update the element's color
     element.style.color = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
 // Call incrementHue every 100 milliseconds (0.1 seconds)
-setInterval(incrementHue, 1000);
+setInterval(incrementHue, 10);
 
