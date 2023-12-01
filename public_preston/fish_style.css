@@ -1,11 +1,16 @@
-/* resume.css */
 html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('img.jpg'); 
     background-size: cover;
-    color: #333; /* Adjust text color for readability */
+    color: black; /* Text color set to black */
+
+    /* Centering the canvas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
 }
 
 header, main, footer {
@@ -15,11 +20,11 @@ header, main, footer {
 }
 
 h1, h2, h3 {
-    color: #4A90E2; /* Example color */
+    color: black; /* Text color set to black */
 }
 
 a {
-    color: #4A90E2;
+    color: black; /* Text color set to black */
     text-decoration: none;
 }
 
@@ -38,5 +43,5 @@ li {
 
 footer {
     margin-top: 30px;
-    color: #888;
+    color: black; /* Text color set to black */
 }
