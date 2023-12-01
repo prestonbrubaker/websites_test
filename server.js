@@ -1,8 +1,9 @@
 const https = require('https');
 const fs = require('fs');
 const express = require('express');
-const app = express();
 const path = require('path');
+
+const app = express();
 
 // SSL/TLS certificate paths
 const options = {
@@ -14,7 +15,7 @@ const options = {
 // Define the port to run the server on
 const PORT = 443;
 
-// Middleware to serve files from the correct folder based on the hostname
+// Serve files from public_preston and public_willoh based on hostname
 app.use((req, res, next) => {
     if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'www.prestonbrubaker.com') {
         express.static(path.join(__dirname, 'public_preston'))(req, res, next);
@@ -30,7 +31,7 @@ app.use((req, res) => {
     res.status(404).send('Page not found');
 });
 
-// Start the server
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${PORT}`);
+// Create an HTTPS server with the SSL/TLS options and attach the Express app
+https.createServer(options, app).listen(PORT, () => {
+    console.log(`HTTPS server running on port ${PORT}`);
 });
