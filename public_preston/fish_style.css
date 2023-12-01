@@ -4,27 +4,24 @@ html, body {
     font-family: Arial, sans-serif;
     background-image: url('img.jpg'); 
     background-size: cover;
-    color: black; /* Text color set to black */
+    color: black; /* All text in black */
+}
 
-    /* Centering the canvas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
+.content {
+    text-align: center; /* Centering content horizontally */
 }
 
 header, main, footer {
-    text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
 
 h1, h2, h3 {
-    color: black; /* Text color set to black */
+    color: black;
 }
 
 a {
-    color: black; /* Text color set to black */
+    color: black;
     text-decoration: none;
 }
 
@@ -43,5 +40,5 @@ li {
 
 footer {
     margin-top: 30px;
-    color: black; /* Text color set to black */
+    color: black;
 }
