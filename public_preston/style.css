@@ -4,7 +4,8 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background: #f4f4f4 url('preston_public/background_image.png') no-repeat center center/cover;
+    background: #f4f4f4 url('./background_image.png') no-repeat center center / cover;
+
 }
 
 header {
