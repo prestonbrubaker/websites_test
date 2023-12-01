@@ -1,3 +1,7 @@
+html {
+ background: url('background_image.png') no-repeat center center / cover;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
