@@ -36,16 +36,6 @@ var maxW_OG = maxW;
 var maxH_OG = maxH;
 
 
-function resizeCanvas() {
-    if (isFullscreen) {
-        c.width = window.innerWidth;
-        c.height = window.innerHeight;
-    } else {
-        c.width = window.innerWidth * 0.8;
-        c.height = window.innerHeight * 0.8;
-    }
-    updateWorld();
-}
 
 function updateWorld() {
     maxW = c.width;
@@ -53,31 +43,7 @@ function updateWorld() {
     pixS = maxW / maxW_OG * pixS_OG;
 }
 
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-document.addEventListener('fullscreenchange', function() {
-    isFullscreen = !!document.fullscreenElement;
-    resizeCanvas();
-});
 
-// Fullscreen Button Action
-document.getElementById("fullscreen").addEventListener("click", function() {
-    var fullscreenButton = document.getElementById("fullscreen");
-    if (fullscreenButton) {
-        fullscreenButton.addEventListener("click", function() {
-        var canvas = document.getElementById("canvas1");
-        if (canvas.requestFullscreen) {
-            canvas.requestFullscreen();
-        } else if (canvas.mozRequestFullScreen) { /* Firefox */
-            canvas.mozRequestFullScreen();
-        } else if (canvas.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            canvas.webkitRequestFullscreen();
-        } else if (canvas.msRequestFullscreen) { /* IE/Edge */
-            canvas.msRequestFullscreen();
-        }
-        });
-    };
-});
 
 var pA = new Array(pCY);
 
