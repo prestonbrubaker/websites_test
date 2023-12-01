@@ -7,7 +7,11 @@ let obstacles = [];
 let isJumping = false;
 let score = 0;
 let groundLevel;
+let groundSegments = [];
 let maxJumpHeight = 100; // Maximum height the player can reach above the ground
+let lastObstacleTime = 0;
+let obstacleInterval = 1500; // Minimum time interval between obstacles in milliseconds
+let groundSpeed = 5; // Speed of ground movement
 
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
@@ -17,6 +21,23 @@ function resizeCanvas() {
   canvas.height = window.innerHeight * 0.3; // Increased frame height
   groundLevel = canvas.height - 40; // Taller ground/grass area
   player.y = groundLevel - player.height;
+  generateGround();
+}
+
+function generateGround() {
+  groundSegments = [];
+  let segmentWidth = 20;
+  for (let i = 0; i < canvas.width / segmentWidth; i++) {
+    groundSegments.push({
+      x: i * segmentWidth,
+      color: getRandomGreen()
+    });
+  }
+}
+
+function getRandomGreen() {
+  let greens = ['#0b8922', '#0b8922', '#0b8922'];
+  return greens[Math.floor(Math.random() * greens.length)];
 }
 
 function drawPlayer() {
@@ -46,11 +67,25 @@ function updatePlayer() {
 }
 
 function drawGround() {
-  // Enhanced ground/grass appearance
-  ctx.fillStyle = '#0a8021'; // Darker green for the grass
-  ctx.fillRect(0, groundLevel, canvas.width, 40); // Taller grass area
-  // Add more details to the grass if needed
-}
+    groundSegments.forEach(segment => {
+      ctx.fillStyle = segment.color;
+      ctx.fillRect(segment.x, groundLevel, 20, 40);
+    });
+  }
+  
+  function updateGround() {
+    groundSegments.forEach(segment => {
+      segment.x -= groundSpeed;
+    });
+  
+    if (groundSegments[0].x <= -20) {
+      groundSegments.shift();
+      groundSegments.push({
+        x: groundSegments[groundSegments.length - 1].x + 20,
+        color: getRandomGreen()
+      });
+    }
+  }  
 
 function drawObstacles() {
   ctx.fillStyle = 'red';
@@ -60,7 +95,14 @@ function drawObstacles() {
 }
 
 function updateObstacles() {
-  if (Math.random() < 0.02) { // Adjust the frequency of obstacles
+   if (Date.now() - lastObstacleTime > obstacleInterval && Math.random() < 0.01) {
+    obstacles.push({ x: canvas.width, y: groundLevel - 50, width: 20, height: 50 });
+    lastObstacleTime = Date.now();
+  }
+  obstacles.forEach(obstacle => {
+    obstacle.x -= groundSpeed;
+  });
+    if (Math.random() < 0.015) { // Adjust the frequency of obstacles
     obstacles.push({ x: canvas.width, y: groundLevel - 50, width: 20, height: 50 });
   }
 
@@ -94,20 +136,22 @@ function drawScore() {
 }
 
 function gameLoop() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  drawGround();
-  drawPlayer();
-  updatePlayer();
-  drawObstacles();
-  updateObstacles();
-  checkCollision();
-  drawScore();
-
-  score++;
-
-  requestAnimationFrame(gameLoop);
-}
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    drawGround();
+    updateGround();
+    drawPlayer();
+    updatePlayer();
+    drawObstacles();
+    updateObstacles();
+    checkCollision();
+    drawScore();
+  
+    score++;
+  
+    requestAnimationFrame(gameLoop);
+  }
+  
 
 window.addEventListener('keydown', (e) => {
     if (e.code === 'Space' && player.y >= groundLevel - player.height) {
