@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
     var x = 78;
-    var y = 35;
+    var y = 135;
     var xV = 5;
     var yV = 5;
     var blockS = 20;
