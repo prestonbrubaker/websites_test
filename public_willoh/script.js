@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
     var x = 20;
     var y = 20;
+    var xV = 1;
+    var yV = 1;
     
     // Get the element
     var element = document.getElementById("dynamic-color");
@@ -36,8 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fillStyle = color_rect;
 
         // Clear the canvas and draw a new rectangle
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillRect(50, 50, 100, 100);
+        ctx.clearRect(0, 0, maxW, maxH);
+        ctx.fillRect(0, 0, maxW, maxH);
+        
+        ctx.fillRect(x, y, 100, 100);
+
+        x += xV;
+        y += yV;
+
+        if(x > maxW || x < 0){
+            xV *= -1;
+        }
+        if(y > maxH || y < 0){
+            yV *= -1;
+        }
     }
 
     // Call incrementHue every 100 milliseconds (0.1 seconds)
