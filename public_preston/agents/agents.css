@@ -12,6 +12,7 @@ html, body {
 }
 
 .navigation {
+    margin: 20px;
     text-align: left;
     text-decoration: underline;
 }
