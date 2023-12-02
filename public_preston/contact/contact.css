@@ -1,4 +1,8 @@
-/* resume.css */
+@font-face {
+  font-family: "tektur";
+  src: url("fonts/tektur.ttf");
+}
+
 html, body {
     margin: 0;
     padding: 0;
