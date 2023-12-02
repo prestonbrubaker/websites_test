@@ -71,7 +71,7 @@ nav ul li a {
 }
 
 .socials img {
-    width: 40%;
+    width: 80%;
     height: auto; /* This ensures the aspect ratio of the images is maintained */
     padding: 1rem;
 }
