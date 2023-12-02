@@ -1,0 +1,70 @@
+/* resume.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img.jpg'); 
+    background-size: cover;
+    color: #333; /* Adjust text color for readability */
+}
+
+header, main, footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+}
+
+header {
+    font-size: xx-large;
+}
+
+h1, h2, h3 {
+    color: #4A90E2; /* Example color */
+}
+
+nav {
+    background-color: white; /* Sets the background color */
+    padding: 10px; /* Adds some space inside the nav bar */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns list items horizontally */
+}
+
+nav ul li {
+    margin-bottom: 5px;
+        margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: blue; /* Sets the text color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#canvas1 {
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: auto; /* Automatically calculates equal left and right margins */
+}
+
+#explainer {
+    text-align: left;
+    margin-left: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    color: #888;
+    bottom: 0;
+}
