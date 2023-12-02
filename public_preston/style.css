@@ -86,6 +86,20 @@ header {
   padding: 1em;
 }
 
-#canvas1 {
+#contentgrid {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: start; /* Align items to the start of the container */
+}
 
+#introduction {
+    /* Ensure the introduction section does not stretch to fill all available space */
+    flex-shrink: 0;
+}
+
+#canvas1 {
+    /* Style your canvas as needed */
+    width: 300px; /* Example width */
+    height: 300px; /* Example height */
+    margin-left: 20px; /* Add some space between the text and the canvas */
 }
