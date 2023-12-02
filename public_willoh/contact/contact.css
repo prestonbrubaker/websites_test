@@ -79,17 +79,17 @@
   
   .socials {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
   }
   
   .section {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1rem;
   }
   
-  #about, #skills, #projects {
+  #about, #skills, #projects #contact{
     padding: 0.5rem;
   }
-  
   

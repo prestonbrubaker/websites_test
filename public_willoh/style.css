@@ -88,23 +88,6 @@ header {
   padding: 1em;
 }
 
-#about {
-  background-color: lightpink;
-  outline: 0.15rem solid black;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-}
-
-#projects {
-  background-color: lightpink;
-  outline: 0.15rem solid black;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-}
-
-#skills {
-  background-color: lightpink;
-  outline: 0.15rem solid black;
-  border-radius: 0.3rem;
+#about, #skills, #projects #contact{
   padding: 0.5rem;
 }

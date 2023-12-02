@@ -1,6 +1,6 @@
 @font-face {
     font-family: "elegant";
-    src: url("fonts/didot.otf");
+    src: url("fonts/elegant.otf");
   }
   
   ::selection {
@@ -11,7 +11,7 @@
   body, html {
     margin: 0;
     padding: 0;
-    font-family: 'elegant', serif;
+    font-family: 'elegant';
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -88,24 +88,8 @@
     padding: 1em;
   }
   
-  #about {
-    background-color: lightpink;
-    outline: 0.15rem solid black;
-    border-radius: 0.3rem;
+  #about, #skills, #projects {
     padding: 0.5rem;
   }
   
-  #projects {
-    background-color: lightpink;
-    outline: 0.15rem solid black;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-  }
-  
-  #skills {
-    background-color: lightpink;
-    outline: 0.15rem solid black;
-    border-radius: 0.3rem;
-    padding: 0.5rem;
-  }
   
