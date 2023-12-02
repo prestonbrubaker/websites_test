@@ -74,6 +74,12 @@ header {
   flex-direction: column;
 }
 
+.socials img {
+    width: 200%;
+    height: auto; /* This ensures the aspect ratio of the images is maintained */
+}
+
+
 .section {
   display: flex;
   justify-content: space-between;
