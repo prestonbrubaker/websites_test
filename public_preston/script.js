@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Accessing the canvas element
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth * 0.2;
-    canvas.height = window.innerHeight * 0.5;
+    canvas.width = window.innerWidth * 0.5;
+    canvas.height = window.innerHeight * 0.4;
   
     var maxW = canvas.width;
     var maxH = canvas.height;
