@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function incrementHue() {
         // Increment the hue
-        hue = (hue + speed) % 360; // This will cycle hue from 0 to 359
+        hue = (hue + speed / 10) % 360; // This will cycle hue from 0 to 359
   
         // Set the fill color using HSL
         var color_rect = "hsl(" + hue + ", 100%, 50%)";
@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#FFFFFF";
-        var color_rect = "hsl(" + hue + 180 + ", 100%, 50%)";
+        var hue_2 = (hue + 180) % 360;
+        var color_rect = "hsl(" + hue_2 + ", 100%, 50%)";
         ctx.fillStyle = color_rect;
         ctx.fillRect(0, 0, maxW, maxH);
   
