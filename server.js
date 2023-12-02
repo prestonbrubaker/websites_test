@@ -5,12 +5,6 @@ const path = require('path');
 
 const app = express();
 
-// SSL/TLS certificate paths
-const options = {
-  key: fs.readFileSync(path.join(__dirname, 'ssl_certs/privkey.pem')),
-  cert: fs.readFileSync(path.join(__dirname, 'ssl_certs/fullchain.pem')),
-  ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
-};
 
 
 // Logging Middleware (moved up)
@@ -34,6 +28,14 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
+// SSL/TLS certificate paths
+const options = {
+  key: fs.readFileSync(path.join(__dirname, 'ssl_certs/privkey.pem')),
+  cert: fs.readFileSync(path.join(__dirname, 'ssl_certs/fullchain.pem')),
+  ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
+};
 
 
 // Function to determine the correct directory based on the hostname
