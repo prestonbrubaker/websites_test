@@ -18,34 +18,6 @@ h1, h2, h3 {
     color: #4A90E2; /* Example color */
 }
 
-a {
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-#canvas1{
-    display: block; /* Ensures the canvas is a block-level element */
-    margin: auto; /* Automatically calculates equal left and right margins */
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-footer {
-    margin-top: 30px;
-    color: #888;
-}
-
 nav {
     background-color: white; /* Sets the background color */
     padding: 10px; /* Adds some space inside the nav bar */
@@ -59,7 +31,8 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between each list item */
+    margin-bottom: 5px;
+        margin-right: 20px;
 }
 
 nav ul li a {
@@ -69,5 +42,28 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
 }
+
+#canvas1{
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: auto; /* Automatically calculates equal left and right margins */
+}
+
+footer {
+    margin-top: 30px;
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
