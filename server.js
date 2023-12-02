@@ -12,6 +12,39 @@ const options = {
   ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
 };
 
+const fs = require('fs');
+
+app.use((req, res, next) => {
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    ip: req.ip,
+    hostname: req.hostname
+  };
+
+  // Read the current log file, add the new entry, and write it back
+  fs.readFile('visit_logs.json', (err, data) => {
+    let logs = [];
+
+    if (!err) {
+      try {
+        logs = JSON.parse(data);
+      } catch (parseErr) {
+        console.error('Error parsing JSON:', parseErr);
+      }
+    }
+
+    logs.push(logEntry);
+
+    fs.writeFile('visit_logs.json', JSON.stringify(logs, null, 2), (writeErr) => {
+      if (writeErr) {
+        console.error('Error writing to log file:', writeErr);
+      }
+    });
+  });
+
+  next();
+});
+
 // Define the port to run the server on
 const PORT = 443;
 
