@@ -75,7 +75,7 @@ header {
 }
 
 .socials img {
-    width: 10%;
+    width: 4%;
     height: auto; /* This ensures the aspect ratio of the images is maintained */
     padding: 1rem;
 }
