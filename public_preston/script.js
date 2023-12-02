@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#FFFFFF";
-        var hue_2 = (hue + 180) % 360;
+        var hue_2 = (hue + 90) % 360;
         var color_rect = "hsl(" + hue_2 + ", 100%, 50%)";
         ctx.fillStyle = color_rect;
         ctx.fillRect(0, 0, maxW, maxH);
