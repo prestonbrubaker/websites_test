@@ -11,12 +11,6 @@ html, body {
     text-align: center; /* Centering content horizontally */
 }
 
-.navigation {
-    margin: 20px;
-    text-align: left;
-    text-decoration: underline;
-}
-
 header, main, footer {
     padding: 20px;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
@@ -86,3 +80,30 @@ footer {
     border: 1px solid #333; /* Optional: adds a border for visibility */
     /* Set the width and height if not set inline in the HTML */
 }
+
+nav {
+    background-color: grey; /* Sets the background color */
+    padding: 10px; /* Adds some space inside the nav bar */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns list items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between each list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: white; /* Sets the text color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+}
+
