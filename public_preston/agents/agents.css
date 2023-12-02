@@ -5,7 +5,7 @@ html, body {
     background-image: url('../img.jpg'); 
     background-size: cover;
     color: black; /* All text in black */
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .content {
