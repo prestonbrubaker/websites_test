@@ -40,28 +40,19 @@ app.use((req, res, next) => {
     hostname: req.hostname
   };
 
-  fs.readFile('visit_logs.json', (err, data) => {
-    let logs = [];
+  console.log('Logging entry:', logEntry);
 
-    if (!err && data) {
-      try {
-        logs = JSON.parse(data);
-      } catch (parseErr) {
-        console.error('Error parsing JSON:', parseErr);
-      }
+  fs.appendFile('visit_logs.json', JSON.stringify(logEntry, null, 2) + ',\n', (err) => {
+    if (err) {
+      console.error('Error writing to log file:', err);
+    } else {
+      console.log('Log entry successfully written');
     }
-
-    logs.push(logEntry);
-
-    fs.writeFile('visit_logs.json', JSON.stringify(logs, null, 2), (writeErr) => {
-      if (writeErr) {
-        console.error('Error writing to log file:', writeErr);
-      }
-    });
   });
 
   next();
 });
+
 
 // Fallback for any other requests
 app.use((req, res) => {
