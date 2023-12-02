@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
-        ctx.fillStyle = "#777777";
+        ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(0, 0, maxW, maxH);
   
   
