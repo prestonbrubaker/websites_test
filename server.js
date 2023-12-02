@@ -17,7 +17,8 @@ app.use((req, res, next) => {
 
   console.log('Logging entry:', logEntry);
 
-  fs.appendFile('visit_logs.json', JSON.stringify(logEntry, null, 2) + ',\n', (err) => {
+  // Append the log entry as a JSON string followed by a newline
+  fs.appendFile('visit_logs.jsonl', JSON.stringify(logEntry) + '\n', (err) => {
     if (err) {
       console.error('Error writing to log file:', err);
     } else {
@@ -27,6 +28,7 @@ app.use((req, res, next) => {
 
   next();
 });
+
 
 
 

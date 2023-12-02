@@ -1,7 +1,7 @@
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
     function getRandomColor() {
-        const hue = Math.floor(Math.random() * 360);
+        const hue = Math.floor(Math.random() * 200);
         const saturation = 50
         const lightness = 50
         return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyRandomBackgroundColor();
     
     var hue = 0;
-    var x = 78;
-    var y = 235;
+    
     var xV = 5;
     var yV = 5;
     var blockS = 20;
@@ -30,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
     var maxW = canvas.width;
     var maxH = canvas.height;
+
+    var x = Math.random() * .5 * maxW;
+    var y = Math.random() * .5 * maxH;
   
     ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(0, 0, maxW, maxH);
