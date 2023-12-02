@@ -1,5 +1,6 @@
 @font-face {
-  src: url("fonts/tektur.ttf");
+  font-family: "pixel1"; /* This is the name you'll use to reference this font */
+  src: url("fonts/tektur.ttf"); /* This should be the correct relative path to your font file */
 }
 
 ::selection {
