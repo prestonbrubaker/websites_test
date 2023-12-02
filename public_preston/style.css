@@ -24,7 +24,7 @@ a {
 }
 
 #canvas1{
-    justify-content: center;
+    position: absolute;
 }
 
 a:hover {
