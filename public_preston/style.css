@@ -49,9 +49,14 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-#canvas1{
+#canvas1 {
     display: block; /* Ensures the canvas is a block-level element */
     margin: auto; /* Automatically calculates equal left and right margins */
+}
+
+#explainer {
+    text-align: left;
+    margin-left: 10px;
 }
 
 footer {
