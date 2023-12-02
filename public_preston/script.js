@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
-    // Call incrementHue every 100 milliseconds (0.1 seconds)
-    setInterval(incrementHue, 100);
+    // Call incrementHue every 50 milliseconds (0.05 seconds)
+    setInterval(incrementHue, 50);
 });
