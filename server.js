@@ -46,6 +46,8 @@ const chooseStaticDir = (req) => {
     return 'public_preston';
   } else if (req.hostname === 'willohrobbins.com' || req.hostname === 'www.willohrobbins.com') {
     return 'public_willoh';
+  } else if (req.hostname === 'markoviandevelopments.com' || req.hostname === 'www.markoviandevelopments.com') {
+    return 'public_markovian_developments';
   }
   return null;
 };
