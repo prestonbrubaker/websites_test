@@ -1,109 +1,87 @@
 @font-face {
-    font-family: "pixel1";
-    src: url("pixel1.ttf");
+  font-family: "pixel1";
+  src: url("pixel1.ttf");
 }
+
+::selection {
+background-color: red;
+color: white;
+}
+
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'pixel1', sans-serif;
-    text-shadow: -0.05rem 0.05rem gray;
-    background-color: lightskyblue;
-    display: flex;
-    flex-direction: column;
-}
-  
-header {
+  margin: 0;
+  padding: 0;
+  font-family: 'pixel1', sans-serif;
+  text-shadow: -0.05rem 0.05rem gray;
+  background-color: white;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 }
-  
+
+header {
+display: flex;
+justify-content: flex-end;
+}
+
 .navigation nav ul {
-  list-style: none;
-  text-align: right;
+list-style: none;
+text-align: right;
 }
 
 .navigation nav ul li {
-  display: inline-block;
-  width: 8rem;
-  height: 3rem;
-  text-align: center;
-  padding: 0.5rem 1rem;
+display: inline-block;
+width: 8rem;
+height: 3rem;
+text-align: center;
+padding: 0.5rem 1rem;
 }
-  
+
 .navigation nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: #333;
+display: block;
+text-decoration: none;
+color: #333;
 }
 
 .navigation nav ul li a:hover {
-  transform: scale(1.15); /* Enlarges text on hover */
-  transform-origin: center; /* Ensures scaling happens from the center */
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.name {
-  font-size: 5rem;
-  margin-left: 4rem;
-  text-shadow: -0.25rem 0.3rem grey;
-  margin-bottom: 0;
-}
-  
-.information {
-  font-size: 1.5rem;
-  margin-left: 4rem;
-  margin-top: 1rem;
+transform: scale(1.15); /* Enlarges text on hover */
+transform-origin: center; /* Ensures scaling happens from the center */
 }
 
 .contentgrid {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
+}
+
+.iLoveYouPreston {
+  display:flex;
+}
+
+.introduction {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+
+.name {
+font-size: 5rem;
+margin-left: 4rem;
+text-shadow: -0.25rem 0.3rem grey;
+margin-bottom: 0;
+}
+
+.information {
+font-size: 1.5rem;
+margin-left: 4rem;
+margin-top: 1rem;
 }
 
 .socials {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 .section {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-#home {
-  background-color: royalblue;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#about {
-  background-color: red;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#projects {
-  background-color: gold;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#skills {
-  background-color: lime;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
+display: flex;
+justify-content: space-between;
+padding: 1em;
 }
