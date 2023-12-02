@@ -24,7 +24,7 @@ a {
 }
 
 #canvas1{
-    align-content: auto;
+    align-horizontal: center;
 }
 
 a:hover {
