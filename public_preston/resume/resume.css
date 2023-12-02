@@ -40,3 +40,29 @@ footer {
     margin-top: 30px;
     color: #888;
 }
+
+nav {
+    background-color: white; /* Sets the background color */
+    padding: 10px; /* Adds some space inside the nav bar */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns list items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between each list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: blue; /* Sets the text color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+}
