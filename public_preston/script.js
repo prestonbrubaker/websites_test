@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var maxW = canvas.width;
     var maxH = canvas.height;
   
-    ctx.fillStyle = "#777777";
+    ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(0, 0, maxW, maxH);
   
     function incrementHue() {
