@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#FFFFFF";
+        var color_rect = "hsl(" + hue + 180 + ", 100%, 50%)";
+        ctx.fillStyle = color_rect;
         ctx.fillRect(0, 0, maxW, maxH);
   
   
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(y > maxH - blockS || y < 0){
             yV *= -1;
         }
-        speed += .001;
+        speed += .000;
   
         if(speed > 5){
             speed = 0;
