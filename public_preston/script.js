@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     function getRandomColor() {
         const hue = Math.floor(Math.random() * 360);
-        const saturation = Math.floor(Math.random() * 100);
-        const lightness = Math.floor(Math.random() * 100);
+        const saturation = 50
+        const lightness = 50
         return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
     }
 
