@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function incrementHue() {
         // Increment the hue
-        hue = (hue + speed / 10) % 360; // This will cycle hue from 0 to 359
+        hue = (hue + speed / 2) % 360; // This will cycle hue from 0 to 359
   
         // Set the fill color using HSL
         var color_rect = "hsl(" + hue + ", 100%, 50%)";
