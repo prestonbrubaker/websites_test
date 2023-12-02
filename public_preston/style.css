@@ -57,6 +57,7 @@ nav ul li a:hover {
 footer {
     margin-top: 30px;
     color: #888;
+    bottom: 0;
 }
 
 
