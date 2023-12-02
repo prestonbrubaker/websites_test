@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preston Brubaker's Website</title>
+    <title>Preston's Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="resume/resume.html">Preston's Resume</a></li>
-            <li><a href="agents/agents.html">Agents Simulation</a></li>
-            <li><a href="contact/contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Preston Brubaker's Website</h1>
+    <header class="navigation">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume/resume.html">Resume</a></li>
+                <li><a href="agents/agents.html">Projects</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <p id="explainer">Welcome! I created this website so that it can run on my desktop. It is run on a node.js server and uses HTML, JavaScript, and CSS.</p>
-    </main>
+    <section id="introduction">
+        <h1 class="name">Preston <br>Brubaker</h1>
+        <p class="information">
+            This is a website by Preston brubaker <br>
+            Welcome!
+        </p>
+    </section>
 
-        
-    <canvas id="canvas1" width="700" height="400"></canvas>
+    <nav class="socials">
+        <ul>
+            <a href="https://github.com/prestonbrubaker" target="_blank">
+                <img src="github.png" alt="prestongit" class="github"/>
+            </a>
+            <a href="https://www.linkedin.com/in/preston-brubaker-05a73b189/" target="_blank">
+                <img src="linkdin.png" alt="linkdin" class="linkdin"/>
+            </a>
+            <a href="mailto:brubakerpreston@gmail.com" class="email" target="blank">
+                <img src="@.png" alt="email" class="email"/>
+            </a>
+        </ul>
+    </nav>
+
+    <canvas id="canvas1"></canvas>
+
     <script src="script.js"></script>
-</body>    
-<footer>
-    <p>Preston Brubaker 2023</p>
-</footer>
+</body>
 </html>
