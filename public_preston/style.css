@@ -15,7 +15,7 @@ body, html {
   flex-direction: column;
 }
 
-header {
+header { /*Ouch, Preston. You're killing me. Throwing out some top-notch formatting for this*/
   display: flex;
   justify-content: flex-start; /* Align items to the start (left) */
   background-color: white; /* Sets the background color of the header */
@@ -95,5 +95,7 @@ nav ul li a {
 }
 
 #canvas1 {
-    margin-left: 20px; /* Add some space between the text and the canvas */
+    margin-left: 20px; /* STOP USING PIXELS OR YOU WILL NEVER NEVER NEVER NEVER 
+    NEVER NEVER NEVER HAVE A DYNAMIC DESIGN UNLESS YOU MAKE YOUR CSS BOOTLEG AND CLUNKY AS HELL. 
+    ESPECIALLY WITH SPACING. CASE IT POINT YOU DO NOT LISTEN WHEN I TALK AND YOU ARENT EVEN UP YET.*/
 }
