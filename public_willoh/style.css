@@ -34,11 +34,21 @@ body, html {
     color: #333;
   }
   
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
   .name {
-    font-size: 6rem;
-    display: flex;
-    justify-content: center;
+    font-size: 4rem;
+    margin-left: 4rem;
     text-shadow: -0.25rem 0.3rem grey;
+  }
+  
+  .information {
+    font-size: 1.5rem;
+    margin-left: 4rem;
   }
 
   .socials {
@@ -46,8 +56,6 @@ body, html {
     flex-direction: column;
   }
 
-
-  /* Flexbox for sections */
   .section {
     display: flex;
     justify-content: space-between;
