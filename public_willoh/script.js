@@ -45,28 +45,28 @@ class Flower {
     }
 
     display() {
-        // Draw the stem
-        stroke(35, 177, 77); // Green for the stem
-        strokeWeight(2);
-        line(this.x, this.y, this.x, this.y - this.stemHeight);
-
-        // Draw the flower
-        fill(this.color);
-        for (let i = 0; i < this.petals; i++) {
-            push();
-            translate(this.x, this.y - this.stemHeight);
-            rotate(TWO_PI / this.petals * i);
-            ellipse(0, this.size / 4, this.size / 2, this.size); // Petal shape
-            pop();
-        }
-
-        // Draw the center of the flower
-        fill(255, 204, 0); // Yellow center
-        noStroke();
-        ellipse(this.x, this.y - this.stemHeight, this.size / 4);
-    }
+      // Draw the stem
+      stroke(35, 177, 77); // Green for the stem
+      strokeWeight(2);
+      line(this.x, this.y, this.x, this.y - this.stemHeight);
+  
+      // Draw the flower
+      fill(this.color);
+      noStroke(); // Disable stroke for the petals
+      for (let i = 0; i < this.petals; i++) {
+          push();
+          translate(this.x, this.y - this.stemHeight);
+          rotate(TWO_PI / this.petals * i);
+          ellipse(0, this.size / 4, this.size / 2, this.size); // Petal shape
+          pop();
+      }
+  
+      // Draw the center of the flower
+      fill(255, 204, 0); // Yellow center
+      ellipse(this.x, this.y - this.stemHeight, this.size / 4);
+  }
+  
 }
-
 function randomRedOrPink() {
     // Function to return a random red or pink color
     let colors = [
