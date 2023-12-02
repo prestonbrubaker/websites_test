@@ -14,6 +14,10 @@ header, main, footer {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
 }
 
+header {
+    font-size: xx-large;
+}
+
 h1, h2, h3 {
     color: #4A90E2; /* Example color */
 }
