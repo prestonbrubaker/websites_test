@@ -98,8 +98,5 @@ header {
 }
 
 #canvas1 {
-    /* Style your canvas as needed */
-    width: 300px; /* Example width */
-    height: 300px; /* Example height */
     margin-left: 20px; /* Add some space between the text and the canvas */
 }
