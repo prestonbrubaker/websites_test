@@ -1,60 +1,79 @@
-// Basic JavaScript for interactive elements
-document.addEventListener('DOMContentLoaded', () => {
-  var hue = 0;
-  var x = 78;
-  var y = 235;
-  var xV = 5;
-  var yV = 5;
-  var blockS = 20;
-  var speed = 1;
-  
-  // Accessing the canvas element
-  var canvas = document.getElementById('iLoveYouPreston');
-  var ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth * 0.3;
-  canvas.height = window.innerHeight * 0.5;
+let flowers = [];
 
-  var maxW = canvas.width;
-  var maxH = canvas.height;
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    let flowerCount = 20; // Adjust the number of flowers as needed
 
-  ctx.fillStyle = "#777777";
-  ctx.fillRect(0, 0, maxW, maxH);
+    // Create initial set of flowers
+    for (let i = 0; i < flowerCount; i++) {
+        flowers.push(new Flower(random(width), height - 20, randomRedOrPink()));
+    }
+}
 
-  function incrementHue() {
-      // Increment the hue
-      hue = (hue + speed) % 360; // This will cycle hue from 0 to 359
+function draw() {
+    background(255);
 
-      // Set the fill color using HSL
-      var color_rect = "hsl(" + hue + ", 100%, 50%)";
-      
+    // Draw and update each flower
+    for (let flower of flowers) {
+        flower.update();
+        flower.display();
+    }
+}
 
-      // Clear the canvas and draw a new rectangle
-      ctx.clearRect(0, 0, maxW, maxH);
-      ctx.fillStyle = "#777777";
-      ctx.fillRect(0, 0, maxW, maxH);
+// Flower class
+class Flower {
+    constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.size = 0; // Starting size of the flower
+        this.growthRate = random(0.1, 0.3); // How fast the flower grows
+        this.maxSize = random(20, 40); // Maximum size of the flower
+        this.stemHeight = 0; // Starting height of the stem
+        this.maxStemHeight = random(50, 100); // Maximum height of the stem
+        this.petals = floor(random(5, 8)); // Number of petals
+    }
 
+    update() {
+        // Grow the flower and the stem
+        if (this.size < this.maxSize) {
+            this.size += this.growthRate;
+        }
+        if (this.stemHeight < this.maxStemHeight) {
+            this.stemHeight += this.growthRate / 2;
+        }
+    }
 
-      ctx.fillStyle = color_rect;
-      ctx.fillRect(x, y, blockS, blockS);
+    display() {
+        // Draw the stem
+        stroke(35, 177, 77); // Green for the stem
+        strokeWeight(2);
+        line(this.x, this.y, this.x, this.y - this.stemHeight);
 
-      x += xV * speed;
-      y += yV * speed;
+        // Draw the flower
+        fill(this.color);
+        for (let i = 0; i < this.petals; i++) {
+            push();
+            translate(this.x, this.y - this.stemHeight);
+            rotate(TWO_PI / this.petals * i);
+            ellipse(0, this.size / 4, this.size / 2, this.size); // Petal shape
+            pop();
+        }
 
-      if(x > maxW - blockS || x < 0){
-          xV *= -1;
-      }
-      if(y > maxH - blockS || y < 0){
-          yV *= -1;
-      }
-      speed += .001;
+        // Draw the center of the flower
+        fill(255, 204, 0); // Yellow center
+        noStroke();
+        ellipse(this.x, this.y - this.stemHeight, this.size / 4);
+    }
+}
 
-      if(speed > 5){
-          speed = 0;
-      }
-  }
-
-  
-
-  // Call incrementHue every 50 milliseconds (0.05 seconds)
-  setInterval(incrementHue, 50);
-});
+function randomRedOrPink() {
+    // Function to return a random red or pink color
+    let colors = [
+        color(255, 105, 180), // Hot pink
+        color(255, 182, 193), // Light pink
+        color(255, 0, 0),     // Red
+        color(255, 20, 147)   // Deep pink
+    ];
+    return random(colors);
+}

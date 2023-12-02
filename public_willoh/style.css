@@ -1,28 +1,35 @@
 @font-face {
-    font-family: "pixel1";
-    src: url("pixel1.ttf");
+  font-family: "pixel1";
+  src: url("fonts/FuturaPT.otf");
 }
 
 ::selection {
-  background-color: red;
-  color: white;
+background-color: lightpink;
+color: white;
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'pixel1', sans-serif;
-    text-shadow: -0.05rem 0.05rem gray;
-    background-color: lightskyblue;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'pixel1', sans-serif;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
-  
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 header {
   display: flex;
   justify-content: flex-end;
 }
-  
+
 .navigation nav ul {
   list-style: none;
   text-align: right;
@@ -35,7 +42,7 @@ header {
   text-align: center;
   padding: 0.5rem 1rem;
 }
-  
+
 .navigation nav ul li a {
   display: block;
   text-decoration: none;
@@ -47,6 +54,15 @@ header {
   transform-origin: center; /* Ensures scaling happens from the center */
 }
 
+.contentgrid {
+  display: flex;
+  flex-direction: row;
+}
+
+.iLoveYouPreston {
+  display:flex;
+}
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -56,19 +72,13 @@ header {
 .name {
   font-size: 5rem;
   margin-left: 4rem;
-  text-shadow: -0.25rem 0.3rem grey;
   margin-bottom: 0;
 }
-  
+
 .information {
   font-size: 1.5rem;
   margin-left: 4rem;
   margin-top: 1rem;
-}
-
-.contentgrid {
-  display: flex;
-  flex-direction: row;
 }
 
 .socials {
@@ -80,36 +90,4 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-}
-
-#home {
-  background-color: royalblue;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#about {
-  background-color: red;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#projects {
-  background-color: gold;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#skills {
-  background-color: lime;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
 }
