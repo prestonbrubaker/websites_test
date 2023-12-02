@@ -1,59 +1,49 @@
 @font-face {
-  font-family: "pixel1";
-  src: url("fonts/pixel1.ttf");
+  font-family: "pixel1"; /* This is the name you'll use to reference this font */
+  src: url("fonts/tektur.ttf"); /* This should be the correct relative path to your font file */
 }
 
 ::selection {
-background-color: red;
-color: white;
+  color: white;
 }
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'pixel1', sans-serif;
-  text-shadow: -0.05rem 0.05rem gray;
-  background-color: white;
   display: flex;
   flex-direction: column;
 }
 
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start; /* Align items to the start (left) */
+  background-color: white; /* Sets the background color of the header */
+  padding: 10px; /* Adds some space inside the nav bar */
 }
 
-.navigation nav ul {
+nav ul {
   list-style: none;
-  text-align: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.navigation nav ul li {
-  display: inline-block;
-  width: 8rem;
-  height: 3rem;
-  text-align: center;
-  padding: 0.5rem 1rem;
+nav ul li {
+  margin-right: 20px;
 }
 
-.navigation nav ul li a {
-  display: block;
+nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: blue;
+  font-weight: bold;
 }
 
-.navigation nav ul li a:hover {
-  transform: scale(1.15); /* Enlarges text on hover */
-  transform-origin: center; /* Ensures scaling happens from the center */
-}
 
 .contentgrid {
+  order: 2;
   display: flex;
   flex-direction: row;
-}
-
-.iLoveYouPreston {
-  display:flex;
 }
 
 .introduction {
@@ -65,7 +55,7 @@ header {
 .name {
   font-size: 5rem;
   margin-left: 4rem;
-  text-shadow: -0.25rem 0.3rem grey;
+  /*text-shadow: -0.25rem 0.3rem white; */
   margin-bottom: 0;
 }
 
@@ -80,8 +70,30 @@ header {
   flex-direction: column;
 }
 
+.socials img {
+    width: 4%;
+    height: auto; /* This ensures the aspect ratio of the images is maintained */
+    padding: 1rem;
+}
+
+
 .section {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+}
+
+#contentgrid {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: start; /* Align items to the start of the container */
+}
+
+#introduction {
+    /* Ensure the introduction section does not stretch to fill all available space */
+    flex-shrink: 0;
+}
+
+#canvas1 {
+    margin-left: 20px; /* Add some space between the text and the canvas */
 }

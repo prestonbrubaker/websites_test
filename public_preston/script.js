@@ -1,5 +1,19 @@
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
+    function getRandomColor() {
+        const hue = Math.floor(Math.random() * 360);
+        const saturation = 50
+        const lightness = 50
+        return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    }
+
+    function applyRandomBackgroundColor() {
+        const randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+    }
+
+    applyRandomBackgroundColor();
+    
     var hue = 0;
     var x = 78;
     var y = 235;
@@ -9,20 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     var speed = 1;
     
     // Accessing the canvas element
-    var canvas = document.getElementById('iLoveYouPreston');
+    var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth * 0.3;
-    canvas.height = window.innerHeight * 0.5;
+    canvas.width = window.innerWidth * 0.5;
+    canvas.height = window.innerHeight * 0.4;
   
     var maxW = canvas.width;
     var maxH = canvas.height;
   
-    ctx.fillStyle = "#777777";
+    ctx.fillStyle = "#FFFFFF";
     ctx.fillRect(0, 0, maxW, maxH);
   
     function incrementHue() {
         // Increment the hue
-        hue = (hue + speed) % 360; // This will cycle hue from 0 to 359
+        hue = (hue + speed / 2) % 360; // This will cycle hue from 0 to 359
   
         // Set the fill color using HSL
         var color_rect = "hsl(" + hue + ", 100%, 50%)";
@@ -30,7 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
         // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
-        ctx.fillStyle = "#777777";
+        ctx.fillStyle = "#FFFFFF";
+        var hue_2 = (hue + 180) % 360;
+        var color_rect_2 = "hsl(" + hue_2 + ", 100%, 50%)";
+        ctx.fillStyle = color_rect_2;
         ctx.fillRect(0, 0, maxW, maxH);
   
   
@@ -46,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(y > maxH - blockS || y < 0){
             yV *= -1;
         }
-        speed += .001;
+        speed += .000;
   
         if(speed > 5){
             speed = 0;
