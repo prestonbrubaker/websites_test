@@ -1,7 +1,7 @@
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
     function getRandomColor() {
-        const hue = Math.floor(Math.random() * 360);
+        const hue = Math.floor(Math.random() * 270);
         const saturation = 50
         const lightness = 50
         return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
