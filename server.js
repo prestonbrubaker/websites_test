@@ -12,6 +12,30 @@ const options = {
   ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
 };
 
+
+// Logging Middleware (moved up)
+app.use((req, res, next) => {
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    ip: req.ip,
+    hostname: req.hostname
+  };
+
+  console.log('Logging entry:', logEntry);
+
+  fs.appendFile('visit_logs.json', JSON.stringify(logEntry, null, 2) + ',\n', (err) => {
+    if (err) {
+      console.error('Error writing to log file:', err);
+    } else {
+      console.log('Log entry successfully written');
+    }
+  });
+
+  next();
+});
+
+
+
 // Function to determine the correct directory based on the hostname
 const chooseStaticDir = (req) => {
   if (req.hostname === 'prestonbrubaker.com' || req.hostname === 'www.prestonbrubaker.com') {
@@ -32,26 +56,6 @@ app.use((req, res, next) => {
   }
 });
 
-// Logging Middleware
-app.use((req, res, next) => {
-  const logEntry = {
-    timestamp: new Date().toISOString(),
-    ip: req.ip,
-    hostname: req.hostname
-  };
-
-  console.log('Logging entry:', logEntry);
-
-  fs.appendFile('visit_logs.json', JSON.stringify(logEntry, null, 2) + ',\n', (err) => {
-    if (err) {
-      console.error('Error writing to log file:', err);
-    } else {
-      console.log('Log entry successfully written');
-    }
-  });
-
-  next();
-});
 
 
 // Fallback for any other requests
