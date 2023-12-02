@@ -24,7 +24,8 @@ a {
 }
 
 #canvas1{
-    align-horizontal: center;
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: auto; /* Automatically calculates equal left and right margins */
 }
 
 a:hover {
