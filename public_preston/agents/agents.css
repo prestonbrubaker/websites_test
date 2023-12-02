@@ -99,7 +99,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Removes the underline from links */
-    color: white; /* Sets the text color */
+    color: blue; /* Sets the text color */
     font-weight: bold;
 }
 
