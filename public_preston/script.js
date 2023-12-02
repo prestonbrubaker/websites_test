@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Accessing the canvas element
     var canvas = document.getElementById('iLoveYouPreston');
     var ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth * 0.3;
+    canvas.width = window.innerWidth * 0.8;
     canvas.height = window.innerHeight * 0.5;
   
     var maxW = canvas.width;
