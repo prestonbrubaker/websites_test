@@ -95,7 +95,24 @@ nav ul li a {
 }
 
 #canvas1 {
-    margin-left: 20px; /* STOP USING PIXELS OR YOU WILL NEVER NEVER NEVER NEVER 
+    margin-left: 20rem; /* STOP USING PIXELS OR YOU WILL NEVER NEVER NEVER NEVER 
     NEVER NEVER NEVER HAVE A DYNAMIC DESIGN UNLESS YOU MAKE YOUR CSS BOOTLEG AND CLUNKY AS HELL. 
     ESPECIALLY WITH SPACING. CASE IT POINT YOU DO NOT LISTEN WHEN I TALK AND YOU ARENT EVEN UP YET.*/
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Or any color that fits your site's design */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.8em;
+}
+
