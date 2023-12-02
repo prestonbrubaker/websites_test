@@ -5,11 +5,15 @@ html, body {
     background-image: url('../img.jpg'); 
     background-size: cover;
     color: black; /* All text in black */
-    font-size: 1em;
 }
 
 .content {
     text-align: center; /* Centering content horizontally */
+}
+
+.navigation {
+    text-align: center;
+    text-decoration: underline;
 }
 
 header, main, footer {
