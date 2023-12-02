@@ -1,6 +1,5 @@
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('DOMContentLoaded', () => {
     var hue = 0;
     var x = 78;
     var y = 235;
@@ -48,5 +47,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Call incrementHue every 100 milliseconds (0.1 seconds)
     setInterval(incrementHue, 10);
-});
 });
