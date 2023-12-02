@@ -2,6 +2,12 @@
     font-family: "pixel1";
     src: url("pixel1.ttf");
 }
+
+::selection {
+  background-color: red;
+  color: white;
+}
+
 body, html {
     margin: 0;
     padding: 0;
