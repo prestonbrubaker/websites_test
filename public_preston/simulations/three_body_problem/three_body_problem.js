@@ -14,8 +14,16 @@ const bgHue = "#77FFF7";
 var x1 = 0;
 var y1 = 0;
 
+var xv1 = 0;
+var yv1 = 0;
+
 var x2 = .3;
 var y2 = 0;
+
+var xv2 = 0;
+var yv2 = 0;
+
+var gC = 0.0001;
 
 
 
@@ -36,8 +44,25 @@ function tick() {
 
     ctx.fillStyle = "#FFFF00";
     ctx.fillRect(x2 * maxW + maxW / 2 - blockSize/2, y2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
-    
 
+    // Calculate Gravity
+    var dx12 = x2 - x1;
+    var dy12 = y2 - y1;
+
+    var dist = ( dx12 ** 2 = dy12 ** 2 ) ** 0.5;
+
+    xv1 -= gC * dx12 / ( dist ** 3 );
+    yv1 -= gC * dy12 / ( dist ** 3 );
+
+    xv2 += gC * dx12 / ( dist ** 3 );
+    yv2 += gC * dy12 / ( dist ** 3 );
+    
+    // Add velocities
+    x1 += xv1;
+    y1 += yv1;
+
+    x2 += xv2;
+    y2 += yv1;
 
     itC++;
 }
