@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
-    const blockSize = 100;
-    const grid = 5;
+    const blockSize = 50;
+    const grid = 10;
     let hues = [];
 
     function drawCanvas(hues) {
