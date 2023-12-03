@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const grid = 100;
     let hues = [];
 
-    canvas.width = window.innerWidth * 0.2;
+    canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.2;
 
     var maxW = canvas.width;
