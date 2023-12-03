@@ -1,18 +1,5 @@
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
-    function getRandomColor() {
-        const hue = Math.floor(Math.random() * 200);
-        const saturation = 50
-        const lightness = 50
-        return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-    }
-
-    function applyRandomBackgroundColor() {
-        const randomColor = getRandomColor();
-        document.body.style.backgroundColor = randomColor;
-    }
-
-    applyRandomBackgroundColor();
     
     var hue = 0;
     
@@ -25,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth * 0.2;
-    canvas.height = window.innerHeight * 0.2;
+    canvas.height = window.innerHeight * 0.4;
   
     var maxW = canvas.width;
     var maxH = canvas.height;
@@ -48,12 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.clearRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#FFFFFF";
         var hue_2 = (hue + 180) % 360;
-        var color_rect_2 = "hsl(" + hue_2 + ", 100%, 50%)";
-        ctx.fillStyle = color_rect_2;
+        //var color_rect_2 = "hsl(" + hue_2 + ", 100%, 50%)";
+        //ctx.fillStyle = color_rect_2;
         ctx.fillRect(0, 0, maxW, maxH);
   
   
         ctx.fillStyle = color_rect;
+        ctx.fillStyle = "#000000";
         ctx.fillRect(x, y, blockS, blockS);
   
         x += xV * speed;
