@@ -5,9 +5,10 @@ const path = require('path');
 
 const app = express();
 
+// Middleware for parsing JSON bodies
+app.use(express.json());
 
-
-// Logging Middleware (moved up)
+// Logging Middleware
 app.use((req, res, next) => {
   const logEntry = {
     timestamp: new Date().toISOString(),
@@ -17,7 +18,6 @@ app.use((req, res, next) => {
 
   console.log('Logging entry:', logEntry);
 
-  // Append the log entry as a JSON string followed by a newline
   fs.appendFile('visit_logs.jsonl', JSON.stringify(logEntry) + '\n', (err) => {
     if (err) {
       console.error('Error writing to log file:', err);
@@ -29,16 +29,12 @@ app.use((req, res, next) => {
   next();
 });
 
-
-
-
 // SSL/TLS certificate paths
 const options = {
   key: fs.readFileSync(path.join(__dirname, 'ssl_certs/privkey.pem')),
   cert: fs.readFileSync(path.join(__dirname, 'ssl_certs/fullchain.pem')),
   ca: fs.readFileSync(path.join(__dirname, 'ssl_certs/chain.pem'))
 };
-
 
 // Function to determine the correct directory based on the hostname
 const chooseStaticDir = (req) => {
@@ -62,15 +58,35 @@ app.use((req, res, next) => {
   }
 });
 
+// Endpoint to save canvas data
+app.post('/save-canvas', (req, res) => {
+    const canvasData = req.body;
+    fs.writeFile(path.join(__dirname, 'canvasData.json'), JSON.stringify(canvasData), (err) => {
+        if (err) {
+            console.error('Error writing canvas data:', err);
+            res.status(500).send('Error saving canvas data');
+        } else {
+            res.send('Canvas data saved successfully');
+        }
+    });
+});
 
+// Endpoint to retrieve canvas data
+app.get('/get-canvas', (req, res) => {
+    fs.readFile(path.join(__dirname, 'canvasData.json'), (err, data) => {
+        if (err) {
+            console.error('Error reading canvas data:', err);
+            res.status(500).send('Error retrieving canvas data');
+        } else {
+            res.send(data);
+        }
+    });
+});
 
 // Fallback for any other requests
 app.use((req, res) => {
   res.status(404).send('Page not found');
 });
-
-// Define the port to run the server on
-const PORT = 443;
 
 // Create an HTTPS server and attach the Express app
 https.createServer(options, app).listen(PORT, () => {
