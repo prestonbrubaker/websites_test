@@ -31,14 +31,15 @@ var yv3 = 0;
 
 var gC = 0.0000002;
 
-
+ctx.fillStyle = bgHue;
+ctx.fillRect(0, 0, maxW, maxH);
 
 
 function tick() {
     // Clear and fill background
     ctx.clearRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = bgHue;
-    ctx.fillRect(0, 0, maxW, maxH);
+    ctx.fillRect(0, 0, maxW, maxH - 100);
     
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
