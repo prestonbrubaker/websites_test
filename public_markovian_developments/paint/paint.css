@@ -48,11 +48,5 @@ body {
 
 #canvas1 {
     border: 4px solid #8B4513; /* A solid border with a color of your choice */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
-    border-radius: 10px; /* Rounds the corners of the frame */
-    padding: 15px; /* Optional: Adds space between the canvas and the frame */
-    background-color: #f5f5dc; /* Optional: Background color for the frame, you can choose any color */
-    display: block;
-    margin: 20px auto; /* Centers the canvas on the page with some margin */
 }
 
