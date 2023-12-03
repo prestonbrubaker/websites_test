@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "pixel";
+    src: url("../fonts/pixel.ttf"), format("trueType");
+}
+
+body {
+    background-color: lightskyblue;
+    font-family: "pixel", sans-serif;
+}
+
 #chatspace {
     flex: 1;
     display: flex;
@@ -20,7 +30,7 @@
     white-space: normal;
     padding: 5px;
     margin: 10px auto;
-    background-color: hotpink; /* Blue message bubbles */
+    background-color: red; /* Blue message bubbles */
     color: #fff; /* White text */
     border-radius: 10px;
 
@@ -43,7 +53,7 @@
 
 #form button {
     padding: 10px;
-    background-color: hotpink; /* Blue send button */
+    background-color: red; /* Blue send button */
     color: #fff; /* White text */
     border: none;
     border-radius: 3px;
