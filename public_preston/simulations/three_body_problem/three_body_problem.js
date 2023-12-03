@@ -11,13 +11,13 @@ var blockSize = 10;
 
 const bgHue = "#333333";
 
-var x1 = 0;
+var x1 = -.2;
 var y1 = 0;
 
 var xv1 = 0;
 var yv1 = 0;
 
-var x2 = .3;
+var x2 = .2;
 var y2 = 0;
 
 var xv2 = 0;
