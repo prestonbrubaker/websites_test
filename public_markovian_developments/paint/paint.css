@@ -45,7 +45,3 @@ body {
   border-radius: 0.4rem;
   color: white;
 }
-
-#canvas1:hover {
-  cursor: url("../images/paintbrush.png"), auto;
-}
