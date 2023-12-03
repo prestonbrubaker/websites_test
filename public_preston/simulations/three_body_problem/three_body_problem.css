@@ -78,17 +78,19 @@ footer {
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-
+.canvasBox{
+  margin: 20px auto;
+}
 
 #canvas1 {
     display: block; /* Ensures the canvas is a block-level element */
-    margin: 20px auto; /* Adds margin to the top and bottom, centers horizontally */
+    margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
     border: 1px solid #333; /* Optional: adds a border for visibility */
     /* Set the width and height if not set inline in the HTML */
 }
 #canvas2 {
     display: block; /* Ensures the canvas is a block-level element */
-    margin: 20px auto; /* Adds margin to the top and bottom, centers horizontally */
+    margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
     border: 1px solid #333; /* Optional: adds a border for visibility */
     /* Set the width and height if not set inline in the HTML */
 }
