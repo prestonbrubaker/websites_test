@@ -3,6 +3,10 @@
   src: url("../fonts/tektur.ttf");
 }
 
+::selection {
+  color: red;
+}
+
 html, body {
     margin: 0;
     padding: 0;
