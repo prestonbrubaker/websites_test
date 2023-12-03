@@ -35,11 +35,11 @@ function tick() {
 
     ctx.fillRect(x1 * maxW + maxW / 2, y1 * maxH + maxH / 2, blockS, blockS);
 
-    ctx.fillStyle = "#00FF00";
+    ctx.fillStyle = "#007700";
 
     ctx.fillRect(x2 * maxW + maxW / 2, y2 * maxH + maxH / 2, blockS, blockS);
 
-    ctx.fillRect(55, 55, blockS, blockS);
+    ctx.fillRect(0, 0, blockS, blockS);
     
 
 
