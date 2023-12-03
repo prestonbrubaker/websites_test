@@ -22,7 +22,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
 
-    ctx.fillText("Program by Preston Brubaker", 300, 10);
+    ctx.fillText("Program by Preston Brubaker", maxW / 2, maxH / 2);
 
 
     itC++;
