@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "pixel1";
+  src: url("../../fonts/tektur.ttf");
+}
+
+::selection {
+  color: red;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'pixel1', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../../pictures/img.jpg');
+    background-size: cover;
+    color: black; /* All text in black */
+}
+
+.content {
+    text-align: center; /* Centering content horizontally */
+}
+
+main, footer {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+h1, h2, h3 {
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    margin-top: 30px;
+    color: black;
+}
+
+.word-art-container {
+    text-align: center; /* This will center the .word-art div */
+    margin-top: 20px; /* Adjust as needed for spacing */
+}
+
+.word-art {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    font-weight: bold; /* Make the text bolder */
+    color: white; /* High contrast color */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); /* Stronger text shadow for depth */
+    padding: 10px 20px;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #cccccc, #333333); /* Grey gradient background */
+    border: 3px solid black; /* Thicker black border */
+    border-radius: 5px;
+    
+    /* Additional stylistic choices for a techy feel */
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    
+    /* CSS Transform for a slight perspective */
+    transform: perspective(500px) rotateX(10deg);
+    
+    /* Transition for a hover effect */
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+
+
+#canvas1 {
+    display: block; /* Ensures the canvas is a block-level element */
+    margin: 20px auto; /* Adds margin to the top and bottom, centers horizontally */
+    border: 1px solid #333; /* Optional: adds a border for visibility */
+    /* Set the width and height if not set inline in the HTML */
+}
+
+nav {
+    background-color: white; /* Sets the background color */
+    padding: 10px; /* Adds some space inside the nav bar */
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points from the list */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Aligns list items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between each list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: blue; /* Sets the text color */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
