@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const grid = 100;
     let hues = [];
 
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight * 0.5;
+
     function drawCanvas(hues) {
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < grid; j++) {
