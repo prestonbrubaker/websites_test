@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preston's Website</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header class="navigation">
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="aboutMe/about.html" id="about">About Me</a></li>
+                <li><a href="projects/projects.html" id="projects">Projects</a></li>
+                <li><a href="skillsdoesn'texistyet" id="skills">Skills</a></li>
+                <li><a href="paint/paint.html" id="paint">Paint</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="contentgrid">
+        <h1 class="name">Markovian <br>Developments</h1>
+        <canvas id="iLoveYouPreston"></canvas>
+    </div>
+
+    <div id="chatspace">
+        <ul id="messages"></ul>
+        <form id="form" action="">
+            <input id="input" autocomplete="off" placeholder="Type a message..." />                
+            <button>Send</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+<footer>
+    <p>
+        2023 Markovian Developments. This website collects user information for a better user experience.<br> 
+        For more information, <a href="privacy_policy/privacy_policy.html">read our privacy policy.</a>
+    </p>
+</footer>
+
+</html>
