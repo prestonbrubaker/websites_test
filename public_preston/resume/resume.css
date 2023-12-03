@@ -72,5 +72,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
 }
