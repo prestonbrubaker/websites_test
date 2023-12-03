@@ -114,6 +114,14 @@ header {
   color: white;
 }
 
+#paint {
+  background-color: orange;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
 footer {
     font-size: 0.75rem;
     position: absolute;
