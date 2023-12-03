@@ -15,7 +15,7 @@ var x1 = -.2;
 var y1 = 0;
 
 var xv1 = 0;
-var yv1 = -.000005;
+var yv1 = -.002;
 
 var x2 = .2;
 var y2 = 0;
