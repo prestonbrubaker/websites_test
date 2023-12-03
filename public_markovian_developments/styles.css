@@ -25,7 +25,7 @@ header {
   
 .navigation nav ul {
   list-style: none;
-  text-align: center;
+  text-align: right;
 }
 
 .navigation nav ul li {
