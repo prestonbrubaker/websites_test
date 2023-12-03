@@ -29,7 +29,7 @@ var y3 = .2;
 var xv3 = 0.002;
 var yv3 = 0;
 
-var gC = 0.0000005;
+var gC = 0.000002;
 
 
 
