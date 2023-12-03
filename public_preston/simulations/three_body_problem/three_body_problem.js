@@ -49,7 +49,7 @@ function tick() {
     var dx12 = x2 - x1;
     var dy12 = y2 - y1;
 
-    var dist = ( dx12 ** 2 = dy12 ** 2 ) ** 0.5;
+    var dist = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
 
     xv1 -= gC * dx12 / ( dist ** 3 );
     yv1 -= gC * dy12 / ( dist ** 3 );
