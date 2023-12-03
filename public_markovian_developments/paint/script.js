@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     const blockSize = 5;
@@ -6,7 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let hues = [];
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight * 0.5;
+    canvas.height = window.innerHeight;
+
+document.addEventListener('DOMContentLoaded', function() {
+
 
     function drawCanvas(hues) {
         for (let i = 0; i < grid; i++) {
