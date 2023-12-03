@@ -28,3 +28,16 @@ body {
   text-decoration: none;
   color: #333;
 }
+
+.navigation nav ul li a:hover {
+  transform: scale(1.15); /* Enlarges text on hover */
+  transform-origin: center; /* Ensures scaling happens from the center */
+}
+
+#home {
+  background-color: royalblue;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
