@@ -9,3 +9,22 @@ body {
     font-family: "pixel";
     font-size: 1rem;
 }
+
+.navigation nav ul {
+  list-style: none;
+  text-align: right;
+}
+
+.navigation nav ul li {
+  display: inline-block;
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+  
+.navigation nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
