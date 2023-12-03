@@ -38,6 +38,7 @@ function tick() {
     ctx.fillStyle = "#00FF00";
 
     ctx.fillRect(x2 * maxW + maxW / 2, y2 * maxH + maxH / 2, blockS, blockS);
+    
 
 
     itC++;
