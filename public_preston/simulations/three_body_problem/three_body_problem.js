@@ -37,7 +37,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
     
-    ctx.fillText("Program by Preston Brubaker", maxW / 2, maxH / 2);
+    ctx.fillText("Program by Preston Brubaker", maxW / 2 - 20, maxH / 5);
 
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(x1 * maxW + maxW / 2 - blockSize/2, y1 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
