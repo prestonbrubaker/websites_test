@@ -43,7 +43,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
     
-    ctx.fillText("Program by Preston Brubaker", maxW / 2 - 20, maxH / 5);
+    ctx.fillText("Across each run, the red planet is varied in placement by 0.000000000001%.", maxW / 2 - 20, maxH / 5);
 
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(x1 * maxW + maxW / 2 - blockSize/2, y1 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
