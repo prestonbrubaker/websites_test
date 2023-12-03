@@ -1,1 +1,1 @@
-document.body.style.cursor = 'url(images/pointer.png), auto';
+document.body.style.cursor = 'url(images/select.png), auto';
