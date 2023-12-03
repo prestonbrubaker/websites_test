@@ -21,9 +21,9 @@ var x2 = .3;
 var y2 = 0;
 
 var xv2 = 0;
-var yv2 = 0.01;
+var yv2 = 0.03;
 
-var gC = 0.0000001;
+var gC = 0.0000005;
 
 
 
