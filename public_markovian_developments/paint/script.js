@@ -58,5 +58,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loadHues();
-    setInterval(loadHues, 500);
+    setInterval(loadHues, 2000);
 });
