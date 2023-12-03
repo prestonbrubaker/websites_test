@@ -88,6 +88,7 @@ app.use((req, res) => {
   res.status(404).send('Page not found');
 });
 
+const PORT = 443;
 // Create an HTTPS server and attach the Express app
 https.createServer(options, app).listen(PORT, () => {
   console.log(`HTTPS server running on port ${PORT}`);
