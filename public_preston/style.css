@@ -107,6 +107,7 @@ nav ul li a:hover {
 
 #canvas1 {
     margin-left: 2rem;
+    border: 0.15rem solid #000;
 }
 
 .footer {
