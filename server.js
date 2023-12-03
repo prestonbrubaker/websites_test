@@ -50,13 +50,14 @@ const chooseStaticDir = (req) => {
 
 // Serve files from the correct directory
 app.use((req, res, next) => {
-  const staticDir = chooseStaticDir(req);
-  if (staticDir) {
-    express.static(path.join(__dirname, staticDir))(req, res, next);
-  } else {
-    next(); // Continue to the next middleware if neither domain matches
-  }
+    const staticDir = chooseStaticDir(req);
+    if (staticDir) {
+        return express.static(path.join(__dirname, staticDir))(req, res, next);
+    } else {
+        next(); // Continue to the next middleware if neither domain matches
+    }
 });
+
 
 // Endpoint to save canvas data
 app.post('/save-canvas', (req, res) => {
