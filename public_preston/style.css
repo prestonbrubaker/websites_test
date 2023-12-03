@@ -41,6 +41,14 @@ nav ul li a {
   font-weight: bold;
 }
 
+nav ul li a:hover {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 
 .contentgrid {
   order: 2;
