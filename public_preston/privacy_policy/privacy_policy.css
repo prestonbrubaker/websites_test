@@ -20,7 +20,7 @@ html, body {
     text-align: center; /* Centering content horizontally */
 }
 
-header, main, footer {
+main, footer {
     padding: 20px;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
 }
