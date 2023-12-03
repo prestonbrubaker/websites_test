@@ -11,7 +11,7 @@ var blockSize = 10;
 
 const bgHue = "#333333";
 
-var x1 = -.2 + Math.random() * 0.0000000000000001;
+var x1 = -.2 + Math.random() * 0.00000000000001;
 var y1 = 0;
 
 var xv1 = 0;
