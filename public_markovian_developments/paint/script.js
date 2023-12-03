@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let hues = [];
 
     canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.2;
+    canvas.height = window.innerHeight * 0.7;
 
     var maxW = canvas.width;
     var maxH = canvas.height;
