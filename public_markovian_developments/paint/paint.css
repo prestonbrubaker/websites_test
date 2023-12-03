@@ -46,3 +46,6 @@ body {
   color: white;
 }
 
+#canvas1:hover {
+  cursor: url("../images/paintbrush.png"), auto;
+}
