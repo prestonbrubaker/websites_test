@@ -7,8 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const grid = 100;
     let hues = [];
 
-    canvas.width = window.innerWidth * 0.2;
-    canvas.height = window.innerHeight * 0.2;
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.8;
+
+    var maxW = canvas.width;
+    var maxH = canvas.height;
+
+    if(maxW > maxH){
+        blockSize = maxH /100;
+    } else{
+        blockSize = maxW / 100;
+    }
 
     function drawCanvas(hues) {
         for (let i = 0; i < grid; i++) {
