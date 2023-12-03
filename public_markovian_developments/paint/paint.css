@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "pixel";
+    src: url("../fonts/pixel.ttf"), format('trueType');
+}
+
+body {
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: "pixel";
+    font-size: 4rem;
+}
