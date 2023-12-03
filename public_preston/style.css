@@ -11,7 +11,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'pixel1', sans-serif;
-  background-image: url('../pictures/img.jpg'); 
+  background-image: url('pictures/img.jpg'); 
   background-size: cover;
   display: flex;
   flex-direction: column;
