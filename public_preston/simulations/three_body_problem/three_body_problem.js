@@ -5,7 +5,7 @@ var ctx = c.getContext("2d");
 var itC = 0;
 const tickS = 10;
 var maxW = c.width;   
-var maxH = c.height;
+var maxH = c.height - 100;
 
 var blockSize = 10;
 
