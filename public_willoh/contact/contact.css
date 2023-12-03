@@ -77,8 +77,9 @@
     margin-top: 0.5rem;
   }
   
-  .socials {
+  .socials img{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
   }
