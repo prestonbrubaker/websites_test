@@ -23,6 +23,12 @@ var y2 = 0;
 var xv2 = 0;
 var yv2 = .002;
 
+var x3 = 0;
+var y3 = .2;
+
+var xv3 = 0.002;
+var yv3 = 0;
+
 var gC = 0.000005;
 
 
@@ -45,17 +51,45 @@ function tick() {
     ctx.fillStyle = "#FFFF00";
     ctx.fillRect(x2 * maxW + maxW / 2 - blockSize/2, y2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
+    ctx.fillStyle = "#0000FF";
+    ctx.fillRect(x3 * maxW + maxW / 2 - blockSize/2, y3 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
+
     // Calculate Gravity
     var dx12 = x2 - x1;
     var dy12 = y2 - y1;
 
-    var dist = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
+    var dx13 = x3 - x1;
+    var dy13 = y3 - y1;
 
-    xv1 += gC * dx12 / ( dist ** 3 );
-    yv1 += gC * dy12 / ( dist ** 3 );
+    var dx23 = x3 - x2;
+    var dy23 = y3 - y2;
+    
 
-    xv2 -= gC * dx12 / ( dist ** 3 );
-    yv2 -= gC * dy12 / ( dist ** 3 );
+    var dist12 = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
+    var dist13 = ( dx13 ** 2 + dy13 ** 2 ) ** 0.5;
+    var dist23 = ( dx23 ** 2 + dy23 ** 2 ) ** 0.5;
+
+    xv1 += gC * dx12 / ( dist12 ** 3 );
+    yv1 += gC * dy12 / ( dist12 ** 3 );
+
+    xv2 -= gC * dx12 / ( dist12 ** 3 );
+    yv2 -= gC * dy12 / ( dist12 ** 3 );
+
+
+    
+    xv1 += gC * dx13 / ( dist13 ** 3 );
+    yv1 += gC * dy13 / ( dist13 ** 3 );
+
+    xv3 -= gC * dx13 / ( dist13 ** 3 );
+    yv3 -= gC * dy13 / ( dist13 ** 3 );
+
+
+    
+    xv2 += gC * dx23 / ( dist23 ** 3 );
+    yv2 += gC * dy23 / ( dist23 ** 3 );
+
+    xv3 -= gC * dx23 / ( dist23 ** 3 );
+    yv3 -= gC * dy23 / ( dist23 ** 3 );
     
     // Add velocities
     x1 += xv1;
@@ -63,6 +97,46 @@ function tick() {
 
     x2 += xv2;
     y2 += yv2;
+
+    x3 += xv3;
+    y3 += yv3;
+
+    if(x1 < -.5){
+        x1 = -.5;
+    }
+    if(x1 > .5){
+        x1 = .5;
+    }
+    if(y1 < -.5){
+        y1 = -.5;
+    }
+    if(y1 > .5){
+        y1 = .5;
+    }
+    if(x2 < -.5){
+        x2 = -.5;
+    }
+    if(x2 > .5){
+        x2 = .5;
+    }
+    if(y2 < -.5){
+        y2 = -.5;
+    }
+    if(y2 > .5){
+        y2 = .5;
+    }
+    if(x3 < -.5){
+        x3 = -.5;
+    }
+    if(x3 > .5){
+        x3 = .5;
+    }
+    if(y3 < -.5){
+        y3 = -.5;
+    }
+    if(y3 > .5){
+        y3 = .5;
+    }
 
     itC++;
 }
