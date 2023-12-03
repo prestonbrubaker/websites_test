@@ -21,7 +21,7 @@ var x2 = .2;
 var y2 = 0;
 
 var xv2 = 0;
-var yv2 = 20;
+var yv2 = .1;
 
 var gC = 0.000005;
 
@@ -62,7 +62,7 @@ function tick() {
     y1 += yv1;
 
     x2 += xv2;
-    y2 += yv1;
+    y2 += yv2;
 
     itC++;
 }
