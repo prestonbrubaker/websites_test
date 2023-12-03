@@ -9,7 +9,7 @@ var maxH = c.height;
 
 var blockSize = 50;
 
-const bgHue = "#777777";
+const bgHue = "#77FFF7";
 
 var x1 = 0;
 var y1 = 0;
