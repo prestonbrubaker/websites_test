@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preston's Simulation</title>
+    <script src="agents.js" defer></script>
+    <link rel="stylesheet" href="three_body_problem.css">
+  </head>
+    
+  <body>
+    <nav>
+    <ul>
+        <li><a href="../../index.html">Back to Home</a></li>
+      <li><a href="../agents.html">Simulation</a></li>
+        <li><a href="../../resume/resume.html">Resume</a></li>
+        <li><a href="../../contact/contact.html">Contact</a></li>
+        <!-- Add more navigation links as needed -->
+    </ul>
+    </nav>
+
+    <div class="content">
+          <div class="word-art-container">
+            <div class="word-art">Preston's Simulation of Competitive Agents</div>
+          </div>
+        <canvas id="canvas1" width="1000" height="500"></canvas>
+    </div>
+  </body>
+
+</html>
