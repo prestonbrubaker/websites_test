@@ -11,7 +11,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'pixel1', sans-serif;
-    background-image: url('../pictures/img.jpg'); 
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');
     background-size: cover;
     color: black; /* All text in black */
 }
