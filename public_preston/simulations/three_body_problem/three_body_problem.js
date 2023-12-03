@@ -5,7 +5,7 @@ var ctx = c.getContext("2d");
 var itC = 0;
 const tickS = 10;
 var maxW = c.width;   
-var maxH = c.height - 100;
+var maxH = c.height;
 
 var blockSize = 10;
 
@@ -36,7 +36,7 @@ var gC = 0.0000002;
 
 function tick() {
     // Clear and fill background
-    ctx.clearRect(0, 0, maxW, maxH);
+    ctx.clearRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
     
