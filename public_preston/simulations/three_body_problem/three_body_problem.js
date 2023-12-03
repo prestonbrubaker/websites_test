@@ -21,9 +21,9 @@ var x2 = .3;
 var y2 = 0;
 
 var xv2 = 0;
-var yv2 = 0;
+var yv2 = 0.01;
 
-var gC = 0.0001;
+var gC = 0.00001;
 
 
 
@@ -51,11 +51,11 @@ function tick() {
 
     var dist = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
 
-    xv1 -= gC * dx12 / ( dist ** 3 );
-    yv1 -= gC * dy12 / ( dist ** 3 );
+    xv1 += gC * dx12 / ( dist ** 3 );
+    yv1 += gC * dy12 / ( dist ** 3 );
 
-    xv2 += gC * dx12 / ( dist ** 3 );
-    yv2 += gC * dy12 / ( dist ** 3 );
+    xv2 -= gC * dx12 / ( dist ** 3 );
+    yv2 -= gC * dy12 / ( dist ** 3 );
     
     // Add velocities
     x1 += xv1;
