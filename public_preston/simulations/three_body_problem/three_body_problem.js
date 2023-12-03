@@ -3,7 +3,7 @@ var ctx = c.getContext("2d");
 
 
 var itC = 0;
-const tickS = 100;
+const tickS = 10;
 var maxW = c.width;   
 var maxH = c.height;
 
@@ -21,9 +21,9 @@ var x2 = .2;
 var y2 = 0;
 
 var xv2 = 0;
-var yv2 = 0.2;
+var yv2 = 0.5;
 
-var gC = 0.0000005;
+var gC = 0.000005;
 
 
 
