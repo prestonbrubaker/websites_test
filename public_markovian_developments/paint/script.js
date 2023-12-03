@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     } else{
         blockSize = Math.floor(maxW / 100);
     }
+    if(blockSize < 1){
+        blockSize = 1;
+    }
 
     function drawCanvas(hues) {
         for (let i = 0; i < grid; i++) {
