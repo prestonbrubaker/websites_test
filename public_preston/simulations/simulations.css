@@ -8,7 +8,7 @@
 }
 
 header {
-  background: #333;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -38,7 +38,7 @@ html, body {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #333;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../pictures/img.jpg');
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
