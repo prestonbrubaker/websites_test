@@ -32,14 +32,10 @@ function tick() {
     ctx.fillText("Program by Preston Brubaker", maxW / 2, maxH / 2);
 
     ctx.fillStyle = "#FF0000";
-
-    ctx.fillRect(x1 * maxW + maxW / 2, y1 * maxH + maxH / 2, blockS, blockS);
+    ctx.fillRect(x1 * maxW + maxW / 2 - blockSize/2, y1 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
     ctx.fillStyle = "#FFFF00";
-
-    ctx.fillRect(x2 * maxW + maxW / 2, y2 * maxH + maxH / 2, blockS, blockS);
-
-    ctx.fillRect(0, 0, blockS, blockS);
+    ctx.fillRect(x2 * maxW + maxW / 2 - blockSize/2, y2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
     
 
 
