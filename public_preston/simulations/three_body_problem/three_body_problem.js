@@ -10,17 +10,14 @@ var pixS = Math.floor(10);
 
 const bgHue = "#777777";
 
-var pA = new Array(pCY);
-
-var cloneA = new Array(pCY);
 
 
 
 function tick() {
     // Clear and fill background
-    ctx.clearRect(minW, minH, maxW, maxH);
+    ctx.clearRect(0, 0, maxW, maxH);
     ctx.fillStyle = bgHue;
-    ctx.fillRect(minW, minH, maxW, maxH);
+    ctx.fillRect(0, 0, maxW, maxH);
 
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
