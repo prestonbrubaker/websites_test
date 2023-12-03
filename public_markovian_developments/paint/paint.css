@@ -10,6 +10,10 @@ body {
     font-size: 1rem;
 }
 
+header {
+    font-size: 3rem
+}
+
 .navigation nav ul {
   list-style: none;
   text-align: right;
