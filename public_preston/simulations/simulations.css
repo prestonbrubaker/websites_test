@@ -21,7 +21,7 @@ header h1 {
 section {
   padding: 1rem;
   margin: 1rem 0;
-  background: #f4f4f4;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');
 }
 
 html, body {
