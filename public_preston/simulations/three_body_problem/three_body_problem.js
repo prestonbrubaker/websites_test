@@ -9,7 +9,7 @@ var maxH = c.height;
 
 var blockSize = 10;
 
-const bgHue = "#333333";
+const bgHue = "#777777";
 
 var x1 = -.2 + Math.random() * 0.00000000000001;
 var y1 = 0;
