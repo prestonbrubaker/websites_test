@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "pixel";
+    src: url("fonts/pixel.ttf");
+}
+
+::selection {
+  background-color: red;
+  color: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'pixel1', sans-serif;
+    text-shadow: -0.05rem 0.05rem gray;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+}
+  
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+  
+.navigation nav ul {
+  list-style: none;
+  text-align: right;
+}
+
+.navigation nav ul li {
+  display: inline-block;
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+  
+.navigation nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.navigation nav ul li a:hover {
+  transform: scale(1.15); /* Enlarges text on hover */
+  transform-origin: center; /* Ensures scaling happens from the center */
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.name {
+  font-size: 5rem;
+  margin-left: 4rem;
+  text-shadow: -0.25rem 0.3rem grey;
+  margin-bottom: 0;
+}
+  
+.information {
+  font-size: 1.5rem;
+  margin-left: 4rem;
+  margin-top: 1rem;
+}
+
+.contentgrid {
+  display: flex;
+  flex-direction: row;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+#home {
+  background-color: royalblue;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+#about {
+  background-color: red;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+#projects {
+  background-color: gold;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+#skills {
+  background-color: lime;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+footer {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
