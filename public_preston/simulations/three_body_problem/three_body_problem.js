@@ -7,9 +7,9 @@ const tickS = 100;
 var maxW = c.width;   
 var maxH = c.height;
 
-var blockSize = 50;
+var blockSize = 10;
 
-const bgHue = "#77FFF7";
+const bgHue = "#333333";
 
 var x1 = 0;
 var y1 = 0;
@@ -23,7 +23,7 @@ var y2 = 0;
 var xv2 = 0;
 var yv2 = 0.01;
 
-var gC = 0.00001;
+var gC = 0.0000001;
 
 
 
