@@ -62,6 +62,9 @@
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
+    var dist_tot_1 = 0;
+    var dist_tot_2 = 0;
+
 function initialize() {
 
     //left canvas
@@ -159,6 +162,8 @@ function tick() {
     var dist12 = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
     var dist13 = ( dx13 ** 2 + dy13 ** 2 ) ** 0.5;
     var dist23 = ( dx23 ** 2 + dy23 ** 2 ) ** 0.5;
+
+    total_dist_1 = dist12 + dist13 + dist23;
 
     xv1 += gC * dx12 / ( dist12 ** 3 );
     yv1 += gC * dy12 / ( dist12 ** 3 );
@@ -261,6 +266,10 @@ function tick2() {
     
     ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
 
+    var variance = ( total_dist_2 - total_dist_1 ) ** 2
+    
+    ctx2.fillText("Variance:  " + variance, 20, 20);
+
     ctx2.fillStyle = "#FF0000";
     ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
@@ -284,6 +293,8 @@ function tick2() {
     var dist12_2 = ( dx12_2 ** 2 + dy12_2 ** 2 ) ** 0.5;
     var dist13_2 = ( dx13_2 ** 2 + dy13_2 ** 2 ) ** 0.5;
     var dist23_2 = ( dx23_2 ** 2 + dy23_2 ** 2 ) ** 0.5;
+
+    total_dist_2 = dist12_2 + dist13_2 + dist23_2;
 
     xv1_2 += gC * dx12_2 / ( dist12_2 ** 3 );
     yv1_2 += gC * dy12_2 / ( dist12_2 ** 3 );
