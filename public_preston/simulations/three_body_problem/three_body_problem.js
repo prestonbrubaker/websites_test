@@ -244,8 +244,8 @@ function tick() {
     }
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
-    
-    ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
+
+    ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
 }
@@ -259,7 +259,7 @@ function tick2() {
     // Write troubleshooting info
     ctx2.fillStyle = "#000000";
     
-    ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
+    ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
 
     ctx2.fillStyle = "#FF0000";
     ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
