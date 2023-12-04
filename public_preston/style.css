@@ -5,6 +5,7 @@
 
 ::selection {
   color: red;
+  background-color: rgb(255, 0, 0, 0.2);
 }
 
 body, html {
