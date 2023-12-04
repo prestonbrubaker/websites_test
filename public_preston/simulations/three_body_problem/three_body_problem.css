@@ -143,3 +143,8 @@ nav ul li a:hover {
     border-radius: 3px;
     cursor: pointer;
 }
+
+.dropdown-content {
+    display: none;
+    /* Other styles here */
+}
