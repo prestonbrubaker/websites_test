@@ -64,6 +64,7 @@
 
     var total_dist_1 = 0;
     var total_dist_2 = 0;
+    
 
 function initialize() {
 
@@ -267,8 +268,10 @@ function tick2() {
     ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
 
     var variance = ( total_dist_2 - total_dist_1 ) ** 2
+
+    var variance_2 = ( (x1_2 - x1) ** 2 + (y1_2 - y1) ** 2 + (x2_2 - x2) ** 2 + (y2_2 - y2) ** 2 + (x3_2 - x3) ** 2 + (y3_2 - y3) ** 2 ) ** 0.5 
     
-    ctx2.fillText("Log of variance of sum of distances:  " + Math.floor(Math.log(variance)), 20, 20);
+    ctx2.fillText("Log of variance of sum of distances:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
     ctx2.fillStyle = "#FF0000";
     ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
