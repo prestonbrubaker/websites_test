@@ -294,7 +294,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
 
-    ctx.fillText("Simulation Window 1", maxW / 2 - 90, maxH / 10);
+    ctx.fillText("Simulation Window 1", maxW / 2 - 120, maxH / 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
 }
@@ -308,7 +308,7 @@ function tick2() {
     // Write troubleshooting info
     ctx2.fillStyle = "#000000";
     
-    ctx2.fillText("Simulation Window 2", maxW / 2 - 90, maxH / 10);
+    ctx2.fillText("Simulation Window 2", maxW / 2 - 120, maxH / 10);
 
 
 
