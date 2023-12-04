@@ -397,7 +397,7 @@ function tick2() {
     ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
     ctx3.fillStyle = "#000000";
     
-    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - 200 + 1 / 40 * Math.log(variance_2) * maxH, 2, 2)
+    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - 100 + 1 / 60 * Math.log(variance_2) * maxH, 2, 2)
     
 }
 
