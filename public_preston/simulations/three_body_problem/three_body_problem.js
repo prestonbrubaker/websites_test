@@ -1,66 +1,72 @@
-//left canvas
+function initialize(){
 
-var c = document.getElementById("canvas1");
-var ctx = c.getContext("2d");
+    //left canvas
+    
+    var c = document.getElementById("canvas1");
+    var ctx = c.getContext("2d");
+    
+    
+    var itC = 0;
+    const tickS = 10;
+    var maxW = c.width;   
+    var maxH = c.height;
+    
+    var blockSize = 10;
+    
+    const bgHue = "#777777";
+    
+    var x1 = -.2 + Math.random() * 0.00000000000001;
+    var y1 = 0;
+    
+    var xv1 = 0;
+    var yv1 = -.002;
+    
+    var x2 = .2;
+    var y2 = 0;
+    
+    var xv2 = 0;
+    var yv2 = .002;
+    
+    var x3 = 0;
+    var y3 = .2;
+    
+    var xv3 = 0.002;
+    var yv3 = 0;
+    
+    var gC = 0.0000002;
+    
+    ctx.fillStyle = bgHue;
+    ctx.fillRect(0, 0, maxW, maxH);
+    
+    //right canvas 
+    
+    var x1_2 = -.2 + Math.random() * 0.00000000000001;
+    var y1_2 = 0;
+    
+    var xv1_2 = 0;
+    var yv1_2 = -.002;
+    
+    var x2_2 = .2;
+    var y2_2 = 0;
+    
+    var xv2_2 = 0;
+    var yv2_2 = .002;
+    
+    var x3_2 = 0;
+    var y3_2 = .2;
+    
+    var xv3_2 = 0.002;
+    var yv3_2 = 0;
+    
+    var c2 = document.getElementById("canvas2");
+    var ctx2 = c2.getContext("2d");
+    
+    ctx2.fillStyle = bgHue;
+    ctx2.fillRect(0, 0, maxW, maxH);
 
+}
 
-var itC = 0;
-const tickS = 10;
-var maxW = c.width;   
-var maxH = c.height;
-
-var blockSize = 10;
-
-const bgHue = "#777777";
-
-var x1 = -.2 + Math.random() * 0.00000000000001;
-var y1 = 0;
-
-var xv1 = 0;
-var yv1 = -.002;
-
-var x2 = .2;
-var y2 = 0;
-
-var xv2 = 0;
-var yv2 = .002;
-
-var x3 = 0;
-var y3 = .2;
-
-var xv3 = 0.002;
-var yv3 = 0;
-
-var gC = 0.0000002;
-
-ctx.fillStyle = bgHue;
-ctx.fillRect(0, 0, maxW, maxH);
-
-//right canvas 
-
-var x1_2 = -.2 + Math.random() * 0.00000000000001;
-var y1_2 = 0;
-
-var xv1_2 = 0;
-var yv1_2 = -.002;
-
-var x2_2 = .2;
-var y2_2 = 0;
-
-var xv2_2 = 0;
-var yv2_2 = .002;
-
-var x3_2 = 0;
-var y3_2 = .2;
-
-var xv3_2 = 0.002;
-var yv3_2 = 0;
-
-var c2 = document.getElementById("canvas2");
-var ctx2 = c2.getContext("2d");
-
-ctx2.fillStyle = bgHue;
-ctx2.fillRect(0, 0, maxW, maxH);
+initialize();
 
 function ticks() {
     tick();
