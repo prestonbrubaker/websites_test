@@ -75,10 +75,7 @@ function tick() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
     
-    // Write troubleshooting info
-    ctx.fillStyle = "#000000";
     
-    ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
 
     ctx.fillStyle = "#FF0000";
     ctx.fillRect(x1 * maxW + maxW / 2 - blockSize/2, y1 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
@@ -186,7 +183,12 @@ function tick() {
         y3 = .5;
         yv3 = 0;
     }
+    // Write troubleshooting info
+    ctx.fillStyle = "#000000";
+    
+    ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
 
+    ctx.fillText("Iteration" + itC, 0, 0);
 }
 
 function tick2() {
