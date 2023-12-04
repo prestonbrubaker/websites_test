@@ -171,7 +171,7 @@ function tick() {
 
 }
 
-funciton tick2() {
+function tick2() {
     // Clear and fill background
     ctx2.clearRect(0, 0, maxW, maxH - 100);
     ctx2.fillStyle = bgHue;
