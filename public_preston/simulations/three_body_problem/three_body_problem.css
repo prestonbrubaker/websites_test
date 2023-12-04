@@ -33,7 +33,6 @@ h1, h2, h3 {
 p {
   margin: 2rem;
   font-size: 1.5em;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))
 }
 
 a {
@@ -115,7 +114,7 @@ footer {
 }
 
 nav {
-    background-color: white; /* Sets the background color */
+    background-color: white;
     padding: 10px; /* Adds some space inside the nav bar */
 }
 
@@ -147,7 +146,7 @@ nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9); /* Change as per your color scheme */
+    background-color: rgba(255, 255, 255, 0.8); /* Change as per your color scheme */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* For dropdown shadow */
     z-index: 1;
 }
@@ -168,48 +167,6 @@ nav ul li a:hover {
     color: white;
 }
 
-.simulation-explanation {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
 
-.simulation-explanation h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
 
-.simulation-explanation p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.simulation-explanation ul {
-  list-style: inside square;
-}
-
-.simulation-explanation li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .simulation-explanation {
-    padding: 10px;
-  }
-
-  .simulation-explanation h2 {
-    font-size: 20px;
-  }
-
-  .simulation-explanation p,
-  .simulation-explanation li {
-    font-size: 14px;
-  }
-}
 
