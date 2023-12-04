@@ -17,7 +17,7 @@ body, html {
   overflow: hidden;
 }
 
-#p5-canvas-container {
+canvas {
   position: fixed;
   top: 0;
   left: 0;

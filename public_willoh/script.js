@@ -4,8 +4,7 @@ let colorStopsEnd = []; // End gradient colors
 let stars = []; // Array to hold the stars
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
-  document.getElementById('p5-canvas-container').appendChild(canvas.elt);
+  createCanvas(windowWidth, windowHeight);
   colorMode(RGB);
   startTime = millis();
 
