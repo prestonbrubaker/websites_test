@@ -5,6 +5,7 @@ let stars = []; // Array to hold the stars
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  canvas.parent('p5-canvas-container');
   colorMode(RGB);
   startTime = millis();
 

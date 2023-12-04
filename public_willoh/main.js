@@ -12,7 +12,8 @@ class ThreeDModel {
 
   init() {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(this.renderer.domElement);
+    let container = document.getElementById('threejs-canvas-container');
+    container.appendChild(this.renderer.domElement);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1); // Parameters are the dimensions of the cube
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
