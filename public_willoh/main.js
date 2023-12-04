@@ -1,5 +1,6 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+// Importing Three.js ES6 modules from a CDN
+import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
 class ThreeDModel {
   constructor() {
