@@ -280,9 +280,12 @@ function tick2() {
 
     var variance_2 = ( (x1_2 - x1) ** 2 + (y1_2 - y1) ** 2 + (x2_2 - x2) ** 2 + (y2_2 - y2) ** 2 + (x3_2 - x3) ** 2 + (y3_2 - y3) ** 2 ) ** 0.5; 
     
-    ctx2.fillText("Log of variance of sum of distances:  " + Math.floor(Math.log(variance_2)), 20, 20);
+    ctx2.fillText("log of variance of sum of square of differences vs. Time:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
+    ctx3.fillStyle = "#440000";
+    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
     ctx3.fillStyle = "#000000";
+    
     ctx3.fillRect(itC / 20000 * maxW + 10, maxH + 1 / 15 * Math.log(variance_2) * maxH, 2, 2)
 
     ctx2.fillStyle = "#FF0000";
