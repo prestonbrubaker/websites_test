@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
         ctx.fillStyle = color_rect;
-        ctx.fillStyle = "#000000";
+        ctx.fillStyle = "#4A90E2";
         ctx.fillRect(x, y, blockS, blockS);
   
         x += xV * speed;

@@ -63,7 +63,7 @@ footer {
 
 .word-art {
     display: inline-block;
-    font-family: 'Courier New', monospace;
+    font-family: 'pixel1', monospace;
     font-size: 2em;
     font-weight: bold; /* Make the text bolder */
     color: white; /* High contrast color */
