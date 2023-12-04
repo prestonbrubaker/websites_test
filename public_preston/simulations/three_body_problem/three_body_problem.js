@@ -142,7 +142,10 @@ function initialize() {
 
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
+    ctx3.fillStyle = "#000000";
     ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(0, maxH - 30 + 1 / 50 * Math.log(1) * maxH - 1, maxW, 2);
 
 }
 
@@ -409,6 +412,8 @@ function tick2() {
     var variance = ( total_dist_2 - total_dist_1 ) ** 2;
 
     var variance_2 = ( (x1_2 - x1) ** 2 + (y1_2 - y1) ** 2 + (x2_2 - x2) ** 2 + (y2_2 - y2) ** 2 + (x3_2 - x3) ** 2 + (y3_2 - y3) ** 2 ) ** 0.5; 
+
+    ctx2.fillStyle = "#000000";
     
     ctx2.fillText("log of variance of sum of square of differences vs. Time:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
