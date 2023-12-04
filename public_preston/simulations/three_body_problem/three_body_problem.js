@@ -188,7 +188,7 @@ function tick() {
     
     ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
 
-    ctx.fillText("Iteration" + itC, 0, 0);
+    ctx.fillText("Iteration" + itC, 10, 10);
 }
 
 function tick2() {
