@@ -268,7 +268,7 @@ function tick2() {
 
     var variance = ( total_dist_2 - total_dist_1 ) ** 2
     
-    ctx2.fillText("Variance:  " + variance, 20, 20);
+    ctx2.fillText("Log of Variance of sum of distances:  " + Math.log(variance), 20, 20);
 
     ctx2.fillStyle = "#FF0000";
     ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
