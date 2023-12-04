@@ -52,7 +52,7 @@ window.onclick = function(event) {
     
     //right canvas 
     
-    var x1_2 = x1 + Math.random() * 0.00000000000001;
+    var x1_2 = x1 + 0.00000000000001;
     var y1_2 = y1;
     
     var xv1_2 = xv1;
@@ -119,7 +119,7 @@ function initialize() {
     
     //right canvas 
     
-    x1_2 = x1 + ( Math.random() - 0.5 ) * 0.00000000000001;
+    x1_2 = x1 + 0.00000000000001;
     y1_2 = y1;
     
     xv1_2 = xv1;
