@@ -22,6 +22,8 @@ header, main, footer {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
 }
 
+
+
 header {
     font-size: xx-large;
 }
@@ -74,5 +76,4 @@ nav ul li a:hover {
 footer {
     margin-top: 30px;
     color: #888;
-    bottom: 0;
 }
