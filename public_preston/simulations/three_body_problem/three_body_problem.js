@@ -13,23 +13,23 @@
     
     const bgHue = "#777777";
     
-    var x1 = -.2 + Math.random() * 0.00000000000001;
-    var y1 = 0;
+    var x1 = Math.random() * 0.5;
+    var y1 = Math.random() * 0.5;
     
-    var xv1 = 0;
-    var yv1 = -.002;
+    var xv1 = 0.002 * 2 * (Math.random() - 0.5);
+    var yv1 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var x2 = .2;
-    var y2 = 0;
+    var x2 = Math.random() * 0.5;
+    var y2 = Math.random() * 0.5;
     
-    var xv2 = 0;
-    var yv2 = .002;
+    var xv2 = 0.002 * 2 * (Math.random() - 0.5);
+    var yv2 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var x3 = 0;
-    var y3 = .2;
+    var x3 = Math.random() * 0.5;
+    var y3 = Math.random() * 0.5;
     
-    var xv3 = 0.002;
-    var yv3 = 0;
+    var xv3 = 0.002 * 2 * (Math.random() - 0.5);
+    var yv3 = 0.002 * 2 * (Math.random() - 0.5);
     
     var gC = 0.0000002;
     
@@ -38,23 +38,23 @@
     
     //right canvas 
     
-    var x1_2 = -.2 + Math.random() * 0.00000000000001;
-    var y1_2 = 0;
+    var x1_2 = x1 + Math.random() * 0.00000000000001;
+    var y1_2 = y1;
     
-    var xv1_2 = 0;
-    var yv1_2 = -.002;
+    var xv1_2 = xv1;
+    var yv1_2 = yv1;
     
-    var x2_2 = .2;
-    var y2_2 = 0;
+    var x2_2 = x2;
+    var y2_2 = y2;
     
-    var xv2_2 = 0;
-    var yv2_2 = .002;
+    var xv2_2 = xv2;
+    var yv2_2 = yv2;
     
-    var x3_2 = 0;
-    var y3_2 = .2;
+    var x3_2 = x3;
+    var y3_2 = y3;
     
-    var xv3_2 = 0.002;
-    var yv3_2 = 0;
+    var xv3_2 = xv3;
+    var yv3_2 = yv3;
     
     var c2 = document.getElementById("canvas2");
     var ctx2 = c2.getContext("2d");
