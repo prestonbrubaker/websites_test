@@ -74,7 +74,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: blue;
+    background-color: #4A90E2;
     color: white;
     padding: 5px;
     border-radius: 3px;
