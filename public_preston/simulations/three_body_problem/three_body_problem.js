@@ -25,7 +25,7 @@ window.onclick = function(event) {
     
     var blockSize = 5;
     
-    const bgHue = "#777777";
+    const bgHue = "#000000";
     
     var x1 = Math.random() - 0.5;
     var y1 = Math.random() - 0.5;
@@ -84,7 +84,7 @@ window.onclick = function(event) {
     
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
-    ctx3.fillStyle = "#000000";
+    ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 10);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, maxH / 10 + 20);
@@ -148,7 +148,7 @@ function initialize() {
 
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
-    ctx3.fillStyle = "#000000";
+    ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 10);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, maxH / 10 + 20);
@@ -292,7 +292,7 @@ function tick() {
         yv3 = 0;
     }
     // Write troubleshooting info
-    ctx.fillStyle = "#000000";
+    ctx.fillStyle = "#FFFFFF";
 
     ctx.fillText("Simulation Window 1", maxW / 2 - 120, maxH / 10);
 
@@ -306,7 +306,7 @@ function tick2() {
     ctx2.fillRect(0, 0, maxW, maxH - 100);
     
     // Write troubleshooting info
-    ctx2.fillStyle = "#000000";
+    ctx2.fillStyle = "#FFFFFF";
     
     ctx2.fillText("Simulation Window 2", maxW / 2 - 120, maxH / 10);
 
@@ -425,7 +425,7 @@ function tick2() {
 
     var variance_2 = ( (x1_2 - x1) ** 2 + (y1_2 - y1) ** 2 + (x2_2 - x2) ** 2 + (y2_2 - y2) ** 2 + (x3_2 - x3) ** 2 + (y3_2 - y3) ** 2 ) ** 0.5; 
 
-    ctx2.fillStyle = "#000000";
+    ctx2.fillStyle = "#FFFFFF";
     
     ctx2.fillText("Log of variance of sum of square of differences:  " + Math.floor(Math.log(variance_2)), 10, 10);
 
