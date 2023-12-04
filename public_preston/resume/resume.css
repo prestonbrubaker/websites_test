@@ -84,7 +84,7 @@ nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(0, 0, 0, 0); /* Change as per your color scheme */
+    background-color: rgba(255, 255, 255, 0.9); /* Change as per your color scheme */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* For dropdown shadow */
     z-index: 1;
 }
