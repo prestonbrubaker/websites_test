@@ -86,6 +86,10 @@ window.onclick = function(event) {
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#000000";
     ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 7);
+    ctx3.fillStyle = "#00FF00";
+    ctx3.fillText("Sum of square of differences in location between each dot of the same color between simulation 1 and simulation 2", maxW / 2 - 170, maxH / 7 + 20);
+    ctx3.fillStyle = "#0000FF";
+    ctx3.fillText("Negative log of sum of square of differences in location between each dot of the same color between simulation 1 and simulation 2", maxW / 2 - 200, maxH / 7 + 40);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
     
@@ -419,7 +423,7 @@ function tick2() {
 
     ctx3.fillStyle = "#440000";
     
-    ctx3.fillStyle = "#000000";
+    ctx3.fillStyle = "#0000FF";
     
     ctx3.fillRect(itC / 20000 * maxW, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2);
 
