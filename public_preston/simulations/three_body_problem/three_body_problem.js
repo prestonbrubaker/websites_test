@@ -65,11 +65,7 @@
 function initialize(){
 
     //left canvas
-    
-    var c = document.getElementById("canvas1");
-    var ctx = c.getContext("2d");
-    
-    
+
     var itC = 0;
     const tickS = 10;
     var maxW = c.width;   
@@ -121,9 +117,6 @@ function initialize(){
     
     var xv3_2 = 0.002;
     var yv3_2 = 0;
-    
-    var c2 = document.getElementById("canvas2");
-    var ctx2 = c2.getContext("2d");
     
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
