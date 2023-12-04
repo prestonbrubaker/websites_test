@@ -85,7 +85,7 @@ window.onclick = function(event) {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#000000";
-    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 7);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
     
@@ -143,7 +143,7 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#000000";
-    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 7);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
 
@@ -282,7 +282,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#000000";
 
-    ctx.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
+    ctx.fillText("Simulation Window 1", maxW / 2 - 90, maxH / 7);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
 }
@@ -296,7 +296,7 @@ function tick2() {
     // Write troubleshooting info
     ctx2.fillStyle = "#000000";
     
-    ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 40, maxH / 5);
+    ctx2.fillText("Simulation Window 2", maxW / 2 - 90, maxH / 7);
 
 
 
@@ -421,7 +421,11 @@ function tick2() {
     
     ctx3.fillStyle = "#000000";
     
-    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2);
+    ctx3.fillRect(itC / 20000 * maxW, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2);
+
+    ctx3.fillStyle = "#00FF00";
+    
+    ctx3.fillRect(itC / 20000 * maxW, maxH - 30 + 1 / 50 * -3 * maxH - 1 - variance_2 * maxH / 3, 2, 2);
     
 }
 
