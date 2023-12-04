@@ -163,7 +163,7 @@ function initialize() {
     ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, 10);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, 30);
-    ctx3.fillText("between simulation 1 and simulation 2", 10, maxH / 10 +50);
+    ctx3.fillText("between simulation 1 and simulation 2", 10, 50);
     ctx3.fillStyle = "#0000FF";
     ctx3.fillText("Negative log of sum of square of differences in location between each dot", 10 , 70);
     ctx3.fillText("of the same color between simulation 1 and simulation 2", 10, 90);
