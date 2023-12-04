@@ -23,7 +23,7 @@ window.onclick = function(event) {
     var maxW = c.width;   
     var maxH = c.height;
     
-    var blockSize = 5;
+    var blockSize = 8;
     
     const bgHue = "#000000";
     
@@ -81,6 +81,11 @@ window.onclick = function(event) {
 
     var c3 = document.getElementById("canvas3");
     var ctx3 = c3.getContext("2d");
+
+    ctx.fillStyle = "#333333";
+    ctx.fillRect(0, maxH - 100, maxW, 100);
+    ctx2.fillStyle = "#333333";
+    ctx2.fillRect(0, maxH - 100, maxW, 100);
     
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
@@ -146,6 +151,12 @@ function initialize() {
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
+
+    ctx.fillStyle = "#333333";
+    ctx.fillRect(0, maxH - 100, maxW, 100);
+    ctx2.fillStyle = "#333333";
+    ctx2.fillRect(0, maxH - 100, maxW, 100);
+
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#FFFFFF";
@@ -180,8 +191,7 @@ function tick() {
     ctx.clearRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
-    ctx.fillStyle = "#333333";
-    ctx.fillRect(0, maxH - 100, maxW, 100);
+
     
     
 
@@ -306,8 +316,7 @@ function tick2() {
     ctx2.clearRect(0, 0, maxW, maxH - 100);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH - 100);
-    ctx2.fillStyle = "#333333";
-    ctx2.fillRect(0, maxH - 100, maxW, 100);
+    
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
