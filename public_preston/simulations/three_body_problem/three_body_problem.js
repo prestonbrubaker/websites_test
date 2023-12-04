@@ -13,20 +13,20 @@
     
     const bgHue = "#777777";
     
-    var x1 = Math.random() * 0.5;
-    var y1 = Math.random() * 0.5;
+    var x1 = Math.random() - 0.5;
+    var y1 = Math.random() - 0.5;
     
     var xv1 = 0.002 * 2 * (Math.random() - 0.5);
     var yv1 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var x2 = Math.random() * 0.5;
-    var y2 = Math.random() * 0.5;
+    var x2 = Math.random() - 0.5;
+    var y2 = Math.random() - 0.5;
     
     var xv2 = 0.002 * 2 * (Math.random() - 0.5);
     var yv2 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var x3 = Math.random() * 0.5;
-    var y3 = Math.random() * 0.5;
+    var x3 = Math.random() - 0.5;
+    var y3 = Math.random() - 0.5;
     
     var xv3 = 0.002 * 2 * (Math.random() - 0.5);
     var yv3 = 0.002 * 2 * (Math.random() - 0.5);
@@ -68,46 +68,46 @@ function initialize() {
 
     itC = 0;
     
-    x1 = -.2 + Math.random() * 0.00000000000001;
-    y1 = 0;
+    x1 = Math.random() - 0.5;
+    y1 = Math.random() - 0.5;
     
-    xv1 = 0;
-    yv1 = -.002;
+    xv1 =  0.002 * 2 * (Math.random() - 0.5);;
+    yv1 =  0.002 * 2 * (Math.random() - 0.5);;
     
-    x2 = .2;
-    y2 = 0;
+    x2 = Math.random() - 0.5;
+    y2 = Math.random() - 0.5;
     
-    xv2 = 0;
-    yv2 = .002;
+    xv2 =  0.002 * 2 * (Math.random() - 0.5);;
+    yv2 =  0.002 * 2 * (Math.random() - 0.5);;
     
-    x3 = 0;
-    y3 = .2;
+    x3 = Math.random() - 0.5;
+    y3 = Math.random() - 0.5;
     
-    xv3 = 0.002;
-    yv3 = 0;
+    xv3 =  0.002 * 2 * (Math.random() - 0.5);;
+    yv3 =  0.002 * 2 * (Math.random() - 0.5);;
     ctx.clearRect(0, 0, maxW, maxH);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
     
     //right canvas 
     
-    x1_2 = -.2 + Math.random() * 0.00000000000001;
-    y1_2 = 0;
+    x1_2 = x1 + ( Math.random() - 0.5 ) * 0.00000000000001;
+    y1_2 = y1;
     
-    xv1_2 = 0;
-    yv1_2 = -.002;
+    xv1_2 = xv1;
+    yv1_2 = yv1;
     
-    x2_2 = .2;
-    y2_2 = 0;
+    x2_2 = x2;
+    y2_2 = y2;
     
-    xv2_2 = 0;
-    yv2_2 = .002;
+    xv2_2 = xv2;
+    yv2_2 = yv2;
     
-    x3_2 = 0;
-    y3_2 = .2;
+    x3_2 = x3;
+    y3_2 = y3;
     
-    xv3_2 = 0.002;
-    yv3_2 = 0;
+    xv3_2 = xv3;
+    yv3_2 = yv3;
     ctx2.clearRect(0, 0, maxW, maxH);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
