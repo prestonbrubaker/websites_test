@@ -45,7 +45,7 @@ window.onclick = function(event) {
     var xv3 = 0.002 * 2 * (Math.random() - 0.5);
     var yv3 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var gC = 0.0000002;
+    var gC = 0.00000001;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
