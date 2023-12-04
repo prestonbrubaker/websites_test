@@ -64,6 +64,12 @@
 
     var total_dist_1 = 0;
     var total_dist_2 = 0;
+
+    var c3 = document.getElementById("canvas3");
+    var ctx3 = c3.getContext("2d");
+    
+    ctx3.fillStyle = bgHue;
+    ctx3.fillRect(0, 0, maxW, maxH);
     
 
 function initialize() {
