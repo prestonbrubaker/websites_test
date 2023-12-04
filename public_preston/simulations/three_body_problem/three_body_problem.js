@@ -124,7 +124,7 @@ function ticks() {
     tick2();
     itC++;
 
-    if(itC > 30000){
+    if(itC > 20000){
         initialize();
     }
     
