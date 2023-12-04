@@ -45,7 +45,7 @@ window.onclick = function(event) {
     var xv3 = 0.002 * 2 * (Math.random() - 0.5);
     var yv3 = 0.002 * 2 * (Math.random() - 0.5);
     
-    var gC = 0.00000002;
+    var gC = 0.0000003;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -84,6 +84,10 @@ window.onclick = function(event) {
     
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
+    ctx3.fillStyle = "#000000";
+    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
     
 
 function initialize() {
@@ -138,6 +142,10 @@ function initialize() {
 
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
+    ctx3.fillStyle = "#000000";
+    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
 
 }
 
@@ -148,7 +156,7 @@ function ticks() {
     tick2();
     itC++;
 
-    if(itC > 40000){
+    if(itC > 20000){
         initialize();
     }
     
@@ -404,14 +412,16 @@ function tick2() {
     var variance = ( total_dist_2 - total_dist_1 ) ** 2;
 
     var variance_2 = ( (x1_2 - x1) ** 2 + (y1_2 - y1) ** 2 + (x2_2 - x2) ** 2 + (y2_2 - y2) ** 2 + (x3_2 - x3) ** 2 + (y3_2 - y3) ** 2 ) ** 0.5; 
+
+    ctx2.fillStyle = "#000000";
     
     ctx2.fillText("log of variance of sum of square of differences vs. Time:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
     ctx3.fillStyle = "#440000";
-    ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    
     ctx3.fillStyle = "#000000";
     
-    ctx3.fillRect(itC / 40000 * maxW + 10, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2)
+    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2);
     
 }
 

@@ -52,12 +52,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Removes the underline from links */
-    color: blue; /* Sets the text color */
+    color: #4A90E2; /* Sets the text color */
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    background-color: blue;
+    background-color: #4A90E2;
     color: white;
     padding: 5px;
     border-radius: 3px;
@@ -96,13 +96,13 @@ footer {
 }
 
 .dropdown-content li a {
-    color: blue; /* Text color */
+    color: #4A90E2; /* Text color */
     padding: 10px 20px; /* Adjust top/bottom and left/right padding as needed */
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content li a:hover {
-    background-color: blue; /* Change for hover effect */
+    background-color: #4A90E2; /* Change for hover effect */
     color: white;
 }
