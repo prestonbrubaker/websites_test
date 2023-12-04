@@ -62,8 +62,8 @@
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
-    var dist_tot_1 = 0;
-    var dist_tot_2 = 0;
+    var total_dist_1 = 0;
+    var total_dist_2 = 0;
 
 function initialize() {
 
