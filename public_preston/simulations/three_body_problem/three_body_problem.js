@@ -67,13 +67,6 @@ function initialize(){
     //left canvas
 
     var itC = 0;
-    const tickS = 10;
-    var maxW = c.width;   
-    var maxH = c.height;
-    
-    var blockSize = 10;
-    
-    const bgHue = "#777777";
     
     var x1 = -.2 + Math.random() * 0.00000000000001;
     var y1 = 0;
@@ -92,8 +85,6 @@ function initialize(){
     
     var xv3 = 0.002;
     var yv3 = 0;
-    
-    var gC = 0.0000002;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
