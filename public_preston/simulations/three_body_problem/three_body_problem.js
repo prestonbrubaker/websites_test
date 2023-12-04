@@ -9,7 +9,7 @@
     var maxW = c.width;   
     var maxH = c.height;
     
-    var blockSize = 10;
+    var blockSize = 5;
     
     const bgHue = "#777777";
     
@@ -85,7 +85,7 @@ function initialize(){
     
     var xv3 = 0.002;
     var yv3 = 0;
-    
+    ctx.clearRect(0, 0, maxW, maxH);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
     
@@ -108,7 +108,7 @@ function initialize(){
     
     var xv3_2 = 0.002;
     var yv3_2 = 0;
-    
+    ctx2.clearRect(0, 0, maxW, maxH);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
