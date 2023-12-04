@@ -168,48 +168,5 @@ nav ul li a:hover {
     color: white;
 }
 
-.simulation-explanation {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
 
-.simulation-explanation h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.simulation-explanation p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.simulation-explanation ul {
-  list-style: inside square;
-}
-
-.simulation-explanation li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .simulation-explanation {
-    padding: 10px;
-  }
-
-  .simulation-explanation h2 {
-    font-size: 20px;
-  }
-
-  .simulation-explanation p,
-  .simulation-explanation li {
-    font-size: 14px;
-  }
-}
 
