@@ -11,9 +11,9 @@ function setup() {
   // Manually define color stops for the starting ombre (sunrise)
   colorStopsStart = [
     // Replace these colors with those from your sunrise image
-    color(255, 189, 109), 
-    color(255, 112, 67),  
-    color(255, 84, 78),   
+    color(40, 100, 200), 
+    color(0, 150, 255),
+    color(64, 164, 223),   
   ];
 
   // Manually define color stops for the ending ombre (sunset)

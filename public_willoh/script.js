@@ -18,8 +18,8 @@ function setup() {
   // Manually define color stops for the ending ombre (sunset)
   colorStopsEnd = [
     color(64, 164, 223), // Replace with sunset colors
-    color(75, 119, 190),
-    color(52, 92, 150),
+    color(75, 119, 255),
+    color(52, 92, 255),
   ];
 
   // Define the boundaries of the text box to avoid placing stars
