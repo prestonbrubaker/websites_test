@@ -115,3 +115,8 @@ nav ul li a:hover {
       display: none;
   }
 }
+
+.dropdown-content {
+  display: none;
+  /* Other styles */
+}

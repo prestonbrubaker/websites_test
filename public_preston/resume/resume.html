@@ -10,7 +10,14 @@
     <nav>
     <ul>
         <li><a href="../index.html">Back to Home</a></li>
-        <li><a href="../simulations/simulations.html">Simulations</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Simulations</a>
+            <ul class="dropdown-content" id="dropdownMenu">
+                <li><a href="simulations.html">Simulations Home</a></li>
+                <li><a href="../simulations/three_body_problem/three_body_problem.html">Three Body Problem Simulation</a></li>
+                <li><a href="../simulations/agents/agents.html">Competetive Agents Simulation</a></li>
+            </ul>
+        </li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
         <!-- Add more navigation links as needed -->
@@ -102,5 +109,6 @@
     <footer>
         <p>Preston Brubaker 2023</p>
     </footer>
+    <script src="resume.js"></script>  
 </body>
 </html>
