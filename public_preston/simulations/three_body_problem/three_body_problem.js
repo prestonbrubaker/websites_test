@@ -123,12 +123,17 @@ function initialize(){
 
 }
 
-initialize();
+
 
 function ticks() {
     tick();
     tick2();
     itC++;
+
+    if(itC > 10000){
+        initialize();
+    }
+    
 }
 
 
