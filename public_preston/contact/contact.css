@@ -85,5 +85,24 @@ footer {
 
 .dropdown-content {
     display: none;
-    /* Other styles here */
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0); /* Change as per your color scheme */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* For dropdown shadow */
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 5px 10px; /* Adjust top/bottom and left/right padding as needed */
+}
+
+.dropdown-content li a {
+    color: blue; /* Text color */
+    padding: 10px 20px; /* Adjust top/bottom and left/right padding as needed */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: blue; /* Change for hover effect */
+    color: white;
 }
