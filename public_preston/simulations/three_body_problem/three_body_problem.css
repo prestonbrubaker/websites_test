@@ -168,5 +168,53 @@ nav ul li a:hover {
     color: white;
 }
 
+.simulation-explanation {
+  max-width: 60rem; /* Responsive width */
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
+  font-family: 'pixel1', sans-serif;
+  color: black;
+}
+
+.simulation-explanation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.simulation-explanation p {
+  font-size: 1rem; /* Adjusted for relative sizing */
+  line-height: 1.5; /* Good for readability */
+  margin: 0 0 2rem; /* Bottom margin for spacing paragraphs */
+  background: none; /* Removing the gradient background for simplicity */
+}
+
+.simulation-explanation ul {
+  list-style-type: square; /* Styled list for better visuals */
+  padding-left: 2rem; /* To align with the text */
+}
+
+.simulation-explanation li {
+  margin-bottom: 0.3125rem; /* Consistent with your style */
+  line-height: 1.5; /* Good for readability */
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 48em) { /* Responsive design breakpoint */
+  .simulation-explanation {
+    padding: 1rem;
+  }
+
+  .simulation-explanation h2 {
+    font-size: 1.25rem; /* Slightly smaller font size for mobile */
+  }
+
+  .simulation-explanation p, .simulation-explanation li {
+    font-size: 0.875rem; /* Smaller font size for readability on mobile */
+  }
+}
+
 
 
