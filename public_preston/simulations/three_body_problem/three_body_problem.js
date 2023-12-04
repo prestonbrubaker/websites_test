@@ -224,8 +224,8 @@ function tick2() {
     var dist13_2 = ( dx13_2 ** 2 + dy13_2 ** 2 ) ** 0.5;
     var dist23_2 = ( dx23_2 ** 2 + dy23_2 ** 2 ) ** 0.5;
 
-    xv1 += gC * dx12_2 / ( dist12_2 ** 3 );
-    yv1 += gC * dy12_2 / ( dist12_2 ** 3 );
+    xv1_2 += gC * dx12_2 / ( dist12_2 ** 3 );
+    yv1_2 += gC * dy12_2 / ( dist12_2 ** 3 );
 
     xv2_2 -= gC * dx12_2 / ( dist12_2 ** 3 );
     yv2_2 -= gC * dy12_2 / ( dist12_2 ** 3 );
