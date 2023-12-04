@@ -425,7 +425,7 @@ function tick2() {
 
     ctx3.fillStyle = "#00FF00";
     
-    ctx3.fillRect(itC / 20000 * maxW, maxH - 30 + 1 / 50 * -3 * maxH - 1 - variance_2 * maxH / 2, 2, 2);
+    ctx3.fillRect(itC / 20000 * maxW, maxH - 30 + 1 / 50 * -3 * maxH - 1 - variance_2 * maxH / 3, 2, 2);
     
 }
 
