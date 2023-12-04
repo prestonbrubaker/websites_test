@@ -427,7 +427,7 @@ function tick2() {
 
     ctx2.fillStyle = "#000000";
     
-    ctx2.fillText("log of variance of sum of square of differences vs. Time:  " + Math.floor(Math.log(variance_2)), 20, 20);
+    ctx2.fillText("Log of variance of sum of square of differences:  " + Math.floor(Math.log(variance_2)), 10, 10);
 
     ctx3.fillStyle = "#440000";
     
