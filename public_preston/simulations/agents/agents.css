@@ -105,7 +105,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none; /* Removes the underline from links */
-    color: blue; /* Sets the text color */
+    color: #4A90E2; /* Sets the text color */
     font-weight: bold;
 }
 
