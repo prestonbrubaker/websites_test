@@ -38,6 +38,24 @@ ctx.fillRect(0, 0, maxW, maxH);
 
 //right canvas 
 
+var x1_2 = -.2 + Math.random() * 0.00000000000001;
+var y1_2 = 0;
+
+var xv1_2 = 0;
+var yv1_2 = -.002;
+
+var x2_2 = .2;
+var y2_2 = 0;
+
+var xv2_2 = 0;
+var yv2_2 = .002;
+
+var x3_2 = 0;
+var y3_2 = .2;
+
+var xv3_2 = 0.002;
+var yv3_2 = 0;
+
 var c2 = document.getElementById("canvas2");
 var ctx2 = c2.getContext("2d");
 
@@ -183,110 +201,110 @@ function tick2() {
     ctx2.fillText("Simulation by Preston Brubaker", maxW / 2 - 20, maxH / 5);
 
     ctx2.fillStyle = "#FF0000";
-    ctx2.fillRect(x1 * maxW + maxW / 2 - blockSize/2, y1 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
+    ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
     ctx2.fillStyle = "#FFFF00";
-    ctx2.fillRect(x2 * maxW + maxW / 2 - blockSize/2, y2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
+    ctx2.fillRect(x2_2 * maxW + maxW / 2 - blockSize/2, y2_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillRect(x3 * maxW + maxW / 2 - blockSize/2, y3 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
+    ctx2.fillRect(x3_2 * maxW + maxW / 2 - blockSize/2, y3_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
 
     // Calculate Gravity
-    var dx12 = x2 - x1;
-    var dy12 = y2 - y1;
+    var dx12_2 = x2_2 - x1_2;
+    var dy12_2 = y2_2 - y1_2;
 
-    var dx13 = x3 - x1;
-    var dy13 = y3 - y1;
+    var dx13_2 = x3_2 - x1_2;
+    var dy13_2 = y3_2 - y1_2;
 
-    var dx23 = x3 - x2;
-    var dy23 = y3 - y2;
+    var dx23_2 = x3_2 - x2_2;
+    var dy23_2 = y3_2 - y2_2;
     
 
-    var dist12 = ( dx12 ** 2 + dy12 ** 2 ) ** 0.5;
-    var dist13 = ( dx13 ** 2 + dy13 ** 2 ) ** 0.5;
-    var dist23 = ( dx23 ** 2 + dy23 ** 2 ) ** 0.5;
+    var dist12_2 = ( dx12_2 ** 2 + dy12_2 ** 2 ) ** 0.5;
+    var dist13_2 = ( dx13_2 ** 2 + dy13_2 ** 2 ) ** 0.5;
+    var dist23_2 = ( dx23_2 ** 2 + dy23_2 ** 2 ) ** 0.5;
 
-    xv1 += gC * dx12 / ( dist12 ** 3 );
-    yv1 += gC * dy12 / ( dist12 ** 3 );
+    xv1 += gC * dx12_2 / ( dist12_2 ** 3 );
+    yv1 += gC * dy12_2 / ( dist12_2 ** 3 );
 
-    xv2 -= gC * dx12 / ( dist12 ** 3 );
-    yv2 -= gC * dy12 / ( dist12 ** 3 );
-
-
-    
-    xv1 += gC * dx13 / ( dist13 ** 3 );
-    yv1 += gC * dy13 / ( dist13 ** 3 );
-
-    xv3 -= gC * dx13 / ( dist13 ** 3 );
-    yv3 -= gC * dy13 / ( dist13 ** 3 );
+    xv2_2 -= gC * dx12_2 / ( dist12_2 ** 3 );
+    yv2_2 -= gC * dy12_2 / ( dist12_2 ** 3 );
 
 
     
-    xv2 += gC * dx23 / ( dist23 ** 3 );
-    yv2 += gC * dy23 / ( dist23 ** 3 );
+    xv1_2 += gC * dx13_2 / ( dist13_2 ** 3 );
+    yv1_2 += gC * dy13_2 / ( dist13_2 ** 3 );
 
-    xv3 -= gC * dx23 / ( dist23 ** 3 );
-    yv3 -= gC * dy23 / ( dist23 ** 3 );
+    xv3_2 -= gC * dx13_2 / ( dist13_2 ** 3 );
+    yv3_2 -= gC * dy13_2 / ( dist13_2 ** 3 );
+
+
+    
+    xv2_2 += gC * dx23_2 / ( dist23_2 ** 3 );
+    yv2_2 += gC * dy23_2 / ( dist23_2 ** 3 );
+
+    xv3_2 -= gC * dx23_2 / ( dist23_2 ** 3 );
+    yv3_2 -= gC * dy23_2 / ( dist23_2 ** 3 );
     
     // Add velocities
-    x1 += xv1;
-    y1 += yv1;
+    x1_2 += xv1_2;
+    y1_2 += yv1_2;
 
-    x2 += xv2;
-    y2 += yv2;
+    x2_2 += xv2_2;
+    y2_2 += yv2_2;
 
-    x3 += xv3;
-    y3 += yv3;
+    x3_2 += xv3_2;
+    y3_2 += yv3_2;
 
-    if(x1 < -.5){
-        x1 = -.5;
-        xv1 = 0;
+    if(x1_2 < -.5){
+        x1_2 = -.5;
+        xv1_2 = 0;
     }
-    if(x1 > .5){
-        x1 = .5;
-        xv1 = 0;
+    if(x1_2 > .5){
+        x1_2 = .5;
+        xv1_2 = 0;
     }
-    if(y1 < -.5){
-        y1 = -.5;
-        yv1 = 0;
+    if(y1_2 < -.5){
+        y1_2 = -.5;
+        yv1_2 = 0;
     }
-    if(y1 > .5){
-        y1 = .5;
-        yv1 = 0;
+    if(y1_2 > .5){
+        y1_2 = .5;
+        yv1_2 = 0;
     }
     
-    if(x2 < -.5){
-        x2 = -.5;
-        xv2 = 0;
+    if(x2_2 < -.5){
+        x2_2 = -.5;
+        xv2_2 = 0;
     }
-    if(x2 > .5){
-        x2 = .5;
-        xv2 = 0;
+    if(x2_2 > .5){
+        x2_2 = .5;
+        xv2_2 = 0;
     }
-    if(y2 < -.5){
-        y2 = -.5;
-        yv2 = 0;
+    if(y2_2 < -.5){
+        y2_2 = -.5;
+        yv2_2 = 0;
     }
-    if(y2 > .5){
-        y2 = .5;
-        yv2 = 0;
+    if(y2_2 > .5){
+        y2_2 = .5;
+        yv2_2 = 0;
     }
     
-    if(x3 < -.5){
-        x3 = -.5;
-        xv3 = 0;
+    if(x3_2 < -.5){
+        x3_2 = -.5;
+        xv3_2 = 0;
     }
-    if(x3 > .5){
-        x3 = .5;
-        xv3 = 0;
+    if(x3_2 > .5){
+        x3_2 = .5;
+        xv3_2 = 0;
     }
-    if(y3 < -.5){
-        y3 = -.5;
-        yv3 = 0;
+    if(y3_2 < -.5){
+        y3_2 = -.5;
+        yv3_2 = 0;
     }
-    if(y3 > .5){
-        y3 = .5;
-        yv3 = 0;
+    if(y3_2 > .5){
+        y3_2 = .5;
+        yv3_2 = 0;
     }
 }
 
