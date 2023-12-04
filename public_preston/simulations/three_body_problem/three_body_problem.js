@@ -66,48 +66,48 @@ function initialize() {
 
     //left canvas
 
-    var itC = 0;
+    itC = 0;
     
-    var x1 = -.2 + Math.random() * 0.00000000000001;
-    var y1 = 0;
+    x1 = -.2 + Math.random() * 0.00000000000001;
+    y1 = 0;
     
-    var xv1 = 0;
-    var yv1 = -.002;
+    xv1 = 0;
+    yv1 = -.002;
     
-    var x2 = .2;
-    var y2 = 0;
+    x2 = .2;
+    y2 = 0;
     
-    var xv2 = 0;
-    var yv2 = .002;
+    xv2 = 0;
+    yv2 = .002;
     
-    var x3 = 0;
-    var y3 = .2;
+    x3 = 0;
+    y3 = .2;
     
-    var xv3 = 0.002;
-    var yv3 = 0;
+    xv3 = 0.002;
+    yv3 = 0;
     ctx.clearRect(0, 0, maxW, maxH);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
     
     //right canvas 
     
-    var x1_2 = -.2 + Math.random() * 0.00000000000001;
-    var y1_2 = 0;
+    x1_2 = -.2 + Math.random() * 0.00000000000001;
+    y1_2 = 0;
     
-    var xv1_2 = 0;
-    var yv1_2 = -.002;
+    xv1_2 = 0;
+    yv1_2 = -.002;
     
-    var x2_2 = .2;
-    var y2_2 = 0;
+    x2_2 = .2;
+    y2_2 = 0;
     
-    var xv2_2 = 0;
-    var yv2_2 = .002;
+    xv2_2 = 0;
+    yv2_2 = .002;
     
-    var x3_2 = 0;
-    var y3_2 = .2;
+    x3_2 = 0;
+    y3_2 = .2;
     
-    var xv3_2 = 0.002;
-    var yv3_2 = 0;
+    xv3_2 = 0.002;
+    yv3_2 = 0;
     ctx2.clearRect(0, 0, maxW, maxH);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
