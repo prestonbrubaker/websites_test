@@ -282,7 +282,7 @@ function tick2() {
     
     ctx2.fillText("Log of variance of sum of distances:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
-    ctx3.fillStyle = "#000000";
+    ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(itC / 20000 * maxW, MaxH - 1 / 15 * Math.floor(Math.log(variance_2)) * maxH, 10, 10)
 
     ctx2.fillStyle = "#FF0000";
