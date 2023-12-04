@@ -122,6 +122,9 @@ function initialize() {
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
+    ctx3.fillStyle = bgHue;
+    ctx3.fillRect(0, 0, maxW, maxH);
+
 }
 
 
@@ -279,7 +282,8 @@ function tick2() {
     
     ctx2.fillText("Log of variance of sum of distances:  " + Math.floor(Math.log(variance_2)), 20, 20);
 
-    ctx3.fillRect(itC / 20000 * maxW, -1 / 15 * Math.floor(Math.log(variance_2)) * maxH, 10, 10)
+    ctx3.fillStyle = "#000000";
+    ctx3.fillRect(itC / 20000 * maxW, MaxH - 1 / 15 * Math.floor(Math.log(variance_2)) * maxH, 10, 10)
 
     ctx2.fillStyle = "#FF0000";
     ctx2.fillRect(x1_2 * maxW + maxW / 2 - blockSize/2, y1_2 * maxH + maxH / 2 - blockSize/2, blockSize, blockSize);
