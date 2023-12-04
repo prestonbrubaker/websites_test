@@ -84,7 +84,10 @@ window.onclick = function(event) {
     
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
+    ctx3.fillStyle = "#000000";
     ctx3.fillText("Graph of log of variance of sum of square of differences vs. Time", 20, 20);
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(0, maxH - 30 + 1 / 50 * Math.log(1) * maxH - 1, maxW, 2);
     
 
 function initialize() {
@@ -150,7 +153,7 @@ function ticks() {
     tick2();
     itC++;
 
-    if(itC > 40000){
+    if(itC > 20000){
         initialize();
     }
     
@@ -413,7 +416,7 @@ function tick2() {
     
     ctx3.fillStyle = "#000000";
     
-    ctx3.fillRect(itC / 40000 * maxW + 10, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2)
+    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - 30 + 1 / 50 * Math.log(variance_2) * maxH, 2, 2);
     
 }
 
