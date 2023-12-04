@@ -24,7 +24,11 @@
           <div class="word-art-container">
             <div class="word-art">Preston's Simulation of the Three-Body Problem</div>
           </div>
-        <canvas id="canvas1" width="1000" height="500"></canvas>
+      <div class="canvasBox">
+        <canvas id="canvas1" width="500" height="500"></canvas>
+        <canvas id="canvas2" width="500" height="500"></canvas>
+      </div>
+      <p>These three bodies are each gravitationally attracted to each other. If two bodies are brought twice as close, the magnitude of the forces increases four fold. Each time the page is loaded, the simulation is brought back to the intial conditions with the red planet being allowed to vary in placement by only 0.000000000001%. With two-bodies, this would mean that two seperate runs would look identical forever assuming no extremely-near collision, but with three bodies, this is enough for any two runs to vary so greatly, that they have no resembelence. I have made the bottom 100 pixels of the canvas allow planets to leave a trail. If you try opening two tabs and running the simulaiton on each, you will see this bottom section will start off looking the same, but eventually the trails will show that the two runs vary.</p>
     </div>
   </body>
 
