@@ -180,6 +180,8 @@ function tick() {
     ctx.clearRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
+    ctx.fillStyle = "#333333";
+    ctx.fillRect(0, maxH - 100, maxW, 100);
     
     
 
@@ -294,7 +296,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
 
-    ctx.fillText("Simulation Window 1", maxW / 2 - 120, maxH / 10);
+    ctx.fillText("Simulation Window 1", maxW / 2 - 100, maxH / 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
 }
@@ -304,11 +306,13 @@ function tick2() {
     ctx2.clearRect(0, 0, maxW, maxH - 100);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH - 100);
+    ctx2.fillStyle = "#333333";
+    ctx2.fillRect(0, maxH - 100, maxW, 100);
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
-    ctx2.fillText("Simulation Window 2", maxW / 2 - 120, maxH / 10);
+    ctx2.fillText("Simulation Window 2", maxW / 2 - 100, maxH / 10);
 
 
 
