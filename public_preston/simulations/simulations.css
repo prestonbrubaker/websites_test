@@ -53,6 +53,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: inline-block;
 }
 
 h1, h2, h3 {
