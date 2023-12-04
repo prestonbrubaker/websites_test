@@ -90,13 +90,13 @@ window.onclick = function(event) {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 10);
+    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, 10);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, maxH / 10 + 20);
-    ctx3.fillText("between simulation 1 and simulation 2", 10, maxH / 10 + 40);
+    ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, 30);
+    ctx3.fillText("between simulation 1 and simulation 2", 10, 50);
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillText("Negative log of sum of square of differences in location between each dot", 10 , maxH / 10 + 60);
-    ctx3.fillText("of the same color between simulation 1 and simulation 2", 10, maxH / 10 + 80);
+    ctx3.fillText("Negative log of sum of square of differences in location between each dot", 10 , 70);
+    ctx3.fillText("of the same color between simulation 1 and simulation 2", 10, 90);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
     
@@ -160,13 +160,13 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, maxH / 10);
+    ctx3.fillText("Data Analysis Graph", maxW / 2 - 90, 10);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, maxH / 10 + 20);
-    ctx3.fillText("between simulation 1 and simulation 2", 10, maxH / 10 + 40);
+    ctx3.fillText("Sum of square of differences in location between each dot of the same color", 10, 30);
+    ctx3.fillText("between simulation 1 and simulation 2", 10, maxH / 10 +50);
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillText("Negative log of sum of square of differences in location between each dot", 10 , maxH / 10 + 60);
-    ctx3.fillText("of the same color between simulation 1 and simulation 2", 10, maxH / 10 + 80);
+    ctx3.fillText("Negative log of sum of square of differences in location between each dot", 10 , 70);
+    ctx3.fillText("of the same color between simulation 1 and simulation 2", 10, 90);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(0, maxH - 30 + 1 / 50 * -3 * maxH - 1, maxW, 2);
 
