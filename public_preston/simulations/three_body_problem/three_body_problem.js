@@ -62,7 +62,7 @@
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
-function initialize(){
+function initialize() {
 
     //left canvas
 
