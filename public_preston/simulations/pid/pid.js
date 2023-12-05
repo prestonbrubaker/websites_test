@@ -20,8 +20,8 @@ var ctx = c.getContext("2d");
     
 var itC = 0;
 const tickS = 100;
-var maxW = c.width;   
-var maxH = c.height;
+const maxW = c.width;   
+const maxH = c.height;
     
 const bgHue = "#777777";
     
