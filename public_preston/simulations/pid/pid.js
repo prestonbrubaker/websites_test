@@ -63,7 +63,7 @@ var qdot = 0;
 var qdot_1 = 0;
 var qdot_2 = 0;
 var qdot_3 = 0;
-var dt = 10; //seconds per interval
+var dt = 100; //seconds per interval
 
 
 function drawPFD() {
@@ -265,7 +265,7 @@ function tick() {
     
     // add heat to heater
     if(vessel_cont_temp < 75){
-        qdot = 100000;
+        qdot = 10000;
         heater_temp += qdot / mass_heater / heat_cap_steel * dt;
     }
     
