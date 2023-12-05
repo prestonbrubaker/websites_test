@@ -44,6 +44,7 @@ ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
 
 function drawPFD() {
+    
     // Clear and fill background
     ctx.clearRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = bgHue;
@@ -53,32 +54,11 @@ function drawPFD() {
 
     ctx.fillStyle = "#000000";
     
+    // Heater Block    
     ctx.fillRect(75,150,50,200);
 
+    // Reactor Vessel
     ctx.fillRect(375,75,50,350);
-    ctx.beginPath();
-    ctx.moveTo(100, 150); // Start point (x, y);
-    ctx.lineTo(100, 100); // End point (x, y);
-    ctx.lineTo(400, 100); // End point (x, y);
-    ctx.stroke();
-    
-    ctx.beginPath();
-    ctx.moveTo(100, 350); // Start point (x, y);
-    ctx.lineTo(100, 425); // End point (x, y);
-    ctx.lineTo(250, 425); // End point (x, y);
-    ctx.stroke();
-    
-    ctx.beginPath();
-    ctx.moveTo(250, 400); // Start point (x, y);
-    ctx.lineTo(400, 400); // End point (x, y);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.arc(250, 425, 25, 0, 2 * Math.PI); // Center (100, 100), Radius 50
-    ctx.stroke();
-    
-    ctx.fillRect(375,75,50,350);
-    
     ctx.beginPath();
     ctx.arc(400, 75, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
     ctx.stroke();
@@ -86,6 +66,48 @@ function drawPFD() {
     ctx.beginPath();
     ctx.arc(400, 425, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
     ctx.stroke();
+
+    // Top linkage from reactor vessel to heater block
+    ctx.beginPath();
+    ctx.moveTo(100, 150); // Start point (x, y);
+    ctx.lineTo(100, 100); // End point (x, y);
+    ctx.lineTo(400, 100); // End point (x, y);
+    ctx.stroke();
+
+    // Bottom linkage from heater block to pump
+    ctx.beginPath();
+    ctx.moveTo(100, 350); // Start point (x, y);
+    ctx.lineTo(100, 425); // End point (x, y);
+    ctx.lineTo(250, 425); // End point (x, y);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(250, 425); // Start point (x, y);
+    ctx.lineTo(240, 415); // End point (x, y);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(250, 425); // Start point (x, y);
+    ctx.lineTo(240, 435); // End point (x, y);
+    ctx.stroke();
+    
+
+    // Pump
+    ctx.beginPath();
+    ctx.arc(250, 425, 25, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.stroke();
+
+    // Pump to reactor vessel
+    ctx.beginPath();
+    ctx.moveTo(250, 400); // Start point (x, y);
+    ctx.lineTo(400, 400); // End point (x, y);
+    ctx.stroke();
+
+    
+    
+    ctx.fillRect(375,75,50,350);
+    
+
     
     
 }
