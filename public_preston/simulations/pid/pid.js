@@ -53,10 +53,10 @@ var vessel_wall_temp = 20;
 var vessel_cont_temp = 20;
 
 var flow_rate = 1; //kg per second
-var mass_heater = 1; //kg
+var mass_heater = 50; //kg
 var mass_fluid = 10;
 var mass_vessel_cont = 1000; //kg
-var mass_vessel_wall = 1; //kg
+var mass_vessel_wall = 50; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
 var heat_cap_steel = 0.502; // J per kg Kelvin
 var qdot = 0;
