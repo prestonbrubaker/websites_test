@@ -85,81 +85,83 @@
     }
 
 
-// Define functions for specific keys
-function handleKeyA() {
-    if (xa > 0) {
-        xa -= 0.01;
-        drawCanvas(hues);
-        saveHues();
+    // Define functions for specific keys
+    function handleKeyA() {
+        if (xa > 0) {
+            xa -= 0.01;
+            drawCanvas(hues);
+            saveHues();
+        }
     }
-}
-
-function handleKeyD() {
-    if (xa < 1 - charW / maxW) {
-        xa += 0.01;
-        drawCanvas(hues);
-        saveHues();
+    
+    function handleKeyD() {
+        if (xa < 1 - charW / maxW) {
+            xa += 0.01;
+            drawCanvas(hues);
+            saveHues();
+        }
     }
-}
-
-function handleLeftArrow() {
-    if (xb > 0) {
-        xb -= 0.01;
-        drawCanvas(hues);
-        saveHues();
+    
+    function handleLeftArrow() {
+        if (xb > 0) {
+            xb -= 0.01;
+            drawCanvas(hues);
+            saveHues();
+        }
     }
-}
-
-function handleRightArrow() {
-    if (xb < 1 - charW / maxW) {
-        xb += 0.01;
-        drawCanvas(hues);
-        saveHues();
+    
+    function handleRightArrow() {
+        if (xb < 1 - charW / maxW) {
+            xb += 0.01;
+            drawCanvas(hues);
+            saveHues();
+        }
     }
-}
-
-// Object to keep track of key states and intervals
-const keysPressed = {
-    'a': { pressed: false, interval: null },
-    'd': { pressed: false, interval: null },
-    'ArrowLeft': { pressed: false, interval: null },
-    'ArrowRight': { pressed: false, interval: null }
-};
-
-// Function to call the appropriate function based on the key
-function repeatFunction(key) {
-    switch (key) {
-        case 'a': handleKeyA(); break;
-        case 'd': handleKeyD(); break;
-        case 'ArrowLeft': handleLeftArrow(); break;
-        case 'ArrowRight': handleRightArrow(); break;
-        default: // No action for other keys
+    
+    // Object to keep track of key states and intervals
+    const keysPressed = {
+        'a': { pressed: false, interval: null },
+        'd': { pressed: false, interval: null },
+        'ArrowLeft': { pressed: false, interval: null },
+        'ArrowRight': { pressed: false, interval: null }
+    };
+    
+    // Function to call the appropriate function based on the key
+    function repeatFunction(key) {
+        switch (key) {
+            case 'a': handleKeyA(); break;
+            case 'd': handleKeyD(); break;
+            case 'ArrowLeft': handleLeftArrow(); break;
+            case 'ArrowRight': handleRightArrow(); break;
+            default: // No action for other keys
+        }
     }
-}
+    
+    // Start moving when keydown
+    document.addEventListener('keydown', function (event) {
+        const key = event.key;
+        if (keysPressed.hasOwnProperty(key) && !keysPressed[key].pressed) {
+            keysPressed[key].pressed = true;
+            keysPressed[key].interval = setInterval(() => {
+                repeatFunction(key);
+            }, 50); // Adjust interval timing as needed
+        }
+    });
+    
+    // Stop moving when keyup
+    document.addEventListener('keyup', function (event) {
+        const key = event.key;
+        if (keysPressed.hasOwnProperty(key)) {
+            clearInterval(keysPressed[key].interval);
+            keysPressed[key].pressed = false;
+            keysPressed[key].interval = null;
+        }
+    });
+    
+    // Initial draw and load hues
+    drawCanvas(hues); // Initial draw to avoid waiting for the load
+    loadHues();
+    setInterval(loadHues, 300); // Adjust as necessary for your app
 
-// Start moving when keydown
-document.addEventListener('keydown', function (event) {
-    const key = event.key;
-    if (keysPressed.hasOwnProperty(key) && !keysPressed[key].pressed) {
-        keysPressed[key].pressed = true;
-        keysPressed[key].interval = setInterval(() => {
-            repeatFunction(key);
-        }, 50); // Adjust interval timing as needed
-    }
-});
 
-// Stop moving when keyup
-document.addEventListener('keyup', function (event) {
-    const key = event.key;
-    if (keysPressed.hasOwnProperty(key)) {
-        clearInterval(keysPressed[key].interval);
-        keysPressed[key].pressed = false;
-        keysPressed[key].interval = null;
-    }
-});
-
-// Initial draw and load hues
-drawCanvas(hues); // Initial draw to avoid waiting for the load
-loadHues();
-setInterval(loadHues, 300); // Adjust as necessary for your app
 //});
