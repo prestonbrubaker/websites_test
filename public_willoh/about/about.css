@@ -1,98 +1,121 @@
 @font-face {
     font-family: "elegant";
-    src: url("../fonts/elegant.otf");
+    src: url("../fonts/type.ttf");
   }
   
-::selection {
-    background-color: lightpink;
-    color: white;
-}
+  ::selection {
+  background-color: rgb(255, 0, 0, 0.2);
+  color: red;
+  }
   
-body, html {
+  #typing-effect {
+    font-family: 'elegant', monospace;
+    white-space: pre;
+    font-size: 3rem;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 4rem;
+  }
+  
+  #typing-effect::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .no-blink::after {
+    animation: none;
+    opacity: 0;
+    content: none;
+  }
+
+  body, html {
     margin: 0;
     padding: 0;
     font-family: 'elegant', serif;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
+    background-color: whitesmoke;
+  }
   
-canvas {
+  canvas {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-}
-
-header {
+  }
+  
+  header {
     display: flex;
     justify-content: flex-end;
-}
-
-.navigation nav ul {
+  }
+  
+  .navigation nav ul {
     list-style: none;
     text-align: right;
-}
-
-.navigation nav ul li {
+  }
+  
+  .navigation nav ul li {
     display: inline-block;
     width: 8rem;
     height: 3rem;
     text-align: center;
     padding: 0.5rem 1rem;
-}
+  }
   
-.navigation nav ul li a {
+  .navigation nav ul li a {
     display: block;
     text-decoration: none;
     color: #333;
-}
+  }
   
-.navigation nav ul li a:hover {
+  .navigation nav ul li a:hover {
     transform: scale(1.15); /* Enlarges text on hover */
     transform-origin: center; /* Ensures scaling happens from the center */
-}
-
-.contentgrid {
+    color: red;
+  }
+  
+  .contentgrid {
     display: flex;
     flex-direction: row;
-}
+  }
   
-.introduction {
+  .introduction {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
+  }
   
-.name {
-    font-size: 3rem;
+  .information {
+    font-size: 1.25rem;
     text-align: left;
-    margin-bottom: 0;
-    margin-left: 4%;
-}
+    margin-top: 1rem;
+    margin-left: 8rem;
+  }
   
-.information {
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 0.5rem;
-}
-  
-.socials {
+  .socials {
     display: flex;
     flex-direction: column;
-}
+  }
   
-.section {
+  .section {
     display: flex;
     justify-content: space-between;
     padding: 1em;
-}
+  }
   
-#about, #skills, #projects {
+  #about, #projects #contact{
     padding: 0.5rem;
-}
-
-footer {
+  }
+  
+  footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.75rem;
     position: absolute;
@@ -104,3 +127,9 @@ footer {
     display: flex;
     justify-content: center;
   }
+  
+  footer a {
+    text-decoration: none;
+    color: red;
+  }
+  

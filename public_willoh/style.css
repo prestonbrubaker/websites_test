@@ -1,11 +1,36 @@
 @font-face {
   font-family: "elegant";
-  src: url("fonts/wasser.ttf");
+  src: url("fonts/type.ttf");
 }
 
 ::selection {
-background-color: lightpink;
-color: white;
+  background-color: rgb(255, 0, 0, 0.2);
+  color: red;
+}
+
+#typing-effect {
+  font-family: 'elegant', monospace;
+  white-space: pre;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+#typing-effect::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.no-blink::after {
+  animation: none;
+  opacity: 0;
+  content: none;
 }
 
 body, html {
@@ -15,6 +40,7 @@ body, html {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: whitesmoke;
 }
 
 canvas {
@@ -53,6 +79,7 @@ header {
 .navigation nav ul li a:hover {
   transform: scale(1.15); /* Enlarges text on hover */
   transform-origin: center; /* Ensures scaling happens from the center */
+  color: red;
 }
 
 .contentgrid {
@@ -90,7 +117,7 @@ header {
   padding: 1em;
 }
 
-#about, #skills, #projects #contact{
+#about, #projects #contact{
   padding: 0.5rem;
 }
 
@@ -105,4 +132,9 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: red;
 }

@@ -1,13 +1,38 @@
 @font-face {
     font-family: "elegant";
-    src: url("../fonts/elegant.otf");
+    src: url("../fonts/type.ttf");
   }
   
-::selection {
-    background-color: lightpink;
-    color: white;
+  ::selection {
+    background-color: rgb(255, 0, 0, 0.2);
+    color: red;
 }
+
+#typing-effect {
+    font-family: 'elegant', monospace;
+    white-space: pre;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 0;
+  }
   
+  #typing-effect::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  .no-blink::after {
+    animation: none;
+    opacity: 0;
+    content: none;
+  }
+
 body, html {
     margin: 0;
     padding: 0;
