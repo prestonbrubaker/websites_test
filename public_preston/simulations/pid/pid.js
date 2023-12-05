@@ -60,6 +60,9 @@ var mass_vessel_wall = 1; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
 var heat_cap_steel = 0.502; // J per kg Kelvin
 var qdot = 0;
+var qdot_1 = 0;
+var qdot_2 = 0;
+var qdot_3 = 0;
 var dt = 1; //seconds per interval
 
 
@@ -216,13 +219,13 @@ function tick() {
     // Transfer heat
 
     // from heater to heating fluid
-    var qdot_1 = (heater_temp - fluid_temp) * .05;
+    qdot_1 = (heater_temp - fluid_temp) * .05;
 
     // from heating fluid to vessel wall
-    var qdot_2 = (fluid_temp - vessel_wall_temp) * .05;
+    qdot_2 = (fluid_temp - vessel_wall_temp) * .05;
 
     // from vessel wall to vessel content
-    var qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .5;
+    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .5;
 
     
     // from heater to heating fluid
