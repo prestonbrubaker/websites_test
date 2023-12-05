@@ -45,3 +45,7 @@ body {
   border-radius: 0.4rem;
   color: white;
 }
+
+#canvas1 {
+  border: 0.25rem dotted black;
+}
