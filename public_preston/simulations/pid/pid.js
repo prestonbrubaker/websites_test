@@ -197,9 +197,9 @@ function tick() {
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
 
-    ctx3.clearRect(0,0,maxW,maxH / 2);
+    ctx3.clearRect(0,0,maxW,maxH / 3);
     ctx3.fillStyle = bgHue;
-    ctx3.fillRect(0,0,maxW,maxH / 2);
+    ctx3.fillRect(0,0,maxW,maxH / 3);
     
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
@@ -213,20 +213,20 @@ function tick() {
 
     //plot temps
     ctx3.fillStyle = "#FF0000";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - heater_temp * 1, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - heater_temp * 3, 2, 2)
     
     ctx3.fillStyle = "#FFFF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - fluid_temp * 1, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - fluid_temp * 3, 2, 2)
 
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_wall_temp * 1, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_wall_temp * 3, 2, 2)
 
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_cont_temp * 1, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_cont_temp * 3, 2, 2)
 
     // Show the temps on the PFD
     var heater_l = 0;
-    heater_l = heater_temp / 20;
+    heater_l = heater_temp / 3;
     if(heater_l > 50){
         heater_l = 50;
     }else if (heater_l < 0){
