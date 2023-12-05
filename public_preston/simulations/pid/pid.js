@@ -243,7 +243,7 @@ function tick() {
     
     // add heat to heater
     if(heater_temp < 91){
-        qdot = 10;
+        qdot = 100;
         heater_temp += 1 / mass_heater / heat_cap_steel * dt;
     }
     
