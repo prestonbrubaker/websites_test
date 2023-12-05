@@ -199,6 +199,10 @@ function tick2() {
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
 
+    ctx3.clearRect(0,0,maxW,maxH);
+    ctx3.fillStyle = bgHue;
+    ctx3.fillRect(0,0,maxW,maxH);
+    
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
     ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
