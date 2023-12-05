@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
+    var charW = 20;
+    var charH = 100
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let hues = [];
 
     canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.9;
+    canvas.height = window.innerHeight * 0.6;
 
     var maxW = canvas.width;
     var maxH = canvas.height;
@@ -92,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleKeyD() {
         console.log('Key D is held down');
-        if(xa < 1){
+        if(xa < 1 - charW / maxW){
             xa += 0.01;
         }
         
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleRightArrow() {
         console.log('Right Arrow is held down');
-        if(xb < 1){
+        if(xb < 1 - charW / maxW){
             xb += 0.01;
         }
         saveHues();
