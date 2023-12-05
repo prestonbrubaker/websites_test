@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
-    var charW = 50;
-    var charH = 300
+    
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -16,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var maxW = canvas.width;
     var maxH = canvas.height;
-
+    var charW = maxW * 0.1;
+    var charH = maxH * 0.7;
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
     } else{
