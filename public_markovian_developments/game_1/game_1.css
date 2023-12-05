@@ -91,9 +91,3 @@ p {
   cursor: pointer;
 }
 
-/* Show the controls on mobile devices */
-@media screen and (max-width: 800px) {
-  #mobile-controls, #phone-controls {
-      display: block;
-  }
-}
