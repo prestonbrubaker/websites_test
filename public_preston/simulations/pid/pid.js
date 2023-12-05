@@ -213,16 +213,16 @@ function tick() {
 
     //plot temps
     ctx3.fillStyle = "#FF0000";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - heater_temp * 3, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 3, 2, 2)
     
     ctx3.fillStyle = "#FFFF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - fluid_temp * 3, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 3, 2, 2)
 
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_wall_temp * 3, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 3, 2, 2)
 
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - vessel_cont_temp * 3, 2, 2)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 3, 2, 2)
 
     // Show the temps on the PFD
     var heater_l = 0;
