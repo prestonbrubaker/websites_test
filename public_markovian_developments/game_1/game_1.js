@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', function() {
+//document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
     
@@ -181,4 +181,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadHues();
     setInterval(loadHues, 50);
-});
+//});
