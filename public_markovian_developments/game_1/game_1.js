@@ -182,5 +182,5 @@
     
 
     loadHues();
-    setInterval(loadHues, 50);
+    setInterval(loadHues, 1000);
 //});
