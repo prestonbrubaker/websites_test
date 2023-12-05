@@ -31,6 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             }
         }
+        xa = hues[0][0];
+        xb = hues[0][1];
+        ctx.fillStyle = "#770000";
+        ctx.fillRect(xa * maxW, maxH, 50, -200);
+        ctx.fillStyle = "#007700";
+        ctx.fillRect(xb * maxW, maxH, 50, -200);
     }
 
     /********************************************************************
@@ -59,15 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
+                
                 drawCanvas(hues);
             });
-        xa = hues[0][0];
-        xb = hues[0][1];
         
-        ctx.fillStyle = "#770000";
-        ctx.fillRect(xa * maxW, maxH, 50, -200);
-        ctx.fillStyle = "#007700";
-        ctx.fillRect(xb * maxW, maxH, 50, -200);
+        
+        
     }
 
 
