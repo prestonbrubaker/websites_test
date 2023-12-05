@@ -1,6 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    var xa = 0;
+    var xb = 0;
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    /********************************************************************
     canvas.addEventListener('click', function(event) {
         const x = Math.floor(event.offsetX / blockSize);
         const y = Math.floor(event.offsetY / blockSize);
@@ -39,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         drawCanvas(hues);
         saveHues();
     });
-
+    *********************************************************************/
+    
     function saveHues() {
         fetch('/save-game_1', {
             method: 'POST',
@@ -56,6 +60,88 @@ document.addEventListener('DOMContentLoaded', function() {
                 drawCanvas(hues);
             });
     }
+
+
+
+
+
+
+    
+    
+    // Define functions for specific keys
+    function handleKeyA() {
+        console.log('Key A is held down');
+        xa -= 0.1;
+    }
+
+    function handleKeyD() {
+        console.log('Key D is held down');
+        xa += 0.1;
+    }
+
+    function handleLeftArrow() {
+        console.log('Left Arrow is held down');
+        xb -= 0.1;
+    }
+
+    function handleRightArrow() {
+        console.log('Right Arrow is held down');
+        xb += 0.1;
+    }
+
+    // Object to keep track of key states
+    const keysPressed = {
+        'a': false,
+        'd': false,
+        'ArrowLeft': false,
+        'ArrowRight': false
+    };
+
+    // Function to call the appropriate function based on the key
+    function repeatFunction(key) {
+        switch (key) {
+            case 'a':
+                handleKeyA();
+                break;
+            case 'd':
+                handleKeyD();
+                break;
+            case 'ArrowLeft':
+                handleLeftArrow();
+                break;
+            case 'ArrowRight':
+                handleRightArrow();
+                break;
+            default:
+                // No action for other keys
+                break;
+        }
+    }
+
+    // Event listener for keydown
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (keysPressed.hasOwnProperty(key) && !keysPressed[key]) {
+            keysPressed[key] = true;
+            repeatFunction(key);
+        }
+    });
+
+    // Event listener for keyup
+    document.addEventListener('keyup', function(event) {
+        const key = event.key;
+        if (keysPressed.hasOwnProperty(key)) {
+            keysPressed[key] = false;
+        }
+
+
+        
+    });
+
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(xa * maxW, 200, 50, 200);
+    ctx.fillStyle = "#00FF00";
+    ctx.fillRect(xb * maxW, 200, 50, 200);
 
     loadHues();
     setInterval(loadHues, 2000);
