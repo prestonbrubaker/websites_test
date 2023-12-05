@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var rightButton = document.getElementById('right-button');
     var leftButt = document.getElementById('left-butt');
     var rightButt = document.getElementById('right-butt');
+    
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
     } else{
