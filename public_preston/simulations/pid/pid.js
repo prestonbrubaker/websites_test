@@ -28,7 +28,8 @@ const bgHue = "#777777";
     
 ctx.fillStyle = bgHue;
 ctx.fillRect(0, 0, maxW, maxH);
-    
+
+
 //right canvas 
     
 var c2 = document.getElementById("canvas2");
@@ -42,6 +43,13 @@ var ctx3 = c3.getContext("2d");
     
 ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
+
+
+var heater_temp = 20;
+var fluid_temp = 20;
+var vessel_wall_temp = 20;
+var vessel_cont_temp = 20;
+
 
 function drawPFD() {
     
@@ -183,7 +191,6 @@ function tick2() {
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH - 100);
     
-    
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
@@ -191,6 +198,13 @@ function tick2() {
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
+
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
+    ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
+    ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
+    ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
+    
     
 }
 
