@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             }
         }
+        ctx.clearRect(0,0,maxW,maxH)
         xa = hues[0][0];
         xb = hues[0][1];
         ctx.fillStyle = "#770000";
@@ -83,25 +84,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define functions for specific keys
     function handleKeyA() {
         console.log('Key A is held down');
-        xa -= 0.01;
+        if(xa > 0){
+            xa -= 0.01;
+        }
         saveHues();
     }
 
     function handleKeyD() {
         console.log('Key D is held down');
-        xa += 0.01;
+        if(xa < 1){
+            xa += 0.01;
+        }
+        
         saveHues();
     }
 
     function handleLeftArrow() {
         console.log('Left Arrow is held down');
-        xb -= 0.01;
+        if(xb > 0){
+            xb -= 0.01;
+        }
+        
         saveHues();
     }
 
     function handleRightArrow() {
         console.log('Right Arrow is held down');
-        xb += 0.01;
+        if(xb < 1){
+            xb += 0.01;
+        }
         saveHues();
     }
 
