@@ -45,10 +45,22 @@ ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
 
 
+// Simulation Parameters
+
 var heater_temp = 20;
 var fluid_temp = 20;
 var vessel_wall_temp = 20;
 var vessel_cont_temp = 20;
+
+var flow_rate = 1; //kg per second
+var mass_heater = 1; //kg
+var mass_fluid = 10;
+var mass_reactor_fluid = 1000; //kg
+var mass_vessel_wall = 1; //kg
+var heat_cap_water = 4180; // J per kg Kelvin
+var heat_cap_steel = 0.502; // J per kg Kelvin
+var qdot = 0;
+var dt = 0.01; //seconds per interval
 
 
 function drawPFD() {
@@ -166,7 +178,6 @@ function initialize() {
 
 function ticks() {
     tick();
-    tick2();
     itC++;
 
     if(itC > 20000){
@@ -179,13 +190,6 @@ function ticks() {
 function tick() {
     
 
-    
-    
-    
-    
-}
-
-function tick2() {
     // Clear and fill background
     ctx2.clearRect(0, 0, maxW, maxH - 100);
     ctx2.fillStyle = bgHue;
@@ -208,9 +212,33 @@ function tick2() {
     ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
     ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
     ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
+
+    // Transfer heat
+    var heater_temp = 20;
+var fluid_temp = 20;
+var vessel_wall_temp = 20;
+var vessel_cont_temp = 20;
+    // from heater to heating fluid
+    qdot = (heater_temp - fluid_temp) * 0.0001;
+    fluid_temp += qdot / mass_fluid / heat_cap_water * dt;
+
+    // from heating fluid to vessel wall
+    qdot = (fluid_temp - vessel_wall_temp) * 0.0001;
+    vessel_wall_temp += qdot / mass_vessel_wall / heat_cap_steel * dt;
+
+    // from vessel wall to vessel content
+    qdot = (vessel_wall_temp - vessel_cont_temp) * 0.0001;
+    vessel_cont_temp += qdot / mass_vessel_cont / heat_cap_water * dt;
+
+
+    // add heat to heater
+    qdot = 10;
+    heater_temp += 1 / mass_heater / heat_cap_steel * dt;
+    
     
     
 }
+
 
 
 // Initialize
