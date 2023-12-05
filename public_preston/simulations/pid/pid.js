@@ -19,7 +19,7 @@ var ctx = c.getContext("2d");
     
     
 var itC = 0;
-const tickS = 10;
+const tickS = 100;
 var maxW = c.width;   
 var maxH = c.height;
     
@@ -60,7 +60,7 @@ var mass_vessel_wall = 1; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
 var heat_cap_steel = 0.502; // J per kg Kelvin
 var qdot = 0;
-var dt = 1; //seconds per interval
+var dt = 100; //seconds per interval
 
 
 function drawPFD() {
