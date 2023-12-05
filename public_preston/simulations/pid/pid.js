@@ -223,9 +223,9 @@ function tick() {
 
     // Show the temps on the PFD
     var heater_l = 0;
-    heater_l = heater_temp / 10;
-    if(heater_l > 100){
-        heater_l = 100;
+    heater_l = heater_temp / 20;
+    if(heater_l > 50){
+        heater_l = 50;
     }else if (heater_l < 0){
         heater_l = 0;
     }
