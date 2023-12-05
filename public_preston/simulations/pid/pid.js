@@ -178,21 +178,12 @@ function initialize() {
 }
 
 
-
-function ticks() {
-    tick();
-    itC++;
-
+function tick() {
+    
     if(itC > 20000){
         initialize();
     }
     
-}
-
-
-function tick() {
-    
-
     // Clear and fill background
     ctx2.clearRect(0, 0, maxW, maxH - 100);
     ctx2.fillStyle = bgHue;
@@ -256,7 +247,7 @@ function tick() {
         heater_temp += 1 / mass_heater / heat_cap_steel * dt;
     }
     
-    
+    itC++;
 }
 
 
@@ -264,4 +255,4 @@ function tick() {
 // Initialize
 drawPFD();
 
-setInterval(ticks, tickS);
+setInterval(tick, tickS);
