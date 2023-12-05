@@ -85,104 +85,81 @@
     }
 
 
-
-
-
-
-    
-    
-    // Define functions for specific keys
-    function handleKeyA() {
-        console.log('Key A is held down');
-        if(xa > 0){
-            xa -= 0.01;
-        }
+// Define functions for specific keys
+function handleKeyA() {
+    if (xa > 0) {
+        xa -= 0.01;
+        drawCanvas(hues);
         saveHues();
     }
+}
 
-    function handleKeyD() {
-        console.log('Key D is held down');
-        if(xa < 1 - charW / maxW){
-            xa += 0.01;
-        }
-        
+function handleKeyD() {
+    if (xa < 1 - charW / maxW) {
+        xa += 0.01;
+        drawCanvas(hues);
         saveHues();
     }
+}
 
-    function handleLeftArrow() {
-        console.log('Left Arrow is held down');
-        if(xb > 0){
-            xb -= 0.01;
-        }
-        
-        saveHues();
-        
-    }
-
-    function handleRightArrow() {
-        console.log('Right Arrow is held down');
-        if(xb < 1 - charW / maxW){
-            xb += 0.01;
-        }
+function handleLeftArrow() {
+    if (xb > 0) {
+        xb -= 0.01;
+        drawCanvas(hues);
         saveHues();
     }
+}
 
-    // Object to keep track of key states
-    const keysPressed = {
-        'a': false,
-        'd': false,
-        'ArrowLeft': false,
-        'ArrowRight': false
-        
-    };
-
-    // Function to call the appropriate function based on the key
-    function repeatFunction(key) {
-        switch (key) {
-            case 'a':
-                handleKeyA();
-                break;
-            case 'd':
-                handleKeyD();
-                break;
-            case 'ArrowLeft':
-                handleLeftArrow();
-                break;
-            case 'ArrowRight':
-                handleRightArrow();
-                break;
-            default:
-                // No action for other keys
-                break;
-        }
+function handleRightArrow() {
+    if (xb < 1 - charW / maxW) {
+        xb += 0.01;
+        drawCanvas(hues);
+        saveHues();
     }
+}
 
-    // Event listener for keydown
-    document.addEventListener('keydown', function(event) {
-        const key = event.key;
-        if (keysPressed.hasOwnProperty(key) && !keysPressed[key]) {
-            keysPressed[key] = true;
+// Object to keep track of key states and intervals
+const keysPressed = {
+    'a': { pressed: false, interval: null },
+    'd': { pressed: false, interval: null },
+    'ArrowLeft': { pressed: false, interval: null },
+    'ArrowRight': { pressed: false, interval: null }
+};
+
+// Function to call the appropriate function based on the key
+function repeatFunction(key) {
+    switch (key) {
+        case 'a': handleKeyA(); break;
+        case 'd': handleKeyD(); break;
+        case 'ArrowLeft': handleLeftArrow(); break;
+        case 'ArrowRight': handleRightArrow(); break;
+        default: // No action for other keys
+    }
+}
+
+// Start moving when keydown
+document.addEventListener('keydown', function (event) {
+    const key = event.key;
+    if (keysPressed.hasOwnProperty(key) && !keysPressed[key].pressed) {
+        keysPressed[key].pressed = true;
+        keysPressed[key].interval = setInterval(() => {
             repeatFunction(key);
-        }
-    });
+        }, 50); // Adjust interval timing as needed
+    }
+});
 
-    // Event listener for keyup
-    document.addEventListener('keyup', function(event) {
-        const key = event.key;
-        if (keysPressed.hasOwnProperty(key)) {
-            keysPressed[key] = false;
-        }
+// Stop moving when keyup
+document.addEventListener('keyup', function (event) {
+    const key = event.key;
+    if (keysPressed.hasOwnProperty(key)) {
+        clearInterval(keysPressed[key].interval);
+        keysPressed[key].pressed = false;
+        keysPressed[key].interval = null;
+    }
+});
 
-
-        
-    });
-    
-
-
-    
-
-    
-
-    loadHues();
-    setInterval(loadHues, 300);
+// Initial draw and load hues
+drawCanvas(hues); // Initial draw to avoid waiting for the load
+loadHues();
+setInterval(loadHues, 300); // Adjust as necessary for your app
 //});
