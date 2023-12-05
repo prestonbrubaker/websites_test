@@ -221,6 +221,17 @@ function tick() {
     ctx3.fillStyle = "#0000FF";
     ctx3.fillRect(itC / 1000, maxH - vessel_cont_temp * 3, 5, 5)
 
+    // Show the temps on the PFD
+    var heater_l = 0;
+    heater_l = heater_temp / 10;
+    if(heater_l > 100){
+        heater_l = 100;
+    }else if (heater_l < 0){
+        heater_l = 0;
+    }
+    ctx.fillStyle = "hsl(0, 50%, " + heater_l + "%)";
+    ctx.fillRect(85,160,30,180);
+
     // Transfer heat
 
     // from heater to heating fluid
