@@ -65,12 +65,12 @@ function drawPFD() {
     ctx.beginPath();
     ctx.moveTo(100, 350); // Start point (x, y);
     ctx.lineTo(100, 425); // End point (x, y);
-    ctx.lineTo(300, 425); // End point (x, y);
+    ctx.lineTo(250, 425); // End point (x, y);
     ctx.stroke();
     
     ctx.beginPath();
-    ctx.moveTo(300, 400); // Start point (x, y);
-    ctx.lineTo(400, 400); // End point (x, y);
+    ctx.moveTo(250, 400); // Start point (x, y);
+    ctx.lineTo(250, 400); // End point (x, y);
     ctx.stroke();
     
     
