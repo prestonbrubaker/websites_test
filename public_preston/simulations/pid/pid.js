@@ -100,17 +100,17 @@ function drawPFD() {
     // Pump to reactor vessel
     ctx.beginPath();
     ctx.moveTo(250, 400); // Start point (x, y);
-    ctx.lineTo(400, 400); // End point (x, y);
+    ctx.lineTo(375, 400); // End point (x, y);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.moveTo(400, 400); // Start point (x, y);
-    ctx.lineTo(390, 413); // End point (x, y);
+    ctx.moveTo(375, 400); // Start point (x, y);
+    ctx.lineTo(365, 413); // End point (x, y);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.moveTo(400, 400); // Start point (x, y);
-    ctx.lineTo(390, 387); // End point (x, y);
+    ctx.moveTo(375, 400); // Start point (x, y);
+    ctx.lineTo(365, 387); // End point (x, y);
     ctx.stroke();
 
     
