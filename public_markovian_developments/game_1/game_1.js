@@ -68,6 +68,7 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
         });
+        loadHues();
     }
 
     function loadHues() {
@@ -115,6 +116,7 @@
         }
         
         saveHues();
+        
     }
 
     function handleRightArrow() {
@@ -182,5 +184,5 @@
     
 
     loadHues();
-    setInterval(loadHues, 1000);
+    setInterval(loadHues, 300);
 //});
