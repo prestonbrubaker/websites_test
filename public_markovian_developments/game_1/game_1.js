@@ -176,8 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var leftButt = document.getElementById('left-butt');
         var rightButt = document.getElementById('right-butt');
     
-        leftButton.addEventListener('touchstart', function() {
-            handleKeyA();
+        leftButton.addEventListener('touchstart', handleKeyA() {
+            ;
         });
     
         rightButton.addEventListener('touchstart', function() {
