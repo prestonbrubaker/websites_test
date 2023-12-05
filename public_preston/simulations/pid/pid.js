@@ -85,6 +85,14 @@ function tick() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
 
+
+    ctx.fillStyle = "#000000";
+    ctx.beginPath();
+    ctx.moveTo(0, 0); // Start point (x, y)
+    ctx.lineTo(200, 200); // End point (x, y)
+    ctx.stroke();
+    
+    
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
     
