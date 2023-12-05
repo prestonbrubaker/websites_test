@@ -36,6 +36,8 @@
             }
         }
         ctx.clearRect(0,0,maxW,maxH)
+        ctx.fillStyle = "#FF7777";
+        ctx.fillRect(0,0,maxW,maxH);
         xa = hues[0][0];
         xb = hues[0][1];
         ctx.fillStyle = "#770000";
@@ -66,6 +68,7 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
         });
+        loadHues();
     }
 
     function loadHues() {
@@ -113,6 +116,7 @@
         }
         
         saveHues();
+        
     }
 
     function handleRightArrow() {
@@ -180,5 +184,5 @@
     
 
     loadHues();
-    setInterval(loadHues, 50);
+    setInterval(loadHues, 300);
 //});
