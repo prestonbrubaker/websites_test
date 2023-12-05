@@ -63,7 +63,7 @@ var qdot = 0;
 var qdot_1 = 0;
 var qdot_2 = 0;
 var qdot_3 = 0;
-var dt = 1; //seconds per interval
+var dt = .1; //seconds per interval
 
 
 function drawPFD() {
