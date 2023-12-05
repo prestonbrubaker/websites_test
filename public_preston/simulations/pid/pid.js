@@ -216,13 +216,13 @@ function tick() {
     // Transfer heat
 
     // from heater to heating fluid
-    var qdot_1 = (heater_temp - fluid_temp) * 5;
+    var qdot_1 = (heater_temp - fluid_temp) * .05;
 
     // from heating fluid to vessel wall
-    var qdot_2 = (fluid_temp - vessel_wall_temp) * 5;
+    var qdot_2 = (fluid_temp - vessel_wall_temp) * .05;
 
     // from vessel wall to vessel content
-    var qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 50;
+    var qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .5;
 
 
     // from heater to heating fluid
