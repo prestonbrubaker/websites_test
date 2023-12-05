@@ -49,7 +49,7 @@ function drawPFD() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("Simulation Window 1: Process Flow Diagram (PFD)", maxW / 2 - 200, 10);
+    ctx.fillText("Simulation Window 1: Process Flow Diagram (PFD)", maxW / 2 - 100, 10);
 
     ctx.fillStyle = "#000000";
     
