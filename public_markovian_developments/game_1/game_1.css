@@ -49,3 +49,7 @@ body {
 #canvas1 {
   border: 0.25rem dotted black;
 }
+
+p {
+  margin-bottom: 2rem;
+ }
