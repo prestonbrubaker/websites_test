@@ -54,5 +54,47 @@ p {
   margin-bottom: 2rem;
  }
 
+ #mobile-controls button {
+  background-color: #770000; 
+  color: white; 
+  border: 0.2rem solid black; 
+  padding: 15px 32px;
+  font-family: "pixel1"; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+}
 
+#phone-controls button {
+  background-color: #007700;
+  color: white; 
+  border: 0.2rem solid black; 
+  padding: 15px 32px; 
+  font-family: "pixel1", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+}
 
+/* Position the mobile controls div */
+#mobile-controls {
+  position: fixed; 
+  left: 50%; 
+  bottom: 10px; 
+  transform: translateX(-50%); 
+  display: none;
+  cursor: pointer;
+}
+
+/* Show the controls on mobile devices */
+@media screen and (max-width: 600px) {
+  #mobile-controls {
+      display: block;
+  }
+}
