@@ -68,8 +68,21 @@ p {
   border-radius: 4px; 
 }
 
+#phone-controls button {
+  background-color: #007700; 
+  color: white; 
+  border: none; 
+  padding: 15px 32px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 4px; 
+}
+
 /* Position the mobile controls div */
-#mobile-controls {
+#mobile-controls, #phone-controls {
   position: fixed; 
   left: 50%; 
   bottom: 10px; 
@@ -80,7 +93,7 @@ p {
 
 /* Show the controls on mobile devices */
 @media screen and (max-width: 600px) {
-  #mobile-controls {
+  #mobile-controls, #phone-controls {
       display: block;
   }
 }

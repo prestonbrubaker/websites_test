@@ -171,25 +171,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function setupMobileControls() {
-        var upButton = document.getElementById('up-button');
-        var downButton = document.getElementById('down-button');
         var leftButton = document.getElementById('left-button');
         var rightButton = document.getElementById('right-button');
-    
-        upButton.addEventListener('touchstart', function() {
-            if(offYP > 0) player_v_y -= player_acc_y;
-        });
-    
-        downButton.addEventListener('touchstart', function() {
-            if(offYP < pCYW - pCY) player_v_y += player_acc_y;
-        });
+        var leftButt = document.getElementById('left-butt');
+        var rightButt = document.getElementById('right-butt');
     
         leftButton.addEventListener('touchstart', function() {
-            if(offXP > 0) player_v_x -= player_acc_x;
+            handleKeyA();
         });
     
         rightButton.addEventListener('touchstart', function() {
-            if(offXP < pCXW - pCX) player_v_x += player_acc_x;
+            handleKeyD();
+        });
+
+        leftButt.addEventListener('touchstart', function() {
+            handleLeftArrow();
+        });
+    
+        rightButt.addEventListener('touchstart', function() {
+            handleRightArrow();
         });
     }
 
