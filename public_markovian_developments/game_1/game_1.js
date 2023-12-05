@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     *********************************************************************/
     
     function saveHues() {
+        hues[0][0] = xa;
+        hues[0][1] = xb;
         fetch('/save-game_1', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -59,6 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 hues = data.hues;
                 drawCanvas(hues);
             });
+        xa = hues[0][0];
+        xb = hues[0][1];
+        
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(xa * maxW, 200, 50, 200);
+        ctx.fillStyle = "#00FF00";
+        ctx.fillRect(xb * maxW, 200, 50, 200);
     }
 
 
@@ -72,21 +81,25 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleKeyA() {
         console.log('Key A is held down');
         xa -= 0.1;
+        saveHues();
     }
 
     function handleKeyD() {
         console.log('Key D is held down');
         xa += 0.1;
+        saveHues();
     }
 
     function handleLeftArrow() {
         console.log('Left Arrow is held down');
         xb -= 0.1;
+        saveHues();
     }
 
     function handleRightArrow() {
         console.log('Right Arrow is held down');
         xb += 0.1;
+        saveHues();
     }
 
     // Object to keep track of key states
@@ -137,11 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
     });
-
-    ctx.fillStyle = "#FF0000";
-    ctx.fillRect(xa * maxW, 200, 50, 200);
-    ctx.fillStyle = "#00FF00";
-    ctx.fillRect(xb * maxW, 200, 50, 200);
+    
+    
 
     loadHues();
     setInterval(loadHues, 2000);
