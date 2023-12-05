@@ -53,18 +53,18 @@ function drawPFD() {
 
     ctx.fillStyle = "#000000";
     
-    ctx.fillRect(75,100,50,200);
+    ctx.fillRect(75,150,50,200);
 
-    ctx.fillRect(375,25,50,350);
+    ctx.fillRect(375,75,50,350);
     ctx.beginPath();
-    ctx.moveTo(100, 100); // Start point (x, y)
-    ctx.lineTo(100, 50); // End point (x, y)
-    ctx.lineTo(400, 50); // End point (x, y)
+    ctx.moveTo(100, 150); // Start point (x, y)
+    ctx.lineTo(100, 100); // End point (x, y)
+    ctx.lineTo(400, 100); // End point (x, y)
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(100, 300); // Start point (x, y)
-    ctx.lineTo(100, 350); // End point (x, y)
-    ctx.lineTo(400, 350); // End point (x, y)
+    ctx.moveTo(100, 350); // Start point (x, y)
+    ctx.lineTo(100, 400); // End point (x, y)
+    ctx.lineTo(400, 400); // End point (x, y)
     ctx.stroke();
     
     
