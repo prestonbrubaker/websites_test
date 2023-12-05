@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'd': false,
         'ArrowLeft': false,
         'ArrowRight': false
+
     };
 
     // Function to call the appropriate function based on the key
@@ -176,8 +177,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var leftButt = document.getElementById('left-butt');
         var rightButt = document.getElementById('right-butt');
     
-        leftButton.addEventListener('touchstart', handleKeyA() {
-            ;
+        leftButton.addEventListener('touchstart', function() {
+            console.log('Key A is held down');
+            if(xa > 0){
+                xa -= 0.01;
+            }
+            saveHues();
         });
     
         rightButton.addEventListener('touchstart', function() {
