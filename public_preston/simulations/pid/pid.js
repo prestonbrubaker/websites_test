@@ -63,7 +63,7 @@ var qdot = 0;
 var qdot_1 = 0;
 var qdot_2 = 0;
 var qdot_3 = 0;
-var dt = .1; //seconds per interval
+var dt = 10; //seconds per interval
 
 
 function drawPFD() {
@@ -235,13 +235,13 @@ function tick() {
     // Transfer heat
 
     // from heater to heating fluid
-    qdot_1 = (heater_temp - fluid_temp) * 20;
+    qdot_1 = (heater_temp - fluid_temp) * 200;
 
     // from heating fluid to vessel wall
-    qdot_2 = (fluid_temp - vessel_wall_temp) * 20;
+    qdot_2 = (fluid_temp - vessel_wall_temp) * 200;
 
     // from vessel wall to vessel content
-    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 20;
+    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 200;
 
     
     // from heater to heating fluid
