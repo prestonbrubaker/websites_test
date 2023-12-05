@@ -80,11 +80,11 @@ function drawPFD() {
     ctx.fillRect(375,75,50,350);
     
     ctx.beginPath();
-    ctx.arc(402, 77, 21, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.arc(400, 75, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.arc(402, 427, 21, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.arc(400, 425, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
     ctx.stroke();
     
     
