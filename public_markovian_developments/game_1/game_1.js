@@ -36,6 +36,8 @@
             }
         }
         ctx.clearRect(0,0,maxW,maxH)
+        ctx.fillStyle = "#FF7777";
+        ctx.fillRect(0,0,maxW,maxH);
         xa = hues[0][0];
         xb = hues[0][1];
         ctx.fillStyle = "#770000";
