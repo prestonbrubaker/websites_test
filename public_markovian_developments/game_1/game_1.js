@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillStyle = "#007700";
         ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#000000";
-        ctx.fillText("HI, I'm Willoh!", xa * maxW, maxH, maxH - 1 * charH - 40);
-        ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH, maxH - 1 * charH - 40);
+        ctx.fillText("HI, I'm Willoh!", xa * maxW, maxH - 1 * charH - 40);
+        ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
     }
 
     /********************************************************************
