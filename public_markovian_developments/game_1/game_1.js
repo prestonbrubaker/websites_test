@@ -178,21 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     
-    leftButton.addEventListener('touchstart', function() {
-        handleKeyA();
-     });
-    
-    rightButton.addEventListener('touchstart', function() {
-        handleKeyD();
-    });
-
-    leftButt.addEventListener('touchstart', function() {
-        handleLeftArrow();
-    });
-    
-    rightButt.addEventListener('touchstart', function() {
-        handleRightArrow();
-    });
 
     
 
