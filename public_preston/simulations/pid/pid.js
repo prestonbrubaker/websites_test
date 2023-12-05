@@ -224,19 +224,28 @@ function tick() {
     // from vessel wall to vessel content
     var qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .5;
 
-
+    
     // from heater to heating fluid
     fluid_temp += qdot_1 / mass_fluid / heat_cap_water * dt;
+
+    // from heating fluid to heater
+    heater_temp -= qdot_1 / mass_heater / heat_cap_steel * dt;
 
     // from heating fluid to vessel wall
     vessel_wall_temp += qdot_2 / mass_vessel_wall / heat_cap_steel * dt;
 
+    // from vessel wall to heating fluid
+    fluid_temp -= qdot_2 / mass_fluid / heat_cap_water * dt;
+
     // from vessel wall to vessel content
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
 
+    // from vessel content to vessel wall
+    vessel_wall_temp -= qdot_3 / mass_vessel_wall / heat_cap_steel * dt;
+    
     
     // add heat to heater
-    if(heater_temp < 90){
+    if(heater_temp < 91){
         qdot = 10;
         heater_temp += 1 / mass_heater / heat_cap_steel * dt;
     }
