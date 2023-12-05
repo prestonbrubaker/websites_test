@@ -102,7 +102,7 @@ footer {
 #canvas2 {
     display: block; /* Ensures the canvas is a block-level element */
     margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
-    border: 5px solid #070; /* Optional: adds a border for visibility */
+    border: 5px solid #770; /* Optional: adds a border for visibility */
     /* Set the width and height if not set inline in the HTML */
 }
 
