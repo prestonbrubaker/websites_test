@@ -54,7 +54,7 @@ var vessel_cont_temp = 20;
 
 var flow_rate = 1; //kg per second
 var mass_heater = 50; //kg
-var mass_fluid = 10;
+var mass_fluid = 1000;
 var mass_vessel_cont = 1000; //kg
 var mass_vessel_wall = 50; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
