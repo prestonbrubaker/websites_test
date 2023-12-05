@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PID Control</title>
+    <script src="pid.js" defer></script>
+    <link rel="stylesheet" href="pid.css">
+  </head>
+    
+  <body>
+    <nav>
+    <ul>
+        <li><a href="../../index.html">Back to Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Simulations</a>
+          <ul class="dropdown-content" id="dropdownMenu">
+              <li><a href="../simulations.html">Simulations Home</a></li>
+              <li><a href="../agents/agents.html">Competetive Agents Simulation</a></li>
+              <li><a href="three_body_problem.html">Three Body Problem Simulation</a></li>
+          </ul>
+        </li>
+        <li><a href="../../resume/resume.html">Resume</a></li>
+        <li><a href="../../contact/contact.html">Contact</a></li>
+        <!-- Add more navigation links as needed -->
+    </ul>
+    </nav>
+
+    <div class="content">
+          <div class="word-art-container">
+            <div class="word-art">Preston's Simulation of the Three-Body Problem</div>
+          </div>
+        <div id="overlay">
+          <div class="canvasBox">
+            <canvas id="canvas1" width="500" height="500"></canvas>
+            <canvas id="canvas2" width="500" height="500"></canvas>
+            <canvas id="canvas3" width="500" height="500"></canvas>
+          </div>
+        </div>
+      <section class="simulation-explanation">
+  <article>
+    <h2>Understanding the Three-Body Problem</h2>
+    <p>
+      The three-body problem demonstrates the complex gravitational interactions between three celestial objects. Here's what makes this simulation fascinating:
+    </p>
+    <ul>
+      <li><strong>Gravitational Pull:</strong> As objects come closer, their gravitational attraction increases exponentially.</li>
+      <li><strong>Sensitive Dependence:</strong> A minute change in position leads to significant variance over time, showing how chaotic celestial mechanics can be.</li>
+      <li><strong>Unpredictable Orbits:</strong> The paths of bodies are highly sensitive, making long-term prediction a challenge.</li>
+    </ul>
+    <p>
+      In this simulation, we visualize how a tiny variation in initial conditions can lead to drastically different outcomes. The bottom of the canvas captures the trails left by planets, painting a picture of their dynamic interactions over time.
+    </p>
+  </article>
+</section>
+    </div>
+    
+  </body>
+
+</html>
