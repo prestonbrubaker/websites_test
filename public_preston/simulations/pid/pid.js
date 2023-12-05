@@ -50,6 +50,16 @@ function drawPFD() {
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FFFFFF";
     ctx.fillText("Simulation Window 1", maxW / 2 - 50, maxH / 10);
+
+    ctx.fillRect(100,100,50,100);
+
+    ctx.fillRect(300,100,50,100);
+    ctx.beginPath();
+    ctx.moveTo(100, 100); // Start point (x, y)
+    ctx.lineTo(100, 50); // End point (x, y)
+    ctx.lineTo(300, 50); // End point (x, y)
+    ctx.lineTo(300, 100); // End point (x, y)
+    ctx.stroke();
     
     
 }
