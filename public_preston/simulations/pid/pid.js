@@ -23,7 +23,7 @@ window.onclick = function(event) {
     var maxW = c.width;   
     var maxH = c.height;
     
-    const bgHue = "#000000";
+    const bgHue = "#777777";
     
     
     ctx.fillStyle = bgHue;
