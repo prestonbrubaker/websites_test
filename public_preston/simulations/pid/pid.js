@@ -103,6 +103,16 @@ function drawPFD() {
     ctx.lineTo(400, 400); // End point (x, y);
     ctx.stroke();
 
+    ctx.beginPath();
+    ctx.moveTo(400, 400); // Start point (x, y);
+    ctx.lineTo(390, 413); // End point (x, y);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(400, 400); // Start point (x, y);
+    ctx.lineTo(390, 387); // End point (x, y);
+    ctx.stroke();
+
     
     
     ctx.fillRect(375,75,50,350);
