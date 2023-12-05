@@ -214,10 +214,7 @@ function tick() {
     ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
 
     // Transfer heat
-    var heater_temp = 20;
-var fluid_temp = 20;
-var vessel_wall_temp = 20;
-var vessel_cont_temp = 20;
+
     // from heater to heating fluid
     qdot = (heater_temp - fluid_temp) * 0.0001;
     fluid_temp += qdot / mass_fluid / heat_cap_water * dt;
