@@ -92,7 +92,7 @@ p {
 }
 
 /* Show the controls on mobile devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   #mobile-controls, #phone-controls {
       display: block;
   }
