@@ -72,6 +72,10 @@ function drawPFD() {
     ctx.moveTo(250, 400); // Start point (x, y);
     ctx.lineTo(400, 400); // End point (x, y);
     ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(250, 425, 25, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.stroke();
     
     
 }
