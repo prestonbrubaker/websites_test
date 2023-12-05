@@ -227,11 +227,12 @@ function tick() {
     qdot = (vessel_wall_temp - vessel_cont_temp) * 50;
     vessel_cont_temp += qdot / mass_vessel_cont / heat_cap_water * dt;
 
-
-    // add heat to heater
-    qdot = 10;
-    heater_temp += 1 / mass_heater / heat_cap_steel * dt;
     
+    // add heat to heater
+    if(heater_temp < 90){
+        qdot = 10;
+        heater_temp += 1 / mass_heater / heat_cap_steel * dt;
+    }
     
     
 }
