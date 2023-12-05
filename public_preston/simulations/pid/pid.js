@@ -235,13 +235,13 @@ function tick() {
     // Transfer heat
 
     // from heater to heating fluid
-    qdot_1 = (heater_temp - fluid_temp) * .5;
+    qdot_1 = (heater_temp - fluid_temp) * .9;
 
     // from heating fluid to vessel wall
-    qdot_2 = (fluid_temp - vessel_wall_temp) * .5;
+    qdot_2 = (fluid_temp - vessel_wall_temp) * .9;
 
     // from vessel wall to vessel content
-    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .5;
+    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * .9;
 
     
     // from heater to heating fluid
@@ -264,7 +264,7 @@ function tick() {
 
     
     // add heat to heater
-    if(heater_temp < 1000){
+    if(vessel_wall_temp < 75){
         qdot = 10000;
         heater_temp += qdot / mass_heater / heat_cap_steel * dt;
     }
