@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         blockSize = 1;
     }
 
-    canvas.addEventListener('mouseover', function() {
+    canvas.addEventListener('mouseout', function() {
         document.body.style.cursor = 'url(../images/paintbrush.png), auto';
     });
 
-    canvas.addEventListener('mouseout', function() {
+    canvas.addEventListener('mouseover', function() {
         canvas.style.cursor = 'default';
     });
 
