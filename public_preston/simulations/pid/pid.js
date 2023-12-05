@@ -268,7 +268,7 @@ function tick() {
     
     // add heat to heater
     if(vessel_cont_temp < 75){
-        qdot = 1000;
+        qdot = 10000;
         heater_temp += qdot / mass_heater / heat_cap_steel * dt;
     }
     
