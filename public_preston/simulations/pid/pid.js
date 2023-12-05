@@ -199,7 +199,7 @@ function tick() {
 
     ctx3.clearRect(0,0,maxW,maxH);
     ctx3.fillStyle = bgHue;
-    ctx3.fillRect(0,0,maxW,maxH);
+    ctx3.fillRect(0,0,maxW,maxH / 2);
     
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
@@ -209,6 +209,17 @@ function tick() {
     ctx3.fillText("q1:  " + qdot_1, 10, 90);
     ctx3.fillText("q2:  " + qdot_2, 10, 110);
     ctx3.fillText("q3:  " + qdot_3, 10, 130);
+
+
+    //plot temps
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(itC / 1000, maxH - fluid_temp * 3, 5, 5)
+
+    ctx3.fillStyle = "#00FF00";
+    ctx3.fillRect(itC / 1000, maxH - vessel_wall_temp * 3, 5, 5)
+
+    ctx3.fillStyle = "#0000FF";
+    ctx3.fillRect(itC / 1000, maxH - vessel_cont_temp * 3, 5, 5)
 
     // Transfer heat
 
@@ -239,7 +250,7 @@ function tick() {
 
     // from vessel content to vessel wall
     vessel_wall_temp -= qdot_3 / mass_vessel_wall / heat_cap_steel * dt;
-    
+
     
     // add heat to heater
     if(heater_temp < 91){
