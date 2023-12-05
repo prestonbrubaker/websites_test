@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var maxH = canvas.height;
     var charW = maxW * 0.1;
     var charH = maxH * 0.7;
+    var leftButton = document.getElementById('left-button');
+    var rightButton = document.getElementById('right-button');
+    var leftButt = document.getElementById('left-butt');
+    var rightButt = document.getElementById('right-butt');
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
     } else{
@@ -172,10 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 
-    var leftButton = document.getElementById('left-button');
-    var rightButton = document.getElementById('right-button');
-    var leftButt = document.getElementById('left-butt');
-    var rightButt = document.getElementById('right-butt');
+
     
     leftButton.addEventListener('touchstart', function() {
         handleKeyA();
