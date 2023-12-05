@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
-    var charW = 20;
-    var charH = 100
+    
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -16,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var maxW = canvas.width;
     var maxH = canvas.height;
-
+    var charW = maxW * 0.1;
+    var charH = maxH * 0.7;
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
     } else{
@@ -37,9 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
         xa = hues[0][0];
         xb = hues[0][1];
         ctx.fillStyle = "#770000";
-        ctx.fillRect(xa * maxW, maxH, 50, -200);
+        ctx.fillRect(xa * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#007700";
-        ctx.fillRect(xb * maxW, maxH, 50, -200);
+        ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
+        ctx.fillStyle = "#000000";
+        ctx.fillText("HI, I'm Willoh!", xa * maxW, maxH, -1 * charH - 20);
+        ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH, -1 * charH - 20);
     }
 
     /********************************************************************
