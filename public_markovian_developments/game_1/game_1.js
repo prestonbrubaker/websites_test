@@ -1,8 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    var xa = 0;
-    var xb = 0;
+    var xa = .2;
+    var xb = .8;
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
         xa = hues[0][0];
         xb = hues[0][1];
         
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(xa * maxW, 200, 50, 200);
-        ctx.fillStyle = "#00FF00";
-        ctx.fillRect(xb * maxW, 200, 50, 200);
+        ctx.fillStyle = "#770000";
+        ctx.fillRect(xa * maxW, maxH, 50, -200);
+        ctx.fillStyle = "#007700";
+        ctx.fillRect(xb * maxW, maxH, 50, -200);
     }
 
 
