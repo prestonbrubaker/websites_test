@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         xa = hues[0][0];
         xb = hues[0][1];
         ctx.fillStyle = "#770000";
-        ctx.fillRect(xa * maxW, maxH, 50, -200);
+        ctx.fillRect(xa * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#007700";
-        ctx.fillRect(xb * maxW, maxH, 50, -200);
+        ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
     }
 
     /********************************************************************
