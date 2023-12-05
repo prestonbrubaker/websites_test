@@ -127,14 +127,40 @@
         saveHues();
     }
 
-    // Object to keep track of key states
+        // Object to keep track of key states and the interval function
     const keysPressed = {
-        'a': false,
-        'd': false,
-        'ArrowLeft': false,
-        'ArrowRight': false
-        
+        'a': { pressed: false, interval: null },
+        'd': { pressed: false, interval: null },
+        'ArrowLeft': { pressed: false, interval: null },
+        'ArrowRight': { pressed: false, interval: null }
     };
+    
+    // Event listener for keydown
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (!keysPressed[key].pressed) {
+            keysPressed[key].pressed = true;
+            // Clear any existing interval just in case
+            if (keysPressed[key].interval !== null) {
+                clearInterval(keysPressed[key].interval);
+            }
+            // Set a new interval
+            keysPressed[key].interval = setInterval(() => {
+                repeatFunction(key);
+            }, 50); // Calls repeatFunction every 50ms
+        }
+    });
+    
+    // Event listener for keyup
+    document.addEventListener('keyup', function(event) {
+        const key = event.key;
+        if (keysPressed[key].pressed) {
+            keysPressed[key].pressed = false;
+            // Clear the interval when the key is released
+            clearInterval(keysPressed[key].interval);
+            keysPressed[key].interval = null;
+        }
+    });
 
     // Function to call the appropriate function based on the key
     function repeatFunction(key) {
@@ -157,25 +183,7 @@
         }
     }
 
-    // Event listener for keydown
-    document.addEventListener('keydown', function(event) {
-        const key = event.key;
-        if (keysPressed.hasOwnProperty(key) && !keysPressed[key]) {
-            keysPressed[key] = true;
-            repeatFunction(key);
-        }
-    });
-
-    // Event listener for keyup
-    document.addEventListener('keyup', function(event) {
-        const key = event.key;
-        if (keysPressed.hasOwnProperty(key)) {
-            keysPressed[key] = false;
-        }
-
-
-        
-    });
+    
     
 
 
