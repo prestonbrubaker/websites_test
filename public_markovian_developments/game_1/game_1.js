@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function saveHues() {
-        fetch('/save-canvas', {
+        fetch('/save-game_1', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function loadHues() {
-        fetch('/get-canvas')
+        fetch('/get-game_1')
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
