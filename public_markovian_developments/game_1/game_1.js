@@ -171,28 +171,28 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
     
-    function setupMobileControls() {
-        var leftButton = document.getElementById('left-button');
-        var rightButton = document.getElementById('right-button');
-        var leftButt = document.getElementById('left-butt');
-        var rightButt = document.getElementById('right-butt');
-    
-        leftButton.addEventListener('touchstart', function() {
-            handleKeyA();
-        });
-    
-        rightButton.addEventListener('touchstart', function() {
-            handleKeyD();
-        });
 
-        leftButt.addEventListener('touchstart', function() {
-            handleLeftArrow();
-        });
+    var leftButton = document.getElementById('left-button');
+    var rightButton = document.getElementById('right-button');
+    var leftButt = document.getElementById('left-butt');
+    var rightButt = document.getElementById('right-butt');
     
-        rightButt.addEventListener('touchstart', function() {
-            handleRightArrow();
-        });
-    }
+    leftButton.addEventListener('touchstart', function() {
+        handleKeyA();
+     });
+    
+    rightButton.addEventListener('touchstart', function() {
+        handleKeyD();
+    });
+
+    leftButt.addEventListener('touchstart', function() {
+        handleLeftArrow();
+    });
+    
+    rightButt.addEventListener('touchstart', function() {
+        handleRightArrow();
+    });
+
     
 
     loadHues();
