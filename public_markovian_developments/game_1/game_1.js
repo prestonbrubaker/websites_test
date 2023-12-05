@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
-    var charW = 20;
-    var charH = 100
+    var charW = 50;
+    var charH = 300
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
