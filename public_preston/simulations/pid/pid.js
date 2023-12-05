@@ -215,6 +215,9 @@ function tick() {
     ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
     ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
     ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
+    ctx3.fillText("q1:  " + qdot_1, 10, 90);
+    ctx3.fillText("q2:  " + qdot_2, 10, 110);
+    ctx3.fillText("q3:  " + qdot_3, 10, 130);
 
     // Transfer heat
 
