@@ -74,6 +74,16 @@ function drawPFD() {
     ctx.lineTo(400, 100); // End point (x, y);
     ctx.stroke();
 
+    ctx.beginPath();
+    ctx.moveTo(100, 150); // Start point (x, y);
+    ctx.lineTo(108, 140); // End point (x, y);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(100, 150); // Start point (x, y);
+    ctx.lineTo(92, 140); // End point (x, y);
+    ctx.stroke();
+
     // Bottom linkage from heater block to pump
     ctx.beginPath();
     ctx.moveTo(100, 350); // Start point (x, y);
