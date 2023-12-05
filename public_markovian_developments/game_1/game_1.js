@@ -25,12 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function drawCanvas(hues) {
-        for (let i = 0; i < grid; i++) {
-            for (let j = 0; j < grid; j++) {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             }
         }
+        ctx.clearRect(0,0,maxW,maxH)
+        xa = hues[0][0];
+        xb = hues[0][1];
+        ctx.fillStyle = "#770000";
+        ctx.fillRect(xa * maxW, maxH, 50, -200);
+        ctx.fillStyle = "#007700";
+        ctx.fillRect(xb * maxW, maxH, 50, -200);
     }
 
     /********************************************************************
@@ -59,15 +66,12 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
+                
                 drawCanvas(hues);
             });
-        xa = hues[0][0];
-        xb = hues[0][1];
         
-        ctx.fillStyle = "#770000";
-        ctx.fillRect(xa * maxW, maxH, 50, -200);
-        ctx.fillStyle = "#007700";
-        ctx.fillRect(xb * maxW, maxH, 50, -200);
+        
+        
     }
 
 
@@ -80,25 +84,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define functions for specific keys
     function handleKeyA() {
         console.log('Key A is held down');
-        xa -= 0.1;
+        if(xa > 0){
+            xa -= 0.01;
+        }
         saveHues();
     }
 
     function handleKeyD() {
         console.log('Key D is held down');
-        xa += 0.1;
+        if(xa < 1){
+            xa += 0.01;
+        }
+        
         saveHues();
     }
 
     function handleLeftArrow() {
         console.log('Left Arrow is held down');
-        xb -= 0.1;
+        if(xb > 0){
+            xb -= 0.01;
+        }
+        
         saveHues();
     }
 
     function handleRightArrow() {
         console.log('Right Arrow is held down');
-        xb += 0.1;
+        if(xb < 1){
+            xb += 0.01;
+        }
         saveHues();
     }
 
@@ -154,5 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     loadHues();
-    setInterval(loadHues, 2000);
+    setInterval(loadHues, 50);
 });
