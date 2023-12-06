@@ -39,14 +39,15 @@
             <canvas id="canvas3" width="500" height="500"></canvas>
           </div>
         </div>
+      <button id="run_1" onclick="run_1()">Run Setpoint Control Simulaiton</button>
       <section class="simulation-explanation">
   <article>
     <h2>Explination of my Simulation</h2>
     <p>
-      This is the proportional version. This is how it works:
+      This is the setpoint control version. This is how it works:
     </p>
     <ul>
-      <li><strong>Control Method:</strong> The difference between the set point and the current temperature is used to determine how much power should be fed into the heater.</li>
+      <li><strong>Control Method:</strong> The heater runs at full power when the contents of the vessel are under the setpoint and turns off completely when the contents reach the setpoint.</li>
       <li><strong>Delayed Feedback:</strong> The heat takes a while to make it through to the tank of water. This makes it insufficient to simply use a single if statement and turn the heater on full blast until the tank reaches the set point</li>
       <li><strong>Complex System:</strong> The most optimal power to feed into the heater becomes more challenging to describe analytically with more elements to consider. Furthermore, the a real setup needs to be able to handle noise and outside sources of heat and heat loss. This escapes analytical methods.</li>
     </ul>
