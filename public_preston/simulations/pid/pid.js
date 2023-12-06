@@ -187,9 +187,9 @@ function tick() {
     }
     
     // Clear and fill background
-    ctx2.clearRect(0, 0, maxW, maxH - 100);
+    ctx2.clearRect(0, 0, maxW, maxH / 4);
     ctx2.fillStyle = bgHue;
-    ctx2.fillRect(0, 0, maxW, maxH - 100);
+    ctx2.fillRect(0, 0, maxW, maxH / 4);
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
@@ -215,28 +215,21 @@ function tick() {
 
 
     //plot temps
-    ctx3.fillStyle = "#FF0000";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
+    ctx2.fillStyle = "#FF0000";
+    ctx2.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
     
-    ctx3.fillStyle = "#FFFF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
+    ctx2.fillStyle = "#FFFF00";
+    ctx2.fillRect(itC / 5000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
 
-    ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
+    ctx2.fillStyle = "#00FF00";
+    ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
 
-    ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
+    ctx2.fillStyle = "#0000FF";
+    ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
 
     // Show the temps on the PFD
-    var heater_l = 0;
-    heater_l = heater_temp / 3;
-    if(heater_l > 50){
-        heater_l = 50;
-    }else if (heater_l < 0){
-        heater_l = 0;
-    }
-    ctx.fillStyle = "hsl(0, 50%, " + heater_l + "%)";
-    ctx.fillRect(85,160,30,180);
+    
+    
 
     // Transfer heat
 
@@ -279,7 +272,13 @@ function tick() {
     if(vessel_cont_temp < 75){
         qdot = 100000;
         heater_temp += qdot / mass_heater / heat_cap_steel * dt;
+        ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+    } else {
+        ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
     }
+
+    
+    ctx.fillRect(85,160,30,180);
     
     itC++;
 }
