@@ -321,6 +321,7 @@ function tick() {
             qdot = max_q;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         } else {
+            qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 1){    // Proportional Control
