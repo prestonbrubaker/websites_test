@@ -248,7 +248,7 @@ function tick() {
     ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
 
     ctx3.fillStyle = "#000000";
-    ctx3.fillRect(0, 300, maxW, 5);
+    ctx3.fillRect(0, 299, maxW, 2);
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(itC / 5000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
