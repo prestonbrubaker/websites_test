@@ -67,6 +67,8 @@ var qdot_2 = 0;
 var qdot_3 = 0;
 var qdot_4 = 0;
 var dt = 10; //seconds per interval
+var setpoint_temp = 75;
+var max_q = 100000;
 
 var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
 
@@ -314,13 +316,23 @@ function tick() {
 
     
     // add heat to heater
-    if(vessel_cont_temp < 75){
-        qdot = 100000;
-        heater_temp += qdot / mass_heater / heat_cap_steel * dt;
-        ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
-    } else {
-        ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+    if(method == 0){    //setpoint control
+        if(vessel_cont_temp < setpoint_temp){
+            qdot = max_q;
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+        } else {
+            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+        }
+    }else if (method == 1){    // Proportional Control
+        if(vessel_cont_temp < setpoint_temp){
+            qdot = max_q * (setpoint_temp - vessel_cont_temp) / 100;
+        }
+    }else if (method == 2) {    // PD Control
+
+    }else if (method == 3){    // PID Control
+
     }
+    heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
     
     ctx.fillRect(85,160,30,180);
