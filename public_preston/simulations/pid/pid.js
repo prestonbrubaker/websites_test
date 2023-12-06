@@ -71,6 +71,7 @@ var setpoint_temp = 75;
 var max_q = 100000;
 var derivative = 0;
 var derivative_sto = 0;
+var multiplier = 0;
 
 var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
 
@@ -331,26 +332,32 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 1){    // Proportional Control
-        if(vessel_cont_temp < setpoint_temp){
-            qdot = max_q * (setpoint_temp - vessel_cont_temp) / 50;
-            if( (setpoint_temp - vessel_cont_temp) / 50 < 1){
-                ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
-            } else {
-                ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
-            }
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50;
+        if(multiplier > 1){
+            qdot = max_q;
+        } else if (multiplier > 0){
+            qdot = max_q * multiplier;
         } else {
-            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+            qdot = 0;
+        }
+        if( (multiplier > 0){
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+        } else {
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         }
     }else if (method == 2) {    // PD Control
-        if(vessel_cont_temp < setpoint_temp){
-            qdot = max_q * ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative);
-            if( ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative) < 1){
-                ctx.fillStyle = "hsl(0, 50%, " + (50 * ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative)) + "%)";
-            } else {
-                ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
-            }
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 0.01 * derivative;
+        if(multiplier > 1){
+            qdot = max_q;
+        } else if (multiplier > 0){
+            qdot = max_q * multiplier;
         } else {
-            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+            qdot = 0;
+        }
+        if( (multiplier > 0){
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+        } else {
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         }
     }else if (method == 3){    // PID Control
 
