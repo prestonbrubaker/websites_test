@@ -51,6 +51,7 @@ var heater_temp = 20;
 var fluid_temp = 20;
 var vessel_wall_temp = 20;
 var vessel_cont_temp = 20;
+var air_temp = 20;
 
 var flow_rate = 1; //kg per second
 var mass_heater = 50; //kg
@@ -63,6 +64,7 @@ var qdot = 0;
 var qdot_1 = 0;
 var qdot_2 = 0;
 var qdot_3 = 0;
+var qdot_4 = 0;
 var dt = 10; //seconds per interval
 
 
@@ -206,9 +208,10 @@ function tick() {
     ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
     ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
     ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
-    ctx3.fillText("q1:  " + qdot_1, 10, 90);
-    ctx3.fillText("q2:  " + qdot_2, 10, 110);
-    ctx3.fillText("q3:  " + qdot_3, 10, 130);
+    ctx3.fillText("q1 heater to fluid:  " + qdot_1, 10, 90);
+    ctx3.fillText("q2 fluid to vessel wall:  " + qdot_2, 10, 110);
+    ctx3.fillText("q3 vessel wall to vessel content:  " + qdot_3, 10, 130);
+    ctx3.fillText("q4 vessel wall to air:  " + qdot_3, 10, 130);
 
 
     //plot temps
@@ -246,6 +249,9 @@ function tick() {
     // from vessel wall to vessel content
     qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 800;
 
+    // from vessel wall to air
+    qdot_4 = (vessel_wall_temp - air_temp) * 800;
+
     
     // from heater to heating fluid
     fluid_temp += qdot_1 / mass_fluid / heat_cap_water * dt;
@@ -261,6 +267,9 @@ function tick() {
 
     // from vessel wall to vessel content
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
+
+    //from vessel wall to air
+    vessel_wall_temp -= qdot_4 / mass_vessel_wall / heat_cap_steel * dt
 
     // from vessel content to vessel wall
     vessel_wall_temp -= qdot_3 / mass_vessel_wall / heat_cap_steel * dt;
