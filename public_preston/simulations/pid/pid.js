@@ -210,7 +210,7 @@ function tick() {
     ctx2.fillStyle = "#00FF00";
     ctx2.fillText("Wall of Vessel", 10, 70);
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillText("Wall of Vessel", 10, 90);
+    ctx2.fillText("Vessel Contents", 10, 90);
     
     ctx3.clearRect(0,0,maxW,150);
     ctx3.fillStyle = "#555555";
