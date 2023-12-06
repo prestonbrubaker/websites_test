@@ -54,8 +54,8 @@ var vessel_cont_temp = 20;
 
 var flow_rate = 1; //kg per second
 var mass_heater = 50; //kg
-var mass_fluid = 10;
-var mass_vessel_cont = 1000; //kg
+var mass_fluid = 1000;
+var mass_vessel_cont = 300; //kg
 var mass_vessel_wall = 50; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
 var heat_cap_steel = 466; // J per kg Kelvin
@@ -197,9 +197,9 @@ function tick() {
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
 
-    ctx3.clearRect(0,0,maxW,maxH / 2);
+    ctx3.clearRect(0,0,maxW,maxH / 3);
     ctx3.fillStyle = bgHue;
-    ctx3.fillRect(0,0,maxW,maxH / 2);
+    ctx3.fillRect(0,0,maxW,maxH / 3);
     
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
@@ -213,17 +213,20 @@ function tick() {
 
     //plot temps
     ctx3.fillStyle = "#FF0000";
-    ctx3.fillRect(itC / 1000, maxH - fluid_temp * 3, 5, 5)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
+    
+    ctx3.fillStyle = "#FFFF00";
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
 
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 1000, maxH - vessel_wall_temp * 3, 5, 5)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
 
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 1000, maxH - vessel_cont_temp * 3, 5, 5)
+    ctx3.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
 
     // Show the temps on the PFD
     var heater_l = 0;
-    heater_l = heater_temp / 20;
+    heater_l = heater_temp / 3;
     if(heater_l > 50){
         heater_l = 50;
     }else if (heater_l < 0){
@@ -235,13 +238,13 @@ function tick() {
     // Transfer heat
 
     // from heater to heating fluid
-    qdot_1 = (heater_temp - fluid_temp) * 200;
+    qdot_1 = (heater_temp - fluid_temp) * 800;
 
     // from heating fluid to vessel wall
-    qdot_2 = (fluid_temp - vessel_wall_temp) * 200;
+    qdot_2 = (fluid_temp - vessel_wall_temp) * 800;
 
     // from vessel wall to vessel content
-    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 200;
+    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 800;
 
     
     // from heater to heating fluid
@@ -265,7 +268,7 @@ function tick() {
     
     // add heat to heater
     if(vessel_cont_temp < 75){
-        qdot = 1000;
+        qdot = 100000;
         heater_temp += qdot / mass_heater / heat_cap_steel * dt;
     }
     
