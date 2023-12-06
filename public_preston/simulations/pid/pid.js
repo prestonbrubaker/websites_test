@@ -281,7 +281,7 @@ function tick() {
     ctx3.fillStyle = "#00FF00";
     ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
 
-    derivitave_sto = vessel_cont_temp;
+    
 
     // Transfer heat
 
@@ -312,7 +312,8 @@ function tick() {
 
     // from vessel wall to vessel content
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
-
+    derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
+    
     //from vessel wall to air
     vessel_wall_temp -= qdot_4 / mass_vessel_wall / heat_cap_steel * dt
 
@@ -347,7 +348,6 @@ function tick() {
     }
     heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
-    derivative = (vessel_cont_temp - derivative_sto) / dt;
     
     ctx.fillRect(85,160,30,180);
     
