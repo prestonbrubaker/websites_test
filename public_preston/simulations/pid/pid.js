@@ -343,7 +343,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 2) {    // PD Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 0.01 * derivative;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 0.1 * derivative;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
