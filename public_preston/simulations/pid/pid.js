@@ -227,7 +227,7 @@ function tick() {
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
-    ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_3) + " J/s", 300, 90);
+    ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_4) + " J/s", 300, 90);
 
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint", 10, 110);
