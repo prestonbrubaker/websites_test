@@ -194,10 +194,18 @@ function tick() {
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
-    ctx2.fillText("Simulation Window 2", maxW / 2 - 50, maxH / 10);
+    ctx2.fillText("Graph of Temperatures", maxW / 2 - 50, 10);
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
+    ctx2.fillStyle = "#FF0000";
+    ctx2.fillText("Heater", 10, 30);
+    ctx2.fillStyle = "#FFFF00";
+    ctx2.fillText("Heating Fluid", 10, 50);
+    ctx2.fillStyle = "#00FF00";
+    ctx2.fillText("Wall of Vessel", 10, 70);
+    ctx2.fillStyle = "#0000FF";
+    ctx2.fillText("Wall of Vessel", 10, 90);
 
     ctx3.clearRect(0,0,maxW,maxH / 3);
     ctx3.fillStyle = bgHue;
