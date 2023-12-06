@@ -327,7 +327,7 @@ function tick() {
         if(vessel_cont_temp < setpoint_temp){
             qdot = max_q * (setpoint_temp - vessel_cont_temp) / 100;
             if( (setpoint_temp - vessel_cont_temp) / 100 < 1){
-                ctx.fillStyle = "hsl(0, 50%, " + 50 * setpoint_temp - vessel_cont_temp) / 100 + "%)";
+                ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 100) + "%)";
             } else {
                 ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
             }
