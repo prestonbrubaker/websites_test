@@ -232,7 +232,7 @@ function tick() {
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint:  " + Math.floor(vessel_cont_temp - 75) + "°C", 10, 110);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillText("Log of difference between vessel contents and setpoint:  " + Math.log(Math.abs((vessel_cont_temp - 75))), 10, 130);
+    ctx3.fillText("Log of difference between vessel contents and setpoint:  " + Math.floor(Math.log(Math.abs((vessel_cont_temp - 75)))), 10, 130);
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
