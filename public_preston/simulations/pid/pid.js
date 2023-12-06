@@ -358,7 +358,16 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 100 * derivative - integral / 1000;
+        if(multiplier > 1){
+            qdot = max_q;
+        } else if (multiplier > 0){
+            qdot = max_q * multiplier;
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (multiplier)) + "%)";
+        } else {
+            qdot = 0;
+            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+        }
     }
     heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
