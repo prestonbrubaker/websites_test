@@ -216,8 +216,8 @@ function tick() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0,0,maxW,150);
 
-    ctx.fillStyle = "#333333";
-    ctx.fillRect(0,150,maxW,-2);
+    ctx3.fillStyle = "#333333";
+    ctx3.fillRect(0,150,maxW,-2);
     
     ctx3.fillStyle = "#FFFFFF";
     
