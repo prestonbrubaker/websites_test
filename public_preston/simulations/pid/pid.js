@@ -360,7 +360,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 100 * derivative - integral / 10000;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 800 * derivative - integral / 5000;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -371,6 +371,13 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }
+
+    if (multiplier > 1){
+        multiplier = 1;
+    }else if (multiplier < 0){
+        multiplier = 0;
+    }
+    
     heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
     
