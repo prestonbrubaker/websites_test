@@ -328,6 +328,11 @@ function tick() {
     itC++;
 }
 
+function button_pressed(setting) {
+    method = setting;
+    initialize();
+}
+
 
 
 // Initialize
