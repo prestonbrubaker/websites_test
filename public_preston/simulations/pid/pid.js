@@ -229,7 +229,7 @@ function tick() {
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
     ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_4) + " J/s", 300, 90);
-    if(vessel_cont_temp < 100){
+    if(vessel_cont_temp < 107){
         ctx3.fillText("Pressure in vessel:  " + Math.floor((10 ** (5.08354 - 1663.125 / (vessel_cont_temp + 273.15 - 45.622)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     } else {
         ctx3.fillText("Pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
@@ -272,7 +272,7 @@ function tick() {
     qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 500;
 
     // from vessel wall to air
-    qdot_4 = (vessel_wall_temp - air_temp) * 150;
+    qdot_4 = (vessel_wall_temp - air_temp) * 100;
 
     
     // from heater to heating fluid
