@@ -316,7 +316,7 @@ function tick() {
 
     // from vessel wall to vessel content
     integral += (vessel_cont_temp - setpoint_temp) * dt;
-    integral *= 0.99;
+    integral *= 0.999;
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
     derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
     
