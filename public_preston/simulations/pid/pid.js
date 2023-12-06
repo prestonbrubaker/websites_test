@@ -343,9 +343,9 @@ function tick() {
         }
     }else if (method == 2) {    // PD Control
         if(vessel_cont_temp < setpoint_temp){
-            qdot = max_q * (setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative;
-            if( (setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative < 1){
-                ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative) + "%)";
+            qdot = max_q * ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative);
+            if( ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative) < 1){
+                ctx.fillStyle = "hsl(0, 50%, " + (50 * ((setpoint_temp - vessel_cont_temp) / 20 - 20 * derivative)) + "%)";
             } else {
                 ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
             }
