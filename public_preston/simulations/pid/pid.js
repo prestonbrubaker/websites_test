@@ -248,7 +248,7 @@ function tick() {
     ctx3.fillText("Vessel cont temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
 
     ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
-    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral * 60) / 100 + "°C * min", 150, 50);
+    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "°C * min", 150, 50);
     
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
@@ -314,7 +314,7 @@ function tick() {
     fluid_temp -= qdot_2 / mass_fluid / heat_cap_ethylene_glycol * dt;
 
     // from vessel wall to vessel content
-    integral += (vessel_cont_temp - setpoint_temp);
+    integral += (vessel_cont_temp - setpoint_temp) * dt;
     integral *= 0.99;
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
     derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
