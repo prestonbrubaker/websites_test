@@ -207,16 +207,16 @@ function tick() {
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
-    ctx2.fillText("Graph of Temperatures", maxW / 2 - 40, 10);
+    ctx2.fillText("Graph of Temperatures", maxW / 2 - 35, 10);
 
     if(method == 0){
-        ctx2.fillText("Setpoint Control", maxW / 2 - 40, 70);
+        ctx2.fillText("Setpoint Control", maxW / 2 - 35, 70);
     }else if (method == 1){
-        ctx2.fillText("Proportional Control", maxW / 2 - 30, 70);
+        ctx2.fillText("Proportional Control", maxW / 2 - 35, 70);
     }else if (method == 2){
-        ctx2.fillText("PD Control", maxW / 2 - 40, 70);
+        ctx2.fillText("PD Control", maxW / 2 - 35, 70);
     }else if (method == 3){
-        ctx2.fillText("PID Control", maxW / 2 - 40, 70);
+        ctx2.fillText("PID Control", maxW / 2 - 35, 70);
     }
 
     
