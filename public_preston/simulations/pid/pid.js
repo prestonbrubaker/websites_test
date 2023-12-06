@@ -260,7 +260,7 @@ function tick() {
     } else {
         ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     }
-    ctx3.fillStyle = "#FF0000";
+    ctx3.fillStyle = "#0000FF";
     ctx3.fillText("Difference between vessel contents and setpoint:  " + Math.floor(vessel_cont_temp - 75) + "°C", 10, 110);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillText("Log of absolute difference between vessel contents and setpoint:  " + Math.floor(Math.log(Math.abs((vessel_cont_temp - 75)))), 10, 130);
@@ -280,7 +280,7 @@ function tick() {
 
     ctx3.fillStyle = "#000000";
     ctx3.fillRect(0, 299, maxW, 2);
-    ctx3.fillStyle = "#FF0000";
+    ctx3.fillStyle = "#0000FF";
     ctx3.fillRect(itC / 8000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
@@ -360,7 +360,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 800 * derivative - integral / 5000;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 700 * derivative - integral / 4000;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -389,6 +389,10 @@ function tick() {
 function button_pressed(setting) {
     method = setting;
     initialize();
+}
+
+function disturbance() {
+    vessel_cont_temp += Math.random() * Math.random() * 10;
 }
 
 
