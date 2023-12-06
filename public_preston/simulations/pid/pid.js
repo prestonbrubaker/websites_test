@@ -201,7 +201,7 @@ function tick() {
     
     // Clear and fill background
     ctx2.clearRect(0, 0, maxW, maxH / 4);
-    ctx2.fillStyle = bgHue;
+    ctx2.fillStyle = "#555555";
     ctx2.fillRect(0, 0, maxW, maxH / 4);
     
     // Write troubleshooting info
