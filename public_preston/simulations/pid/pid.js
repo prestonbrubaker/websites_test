@@ -337,12 +337,9 @@ function tick() {
             qdot = max_q;
         } else if (multiplier > 0){
             qdot = max_q * multiplier;
-        } else {
-            qdot = 0;
-        }
-        if( (multiplier > 0){
             ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
         } else {
+            qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         }
     }else if (method == 2) {    // PD Control
@@ -351,12 +348,9 @@ function tick() {
             qdot = max_q;
         } else if (multiplier > 0){
             qdot = max_q * multiplier;
-        } else {
-            qdot = 0;
-        }
-        if( (multiplier > 0){
             ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
         } else {
+            qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         }
     }else if (method == 3){    // PID Control
