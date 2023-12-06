@@ -213,11 +213,8 @@ function tick() {
     ctx2.fillText("Wall of Vessel", 10, 90);
     
     ctx3.clearRect(0,0,maxW,150);
-    ctx3.fillStyle = bgHue;
+    ctx3.fillStyle = "#555555";
     ctx3.fillRect(0,0,maxW,150);
-
-    ctx3.fillStyle = "#333333";
-    ctx3.fillRect(0,150,maxW,-2);
     
     ctx3.fillStyle = "#FFFFFF";
     
