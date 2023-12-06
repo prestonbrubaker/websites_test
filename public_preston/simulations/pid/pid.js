@@ -19,7 +19,7 @@ var ctx = c.getContext("2d");
     
     
 var itC = 0;
-const tickS = 100;
+const tickS = 20;
 const maxW = c.width;   
 const maxH = c.height;
     
