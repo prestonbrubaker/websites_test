@@ -244,10 +244,11 @@ function tick() {
     
     ctx3.fillText("Heater temp:  " + Math.floor(heater_temp) + "° C", 10, 30);
     ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
-    ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
-    ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
+    ctx3.fillText("Vessel wall temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
+    ctx3.fillText("Vessel cont temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
 
     ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
+    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral * 60) / 100 + "°C * min", 150, 30);
     
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
