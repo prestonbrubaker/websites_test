@@ -230,9 +230,9 @@ function tick() {
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
     ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_4) + " J/s", 300, 90);
     if(vessel_cont_temp < 107){
-        ctx3.fillText("Pressure in vessel:  " + Math.floor((10 ** (5.08354 - 1663.125 / (vessel_cont_temp + 273.15 - 45.622)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
+        ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (5.08354 - 1663.125 / (vessel_cont_temp + 273.15 - 45.622)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     } else {
-        ctx3.fillText("Pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
+        ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     }
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint:  " + Math.floor(vessel_cont_temp - 75) + "°C", 10, 110);
