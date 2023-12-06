@@ -211,7 +211,7 @@ function tick() {
     ctx3.fillText("q1 heater to fluid:  " + qdot_1, 10, 90);
     ctx3.fillText("q2 fluid to vessel wall:  " + qdot_2, 10, 110);
     ctx3.fillText("q3 vessel wall to vessel content:  " + qdot_3, 10, 130);
-    ctx3.fillText("q4 vessel wall to air:  " + qdot_3, 10, 130);
+    ctx3.fillText("q4 vessel wall to air:  " + qdot_3, 10, 150);
 
 
     //plot temps
