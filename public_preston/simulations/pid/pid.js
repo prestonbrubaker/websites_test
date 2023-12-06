@@ -337,10 +337,10 @@ function tick() {
             qdot = max_q;
         } else if (multiplier > 0){
             qdot = max_q * multiplier;
-            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * multiplier) + "%)";
         } else {
             qdot = 0;
-            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 2) {    // PD Control
         multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 0.01 * derivative;
@@ -348,10 +348,10 @@ function tick() {
             qdot = max_q;
         } else if (multiplier > 0){
             qdot = max_q * multiplier;
-            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (multiplier) + "%)";
         } else {
             qdot = 0;
-            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
 
