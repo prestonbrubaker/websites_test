@@ -348,7 +348,7 @@ function tick() {
             qdot = max_q;
         } else if (multiplier > 0){
             qdot = max_q * multiplier;
-            ctx.fillStyle = "hsl(0, 50%, " + (50 * (multiplier) + "%)";
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (multiplier)) + "%)";
         } else {
             qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
