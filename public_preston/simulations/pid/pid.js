@@ -67,6 +67,11 @@ var qdot_2 = 0;
 var qdot_3 = 0;
 var qdot_4 = 0;
 var dt = 10; //seconds per interval
+var setpoint_temp = 75;
+var max_q = 100000;
+var derivative = 0;
+var derivative_sto = 0;
+var multiplier = 0;
 
 var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
 
@@ -197,29 +202,28 @@ function tick() {
     
     // Clear and fill background
     ctx2.clearRect(0, 0, maxW, maxH / 4);
-    ctx2.fillStyle = bgHue;
+    ctx2.fillStyle = "#555555";
     ctx2.fillRect(0, 0, maxW, maxH / 4);
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
-    ctx2.fillText("Graph of Temperatures", maxW / 2 - 50, 10);
+    ctx2.fillText("Graph of Temperatures", maxW / 2 - 30, 10);
 
     if(method == 0){
-        ctx2.fillText("Setpoint Control", maxW / 2 - 50, 30);
+        ctx2.fillText("Setpoint Control", maxW / 2 - 20, 70);
     }else if (method == 1){
-        ctx2.fillText("Proportional Control", maxW / 2 - 50, 30);
+        ctx2.fillText("Proportional Control", maxW / 2 - 20, 70);
     }else if (method == 2){
-        ctx2.fillText("PD Control", maxW / 2 - 50, 30);
+        ctx2.fillText("PD Control", maxW / 2 - 20, 70);
     }else if (method == 3){
-        ctx2.fillText("PID Control", maxW / 2 - 50, 30);
+        ctx2.fillText("PID Control", maxW / 2 - 20, 70);
     }
-
 
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
-    ctx2.fillText("Iteration:  " + itC, 10, 10);
+    ctx2.fillText("Time (minutes):  " + Math.floor (itC * dt / 60 * 10) / 10, 10, 10);
     ctx2.fillStyle = "#FF0000";
     ctx2.fillText("Heater", 10, 30);
     ctx2.fillStyle = "#FFFF00";
@@ -241,6 +245,9 @@ function tick() {
     ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
     ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
     ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
+
+    ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
+    
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
@@ -274,6 +281,7 @@ function tick() {
     ctx3.fillRect(itC / 8000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
+
     
 
     // Transfer heat
@@ -305,7 +313,8 @@ function tick() {
 
     // from vessel wall to vessel content
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
-
+    derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
+    
     //from vessel wall to air
     vessel_wall_temp -= qdot_4 / mass_vessel_wall / heat_cap_steel * dt
 
@@ -314,13 +323,40 @@ function tick() {
 
     
     // add heat to heater
-    if(vessel_cont_temp < 75){
-        qdot = 100000;
-        heater_temp += qdot / mass_heater / heat_cap_steel * dt;
-        ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
-    } else {
-        ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+    if(method == 0){    //setpoint control
+        if(vessel_cont_temp < setpoint_temp){
+            qdot = max_q;
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+        } else {
+            qdot = 0;
+            ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
+        }
+    }else if (method == 1){    // Proportional Control
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50;
+        if(multiplier > 1){
+            qdot = max_q;
+        } else if (multiplier > 0){
+            qdot = max_q * multiplier;
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+        } else {
+            qdot = 0;
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+        }
+    }else if (method == 2) {    // PD Control
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 0.01 * derivative;
+        if(multiplier > 1){
+            qdot = max_q;
+        } else if (multiplier > 0){
+            qdot = max_q * multiplier;
+            ctx.fillStyle = "hsl(0, 50%, " + (50 * (setpoint_temp - vessel_cont_temp) / 50) + "%)";
+        } else {
+            qdot = 0;
+            ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
+        }
+    }else if (method == 3){    // PID Control
+
     }
+    heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
     
     ctx.fillRect(85,160,30,180);
