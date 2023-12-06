@@ -220,14 +220,14 @@ function tick() {
     
     ctx3.fillText("Data and Setpoint Fittness", maxW / 2 - 50, 10);
     
-    ctx3.fillText("Heater temp:  " + Math.floor(heater_temp), 10, 30);
-    ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp), 10, 50);
-    ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp), 10, 70);
-    ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp), 10, 90);
-    ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1), 300, 30);
-    ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2), 300, 50);
-    ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3), 300, 70);
-    ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_3), 300, 90);
+    ctx3.fillText("Heater temp:  " + Math.floor(heater_temp) + "° C", 10, 30);
+    ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
+    ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
+    ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
+    ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
+    ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
+    ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
+    ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_3) + " J/s", 300, 90);
 
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint", 10, 110);
