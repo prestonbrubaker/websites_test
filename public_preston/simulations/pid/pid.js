@@ -261,13 +261,13 @@ function tick() {
     qdot_1 = (heater_temp - fluid_temp) * 800;
 
     // from heating fluid to vessel wall
-    qdot_2 = (fluid_temp - vessel_wall_temp) * 800;
+    qdot_2 = (fluid_temp - vessel_wall_temp) * 500;
 
     // from vessel wall to vessel content
-    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 800;
+    qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 500;
 
     // from vessel wall to air
-    qdot_4 = (vessel_wall_temp - air_temp) * 800;
+    qdot_4 = (vessel_wall_temp - air_temp) * 200;
 
     
     // from heater to heating fluid
