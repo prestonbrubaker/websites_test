@@ -392,7 +392,7 @@ function button_pressed(setting) {
 }
 
 function disturbance() {
-    vessel_cont_temp += Math.random() * Math.random() * 10;
+    vessel_cont_temp += ((Math.random() - 0.5) + (Math.random() - 0.5) + (Math.random() - 0.5) + (Math.random() - 0.5)) * 10;
 }
 
 
