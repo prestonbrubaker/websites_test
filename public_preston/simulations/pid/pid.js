@@ -153,8 +153,8 @@ function drawPFD() {
     ctx.fillRect(375,75,50,350);
 
     ctx.fillStyle = "#FFFFFF";
-    ctx.fillText("Electric Heater", 130, 350);
-    ctx.fillText("Centrifugal Pump", 208, 460);
+    ctx.fillText("Electric Heater", 130, 340);
+    ctx.fillText("Centrifugal Pump", 210, 460);
     ctx.fillText("Vessel", 430, 410);
     
 
