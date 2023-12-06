@@ -207,12 +207,12 @@ function tick() {
     ctx2.fillStyle = "#0000FF";
     ctx2.fillText("Wall of Vessel", 10, 90);
     
-    ctx3.clearRect(0,0,maxW,maxH / 3);
+    ctx3.clearRect(0,0,maxW,maxH / 2);
     ctx3.fillStyle = bgHue;
-    ctx3.fillRect(0,0,maxW,maxH / 3);
+    ctx3.fillRect(0,0,maxW,maxH / 2);
     
     ctx3.fillStyle = "#FFFFFF";
-
+    
     ctx3.fillText("Data and Setpoint Fittness", maxW / 2 - 50, 10);
     
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
@@ -224,6 +224,10 @@ function tick() {
     ctx3.fillText("q3 vessel wall to vessel content:  " + qdot_3, 10, 130);
     ctx3.fillText("q4 vessel wall to air:  " + qdot_3, 10, 150);
 
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Difference between vessel contents and setpoint", 10, 170);
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Log of difference between vessel contents and setpoint" + qdot_3, 10, 190);
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
