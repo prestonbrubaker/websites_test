@@ -252,7 +252,7 @@ function tick() {
     ctx3.fillStyle = "#FF0000";
     ctx3.fillRect(itC / 5000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 5000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 20, 2, 2);
+    ctx3.fillRect(itC / 5000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
     
 
     // Transfer heat
