@@ -216,7 +216,7 @@ function tick() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0,0,maxW,150);
 
-    ctx.fillStyle = "#555555";
+    ctx.fillStyle = "#333333";
     ctx.fillRect(0,150,maxW,2);
     
     ctx3.fillStyle = "#FFFFFF";
@@ -235,7 +235,7 @@ function tick() {
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint", 10, 110);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillText("Log of difference between vessel contents and setpoint", 10, 110);
+    ctx3.fillText("Log of difference between vessel contents and setpoint", 10, 130);
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
