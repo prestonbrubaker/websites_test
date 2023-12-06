@@ -69,6 +69,8 @@ var qdot_4 = 0;
 var dt = 10; //seconds per interval
 var setpoint_temp = 75;
 var max_q = 100000;
+var derivative = 0;
+var derivative_sto = 0;
 
 var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
 
@@ -217,7 +219,6 @@ function tick() {
         ctx2.fillText("PID Control", maxW / 2 - 50, 30);
     }
 
-
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
@@ -243,6 +244,9 @@ function tick() {
     ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
     ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
     ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
+
+    ctx.fillText("Derivative:  " + Math.floor(derivative * 10) / 10 + "°C/s", 150, 30);
+    
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
@@ -276,7 +280,8 @@ function tick() {
     ctx3.fillRect(itC / 8000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
-    
+
+    derivitave_sto = vessel_cont_temp;
 
     // Transfer heat
 
@@ -342,6 +347,7 @@ function tick() {
     }
     heater_temp += qdot / mass_heater / heat_cap_steel * dt;
 
+    derivative = (vessel_cont_temp - derivative_sto) / dt;
     
     ctx.fillRect(85,160,30,180);
     
