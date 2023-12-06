@@ -249,6 +249,7 @@ function tick() {
 
     ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
     ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "°C * min", 150, 50);
+    ctx3.fillText("Pseudo-Integral:  " + Math.floor(multiplier * 100) / 100 , 150, 50);
     
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
@@ -329,6 +330,7 @@ function tick() {
     // add heat to heater
     if(method == 0){    //setpoint control
         if(vessel_cont_temp < setpoint_temp){
+            multiplier = 1;
             qdot = max_q;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         } else {
@@ -358,7 +360,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 100 * derivative - integral / 1000;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 100 * derivative - integral / 10000;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
