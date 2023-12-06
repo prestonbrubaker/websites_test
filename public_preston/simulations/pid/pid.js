@@ -220,14 +220,14 @@ function tick() {
     
     ctx3.fillText("Data and Setpoint Fittness", maxW / 2 - 50, 10);
     
-    ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
-    ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
-    ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
-    ctx3.fillText("vessel_cont_temp:  " + vessel_cont_temp, 10, 70);
-    ctx3.fillText("q1 heater to fluid:  " + qdot_1, 10, 90);
-    ctx3.fillText("q2 fluid to vessel wall:  " + qdot_2, 10, 110);
-    ctx3.fillText("q3 vessel wall to vessel content:  " + qdot_3, 10, 130);
-    ctx3.fillText("q4 vessel wall to air:  " + qdot_3, 10, 150);
+    ctx3.fillText("Heater temp:  " + Math.floor(heater_temp), 10, 30);
+    ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp), 10, 50);
+    ctx3.fillText("vessel_wall_temp:  " + Math.floor(vessel_wall_temp), 10, 70);
+    ctx3.fillText("vessel_cont_temp:  " + Math.floor(vessel_cont_temp), 10, 90);
+    ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1), 300, 30);
+    ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2), 300, 50);
+    ctx3.fillText("q3 vessel wall to vessel content:  " + qdot_3), 300, 70);
+    ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_3), 300, 90);
 
     ctx3.fillStyle = "#FF0000";
     ctx3.fillText("Difference between vessel contents and setpoint", 10, 170);
