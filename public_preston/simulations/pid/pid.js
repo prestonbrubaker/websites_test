@@ -68,6 +68,8 @@ var qdot_3 = 0;
 var qdot_4 = 0;
 var dt = 10; //seconds per interval
 
+var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
+
 
 function drawPFD() {
     
@@ -202,6 +204,19 @@ function tick() {
     ctx2.fillStyle = "#FFFFFF";
     
     ctx2.fillText("Graph of Temperatures", maxW / 2 - 50, 10);
+
+    if(method == 0){
+        ctx2.fillText("Setpoint Control", maxW / 2 - 50, 30);
+    }else if (method == 1){
+        ctx2.fillText("Proportional Control", maxW / 2 - 50, 30);
+    }else if (method == 2){
+        ctx2.fillText("PD Control", maxW / 2 - 50, 30);
+    }else if (method == 3){
+        ctx2.fillText("PID Control", maxW / 2 - 50, 30);
+    }
+
+
+    
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Iteration:  " + itC, 10, 10);
