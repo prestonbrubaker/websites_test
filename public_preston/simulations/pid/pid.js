@@ -360,7 +360,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 20 - 1700 * derivative - integral / 3000;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 20 - 1900 * derivative - integral / 3000;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
