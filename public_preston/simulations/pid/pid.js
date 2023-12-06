@@ -169,25 +169,26 @@ function initialize() {
 
     itC = 0;
     
-    ctx.clearRect(0, 0, maxW, maxH);
-    ctx.fillStyle = bgHue;
-    ctx.fillRect(0, 0, maxW, maxH);
-    
-    //right canvas 
-    
     ctx2.clearRect(0, 0, maxW, maxH);
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
+    ctx3.clearRect(0,0,maxW,maxH);
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
+
+    heater_temp = 20;
+    fluid_temp = 20;
+    vessel_wall_temp = 20;
+    vessel_cont_temp = 20;
+    air_temp = 20;
 
 }
 
 
 function tick() {
     
-    if(itC > 20000){
+    if(itC > 8000){
         initialize();
     }
     
@@ -236,23 +237,23 @@ function tick() {
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
-    ctx2.fillRect(itC / 5000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
     
     ctx2.fillStyle = "#FFFF00";
-    ctx2.fillRect(itC / 5000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
 
     ctx2.fillStyle = "#00FF00";
-    ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
 
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
 
     ctx3.fillStyle = "#000000";
     ctx3.fillRect(0, 299, maxW, 2);
     ctx3.fillStyle = "#FF0000";
-    ctx3.fillRect(itC / 5000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
+    ctx3.fillRect(itC / 8000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 5000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
+    ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
     
 
     // Transfer heat
@@ -267,7 +268,7 @@ function tick() {
     qdot_3 = (vessel_wall_temp - vessel_cont_temp) * 500;
 
     // from vessel wall to air
-    qdot_4 = (vessel_wall_temp - air_temp) * 200;
+    qdot_4 = (vessel_wall_temp - air_temp) * 150;
 
     
     // from heater to heating fluid
