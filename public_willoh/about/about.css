@@ -99,6 +99,11 @@
     margin-top: 1rem;
     margin-left: 8rem;
   }
+
+  .languages li {
+    font-size: 1.25rem;
+    margin-left: 8rem;
+  }
   
   .socials {
     display: flex;
