@@ -206,12 +206,15 @@ function tick() {
     ctx2.fillText("Wall of Vessel", 10, 70);
     ctx2.fillStyle = "#0000FF";
     ctx2.fillText("Wall of Vessel", 10, 90);
-
+    
     ctx3.clearRect(0,0,maxW,maxH / 3);
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0,0,maxW,maxH / 3);
     
     ctx3.fillStyle = "#FFFFFF";
+
+    ctx3.fillText("Data and Setpoint Fittness", maxW / 2 - 50, 10);
+    
     ctx3.fillText("Heater temp:  " + heater_temp, 10, 10);
     ctx3.fillText("Fluid temp:  " + fluid_temp, 10, 30);
     ctx3.fillText("vessel_wall_temp:  " + vessel_wall_temp, 10, 50);
@@ -235,8 +238,12 @@ function tick() {
     ctx2.fillStyle = "#0000FF";
     ctx2.fillRect(itC / 5000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
 
-    // Show the temps on the PFD
-    
+    ctx3.fillStyle = "#000000";
+    ctx3.fillRect(0, 300, maxW, 5);
+    ctx3.fillStyle = "#FF0000";
+    ctx3.fillRect(itC / 5000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
+    ctx3.fillStyle = "#00FF00";
+    ctx3.fillRect(itC / 5000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 3, 2, 2);
     
 
     // Transfer heat
