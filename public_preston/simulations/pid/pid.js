@@ -60,6 +60,7 @@ var mass_vessel_cont = 300; //kg
 var mass_vessel_wall = 50; //kg
 var heat_cap_water = 4180; // J per kg Kelvin
 var heat_cap_steel = 466; // J per kg Kelvin
+var heat_cap_ethylene_glycol = 2090; // J per kg Kelvin
 var qdot = 0;
 var qdot_1 = 0;
 var qdot_2 = 0;
@@ -276,7 +277,7 @@ function tick() {
 
     
     // from heater to heating fluid
-    fluid_temp += qdot_1 / mass_fluid / heat_cap_water * dt;
+    fluid_temp += qdot_1 / mass_fluid / heat_cap_ethylene_glycol * dt;
 
     // from heating fluid to heater
     heater_temp -= qdot_1 / mass_heater / heat_cap_steel * dt;
@@ -285,7 +286,7 @@ function tick() {
     vessel_wall_temp += qdot_2 / mass_vessel_wall / heat_cap_steel * dt;
 
     // from vessel wall to heating fluid
-    fluid_temp -= qdot_2 / mass_fluid / heat_cap_water * dt;
+    fluid_temp -= qdot_2 / mass_fluid / heat_cap_ethylene_glycol * dt;
 
     // from vessel wall to vessel content
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
