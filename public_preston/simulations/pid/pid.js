@@ -391,7 +391,7 @@ function button_pressed(setting) {
     initialize();
 }
 
-function disturbance(amounnt) {
+function disturbance(amount) {
     vessel_cont_temp += amount;
 }
 
