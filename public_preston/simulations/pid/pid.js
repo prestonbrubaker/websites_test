@@ -72,6 +72,7 @@ var max_q = 100000;
 var derivative = 0;
 var derivative_sto = 0;
 var multiplier = 0;
+var integral = 0;
 
 var method = 0; // 0 is setpoint, 1 is proportional, 2 is PD, 3 is PID
 
@@ -312,6 +313,8 @@ function tick() {
     fluid_temp -= qdot_2 / mass_fluid / heat_cap_ethylene_glycol * dt;
 
     // from vessel wall to vessel content
+    integral += (vessel_cont_temp - setpoint_temp);
+    integral *= 0.99;
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
     derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
     
