@@ -37,8 +37,8 @@ ctx2.fillStyle = bgHue;
 ctx2.fillRect(0, 0, maxW, maxH);
 
 ctx2.fillStyle = "#000000"
-ctx2.fillRect(10, maxH - 10, maxW - 20,2);
-ctx2.fillRect(10, maxH - 10, -2,-250);
+ctx2.fillRect(30, maxH - 30, maxW - 60,2);
+ctx2.fillRect(30, maxH - 60, -2,-250);
 
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
@@ -197,8 +197,8 @@ function initialize() {
     air_temp = 20;
 
     ctx2.fillStyle = "#000000"
-    ctx2.fillRect(10, maxH - 10, maxW - 20,2);
-    ctx2.fillRect(10, maxH - 10, -2,-250);
+    ctx2.fillRect(30, maxH - 30, maxW - 60,2);
+    ctx2.fillRect(30, maxH - 60, -2,-250);
 
 }
 
@@ -275,23 +275,23 @@ function tick() {
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (heater_temp - 20) * 1 - 10, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (heater_temp - 20) * 1 - 30, 2, 2)
     
     ctx2.fillStyle = "#FFFF00";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (fluid_temp - 20) * 1 - 10, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (fluid_temp - 20) * 1 - 30, 2, 2)
 
     ctx2.fillStyle = "#00FF00";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_wall_temp - 20) * 1 - 10, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (vessel_wall_temp - 20) * 1 - 30, 2, 2)
 
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_cont_temp - 20) * 1 - 10, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (vessel_cont_temp - 20) * 1 - 30, 2, 2)
     
     ctx3.fillStyle = "#000000";
     ctx3.fillRect(0, 299, maxW, 2);
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 8000 * (maxW - 10) + 10, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
+    ctx3.fillRect(itC / 8000 * (maxW - 60) + 30, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 8000 * (maxW - 10) + 10, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
+    ctx3.fillRect(itC / 8000 * (maxW - 60) + 30, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
 
     
 
