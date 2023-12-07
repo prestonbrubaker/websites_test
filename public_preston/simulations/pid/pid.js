@@ -40,6 +40,9 @@ ctx2.fillStyle = "#000000"
 ctx2.fillRect(30, maxH - 30, maxW - 60,2);
 ctx2.fillRect(30, maxH - 30, -2,-250);
 
+ctx2.fillStyle = "#FFFFFF";
+ctx2.fillText("Time", maxW / 2, 450);
+
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
     
@@ -49,6 +52,9 @@ ctx3.fillRect(0, 0, maxW, maxH);
 ctx3.fillStyle = "#000000";
 ctx3.fillRect(29, 299, maxW - 60, 2);
 ctx3.fillRect(29,maxH - 30, 2, -300);
+
+ctx3.fillStyle = "#FFFFFF";
+ctx3.fillText("Time", maxW / 2, 450);
 
 
 
@@ -198,6 +204,9 @@ function initialize() {
     ctx3.fillRect(29, 299, maxW - 60, 2);
     ctx3.fillRect(29,maxH - 30, 2, -300);
     
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Time", maxW / 2, 450);
+    
     heater_temp = 20;
     fluid_temp = 20;
     vessel_wall_temp = 20;
@@ -207,6 +216,9 @@ function initialize() {
     ctx2.fillStyle = "#000000"
     ctx2.fillRect(29, maxH - 31, maxW - 60,2);
     ctx2.fillRect(29, maxH - 31, -2,-250);
+
+    ctx2.fillStyle = "#FFFFFF";
+    ctx2.fillText("Time", maxW / 2, 450);
 
 }
 
