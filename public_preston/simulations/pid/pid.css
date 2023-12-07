@@ -161,3 +161,61 @@ canvas {
     text-decoration: underline;
     color: white;
 }
+
+.hamburger-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-icon div {
+    width: 1.5rem; /* Width of the icon */
+    height: 0.2rem; /* Height of each line */
+    background-color: black; /* Color of the icon */
+    margin: 0.33rem 0; /* Spacing between lines */
+}
+
+@media screen and (max-width: 768px) {
+    /* Hamburger menu styles */
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hidden by default */
+    }
+
+    nav ul li {
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Style for the hamburger icon */
+    .hamburger-icon {
+        display: block; /* Show hamburger icon */
+        /* Other styling for the icon */
+    }
+
+    /* Stacking canvases */
+    .canvasBox {
+        flex-direction: column;
+    }
+
+    /* Stacking buttons */
+    button {
+        display: block;
+        width: 100%;
+        margin: 10px 0; /* Adjust as needed */
+    }
+
+    /* Adjust word art container */
+    .word-art-container {
+        margin-top: 0.5rem;
+        font-size: 1.5rem; /* Adjust the font size */
+    }
+
+    /* Adjust content and text sizing */
+    .simulation-explanation p,
+    .footer-text {
+        font-size: 0.9rem; /* Adjust the font size for readability */
+    }
+
+    /* Other responsive adjustments */
+    /* ... */
+}

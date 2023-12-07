@@ -1,3 +1,8 @@
+function toggleHamburgerMenu() {
+    var navUl = document.querySelector('nav ul');
+    navUl.style.display = navUl.style.display === 'block' ? 'none' : 'block';
+}
+
 function toggleDropdown() {
     var dropdownContent = document.getElementById("dropdownMenu");
     dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
