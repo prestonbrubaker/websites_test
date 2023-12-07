@@ -4,8 +4,8 @@
 }
 
 ::selection {
-  color: red;
-  background: rgb(255, 0, 0, 0.2);
+  color: rgb(74,144,226, );
+  background: rgb(74,144,226, 0.2);
 }
 
 html, body {
@@ -86,7 +86,7 @@ nav ul li a:hover {
 
 .word-art {
     display: inline-block;
-    background-image: linear-gradient(to bottom, #cccccc, #333333);
+    background-image: linear-gradient(to bottom, #cccccc, rgb(74,144,226));
     font-family: 'pixel1', monospace;
     font-size: 2rem;
     font-weight: bold;
@@ -103,7 +103,7 @@ nav ul li a:hover {
 }
 
 button {
-    background-color: rgb(74,144,226, 00.6); 
+    background-color: #f2f2f2; 
     color: #000; 
     padding: 0.625rem 1.25rem; 
     border: 0.05rem solid #000; 
@@ -115,10 +115,18 @@ button {
     transition-duration: 0.4s; 
     cursor: pointer; 
   }
+
+  #button5 {
+    background-color: rgb(255, 0, 0, 0.6);
+  }
+
+  #button4 {
+    background-color: rgb(74,144,226, 0.6);
+  }
   
   .button:hover {
-    background-color: #ddd; /* Slightly darker grey on hover */
-    color: black; /* Text color remains black */
+    background-color: #ddd;
+    color: black;
   }
   
 
