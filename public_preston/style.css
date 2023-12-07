@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "pixel1"; /* This is the name you'll use to reference this font */
-  src: url("fonts/tektur.ttf"); /* This should be the correct relative path to your font file */
+  font-family: "pixel1";
+  src: url("fonts/tektur.ttf");
 }
 
 ::selection {
@@ -18,11 +18,11 @@ body, html {
   flex-direction: column;
 }
 
-header { /*Ouch, Preston. You're killing me. Throwing out some top-notch formatting for this*/
+header {
   display: flex;
-  justify-content: flex-start; /* Align items to the start (left) */
-  background-color: white; /* Sets the background color of the header */
-  padding: 10px; /* Adds some space inside the nav bar */
+  justify-content: flex-start;
+  background-color: white;
+  padding: 10px;
 }
 
 nav ul {
@@ -53,24 +53,24 @@ nav ul li a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.9); /* Change as per your color scheme */
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* For dropdown shadow */
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   z-index: 1;
 }
 
 .dropdown-content li {
-  padding: 5px 10px; /* Adjust top/bottom and left/right padding as needed */
+  padding: 5px 10px;
 }
 
 .dropdown-content li a {
-  color: #4A90E2; /* Text color */
-  padding: 10px 20px; /* Adjust top/bottom and left/right padding as needed */
+  color: #4A90E2;
+  padding: 10px 20px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content li a:hover {
-  background-color: #4A90E2; /* Change for hover effect */
+  background-color: #4A90E2;
   color: white;
 }
 
@@ -84,14 +84,13 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; /* Align items vertically in the center */
-  justify-content: start; /* Align items to the start of the container */
+  align-items: center;
+  justify-content: start;
 }
 
 .name {
   font-size: 5rem;
   margin-left: 4rem;
-  /*text-shadow: -0.25rem 0.3rem white; */
   margin-bottom: 0;
   color: #4A90E2;
 }
@@ -114,7 +113,7 @@ nav ul li a:hover {
 
 .socials img {
     width: 35%;
-    height: auto; /* This ensures the aspect ratio of the images is maintained */
+    height: auto;
     margin-left: 4rem;
     padding: 2rem;
 }
@@ -128,12 +127,11 @@ nav ul li a:hover {
 
 #contentgrid {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
-    justify-content: start; /* Align items to the start of the container */
+    align-items: center;
+    justify-content: start;
 }
 
 #introduction {
-    /* Ensure the introduction section does not stretch to fill all available space */
     flex-shrink: 0;
 }
 
@@ -142,7 +140,7 @@ nav ul li a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(74,144,226, 00.6); /* Adjust the first three values to change the color */
+    background-color: rgb(74,144,226, 00.6);
     color: white;
     text-align: center;
     padding: 0.5rem;
