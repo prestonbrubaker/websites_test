@@ -15,8 +15,6 @@ window.onclick = function(event) {
 // Basic JavaScript for interactive elements
 document.addEventListener('DOMContentLoaded', () => {
     
-    var hue = 0;
-    
     var xV = 5;
     var yV = 5;
     var blockS = 20;
@@ -38,17 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.fillRect(0, 0, maxW, maxH);
   
     function incrementHue() {
-
-        
-  
-        // Clear the canvas and draw a new rectangle
         ctx.clearRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#FFFFFF";
-        var hue_2 = (hue + 180) % 360;
         ctx.fillRect(0, 0, maxW, maxH);
-  
-  
-        ctx.fillStyle = color_rect;
+
         ctx.fillStyle = "#4A90E2";
         ctx.fillRect(x, y, blockS, blockS);
   
