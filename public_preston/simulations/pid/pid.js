@@ -228,13 +228,13 @@ function tick() {
     ctx2.fillText("Graph of Temperatures", maxW / 2 - 30, 10);
 
     if(method == 0){
-        ctx2.fillText("Setpoint Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: Setpoint", maxW / 2 - 30, 50);
     }else if (method == 1){
-        ctx2.fillText("Proportional Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: Proportional", maxW / 2 - 30, 50);
     }else if (method == 2){
-        ctx2.fillText("PD Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: PD", maxW / 2 - 30, 50);
     }else if (method == 3){
-        ctx2.fillText("PID Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: PID", maxW / 2 - 30, 50);
     }
 
     
