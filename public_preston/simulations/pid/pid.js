@@ -40,6 +40,10 @@ ctx2.fillStyle = "#000000"
 ctx2.fillRect(30, maxH - 30, maxW - 60,2);
 ctx2.fillRect(30, maxH - 30, -2,-250);
 
+ctx2.fillStyle = "#FFFFFF";
+ctx2.fillText("Time", maxW / 2 - 20, 485);
+ctx2.fillText("Temp.", 0, 310);
+
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
     
@@ -47,9 +51,12 @@ ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
 
 ctx3.fillStyle = "#000000";
-ctx3.fillRect(29, 299, maxW, 2);
+ctx3.fillRect(29, 299, maxW - 60, 2);
 ctx3.fillRect(29,maxH - 30, 2, -300);
 
+ctx3.fillStyle = "#FFFFFF";
+ctx3.fillText("Time", maxW / 2 - 20, 310);
+ctx3.fillText("Temp.", 0, 260);
 
 
 
@@ -102,11 +109,11 @@ function drawPFD() {
     // Reactor Vessel
     ctx.fillRect(375,75,50,350);
     ctx.beginPath();
-    ctx.arc(400, 75, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.arc(400, 75, 24, 0, 2 * Math.PI);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.arc(400, 425, 24, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.arc(400, 425, 24, 0, 2 * Math.PI);
     ctx.stroke();
 
     // Top linkage from reactor vessel to heater block
@@ -146,7 +153,7 @@ function drawPFD() {
 
     // Pump
     ctx.beginPath();
-    ctx.arc(250, 425, 25, 0, 2 * Math.PI); // Center (100, 100), Radius 50
+    ctx.arc(250, 425, 25, 0, 2 * Math.PI);
     ctx.stroke();
 
     // Pump to reactor vessel
@@ -195,8 +202,12 @@ function initialize() {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     ctx3.fillStyle = "#000000";
-    ctx3.fillRect(29, 299, maxW, 2);
+    ctx3.fillRect(29, 299, maxW - 60, 2);
     ctx3.fillRect(29,maxH - 30, 2, -300);
+    
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Time", maxW / 2 - 20, 310);
+    ctx3.fillText("Temp.", 0, 260);
     
     heater_temp = 20;
     fluid_temp = 20;
@@ -207,6 +218,10 @@ function initialize() {
     ctx2.fillStyle = "#000000"
     ctx2.fillRect(29, maxH - 31, maxW - 60,2);
     ctx2.fillRect(29, maxH - 31, -2,-250);
+
+    ctx2.fillStyle = "#FFFFFF";
+    ctx2.fillText("Time", maxW / 2 - 20, 485);
+    ctx2.fillText("Temp.", 0, 310);
 
 }
 
@@ -228,19 +243,19 @@ function tick() {
     ctx2.fillText("Graph of Temperatures", maxW / 2 - 30, 10);
 
     if(method == 0){
-        ctx2.fillText("Contol Mode: Setpoint", maxW / 2 - 30, 50);
+        ctx2.fillText("Control Mode: Setpoint", maxW / 2 - 30, 50);
     }else if (method == 1){
-        ctx2.fillText("Contol Mode: Proportional", maxW / 2 - 30, 50);
+        ctx2.fillText("Control Mode: Proportional", maxW / 2 - 30, 50);
     }else if (method == 2){
-        ctx2.fillText("Contol Mode: PD", maxW / 2 - 30, 50);
+        ctx2.fillText("Control Mode: PD", maxW / 2 - 30, 50);
     }else if (method == 3){
-        ctx2.fillText("Contol Mode: PID", maxW / 2 - 30, 50);
+        ctx2.fillText("Control Mode: PID", maxW / 2 - 30, 50);
     }
 
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
-    ctx2.fillText("Time (minutes):  " + Math.floor (itC * dt / 60 * 10) / 10, 10, 10);
+    ctx2.fillText("Time (minutes):  " + Math.floor (itC * dt / 60), 10, 10);
     ctx2.fillStyle = "#FF0000";
     ctx2.fillText("Heater", 10, 30);
     ctx2.fillStyle = "#FFFF00";
