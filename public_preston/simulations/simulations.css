@@ -9,16 +9,15 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'pixel1', sans-serif;
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../pictures/img.jpg');
-    background-size: cover;
-    line-height: 1.6;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
+   margin: 0;
+  padding: 0;
+  font-family: 'pixel1', sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  min-height: 100vh; 
 }
 
 nav {
