@@ -56,7 +56,7 @@ ctx3.fillRect(29,maxH - 30, 2, -300);
 
 ctx3.fillStyle = "#FFFFFF";
 ctx3.fillText("Time", maxW / 2 - 20, 310);
-ctx3.fillText("Temp.", 0, 310);
+ctx3.fillText("Temp.", 0, 260);
 
 
 
@@ -207,7 +207,7 @@ function initialize() {
     
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Time", maxW / 2 - 20, 310);
-    ctx3.fillText("Temp.", 0, 310);
+    ctx3.fillText("Temp.", 0, 260);
     
     heater_temp = 20;
     fluid_temp = 20;
