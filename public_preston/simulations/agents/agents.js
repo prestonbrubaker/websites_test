@@ -216,7 +216,7 @@ function tick() {
 
     
     ctx.fillStyle = "#000000";
-    ctx.fillText("Total Food: " + total_food, 10, 10);
+    ctx.fillText("Total Food: " + Math.floor(total_food), 10, 10);
 
     avg_food = calculateMean(cr_food);
     std_dev_food = calculateStandardDeviation(cr_food);
