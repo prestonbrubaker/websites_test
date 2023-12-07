@@ -46,9 +46,9 @@ var ctx3 = c3.getContext("2d");
 ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
 
-ctx2.fillStyle = "#000000"
-ctx2.fillRect(29, maxH - 31, maxW - 60,2);
-ctx2.fillRect(29, maxH - 31, -2,-250);
+ctx3.fillStyle = "#000000";
+ctx3.fillRect(29, 299, maxW, 2);
+ctx3.fillRect(29,maxH - 30, 2, -300);
 
 
 
@@ -195,7 +195,7 @@ function initialize() {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     ctx3.fillStyle = "#000000";
-    ctx3.fillRect(30, 299, maxW, 2);
+    ctx3.fillRect(29, 299, maxW, 2);
     ctx3.fillRect(29,maxH - 30, 2, -300);
     
     heater_temp = 20;
