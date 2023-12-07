@@ -37,7 +37,7 @@ ctx2.fillStyle = bgHue;
 ctx2.fillRect(0, 0, maxW, maxH);
 
 ctx2.fillStyle = "#000000"
-ctx2.fillRect(10, maxH - 10, maxW - 10,2);
+ctx2.fillRect(10, maxH - 10, maxW - 20,2);
 ctx2.fillRect(10, maxH - 10, -2,-250);
 
 var c3 = document.getElementById("canvas3");
@@ -197,7 +197,7 @@ function initialize() {
     air_temp = 20;
 
     ctx2.fillStyle = "#000000"
-    ctx2.fillRect(10, maxH - 10, maxW - 10,2);
+    ctx2.fillRect(10, maxH - 10, maxW - 20,2);
     ctx2.fillRect(10, maxH - 10, -2,-250);
 
 }
@@ -275,16 +275,16 @@ function tick() {
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (heater_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (heater_temp - 20) * 1 - 10, 2, 2)
     
     ctx2.fillStyle = "#FFFF00";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (fluid_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (fluid_temp - 20) * 1 - 10, 2, 2)
 
     ctx2.fillStyle = "#00FF00";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_wall_temp - 20) * 1 - 10, 2, 2)
 
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 10) + 10, maxH - (vessel_cont_temp - 20) * 1 - 10, 2, 2)
     
     ctx3.fillStyle = "#000000";
     ctx3.fillRect(0, 299, maxW, 2);
