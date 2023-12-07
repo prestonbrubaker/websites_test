@@ -112,6 +112,7 @@ section {
   text-align: center;
   padding-top: 0.5rem;
   margin-top: 1rem;
+  position: bottom;
 }
 
 .footer-text {
