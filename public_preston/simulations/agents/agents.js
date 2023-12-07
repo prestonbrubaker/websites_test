@@ -246,7 +246,7 @@ function tick() {
 
     ctx.fillText("Number of organisms: " + cr_hue.length, 10, 80);
 
-    ctx.fillTect("Iteration: " + itC, 10, 90);
+    ctx.fillText("Iteration: " + itC, 10, 90);
 
 
 
