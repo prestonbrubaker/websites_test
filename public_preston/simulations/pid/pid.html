@@ -36,13 +36,18 @@
         <canvas id="canvas2" width="500" height="500"></canvas>
         <canvas id="canvas3" width="500" height="500"></canvas>
       </div>
-
-      <button id="button0" onclick="button_pressed(0)">Setpoint Control</button>
-      <button id="button1" onclick="button_pressed(1)">Proportional Control</button>
-      <button id="button2" onclick="button_pressed(2)">PD Control</button>
-      <button id="button3" onclick="button_pressed(3)">PID Control</button>
-      <button id="button4" onclick="disturbance(-2)">Decrease Vessel Contents by 2° C</button>
-      <button id="button5" onclick="disturbance(2)">Increase Vessel Contents by 2° C</button>
+      <div id="controls">
+        <label><b>Control Methods (Press to restart with a new method):</b></label>
+        <button id="button0" onclick="button_pressed(0)">Setpoint Control</button>
+        <button id="button1" onclick="button_pressed(1)">Proportional Control</button>
+        <button id="button2" onclick="button_pressed(2)">PD Control</button>
+        <button id="button3" onclick="button_pressed(3)">PID Control</button>
+      </div>
+      <div id="temperature">
+        <label><b>Manual Tempurature Manipulation:</b></label>
+        <button id="button4" onclick="disturbance(-2)">Decrease Vessel Contents by 2° C</button>
+        <button id="button5" onclick="disturbance(2)">Increase Vessel Contents by 2° C</button>
+      </div>
     </div>
 
     <section class="simulation-explanation">
