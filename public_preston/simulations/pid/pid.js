@@ -349,6 +349,7 @@ function tick() {
             qdot = max_q;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         } else {
+            multiplier = 0;
             qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
