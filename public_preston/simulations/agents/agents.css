@@ -153,6 +153,6 @@ nav ul li a:hover {
   color: white;
 }
 
-#simulation-explanation {
+.simulation-explanation {
   margin-left: 1rem;
 }
