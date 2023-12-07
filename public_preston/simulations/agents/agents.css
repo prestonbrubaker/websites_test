@@ -4,7 +4,8 @@
 }
 
 ::selection {
-  color: red;
+    color: rgb(74,144,226);
+    background-color: rgb(74,144,226, 0.2);
 }
 
 html, body {
@@ -16,67 +17,9 @@ html, body {
     color: black;
 }
 
-.content {
-    text-align: center;
-}
-
 main {
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
-}
-
-h1, h2, h3 {
-    color: black;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-
-.word-art-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.word-art {
-    display: inline-block;
-    font-family: 'Courier New', monospace;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
-    padding: 10px 20px;
-    margin: 0;
-    background-image: linear-gradient(to bottom, #cccccc, #333333);
-    border: 3px solid black;
-    border-radius: 5px;
-    
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    
-    transform: perspective(500px) rotateX(10deg);
-    
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-
-
-#canvas1 {
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #000;
 }
 
 nav {
@@ -89,10 +32,12 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    margin-left: 20px;
 }
 
 nav ul li {
     margin-right: 20px;
+    margin-bottom: 5px;
 }
 
 nav ul li a {
@@ -133,6 +78,50 @@ nav ul li a:hover {
     color: white;
 }
 
+.content {
+    text-align: center;
+}
+
+.word-art-container {
+    text-align: center; 
+    margin-top: 1.25rem; 
+}
+
+.word-art {
+    display: inline-block;
+    background-image: linear-gradient(to bottom, #cccccc, rgb(74,144,226));
+    font-family: 'pixel1', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); 
+    padding: 10px 20px;
+    margin: 0;
+    border: 0.15rem solid black; 
+    border-radius: 0.33rem;
+    letter-spacing: 1px;
+    word-spacing: 0.1rem;
+    transform: perspective(32rem) rotateX(10deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    color: black;
+}
+
+canvas {
+    border: 0.33rem solid #DDD;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px auto;
+    flex-wrap: wrap; 
+}
+
+.simulation-explanation {
+  margin-left: 1rem;
+}
+
 .footer {
     left: 0;
     bottom: 0;
@@ -151,8 +140,4 @@ nav ul li a:hover {
 #policy {
   text-decoration: underline;
   color: white;
-}
-
-.simulation-explanation {
-  margin-left: 1rem;
 }
