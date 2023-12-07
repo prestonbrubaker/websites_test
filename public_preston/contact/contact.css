@@ -115,5 +115,6 @@ nav ul li a:hover {
 }
 
 #policy {
+  text-decoration: underline;
   color: white;
 }
