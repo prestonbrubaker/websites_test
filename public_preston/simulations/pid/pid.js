@@ -29,8 +29,6 @@ const bgHue = "#777777";
 ctx.fillStyle = bgHue;
 ctx.fillRect(0, 0, maxW, maxH);
 
-
-//right canvas 
     
 var c2 = document.getElementById("canvas2");
 var ctx2 = c2.getContext("2d");
@@ -38,11 +36,21 @@ var ctx2 = c2.getContext("2d");
 ctx2.fillStyle = bgHue;
 ctx2.fillRect(0, 0, maxW, maxH);
 
+ctx2.fillStyle = "#000000"
+ctx2.fillRect(30, maxH - 30, maxW - 60,2);
+ctx2.fillRect(30, maxH - 30, -2,-250);
+
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
     
 ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
+
+ctx3.fillStyle = "#000000";
+ctx3.fillRect(29, 299, maxW, 2);
+ctx3.fillRect(29,maxH - 30, 2, -300);
+
+
 
 
 // Simulation Parameters
@@ -186,11 +194,19 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
+    ctx3.fillStyle = "#000000";
+    ctx3.fillRect(29, 299, maxW, 2);
+    ctx3.fillRect(29,maxH - 30, 2, -300);
+    
     heater_temp = 20;
     fluid_temp = 20;
     vessel_wall_temp = 20;
     vessel_cont_temp = 20;
     air_temp = 20;
+
+    ctx2.fillStyle = "#000000"
+    ctx2.fillRect(29, maxH - 31, maxW - 60,2);
+    ctx2.fillRect(29, maxH - 31, -2,-250);
 
 }
 
@@ -212,13 +228,13 @@ function tick() {
     ctx2.fillText("Graph of Temperatures", maxW / 2 - 30, 10);
 
     if(method == 0){
-        ctx2.fillText("Setpoint Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: Setpoint", maxW / 2 - 30, 50);
     }else if (method == 1){
-        ctx2.fillText("Proportional Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: Proportional", maxW / 2 - 30, 50);
     }else if (method == 2){
-        ctx2.fillText("PD Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: PD", maxW / 2 - 30, 50);
     }else if (method == 3){
-        ctx2.fillText("PID Control", maxW / 2 - 20, 70);
+        ctx2.fillText("Contol Mode: PID", maxW / 2 - 30, 50);
     }
 
     
@@ -245,7 +261,7 @@ function tick() {
     ctx3.fillText("Heater temp:  " + Math.floor(heater_temp) + "° C", 10, 30);
     ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
     ctx3.fillText("Vessel wall temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
-    ctx3.fillText("Vessel cont temp:  " + Math.floor(vessel_cont_temp) + "°C", 10, 90);
+    ctx3.fillText("Vessel cont temp:  " + (Math.floor(vessel_cont_temp * 10) / 10) + "°C", 10, 90);
 
     ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
     ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "°C * min", 150, 50);
@@ -255,7 +271,7 @@ function tick() {
     ctx3.fillText("q2 fluid to vessel wall:  " + Math.floor(qdot_2) + " J/s", 300, 50);
     ctx3.fillText("q3 vessel wall to vessel content:  " + Math.floor(qdot_3) + " J/s", 300, 70);
     ctx3.fillText("q4 vessel wall to air:  " + Math.floor(qdot_4) + " J/s", 300, 90);
-    if(vessel_cont_temp < 107){
+    if(vessel_cont_temp < 150){
         ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (5.08354 - 1663.125 / (vessel_cont_temp + 273.15 - 45.622)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     } else {
         ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
@@ -267,23 +283,22 @@ function tick() {
 
     //plot temps
     ctx2.fillStyle = "#FF0000";
-    ctx2.fillRect(itC / 8000 * maxW, maxH - (heater_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (heater_temp - 20) * 1 - 30, 2, 2)
     
     ctx2.fillStyle = "#FFFF00";
-    ctx2.fillRect(itC / 8000 * maxW, maxH - (fluid_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (fluid_temp - 20) * 1 - 30, 2, 2)
 
     ctx2.fillStyle = "#00FF00";
-    ctx2.fillRect(itC / 8000 * maxW, maxH - (vessel_wall_temp - 20) * 1, 2, 2)
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (vessel_wall_temp - 20) * 1 - 30, 2, 2)
 
     ctx2.fillStyle = "#0000FF";
-    ctx2.fillRect(itC / 8000 * maxW, maxH - (vessel_cont_temp - 20) * 1, 2, 2)
-
-    ctx3.fillStyle = "#000000";
-    ctx3.fillRect(0, 299, maxW, 2);
+    ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (vessel_cont_temp - 20) * 1 - 30, 2, 2)
+    
+    
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillRect(itC / 8000 * maxW, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
+    ctx3.fillRect(itC / 8000 * (maxW - 60) + 30, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
-    ctx3.fillRect(itC / 8000 * maxW, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
+    ctx3.fillRect(itC / 8000 * (maxW - 60) + 30, 300 - Math.log(Math.abs((vessel_cont_temp - 75))) * 10, 2, 2);
 
     
 
@@ -316,7 +331,7 @@ function tick() {
 
     // from vessel wall to vessel content
     integral += (vessel_cont_temp - setpoint_temp) * dt;
-    integral *= 0.99;
+    integral *= 0.995;
     vessel_cont_temp += qdot_3 / mass_vessel_cont / heat_cap_water * dt;
     derivative = qdot_3 / mass_vessel_cont / heat_cap_water;
     
@@ -334,11 +349,12 @@ function tick() {
             qdot = max_q;
             ctx.fillStyle = "hsl(0, 50%, " + 50 + "%)";
         } else {
+            multiplier = 0;
             qdot = 0;
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 1){    // Proportional Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 80;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -349,7 +365,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 2) {    // PD Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 100 * derivative;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 20 - 100 * derivative;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -360,7 +376,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 3){    // PID Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 700 * derivative - integral / 4000;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 20 - 2100 * derivative - integral / 3000;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -391,8 +407,8 @@ function button_pressed(setting) {
     initialize();
 }
 
-function disturbance() {
-    vessel_cont_temp += Math.random() * Math.random() * 10;
+function disturbance(amount) {
+    vessel_cont_temp += amount;
 }
 
 

@@ -17,7 +17,7 @@ html, body {
     color: #333; /* Adjust text color for readability */
 }
 
-header, main, footer {
+header, main {
     text-align: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
@@ -74,15 +74,6 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
-footer {
-    left: 0;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -105,4 +96,24 @@ footer {
 .dropdown-content li a:hover {
     background-color: #4A90E2; /* Change for hover effect */
     color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(74,144,226, 00.6); /* Adjust the first three values to change the color */
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+#policy {
+  color: white;
 }
