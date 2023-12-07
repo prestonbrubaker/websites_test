@@ -14,16 +14,16 @@ html, body {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../../pictures/img.jpg');
     background-size: cover;
     display: inline-block;
-    color: black; /* All text in black */
+    color: black;
 }
 
 .content {
-    text-align: center; /* Centering content horizontally */
+    text-align: center;
 }
 
 main, footer {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background: rgba(255, 255, 255, 0.8);
 }
 
 h1, h2, h3 {
@@ -56,82 +56,76 @@ footer {
 }
 
 .word-art-container {
-    text-align: center; /* This will center the .word-art div */
-    margin-top: 20px; /* Adjust as needed for spacing */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .word-art {
     display: inline-block;
     font-family: 'pixel1', monospace;
     font-size: 2em;
-    font-weight: bold; /* Make the text bolder */
-    color: white; /* High contrast color */
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); /* Stronger text shadow for depth */
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
     padding: 10px 20px;
     margin: 0;
-    background-image: linear-gradient(to bottom, #cccccc, #333333); /* Grey gradient background */
-    border: 3px solid black; /* Thicker black border */
+    background-image: linear-gradient(to bottom, #cccccc, #333333);
+    border: 3px solid black;
     border-radius: 5px;
     
-    /* Additional stylistic choices for a techy feel */
     letter-spacing: 1px;
     word-spacing: 2px;
-    
-    /* CSS Transform for a slight perspective */
+
     transform: perspective(500px) rotateX(10deg);
-    
-    /* Transition for a hover effect */
+
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .canvasBox {
-  display: flex; /* This will arrange child elements (canvases) in a row */
-  justify-content: center; /* This will center the canvases horizontally */
-  align-items: center; /* This will center the canvases vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px auto;
-  flex-wrap: wrap; /* This allows items to wrap to next line if not enough space */
+  flex-wrap: wrap;
 }
 
 
 #canvas1 {
-    display: block; /* Ensures the canvas is a block-level element */
-    margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
-    border: 5px solid #700; /* Optional: adds a border for visibility */
-    /* Set the width and height if not set inline in the HTML */
+    display: block;
+    margin: 20px;
+    border: 5px solid #700;
 }
 #canvas2 {
-    display: block; /* Ensures the canvas is a block-level element */
-    margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
-    border: 5px solid #770; /* Optional: adds a border for visibility */
-    /* Set the width and height if not set inline in the HTML */
+    display: block;
+    margin: 20px;
+    border: 5px solid #770;
 }
 
 #canvas3 {
-    display: block; /* Ensures the canvas is a block-level element */
-    margin: 20px; /* Adds margin to the top and bottom, centers horizontally */
-    border: 5px solid #007; /* Optional: adds a border for visibility */
-    /* Set the width and height if not set inline in the HTML */
+    display: block;
+    margin: 20px;
+    border: 5px solid #007;
 }
 
 nav {
     background-color: white;
-    padding: 10px; /* Adds some space inside the nav bar */
+    padding: 10px;
 }
 
 nav ul {
-    list-style: none; /* Removes bullet points from the list */
+    list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Aligns list items horizontally */
+    display: flex;
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between each list item */
+    margin-right: 20px;
 }
 
 nav ul li a {
-    text-decoration: none; /* Removes the underline from links */
-    color: #4A90E2; /* Sets the text color */
+    text-decoration: none;
+    color: #4A90E2;
     font-weight: bold;
 }
 
@@ -146,24 +140,24 @@ nav ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8); /* Change as per your color scheme */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* For dropdown shadow */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
     z-index: 1;
 }
 
 .dropdown-content li {
-    padding: 5px 10px; /* Adjust top/bottom and left/right padding as needed */
+    padding: 5px 10px;
 }
 
 .dropdown-content li a {
-    color: #4A90E2; /* Text color */
-    padding: 10px 20px; /* Adjust top/bottom and left/right padding as needed */
+    color: #4A90E2;
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content li a:hover {
-    background-color: #4A90E2; /* Change for hover effect */
+    background-color: #4A90E2;
     color: white;
 }
 
@@ -172,7 +166,7 @@ nav ul li a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(74,144,226, 00.6); /* Adjust the first three values to change the color */
+    background-color: rgb(74,144,226, 00.6);
     color: white;
     text-align: center;
     padding: 0.5rem;
