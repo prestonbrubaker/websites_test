@@ -116,3 +116,22 @@ nav ul li a:hover {
   text-decoration: underline;
   color: white;
 }
+
+.content-container {
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 5px; /* Rounded corners */
+}
+
+ul {
+    list-style-type: disc; /* Change bullet style */
+    margin-left: 20px; /* Indent list items */
+}
+
+section {
+    text-align: left;
+}
