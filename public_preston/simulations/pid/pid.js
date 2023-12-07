@@ -38,13 +38,17 @@ ctx2.fillRect(0, 0, maxW, maxH);
 
 ctx2.fillStyle = "#000000"
 ctx2.fillRect(30, maxH - 30, maxW - 60,2);
-ctx2.fillRect(30, maxH - 60, -2,-250);
+ctx2.fillRect(30, maxH - 30, -2,-250);
 
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
     
 ctx3.fillStyle = bgHue;
 ctx3.fillRect(0, 0, maxW, maxH);
+
+ctx2.fillStyle = "#000000"
+ctx2.fillRect(29, maxH - 31, maxW - 60,2);
+ctx2.fillRect(29, maxH - 31, -2,-250);
 
 
 
@@ -190,6 +194,10 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
+    ctx3.fillStyle = "#000000";
+    ctx3.fillRect(30, 299, maxW, 2);
+    ctx3.fillRect(29,maxH - 30, 2, -300);
+    
     heater_temp = 20;
     fluid_temp = 20;
     vessel_wall_temp = 20;
@@ -197,8 +205,8 @@ function initialize() {
     air_temp = 20;
 
     ctx2.fillStyle = "#000000"
-    ctx2.fillRect(30, maxH - 30, maxW - 60,2);
-    ctx2.fillRect(30, maxH - 60, -2,-250);
+    ctx2.fillRect(29, maxH - 31, maxW - 60,2);
+    ctx2.fillRect(29, maxH - 31, -2,-250);
 
 }
 
@@ -286,8 +294,7 @@ function tick() {
     ctx2.fillStyle = "#0000FF";
     ctx2.fillRect(itC / 8000 * (maxW - 60) + 30, maxH - (vessel_cont_temp - 20) * 1 - 30, 2, 2)
     
-    ctx3.fillStyle = "#000000";
-    ctx3.fillRect(0, 299, maxW, 2);
+    
     ctx3.fillStyle = "#0000FF";
     ctx3.fillRect(itC / 8000 * (maxW - 60) + 30, 300 - (vessel_cont_temp - 75) * 3, 2, 2);
     ctx3.fillStyle = "#00FF00";
