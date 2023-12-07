@@ -11,13 +11,10 @@ window.onclick = function(event) {
         }
     }
 }
-
-//left canvas
     
 var c = document.getElementById("canvas1");
 var ctx = c.getContext("2d");
-    
-    
+
 var itC = 0;
 const tickS = 20;
 const maxW = c.width;   

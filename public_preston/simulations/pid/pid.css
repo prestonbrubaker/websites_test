@@ -16,17 +16,13 @@ html, body {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    color: black; 
-}
-
-main, footer {
-    padding: 1.25rem;
-    background: rgba(255, 255, 255, 0.8); 
+    color: black;
+    min-height: 100vh; 
 }
 
 nav {
     background-color: white;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 nav ul {
@@ -85,7 +81,7 @@ nav ul li a:hover {
 
 .word-art-container {
     text-align: center; 
-    margin-top: 20px; 
+    margin-top: 1.25rem; 
 }
 
 .word-art {
@@ -121,16 +117,11 @@ canvas {
     /* Set the width and height if not set inline in the HTML */
 }
 
-h1 {
-    color: black;
-}
-
-p {
+.simulation-explanation {
   margin: 2rem;
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -147,5 +138,6 @@ p {
 }
 
 #policy {
-  color: white;
+    text-decoration: underline;
+    color: white;
 }
