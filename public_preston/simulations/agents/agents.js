@@ -212,7 +212,7 @@ function tick() {
 
     // Write troubleshooting info
     ctx.fillStyle = "#777777";
-    ctx.fillRect(0,0,100,250);
+    ctx.fillRect(0,0,250,100);
 
     
     ctx.fillStyle = "#000000";
