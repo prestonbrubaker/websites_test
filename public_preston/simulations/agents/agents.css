@@ -152,3 +152,7 @@ nav ul li a:hover {
   text-decoration: underline;
   color: white;
 }
+
+#simulation-explanation {
+  margin: 1 rem;
+}
