@@ -84,11 +84,6 @@ header {
     margin: 0 4rem;
 }
 
-.contentgrid {
-    display: flex;
-    flex-direction: row;
-}
-
 /* Footer Styles */
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
