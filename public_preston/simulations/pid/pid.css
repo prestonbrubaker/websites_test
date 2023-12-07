@@ -5,6 +5,7 @@
 
 ::selection {
   color: red;
+  background: rgb(255, 0, 0, 0.2);
 }
 
 html, body {
@@ -14,84 +15,103 @@ html, body {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../../pictures/img.jpg');
     background-size: cover;
     display: inline-block;
-    color: black; /* All text in black */
-}
-
-.content {
-    text-align: center; /* Centering content horizontally */
+    color: black; 
 }
 
 main, footer {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.8); 
 }
 
-h1, h2, h3 {
-    color: black;
+nav {
+    background-color: white;
+    padding: 10px;
 }
 
-p {
-  margin: 2rem;
-  font-size: 1.5em;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-
-ul {
+nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex; 
 }
 
-li {
-    margin-bottom: 5px;
+nav ul li {
+    margin-bottom: 0.33rem;
+    margin-right: 1.25rem;
 }
 
-footer {
-    margin-top: 30rem;
-    color: black;
+nav ul li a {
+    text-decoration: none;
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); 
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 5px 10px; 
+}
+
+.dropdown-content li a {
+    color: #4A90E2; 
+    padding: 10px 20px; 
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #4A90E2; 
+    color: white;
+}
+
+.content {
+    text-align: center; 
 }
 
 .word-art-container {
-    text-align: center; /* This will center the .word-art div */
-    margin-top: 20px; /* Adjust as needed for spacing */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 .word-art {
     display: inline-block;
     font-family: 'pixel1', monospace;
     font-size: 2em;
-    font-weight: bold; /* Make the text bolder */
-    color: white; /* High contrast color */
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); /* Stronger text shadow for depth */
+    font-weight: bold;
+    color: white; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); 
     padding: 10px 20px;
     margin: 0;
-    background-image: linear-gradient(to bottom, #cccccc, #333333); /* Grey gradient background */
-    border: 3px solid black; /* Thicker black border */
+    background-image: linear-gradient(to bottom, #cccccc, #333333); 
+    border: 3px solid black; 
     border-radius: 5px;
-    
-    /* Additional stylistic choices for a techy feel */
     letter-spacing: 1px;
     word-spacing: 2px;
-    
-    /* CSS Transform for a slight perspective */
     transform: perspective(500px) rotateX(10deg);
-    
-    /* Transition for a hover effect */
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .canvasBox {
-  display: flex; /* This will arrange child elements (canvases) in a row */
-  justify-content: center; /* This will center the canvases horizontally */
-  align-items: center; /* This will center the canvases vertically */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   margin: 20px auto;
-  flex-wrap: wrap; /* This allows items to wrap to next line if not enough space */
+  flex-wrap: wrap; 
 }
-
 
 #canvas1 {
     display: block; /* Ensures the canvas is a block-level element */
@@ -113,58 +133,13 @@ footer {
     /* Set the width and height if not set inline in the HTML */
 }
 
-nav {
-    background-color: white;
-    padding: 10px; /* Adds some space inside the nav bar */
+h1 {
+    color: black;
 }
 
-nav ul {
-    list-style: none; /* Removes bullet points from the list */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Aligns list items horizontally */
-}
-
-nav ul li {
-    margin-right: 20px; /* Space between each list item */
-}
-
-nav ul li a {
-    text-decoration: none; /* Removes the underline from links */
-    color: #4A90E2; /* Sets the text color */
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    background-color: #4A90E2;
-    color: white;
-    padding: 5px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8); /* Change as per your color scheme */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* For dropdown shadow */
-    z-index: 1;
-}
-
-.dropdown-content li {
-    padding: 5px 10px; /* Adjust top/bottom and left/right padding as needed */
-}
-
-.dropdown-content li a {
-    color: #4A90E2; /* Text color */
-    padding: 10px 20px; /* Adjust top/bottom and left/right padding as needed */
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content li a:hover {
-    background-color: #4A90E2; /* Change for hover effect */
-    color: white;
+p {
+  margin: 2rem;
+  font-size: 1.5em;
 }
 
 .footer {
@@ -176,6 +151,7 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 0.5rem;
+    margin-top: 30rem;
 }
 
 .footer-text {
