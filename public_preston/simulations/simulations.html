@@ -6,30 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Preston's Simulations</title>
     <link rel="stylesheet" href="simulations.css">
+    <script src="simulations.js"></script> 
   </head>
     
   <body>
     <nav>
-    <ul>
+      <ul>
         <li><a href="../index.html">Back to Home</a></li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Simulations</a>
           <ul class="dropdown-content" id="dropdownMenu">
               <li><a href="simulations.html">Simulations Home</a></li>
-              <li><a href="agents/agents.html">Competetive Agents Simulation</a></li>
+              <li><a href="agents/agents.html">Competitive Agents Simulation</a></li>
               <li><a href="three_body_problem/three_body_problem.html">Three Body Problem Simulation</a></li>
               <li><a href="pid/pid.html">PID Example</a></li>
           </ul>
         </li>
         <li><a href="../resume/resume.html">Resume</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
-        <!-- Add more navigation links as needed -->
-    </ul>
+      </ul>
     </nav>
 
-    <header>
-      <h1>Simulation Portal</h1>
-    </header>
+    <header><h1>Simulation Portal</h1></header>
     
     <section id="simulation1">
       <h2>Competitive Agents</h2>
@@ -39,25 +37,22 @@
 
     <section id="simulation2">
       <h2>Three-Body Problem</h2>
-      <p>This simulation will showcase the three-body problem. If three gravitational bodies are allowed to be in free orbit, their locations cannot be predicted far into the future using analytical functions for most initial conditions.</p>
+      <p>This simulation will showcase the three-body problem. If three gravitational bodies are allowed to be in free orbit, 
+        their locations cannot be predicted far into the future using analytical functions for most initial conditions.</p>
       <a href="three_body_problem/three_body_problem.html" class="simulation-link">Go to Three-Body Problem Simulation</a>
     </section>
 
     <section id="simulation3">
       <h2>PID Example</h2>
-      <p>This simulation will showcase an example of PID control. An electric heater will be used to heat up a water stream that is run through the jacket of a chemical reactor vessel containing water.</p>
+      <p>This simulation will showcase an example of PID control. An electric heater will be used to heat up a water stream that is run 
+        through the jacket of a chemical reactor vessel containing water.</p>
       <a href="pid/pid.html" class="simulation-link">Go to PID Example Simulation</a>
-    </section>
-
-    <footer class="footer">
-        <p class="footer-text">
-            2023 by Preston Brubaker.
-            <br>
-            This website collects user information for a better user experience. 
-            <a id="policy" href="../privacy_policy/privacy_policy.html">Read our privacy policy.</a>
-        </p>
-    </footer>
-  <script src="simulations.js"></script>  
+    </section> 
   </body>
-
+  <footer class="footer">
+    <p class="footer-text">
+      2023 by Preston Brubaker.<br>This website collects user information for a better user experience. 
+      <a id="policy" href="../../privacy_policy/privacy_policy.html">Read my privacy policy.</a>
+    </p>
+  </footer>
 </html>

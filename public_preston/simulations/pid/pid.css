@@ -5,7 +5,7 @@
 
 ::selection {
   color: rgb(74,144,226, );
-  background: rgb(74,144,226, 0.2);
+  background-color: rgb(74,144,226, 0.2);
 }
 
 html, body {
@@ -142,7 +142,6 @@ canvas {
     display: block; 
     margin: 1.25rem; 
     border: 0.33rem solid #DDD;
-    /* Set the width and height if not set inline in the HTML */
 }
 
 .simulation-explanation {
