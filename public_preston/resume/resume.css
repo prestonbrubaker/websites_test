@@ -4,8 +4,8 @@
 }
 
 ::selection {
-  color: red;
-  background-color: rgb(255, 0, 0, 0.2);
+    color: rgb(74,144,226);
+    background-color: rgb(74,144,226, 0.2);
 }
 
 html, body {
@@ -24,26 +24,6 @@ header, main {
     background: rgba(255, 255, 255, 0.8); 
 }
 
-h1, h2, h3 {
-    color: #4A90E2; /* Example color */
-}
-
-a {
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
 nav {
     background-color: white; 
     padding: 10px; 
@@ -54,6 +34,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    margin-left: 20px;
 }
 
 nav ul li {
@@ -83,7 +64,8 @@ nav ul li a:hover {
 }
 
 .dropdown-content li {
-    padding: 5px 10px; 
+    padding: 5px 10px;
+    margin-bottom: 5px;
 }
 
 .dropdown-content li a {
@@ -96,6 +78,24 @@ nav ul li a:hover {
 .dropdown-content li a:hover {
     background-color: #4A90E2;
     color: white;
+}
+
+h1, h2, h3 {
+    color: #4A90E2; /* Example color */
+}
+
+.content-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+section {
+    text-align: left;
 }
 
 .footer {
@@ -114,25 +114,6 @@ nav ul li a:hover {
 }
 
 #policy {
-  text-decoration: underline;
-  color: white;
-}
-
-.content-container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-section {
-    text-align: left;
-}
+    text-decoration: underline;
+    color: white;
+  }
