@@ -75,8 +75,8 @@ li {
 
 #canvas1 {
     display: block;
-    margin: 20px auto;
-    border: 1px solid #333;
+    margin: 20px;
+    border: 5px solid #000;
 }
 
 nav {
