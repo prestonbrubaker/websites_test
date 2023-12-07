@@ -368,7 +368,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 1){    // Proportional Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 20;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
@@ -379,7 +379,7 @@ function tick() {
             ctx.fillStyle = "hsl(0, 50%, " + 5 + "%)";
         }
     }else if (method == 2) {    // PD Control
-        multiplier = (setpoint_temp - vessel_cont_temp) / 20 - 70 * derivative;
+        multiplier = (setpoint_temp - vessel_cont_temp) / 50 - 50 * derivative;
         if(multiplier > 1){
             qdot = max_q;
         } else if (multiplier > 0){
