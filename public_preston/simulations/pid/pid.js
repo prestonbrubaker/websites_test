@@ -274,11 +274,11 @@ function tick() {
     
     ctx3.fillText("Heater temp:  " + Math.floor(heater_temp) + "° C", 10, 30);
     ctx3.fillText("Fluid temp:  " + Math.floor(fluid_temp) + "° C", 10, 50);
-    ctx3.fillText("Vessel wall temp:  " + Math.floor(vessel_wall_temp) + "°C", 10, 70);
-    ctx3.fillText("Vessel cont temp:  " + (Math.floor(vessel_cont_temp * 10) / 10) + "°C", 10, 90);
+    ctx3.fillText("Vessel wall temp:  " + Math.floor(vessel_wall_temp) + "° C", 10, 70);
+    ctx3.fillText("Vessel cont temp:  " + (Math.floor(vessel_cont_temp * 10) / 10) + "° C", 10, 90);
 
     ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
-    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "°C * min", 150, 50);
+    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "° C * min", 150, 50);
     ctx3.fillText("Multiplier of qmax:  " + Math.floor(multiplier * 100) / 100 , 150, 70);
     
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
@@ -291,7 +291,7 @@ function tick() {
         ctx3.fillText("Abs. pressure in vessel:  " + Math.floor((10 ** (3.55959 - 643.748 / (vessel_cont_temp + 273.15 - 198.043)) + 1.01325 ) * 1000) / 1000 + " bar", 300, 110)    //Antoine Equation Parameters taken from NIST Chemistry WebBook, SRD 69
     }
     ctx3.fillStyle = "#0000FF";
-    ctx3.fillText("Difference between vessel contents and setpoint:  " + Math.floor(vessel_cont_temp - 75) + "°C", 10, 110);
+    ctx3.fillText("Difference between vessel contents and setpoint:  " + Math.floor(vessel_cont_temp - 75) + "° C", 10, 110);
     ctx3.fillStyle = "#00FF00";
     ctx3.fillText("Log of absolute difference between vessel contents and setpoint:  " + Math.floor(Math.log(Math.abs((vessel_cont_temp - 75)))), 10, 130);
 
