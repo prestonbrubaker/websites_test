@@ -20,10 +20,6 @@ html, body {
   min-height: 100vh;
 }
 
-main {
-  flex: 1;
-}
-
 nav {
   background-color: white;
   padding: 0.625rem;
@@ -77,6 +73,10 @@ nav ul li a:hover {
 .dropdown-content li a:hover {
   background-color: #4A90E2; 
   color: white;
+}
+
+#main-content {
+  flex: 1;
 }
 
 header {
