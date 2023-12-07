@@ -18,7 +18,7 @@ var isFullscreen = false;
 
 
 var itC = 0;
-const tickS = 100;
+const tickS = 20;
 const minW = 0;
 const minH = 0;
 var maxW = c.width;   
