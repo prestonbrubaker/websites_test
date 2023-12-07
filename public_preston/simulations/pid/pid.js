@@ -42,6 +42,7 @@ ctx2.fillRect(30, maxH - 30, -2,-250);
 
 ctx2.fillStyle = "#FFFFFF";
 ctx2.fillText("Time", maxW / 2 - 20, 485);
+ctx2.fillText("Temp.", 0, 310);
 
 var c3 = document.getElementById("canvas3");
 var ctx3 = c3.getContext("2d");
@@ -55,7 +56,7 @@ ctx3.fillRect(29,maxH - 30, 2, -300);
 
 ctx3.fillStyle = "#FFFFFF";
 ctx3.fillText("Time", maxW / 2 - 20, 310);
-
+ctx3.fillText("Temp.", 0, 310);
 
 
 
@@ -206,6 +207,7 @@ function initialize() {
     
     ctx3.fillStyle = "#FFFFFF";
     ctx3.fillText("Time", maxW / 2 - 20, 310);
+    ctx3.fillText("Temp.", 0, 310);
     
     heater_temp = 20;
     fluid_temp = 20;
@@ -219,6 +221,7 @@ function initialize() {
 
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Time", maxW / 2 - 20, 485);
+    ctx2.fillText("Temp.", 0, 310);
 
 }
 
