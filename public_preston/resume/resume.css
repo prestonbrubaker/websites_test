@@ -12,9 +12,10 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'pixel1', sans-serif;
-    background-image: url('../pictures/img.jpg'); 
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');; 
     background-size: cover;
     color: #333; 
+    background-color: rgba(255, 255, 255, 0.8)
 }
 
 header, main {
@@ -115,4 +116,23 @@ nav ul li a:hover {
 #policy {
   text-decoration: underline;
   color: white;
+}
+
+.content-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+section {
+    text-align: left;
 }
