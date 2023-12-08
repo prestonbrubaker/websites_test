@@ -3,6 +3,17 @@
     src: url("../../fonts/pixel.ttf"), format('trueType');
 }
 
+body {
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: "pixel";
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem
+}
+
 header {
   display: flex;
   justify-content: flex-end;
@@ -68,15 +79,4 @@ header {
 #game1 { background-color: hotpink}
 #paint { background-color: orange;}
 #contacts { background-color: lime;}
-
-body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
-}
-
-h1 {
-    font-size: 3rem;
-}
 
