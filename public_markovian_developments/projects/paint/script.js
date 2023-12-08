@@ -21,14 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         blockSize = 1;
     }
 
-    canvas.addEventListener('mouseout', function() {
-        document.body.style.cursor = 'url(../images/paintbrush.png), auto';
-    });
-
-    canvas.addEventListener('mouseover', function() {
-        canvas.style.cursor = 'default';
-    });
-
     function drawCanvas(hues) {
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < grid; j++) {

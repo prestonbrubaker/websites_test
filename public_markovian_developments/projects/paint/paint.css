@@ -80,3 +80,7 @@ header {
 #paint { background-color: orange;}
 #contacts { background-color: lime;}
 
+
+#canvas1 {
+  display: inline;
+}
