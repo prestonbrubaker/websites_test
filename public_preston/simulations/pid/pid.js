@@ -277,8 +277,8 @@ function tick() {
     ctx3.fillText("Vessel wall temp:  " + Math.floor(vessel_wall_temp) + "° C", 10, 70);
     ctx3.fillText("Vessel cont temp:  " + (Math.floor(vessel_cont_temp * 10) / 10) + "° C", 10, 90);
 
-    ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + "°C/min", 150, 30);
-    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + "° C * min", 150, 50);
+    ctx3.fillText("Derivative:  " + Math.floor(derivative * 60 * 100) / 100 + " K / min", 150, 30);
+    ctx3.fillText("Pseudo-Integral:  " + Math.floor(integral / 60) + " K * min", 150, 50);
     ctx3.fillText("Multiplier of qmax:  " + Math.floor(multiplier * 100) / 100 , 150, 70);
     
     ctx3.fillText("q1 heater to fluid:  " + Math.floor(qdot_1) + " J/s", 300, 30);
