@@ -22,10 +22,12 @@ header {
   display: flex;
   justify-content: flex-end;
 }
-  
+
 .navigation nav ul {
   list-style: none;
-  text-align: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .navigation nav ul li {
@@ -39,13 +41,44 @@ header {
 .navigation nav ul li a {
   display: block;
   text-decoration: none;
-  color: #333;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
 }
 
 .navigation nav ul li a:hover {
   transform: scale(1.15); /* Enlarges text on hover */
   transform-origin: center; /* Ensures scaling happens from the center */
 }
+
+.dropdown {
+  position: relative; /* This ensures the absolute positioning of child elements is relative to this container */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* This will center the dropdown */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  z-index: 1;
+  text-align: center; /* Center align text */
+}
+
+.dropdown-content li {
+  margin: 0; /* Remove any default margin */
+  padding: 0.5rem 0; /* Add padding for spacing */
+}
+
+#home { background-color: royalblue;}
+#about { background-color: red;}
+.dropdwn { background-color: gold;}
+#projhome { background-color: turquoise;}
+#game1 { background-color: hotpink}
+#paint { background-color: orange;}
+#contacts { background-color: lime;}
 
 .introduction {
   display: flex;
@@ -82,45 +115,7 @@ header {
   padding: 1em;
 }
 
-#home {
-  background-color: royalblue;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
 
-#about {
-  background-color: red;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#projects {
-  background-color: gold;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#skills {
-  background-color: lime;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
-
-#paint {
-  background-color: orange;
-  padding: 0.5rem;
-  border: 0.2rem solid black;
-  border-radius: 0.4rem;
-  color: white;
-}
 
 footer {
     font-size: 0.75rem;
