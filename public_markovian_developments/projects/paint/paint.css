@@ -1,22 +1,18 @@
 @font-face {
     font-family: "pixel";
-    src: url("../fonts/pixel.ttf"), format('trueType');
+    src: url("../../fonts/pixel.ttf"), format('trueType');
 }
 
-body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
-}
-
-#thing {
-    font-size: 3rem
+header {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navigation nav ul {
   list-style: none;
-  text-align: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .navigation nav ul li {
@@ -30,18 +26,57 @@ body {
 .navigation nav ul li a {
   display: block;
   text-decoration: none;
-  color: #333;
-}
-
-.navigation nav ul li a:hover {
-  transform: scale(1.15); /* Enlarges text on hover */
-  transform-origin: center; /* Ensures scaling happens from the center */
-}
-
-#home {
-  background-color: royalblue;
   padding: 0.5rem;
   border: 0.2rem solid black;
   border-radius: 0.4rem;
   color: white;
 }
+
+.navigation nav ul li a:hover {
+  transform: scale(1.15); 
+  transform-origin: center; 
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  z-index: 1;
+  text-align: center; 
+}
+
+.dropdown-content li {
+  margin: 0; 
+  padding: 0.5rem 0; 
+}
+
+#dropdownMenu {
+  display: none;
+}
+
+#home { background-color: royalblue;}
+#about { background-color: red;}
+.dropdwn { background-color: gold;}
+#projhome { background-color: royalblue;}
+#game1 { background-color: hotpink}
+#paint { background-color: orange;}
+#contacts { background-color: lime;}
+
+body {
+    background-color: lightskyblue;
+    text-align: center;
+    font-family: "pixel";
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
