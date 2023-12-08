@@ -70,6 +70,9 @@ header {
 #contacts { background-color: lime;}
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: lightskyblue;
     text-align: center;
     font-family: "pixel";
