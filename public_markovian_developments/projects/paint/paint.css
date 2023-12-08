@@ -81,6 +81,7 @@ header {
 #contacts { background-color: lime;}
 
 
-canvas {
-  display: inline;
+#canvas1 {
+  display: block;
+  margin: auto;
 }
