@@ -4,10 +4,15 @@
 }
 
 body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
+  background-color: lightskyblue;
+  text-align: center;
+  font-family: "pixel";
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 h1 {
@@ -17,6 +22,7 @@ h1 {
 header {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .navigation nav ul {
