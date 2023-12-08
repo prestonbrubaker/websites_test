@@ -4,49 +4,8 @@
 }
 
 ::selection {
-  color: red;
-  background-color: rgb(255, 0, 0, 0.2);
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'pixel1', sans-serif;
-    background-image: url('../pictures/img.jpg'); 
-    background-size: cover;
-    color: black;
-}
-
-.content {
-    text-align: center;
-}
-
-main, footer {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-h1, h2, h3 {
-    color: black;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-footer {
-    margin-top: 30px;
-    color: black;
+    color: rgb(74,144,226);
+    background-color: rgb(74,144,226, 0.2);
 }
 
 nav {
@@ -63,6 +22,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
+    margin-bottom: 5px;
 }
 
 nav ul li a {
@@ -77,4 +37,34 @@ nav ul li a:hover {
     padding: 5px;
     border-radius: 3px;
     cursor: pointer;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'pixel1', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../pictures/img.jpg');; 
+    background-size: cover;
+    color: #333; 
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+main {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.privacy-policy {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
