@@ -89,4 +89,8 @@ header {
 #canvas1 {
   display: block;
   margin: auto;
+  max-width: 500px; /* Maximum width */
+  max-height: 500px; /* Maximum height */
+  width: 90vw; /* Scale based on viewport width */
+  height: 90vw; /* Scale based on viewport width to maintain aspect ratio */
 }

@@ -2,26 +2,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
-    var blockSize = 5;
-    const grid = 100;
+    const grid = 100; // 100x100 grid
     let hues = [];
 
-    canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.9;
-
-    var maxW = canvas.width;
-    var maxH = canvas.height;
-
-    if(maxW > maxH){
-        blockSize = Math.floor(maxH /100);
-    } else{
-        blockSize = Math.floor(maxW / 100);
+    // Function to adjust canvas size
+    function adjustCanvasSize() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
     }
-    if(blockSize < 1){
-        blockSize = 1;
-    }
+
+    adjustCanvasSize(); // Adjust on initial load
+
+    // Adjust canvas size on window resize
+    window.addEventListener('resize', adjustCanvasSize);
 
     function drawCanvas(hues) {
+        var blockSize = canvas.width / grid; // Calculate block size based on canvas size
+
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < grid; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
