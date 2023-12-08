@@ -81,7 +81,11 @@ nav ul li a:hover {
 }
 
 h1, h2, h3 {
-    color: #4A90E2; /* Example color */
+    color: #4A90E2;
+}
+
+.links, .links:visited {
+    color:#4A90E2;
 }
 
 .content-container {
@@ -113,7 +117,7 @@ section {
     font-size: 0.8em;
 }
 
-#policy {
+#policy, #policy:visited {
     text-decoration: underline;
     color: white;
   }
