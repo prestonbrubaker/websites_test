@@ -9,6 +9,7 @@ body {
   font-family: "pixel";
   font-size: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
