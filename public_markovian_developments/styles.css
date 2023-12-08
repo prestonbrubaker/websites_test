@@ -48,28 +48,28 @@ header {
 }
 
 .navigation nav ul li a:hover {
-  transform: scale(1.15); /* Enlarges text on hover */
-  transform-origin: center; /* Ensures scaling happens from the center */
+  transform: scale(1.15); 
+  transform-origin: center; 
 }
 
 .dropdown {
-  position: relative; /* This ensures the absolute positioning of child elements is relative to this container */
+  position: relative;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* This will center the dropdown */
+  transform: translateX(-50%); 
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
   z-index: 1;
-  text-align: center; /* Center align text */
+  text-align: center; 
 }
 
 .dropdown-content li {
-  margin: 0; /* Remove any default margin */
-  padding: 0.5rem 0; /* Add padding for spacing */
+  margin: 0; 
+  padding: 0.5rem 0; 
 }
 
 #dropdownMenu {
@@ -79,7 +79,7 @@ header {
 #home { background-color: royalblue;}
 #about { background-color: red;}
 .dropdwn { background-color: gold;}
-#projhome { background-color: turquoise;}
+#projhome { background-color: royalblue;}
 #game1 { background-color: hotpink}
 #paint { background-color: orange;}
 #contacts { background-color: lime;}

@@ -4,17 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Markovian Developments</title>
-        <link rel="stylesheet" href="projects.css">
+        <link rel="stylesheet" href="about.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="projects.js"></script>
+        <script src="about.js"></script>
     </head>
     <body>
         <header class="navigation">
             <nav>
                 <ul>
                     <li><a href="../index.html" id="home">Home</a></li>
-                    <li><a href="../aboutMe/about.html" id="about">About Us</a></li>
-                    <li><a href="../contact/contact.html" id="contacts">Contact Us</a>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdwn" onclick="toggleDropdown()">Projects</a>
+                        <ul class="dropdown-content" id="dropdownMenu">
+                            <li><a href="projects/projects.html" id="projhome">Overview</a></li>
+                            <li><a href="prjects//game_1/game_1.html" id="game1">Game 1</a></li>
+                            <li><a href="projects/paint/paint.html" id="paint">Paint</a></li></ul></li>
+                    <li><a href="contact/contact.html" id="contacts">Contact Us</a>
                 </ul>
             </nav>
         </header>
