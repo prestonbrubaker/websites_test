@@ -5,16 +5,14 @@
 
 body {
   background-color: lightskyblue;
-  text-align: center;
   font-family: "pixel";
   font-size: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
+  align-items: center; 
+  margin: 0; 
 }
+
 
 h1 {
     font-size: 3rem
