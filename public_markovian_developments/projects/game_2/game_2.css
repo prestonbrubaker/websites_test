@@ -17,12 +17,14 @@ h1 {
   font-size: 3rem;
   text-shadow: -0.05rem 0.05rem gray;
   margin: 0;
+  margin: 1rem auto;
 }
 
 header {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  margin: 1rem auto;
 }
 
 .navigation nav ul {
@@ -102,4 +104,5 @@ p {
 .hues {
   display: flex;
   flex-direction: row;
+  margin: 1rem auto;
 }
