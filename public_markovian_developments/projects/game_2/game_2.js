@@ -11,15 +11,11 @@ window.onclick = function(event) {
         }
     }
 }
-
-
-    var xa = .2;
-    var xb = .8;
     
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
 
-    const grid = 10;
+    var grid = 10;
     let hues = [];
     var blockSize = 5;
     
@@ -60,8 +56,6 @@ window.onclick = function(event) {
     });
     
     function saveHues() {
-        hues[0][0] = xa;
-        hues[0][1] = xb;
         fetch('/save-game_2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -77,116 +71,18 @@ window.onclick = function(event) {
                 hues = data.hues;
                 
                 drawCanvas(hues);
-            });
-        
-        
-    
-
-
-
-
-
-
-    
-    
-    // Define functions for specific keys
-    function handleKeyA() {
-        console.log('Key A is held down');
-        if(xa > 0){
-            xa -= 0.01;
-        }
-        saveHues();
-    }
-
-    function handleKeyD() {
-        console.log('Key D is held down');
-        if(xa < 1 - charW / maxW){
-            xa += 0.01;
-        }
-        
-        saveHues();
-    }
-
-    function handleLeftArrow() {
-        if(xb > 0){
-            xb -= 0.01;
-        }
-        
-        saveHues();
-        
-    }
-
-    function handleRightArrow() {
-        if(xb < 1 - charW / maxW){
-            xb += 0.01;
-        }
-        saveHues();
-    }
-
-        // Object to keep track of key states and the interval function
-    const keysPressed = {
-        'a': { pressed: false, interval: null },
-        'd': { pressed: false, interval: null },
-        'ArrowLeft': { pressed: false, interval: null },
-        'ArrowRight': { pressed: false, interval: null }
-    };
-    
-    // Event listener for keydown
-    document.addEventListener('keydown', function(event) {
-        const key = event.key;
-        if (!keysPressed[key].pressed) {
-            keysPressed[key].pressed = true;
-            // Clear any existing interval just in case
-            if (keysPressed[key].interval !== null) {
-                clearInterval(keysPressed[key].interval);
             }
-            // Set a new interval
-            keysPressed[key].interval = setInterval(() => {
-                repeatFunction(key);
-            }, 50); // Calls repeatFunction every 50ms
         }
-    });
-    
-    // Event listener for keyup
-    document.addEventListener('keyup', function(event) {
-        const key = event.key;
-        if (keysPressed[key].pressed) {
-            keysPressed[key].pressed = false;
-            // Clear the interval when the key is released
-            clearInterval(keysPressed[key].interval);
-            keysPressed[key].interval = null;
-        }
-    });
-
-    // Function to call the appropriate function based on the key
-    function repeatFunction(key) {
-        switch (key) {
-            case 'a':
-                handleKeyA();
-                break;
-            case 'd':
-                handleKeyD();
-                break;
-            case 'ArrowLeft':
-                handleLeftArrow();
-                break;
-            case 'ArrowRight':
-                handleRightArrow();
-                break;
-            default:
-                // No action for other keys
-                break;
-        }
-    }
-
-    
+        
+        
     
 
 
-    
 
-    
+
+
+
+
 
     loadHues();
     setInterval(loadHues, 300);
-});
