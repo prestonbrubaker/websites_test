@@ -72,6 +72,8 @@ function getValue() {
     x = Math.floor(Math.random() * grid);
     y = Math.floor(Math.random() * grid);
     hues[y][x] = document.getElementById('input_message').value;
+    saveHues();
+    loadHues();
 }
 
 loadHues();
