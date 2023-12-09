@@ -13,10 +13,8 @@ body {
   margin: 0; 
 }
 
-
 h1 {
   font-size: 3rem;
-  margin: 0;
 }
 
 header {
@@ -96,5 +94,4 @@ header {
 
 p {
   text-align: center;
-  margin: 1rem 6rem;
 }
