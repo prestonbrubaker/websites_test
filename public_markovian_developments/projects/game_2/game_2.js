@@ -31,6 +31,12 @@ function drawCanvas() {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             } else {
+                if ( (i + j ) % 2 == 1){
+                    ctx.fillStyle = "#777777";
+                }else {
+                    ctx.fillStyle = "#FFFFFF";
+                }
+                ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
                 ctx.fillStyle = "#000000";
                 ctx.fillText(hues[i][j], j * blockSize + blockSize / 2, i * blockSize + blockSize / 2);
             }
