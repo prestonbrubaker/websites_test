@@ -17,28 +17,26 @@ var ctx = canvas.getContext('2d');
 const grid = 5;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 var unlocked = 0;
-var input_m = "h";
+
+canvas.width = 500;
+canvas.height = 500;
 var maxW = canvas.width;
 var maxH = canvas.height;
-
-var blockSize = Math.min(canvas.width, canvas.height) / grid;
+var blockSize = Math.min(maxW, maxH) / grid;
 
 function drawCanvas() {
     ctx.font = "16px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    if(unlocked == 1){
+
+    if (unlocked == 1) {
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < grid; j++) {
                 if (typeof hues[i][j] === 'number') {
                     ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
                     ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
                 } else {
-                    if ( (i + j ) % 2 == 1){
-                        ctx.fillStyle = "#777777";
-                    }else {
-                        ctx.fillStyle = "#FFFFFF";
-                    }
+                    ctx.fillStyle = (i + j) % 2 == 1 ? "#777777" : "#FFFFFF";
                     ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
                     ctx.fillStyle = "#000000";
                     ctx.fillText(hues[i][j], j * blockSize + blockSize / 2, i * blockSize + blockSize / 2);
@@ -47,18 +45,20 @@ function drawCanvas() {
         }
     } else {
         ctx.fillStyle = "#777777";
-        ctx.fillRect(0,0,maxW,maxH);
+        ctx.fillRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#000000";
-        ctx.fillText("LOCKED!!!, maxW / 2, maxH / 2);
+        ctx.fillText("LOCKED!!!", maxW / 2, maxH / 2);
     }
 }
 
 canvas.addEventListener('click', function(event) {
-    const x = Math.floor(event.offsetX / blockSize);
-    const y = Math.floor(event.offsetY / blockSize);
-    hues[y][x] = Math.floor(Math.random() * 360);
-    saveHues();
-    drawCanvas();
+    if (unlocked == 1) {
+        const x = Math.floor(event.offsetX / blockSize);
+        const y = Math.floor(event.offsetY / blockSize);
+        hues[y][x] = Math.floor(Math.random() * 360);
+        saveHues();
+        drawCanvas();
+    }
 });
 
 drawCanvas(); // Initial draw to fill the canvas
@@ -83,19 +83,18 @@ function loadHues() {
 }
 
 function getValue() {
-    x = Math.floor(Math.random() * grid);
-    y = Math.floor(Math.random() * grid);
-    input_m = document.getElementById('input_message').value
-    if(input_m == "Scott" || input_m == "scott"){
+    var input_m = document.getElementById('input_message').value;
+    if (input_m.toLowerCase() === "scott") {
         unlocked = 1;
-        
-    } else if (unlocked == 1){
+        drawCanvas();
+    } else if (unlocked == 1) {
+        const x = Math.floor(Math.random() * grid);
+        const y = Math.floor(Math.random() * grid);
         hues[y][x] = input_m;
+        drawCanvas();
+        saveHues();
     }
-    saveHues();
-    loadHues();
 }
 
 loadHues();
 setInterval(loadHues, 2000);
-
