@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.9;
 
-    var maxW = canvas.width;
-    var maxH = canvas.height;
 
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
@@ -18,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     } else{
         blockSize = Math.floor(maxW / 100);
         canvas.height = canvas.width;
+
+
+    var maxW = canvas.width;
+    var maxH = canvas.height;
+
     }
     if(blockSize < 1){
         blockSize = 1;
