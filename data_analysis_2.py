@@ -2,6 +2,7 @@ import json
 import csv
 from collections import defaultdict
 from datetime import datetime
+from dateutil import parser
 
 def read_jsonl_and_process(file_path):
     site_visits = defaultdict(int)
@@ -18,7 +19,7 @@ def read_jsonl_and_process(file_path):
                 ip = data['ip']
                 timestamp = data['timestamp']
 
-                # Convert timestamp to epoch time using dateutil.parser or replacing 'Z' as previously discussed
+                # Convert timestamp to epoch time
                 epoch_time = int(parser.parse(timestamp).timestamp())
 
                 site_visits[hostname] += 1
