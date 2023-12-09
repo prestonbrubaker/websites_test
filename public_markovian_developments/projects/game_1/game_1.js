@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for ( var y = 0; y < 6; y++){
             for ( var x = 0; x < 5; x++){
                 ctx.fillStyle = `hsl(${hues[y][x]}, 100%, 50%)`;
-                ctx.fillRect(xa * maxW + charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
+                ctx.fillRect(xa * maxW + x * charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
             }
         }
         
