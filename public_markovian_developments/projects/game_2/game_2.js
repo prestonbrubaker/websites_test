@@ -14,7 +14,7 @@ window.onclick = function(event) {
 
 var canvas = document.getElementById('canvas1');
 var ctx = canvas.getContext('2d');
-const grid = 10;
+const grid = 5;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 
 canvas.width = 500;
