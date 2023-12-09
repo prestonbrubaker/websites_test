@@ -58,7 +58,7 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
         ctx.fillStyle = "#007700";
         ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#000000";
-        ctx.fillText("HI, I'm P.!", xa * maxW, maxH - 1 * charH - 40);
+        ctx.fillText("HI, I'm P.!", xa * maxW + 30, maxH - 1 * charH - 40 + 10);
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
         for ( var y = 0; y < 60; y++){
             for ( var x = 0; x < 37; x++){
