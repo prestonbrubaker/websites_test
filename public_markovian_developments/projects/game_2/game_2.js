@@ -34,6 +34,7 @@ canvas.addEventListener('click', function(event) {
     const x = Math.floor(event.offsetX / blockSize);
     const y = Math.floor(event.offsetY / blockSize);
     hues[y][x] = Math.floor(Math.random() * 360);
+    saveHues();
     drawCanvas();
 });
 
