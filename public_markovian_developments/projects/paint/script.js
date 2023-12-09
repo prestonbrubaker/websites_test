@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
     var blockSize = 5;
@@ -77,4 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadHues();
     setInterval(loadHues, 2000);
-});
+
