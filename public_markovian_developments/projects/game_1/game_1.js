@@ -63,8 +63,8 @@ var char_1_hues = [
         ctx.fillStyle = "#000000";
         ctx.fillText("HI, I'm P.!", xa * maxW, maxH - 1 * charH - 40);
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
-        for ( var y = 0; y < 37; y++){
-            for ( var x = 0; x < 65; x++){
+        for ( var y = 0; y < 65; y++){
+            for ( var x = 0; x < 37; x++){
                 ctx.fillStyle = `hsl(${char_1_hues[y][x]}, 100%, 50%)`;
                 ctx.fillRect(xa * maxW + x * charW / 37, maxH - y * charH / 65, charW / 37, -1 * charH / 65);
             }
