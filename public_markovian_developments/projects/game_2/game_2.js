@@ -14,7 +14,7 @@ window.onclick = function(event) {
 
 var canvas = document.getElementById('canvas1');
 var ctx = canvas.getContext('2d');
-const grid = 100;
+const grid = 10;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 
 canvas.width = 500;
@@ -56,6 +56,10 @@ function loadHues() {
                 drawCanvas();
             }
         }).catch(error => console.error('Error:', error));
+}
+
+function getValue() {
+    message_sto = document.getElementById('input_message').value;
 }
 
 loadHues();
