@@ -68,7 +68,7 @@ window.onclick = function(event) {
     });
 
     function saveHues() {
-        fetch('/save-canvas', {
+        fetch('/save-game_2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
@@ -76,7 +76,7 @@ window.onclick = function(event) {
     }
 
     function loadHues() {
-        fetch('/get-canvas')
+        fetch('/get-game_1')
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
