@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         ctx.fillStyle = "#FFFFFF";
-        ctx.fillText("Hue: " + hue_sto, 10, 10
+        ctx.fillText("Hue: " + hue_sto, 10, 10);
     }
 
     canvas.addEventListener('click', function(event) {
