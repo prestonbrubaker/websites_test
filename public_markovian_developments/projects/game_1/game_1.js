@@ -66,7 +66,7 @@ var char_1_hues = [
         for ( var y = 0; y < 37; y++){
             for ( var x = 0; x < 65; x++){
                 ctx.fillStyle = `hsl(${char_1_hues[y][x]}, 100%, 50%)`;
-                ctx.fillRect(xa * maxW + x * charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
+                ctx.fillRect(xa * maxW + x * charW / 37, maxH - y * charH / 65, charW / 37, -1 * charH / 65);
             }
         }
         
