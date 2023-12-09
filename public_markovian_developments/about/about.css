@@ -83,6 +83,18 @@ header {
   #game1 { background-color: hotpink}
   #paint { background-color: orange;}
   #contacts { background-color: lime;}
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: -0.25rem 0.3rem grey;
+  }
+
+  .buddies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   
 footer {
     position: fixed;

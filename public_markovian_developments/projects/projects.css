@@ -56,8 +56,18 @@ header {
 #about { background-color: red;}
 #contacts { background-color: gold;}
 
+h1 {
+  font-size: 3rem;
+  text-shadow: -0.25rem 0.3rem grey;
+  margin-left: 4rem;
+}
+
+h2 {
+  margin-left: 4rem;
+}
+
 p {
-    text-align: center;
+  margin-left: 4rem;
 }
 
 footer {

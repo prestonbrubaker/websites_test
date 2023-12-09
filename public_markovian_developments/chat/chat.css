@@ -37,6 +37,13 @@ header {
     transform-origin: center; /* Ensures scaling happens from the center */
   }
 
+  h1 {
+    font-size: 3rem;
+    text-shadow: -0.25rem 0.3rem grey;
+    text-align: center;
+    margin-left: 4rem;
+  }
+
 #chatspace {
     flex: 1;
     display: flex;
