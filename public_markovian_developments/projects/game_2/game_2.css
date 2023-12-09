@@ -118,9 +118,9 @@ p {
 
 .submit-button {
   padding: 0.5rem 1rem;
-  border: 2px solid deepskyblue;
+  border: 2px solid black;
   border-radius: 4px;
-  background-color: deepskyblue;
+  background-color: crimson;
   color: white;
   font-size: 1rem;
   cursor: pointer;
