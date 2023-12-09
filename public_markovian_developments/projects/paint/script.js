@@ -11,15 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     if(maxW > maxH){
-        blockSize = Math.floor(maxH /100);
         canvas.width = canvas.height;
+        var maxW = canvas.width;
+        blockSize = Math.floor(maxH /100);
+        
     } else{
-        blockSize = Math.floor(maxW / 100);
         canvas.height = canvas.width;
+        var maxH = canvas.height;
+        blockSize = Math.floor(maxW / 100);
 
 
-    var maxW = canvas.width;
-    var maxH = canvas.height;
+    
+    
 
     }
     if(blockSize < 1){
