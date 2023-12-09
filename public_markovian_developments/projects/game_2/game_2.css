@@ -4,15 +4,19 @@
 }
 
 body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
+  background-color: lightskyblue;
+  font-family: "pixel";
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 0; 
 }
 
 h1 {
-    font-size: 3rem;
-    text-shadow: -0.05rem 0.05rem gray;
+  font-size: 3rem;
+  text-shadow: -0.05rem 0.05rem gray;
+  margin: 0;
 }
 
 header {
@@ -83,7 +87,6 @@ header {
 #contacts { background-color: lime;}
 
 
-
 #canvas1 {
   display: block;
   margin: 1rem auto;
@@ -92,5 +95,11 @@ header {
 }
 
 p {
-  margin-bottom: 2rem;
- }
+  text-align: center;
+  margin: 1rem 6rem;
+}
+
+.hues {
+  display: flex;
+  flex-direction: row;
+}
