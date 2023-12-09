@@ -17,6 +17,7 @@ var ctx = canvas.getContext('2d');
 const grid = 5;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 var unlocked = 0;
+var input_m = "h";
 
 
 var blockSize = Math.min(canvas.width, canvas.height) / grid;
@@ -82,12 +83,12 @@ function loadHues() {
 function getValue() {
     x = Math.floor(Math.random() * grid);
     y = Math.floor(Math.random() * grid);
-    var input = document.getElementById('input_message').value
-    if(input == "Scott" || input == "scott"){
+    input_m = document.getElementById('input_message').value
+    if(input_m == "Scott" || input_m == "scott"){
         unlocked = 1;
         
     } else if (unlocked == 1){
-        hues[y][x] = input;
+        hues[y][x] = input_m;
     }
     saveHues();
     loadHues();
