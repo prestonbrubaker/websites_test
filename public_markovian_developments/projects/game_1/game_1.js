@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         ctx.clearRect(0,0,maxW,maxH)
-        ctx.fillStyle = "#FF7777";
+        ctx.fillStyle = "#ffffff";
         ctx.fillRect(0,0,maxW,maxH);
         xa = hues[0][0];
         xb = hues[0][1];
