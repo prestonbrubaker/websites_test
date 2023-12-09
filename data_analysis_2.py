@@ -12,10 +12,14 @@ file_path = 'visit_logs.jsonl'
 with open(file_path, 'r') as file:
     for line in file:
         entry = json.loads(line)
-        ip = entry['ip']
-        site = entry['hostname']
-        # Increment the count of visits for this IP at this site
-        visits_per_site_per_ip[ip][site] += 1
+        # Check if 'hostname' key exists
+        if 'hostname' in entry:
+            ip = entry['ip']
+            site = entry['hostname']
+            # Increment the count of visits for this IP at this site
+            visits_per_site_per_ip[ip][site] += 1
+        else:
+            print(f"Skipping entry without hostname: {entry}")
 
 # Now we'll write the aggregated data to a CSV file
 output_csv_path = 'output.csv'
