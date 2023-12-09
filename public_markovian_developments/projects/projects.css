@@ -56,6 +56,10 @@ header {
 #about { background-color: red;}
 #contacts { background-color: gold;}
 
+p {
+    text-align: center;
+}
+
 footer {
     position: fixed;
     left: 0;
