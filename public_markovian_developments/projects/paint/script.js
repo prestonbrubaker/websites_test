@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
+        canvas.height = canvas.width;
     } else{
         blockSize = Math.floor(maxW / 100);
+        canvas.width = canvas.height;
     }
     if(blockSize < 1){
         blockSize = 1;
