@@ -65,7 +65,9 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
         for ( var y = 0; y < 60; y++){
             for ( var x = 0; x < 37; x++){
                 ctx.fillStyle = `hsl(${char_1_hues[y][x]}, ${char_1_saturations[y][x]}%, ${char_1_lightings[y][x]}%)`;
-                ctx.fillRect(xa * maxW + x * charW / 37, maxH - charH + y * charH / 60, charW / 37, 1 * charH / 60);
+                if(char_1_lightings[y][x] != 100){
+                    ctx.fillRect(xa * maxW + x * charW / 37, maxH - charH + y * charH / 60, charW / 37, 1 * charH / 60);
+                }
             }
         }
         
