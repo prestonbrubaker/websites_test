@@ -77,11 +77,7 @@ header {
   display: none;
 }
 
-#canvas1 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 
 #home { background-color: royalblue;}
@@ -94,6 +90,8 @@ header {
 
 
 #canvas1 {
-  display: block;
-  margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
 }
