@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
         for ( var y = 0; y < 6; y++){
             for ( var x = 0; x < 5; x++){
-                ctx.fillStyle = `hsl(${hues[y][x]}, 100%, 50%)`;
+                ctx.fillStyle = `hsl(${char_1_hues[y][x]}, 100%, 50%)`;
                 ctx.fillRect(xa * maxW + x * charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
             }
         }
