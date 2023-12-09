@@ -17,8 +17,7 @@ var ctx = canvas.getContext('2d');
 const grid = 5;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 
-canvas.width = 500;
-canvas.height = 500;
+
 var blockSize = Math.min(canvas.width, canvas.height) / grid;
 
 function drawCanvas() {
