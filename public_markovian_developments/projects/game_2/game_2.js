@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var xa = .2;
     var xb = .8;
     
-    const canvas = document.getElementById('canvas1');
-    const ctx = canvas.getContext('2d');
+    var canvas = document.getElementById('canvas1');
+    var ctx = canvas.getContext('2d');
 
     const grid = 10;
     let hues = [];
