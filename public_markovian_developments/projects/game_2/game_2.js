@@ -76,7 +76,7 @@ window.onclick = function(event) {
     }
 
     function loadHues() {
-        fetch('/get-game_1')
+        fetch('/get-game_2')
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
