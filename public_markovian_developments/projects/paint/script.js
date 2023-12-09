@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             }
         }
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillText("Hue: " + hue_sto, 10, 10);
     }
 
     canvas.addEventListener('click', function(event) {
