@@ -23,6 +23,7 @@ canvas.height = 500;
 var maxW = canvas.width;
 var maxH = canvas.height;
 var blockSize = Math.min(maxW, maxH) / grid;
+var numbify = 0;
 
 function drawCanvas() {
     ctx.font = "16px Arial";
@@ -48,6 +49,7 @@ function drawCanvas() {
         ctx.fillRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#000000";
         ctx.fillText("LOCKED!!!", maxW / 2, maxH / 2);
+        ctx.fillText("Last Guess Numbified: " + numbify, maxW / 2, maxH / 2 + 30);
     }
 }
 
