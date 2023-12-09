@@ -11,18 +11,25 @@ def read_jsonl_and_process(file_path):
     with open(file_path, 'r') as file:
         for line in file:
             data = json.loads(line)
-            hostname = data['hostname']
-            ip = data['ip']
-            timestamp = data['timestamp']
 
-            formatted_timestamp = timestamp.replace('Z', '+00:00')
-            epoch_time = int(datetime.fromisoformat(formatted_timestamp).timestamp())
+            # Check if 'hostname' key exists
+            if 'hostname' in data:
+                hostname = data['hostname']
+                ip = data['ip']
+                timestamp = data['timestamp']
 
-            site_visits[hostname] += 1
-            ip_site_visits[ip][hostname] += 1
-            site_visits_over_time[hostname][epoch_time] += 1
+                # Convert timestamp to epoch time using dateutil.parser or replacing 'Z' as previously discussed
+                epoch_time = int(parser.parse(timestamp).timestamp())
+
+                site_visits[hostname] += 1
+                ip_site_visits[ip][hostname] += 1
+                site_visits_over_time[hostname][epoch_time] += 1
+            else:
+                print(f"Missing 'hostname' in data: {data}")
 
     return site_visits, ip_site_visits, site_visits_over_time
+
+
 
 def write_to_csv(site_visits, ip_site_visits, site_visits_over_time, output_file):
     with open(output_file, 'w', newline='') as file:
