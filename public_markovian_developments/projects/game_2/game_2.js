@@ -19,8 +19,8 @@ window.onclick = function(event) {
     const grid = 100;
     let hues = [];
 
-    var maxW = canvas.width;
-    var maxH = canvas.height;
+    var maxW = 500
+    var maxH = 500
 
     blockS = maxH / grid
 
@@ -45,7 +45,7 @@ window.onclick = function(event) {
     });
 
     function saveHues() {
-        fetch('/save-game_1', {
+        fetch('/save-game_2', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
@@ -53,7 +53,7 @@ window.onclick = function(event) {
     }
 
     function loadHues() {
-        fetch('/get-game_1')
+        fetch('/get-game_2')
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
