@@ -95,3 +95,8 @@ header {
 p {
   text-align: center;
 }
+
+.hues {
+  display: flex;
+  flex-direction: row;
+}
