@@ -18,7 +18,8 @@ const grid = 5;
 let hues = new Array(grid).fill().map(() => new Array(grid).fill(0));
 var unlocked = 0;
 var input_m = "h";
-
+var maxW = canvas.width;
+var maxH = canvas.height;
 
 var blockSize = Math.min(canvas.width, canvas.height) / grid;
 
