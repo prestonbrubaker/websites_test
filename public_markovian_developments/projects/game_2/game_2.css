@@ -102,4 +102,5 @@ p {
   display: flex;
   flex-direction: row;
   margin: 1rem auto;
+  align-items: center;
 }
