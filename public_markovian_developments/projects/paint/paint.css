@@ -77,6 +77,13 @@ header {
   display: none;
 }
 
+#canvas1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #home { background-color: royalblue;}
 #about { background-color: red;}
 .dropdwn { background-color: gold;}
