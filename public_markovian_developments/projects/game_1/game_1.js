@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var maxW = canvas.width;
     var maxH = canvas.height;
-    var charW = maxW * 0.2;
+    var charW = maxW * 0.4;
     var charH = maxH * 0.9;
 
 var char_1_hues = [
