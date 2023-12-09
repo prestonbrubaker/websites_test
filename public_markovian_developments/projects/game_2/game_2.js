@@ -38,3 +38,25 @@ canvas.addEventListener('click', function(event) {
 });
 
 drawCanvas(); // Initial draw to fill the canvas
+function saveHues() {
+    fetch('/save-game_2', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ hues: hues })
+    }).catch(error => console.error('Error:', error));
+}
+
+function loadHues() {
+    fetch('/get-game_2')
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.hues) {
+                hues = data.hues;
+                drawCanvas();
+            }
+        }).catch(error => console.error('Error:', error));
+}
+
+loadHues();
+setInterval(loadHues, 2000);
+
