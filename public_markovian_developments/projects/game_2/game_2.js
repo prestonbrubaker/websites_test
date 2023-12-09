@@ -24,8 +24,12 @@ var blockSize = Math.min(canvas.width, canvas.height) / grid;
 function drawCanvas() {
     for (let i = 0; i < grid; i++) {
         for (let j = 0; j < grid; j++) {
+            if(hues[i][j] < 10000){
             ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
             ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
+            } else {
+                ctx.fillStyle = "#000000";
+                ctx.fillText(hues[i][j], j * blockSize, i * blockSize);
         }
     }
 }
@@ -59,7 +63,9 @@ function loadHues() {
 }
 
 function getValue() {
-    message_sto = document.getElementById('input_message').value;
+    x = Math.floor(Math.random() * grid);
+    y = Math.floor(Math.random() * grid);
+    hues[y][x] = document.getElementById('input_message').value;
 }
 
 loadHues();
