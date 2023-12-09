@@ -132,7 +132,6 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
     }
 
     function handleLeftArrow() {
-        console.log('Left Arrow is held down');
         if(xb > 0){
             xb -= 0.01;
         }
@@ -142,7 +141,6 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
     }
 
     function handleRightArrow() {
-        console.log('Right Arrow is held down');
         if(xb < 1 - charW / maxW){
             xb += 0.01;
         }
