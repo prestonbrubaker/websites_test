@@ -1,6 +1,6 @@
 @font-face {
     font-family: "pixel";
-    src: url("../../fonts/pixel.ttf"), format('trueType');
+    src: url("../../fonts/pixel.ttf") format('truetype');
 }
 
 body {
@@ -16,7 +16,6 @@ body {
 h1 {
   font-size: 3rem;
   text-shadow: -0.05rem 0.05rem gray;
-  margin: 0;
   margin: 1rem auto;
 }
 
@@ -80,14 +79,13 @@ header {
   display: none;
 }
 
-#home { background-color: royalblue;}
-#about { background-color: red;}
-.dropdwn { background-color: gold;}
-#projhome { background-color: royalblue;}
-#game1 { background-color: hotpink}
-#paint { background-color: orange;}
-#contacts { background-color: lime;}
-
+#home { background-color: royalblue; }
+#about { background-color: red; }
+.dropdwn { background-color: gold; }
+#projhome { background-color: royalblue; }
+#game1 { background-color: hotpink; }
+#paint { background-color: orange; }
+#contacts { background-color: lime; }
 
 #canvas1 {
   display: block;
