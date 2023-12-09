@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(hue_sto == -1){
             hues[y][x] = Math.floor(Math.random() * 360); // Random hue
         } else {
-            hues[y][x] = hue_sto;
+            hues[y][x] = Math.floor(hue_sto);
         }
 
         drawCanvas(hues);
