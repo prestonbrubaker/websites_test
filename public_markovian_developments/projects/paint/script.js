@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var blockSize = 5;
     const grid = 100;
     let hues = [];
+    var hue_sto = -1
 
     canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.9;
@@ -41,7 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.addEventListener('click', function(event) {
         const x = Math.floor(event.offsetX / blockSize);
         const y = Math.floor(event.offsetY / blockSize);
-        hues[y][x] = Math.floor(Math.random() * 360); // Random hue
+        if(hue_sto == -1){
+            hues[y][x] = Math.floor(Math.random() * 360); // Random hue
+        } else {
+            hues[y][x] = hue_sto;
+        }
 
         drawCanvas(hues);
         saveHues();
@@ -63,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 drawCanvas(hues);
             });
     }
+
+    function getValue() {
+        hue_sto = document.getElementById('input_hue').value;
+}
 
     loadHues();
     setInterval(loadHues, 2000);
