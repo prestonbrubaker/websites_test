@@ -22,14 +22,19 @@ canvas.height = 500;
 var blockSize = Math.min(canvas.width, canvas.height) / grid;
 
 function drawCanvas() {
+    ctx.font = "16px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+
     for (let i = 0; i < grid; i++) {
         for (let j = 0; j < grid; j++) {
-            if(hues[i][j] < 10000){
-            ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
-            ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
+            if (typeof hues[i][j] === 'number') {
+                ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
+                ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             } else {
                 ctx.fillStyle = "#000000";
-                ctx.fillText(hues[i][j], j * blockSize, i * blockSize);
+                ctx.fillText(hues[i][j], j * blockSize + blockSize / 2, i * blockSize + blockSize / 2);
+            }
         }
     }
 }
@@ -43,6 +48,7 @@ canvas.addEventListener('click', function(event) {
 });
 
 drawCanvas(); // Initial draw to fill the canvas
+
 function saveHues() {
     fetch('/save-game_2', {
         method: 'POST',
