@@ -221,13 +221,10 @@ var char_2_hues = [[0, 0, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23
         }
     }
 
-    
-    
-
-
-    
-
-    
+    document.getElementById('left-button').addEventListener('click', handleKeyA);
+    document.getElementById('right-button').addEventListener('click', handleKeyD);
+    document.getElementById('left-butt').addEventListener('click', handleLeftArrow);
+    document.getElementById('right-butt').addEventListener('click', handleRightArrow);
 
     loadHues();
     setInterval(loadHues, 300);
