@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.9;
-
-
+    var maxW = canvas.width;
+    var maxH = canvas.height;
     if(maxW > maxH){
         canvas.width = canvas.height;
-        var maxW = canvas.width;
+        
         blockSize = Math.floor(maxH /100);
         
     } else{
         canvas.height = canvas.width;
-        var maxH = canvas.height;
+        
         blockSize = Math.floor(maxW / 100);
 
 
