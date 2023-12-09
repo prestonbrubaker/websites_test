@@ -55,8 +55,6 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
         ctx.fillRect(0,0,maxW,maxH);
         xa = hues[0][0];
         xb = hues[0][1];
-        ctx.fillStyle = "#770000";
-        ctx.fillRect(xa * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#007700";
         ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#000000";
