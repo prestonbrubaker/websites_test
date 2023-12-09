@@ -78,8 +78,11 @@ header {
 }
 
 #canvas1 {
-    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 #home { background-color: royalblue;}
 #about { background-color: red;}
