@@ -109,6 +109,31 @@ app.get('/get-game_1', (req, res) => {
     });
 });
 
+// Endpoint to save game_1 data
+app.post('/save-game_2', (req, res) => {
+    const canvasData = req.body;
+    fs.writeFile(path.join(__dirname, 'game_2.json'), JSON.stringify(canvasData), (err) => {
+        if (err) {
+            console.error('Error writing game_2 data:', err);
+            res.status(500).send('Error saving game_2 data');
+        } else {
+            res.send('Canvas data saved successfully');
+        }
+    });
+});
+
+// Endpoint to retrieve game_1 data
+app.get('/get-game_2', (req, res) => {
+    fs.readFile(path.join(__dirname, 'game_2.json'), (err, data) => {
+        if (err) {
+            console.error('Error reading game_2 data:', err);
+            res.status(500).send('Error retrieving game2 data');
+        } else {
+            res.send(data);
+        }
+    });
+});
+
 // Fallback for any other requests
 app.use((req, res) => {
   res.status(404).send('Page not found');
