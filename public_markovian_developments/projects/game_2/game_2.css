@@ -4,15 +4,19 @@
 }
 
 body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
+  background-color: lightskyblue;
+  font-family: "pixel";
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 0; 
 }
 
 h1 {
-    font-size: 3rem;
-    text-shadow: -0.05rem 0.05rem gray;
+  font-size: 3rem;
+  text-shadow: -0.05rem 0.05rem gray;
+  margin: 0;
 }
 
 header {
@@ -83,38 +87,19 @@ header {
 #contacts { background-color: lime;}
 
 
-
 #canvas1 {
-  border: 10px solid transparent;
+  display: block;
+  margin: 1rem auto;
+  border: 5px solid transparent;
   border-image: linear-gradient(to right, red, green, red, green, red, green) 1 round;
 }
 
 p {
-  margin-bottom: 2rem;
- }
-
- #mobile-controls button {
-  background-color: #770000; 
-  color: white; 
-  border: 0.2rem solid black; 
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  font-family: "pixel1";
+  text-align: center;
+  margin: 1rem 6rem;
 }
 
-#phone-controls button {
-  background-color: #007700;
-  color: white; 
-  border: 0.2rem solid black;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  font-family: "pixel1";
+.hues {
+  display: flex;
+  flex-direction: row;
 }
