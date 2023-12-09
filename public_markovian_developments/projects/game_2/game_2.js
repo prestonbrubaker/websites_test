@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     var blockSize = 5;
-    const grid = 100;
+    const grid = 10;
     let hues = [];
 
     canvas.width = window.innerWidth * 0.9;
