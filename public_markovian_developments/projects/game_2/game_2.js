@@ -28,9 +28,6 @@ for (let i = 0; i < grid; i++) {
 
 var blockSize = 5;
 
-canvas.width = window.innerWidth * 0.9;
-canvas.height = window.innerHeight * 0.6;
-
 var maxW = canvas.width;
 var maxH = canvas.height;
 
