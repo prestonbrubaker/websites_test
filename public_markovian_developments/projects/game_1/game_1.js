@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
     var charW = maxW * 0.1;
     var charH = maxH * 0.7;
 
+    var char_1_hues = [
+        [100, 200, 100, 200, 100],
+        [200, 100, 200, 100, 200],
+        [100, 200, 100, 200, 100],
+        [200, 100, 200, 100, 200],
+        [100, 200, 100, 200, 100],
+        [200, 100, 200, 100, 200]
+        ]
+
     
     if(maxW > maxH){
         blockSize = Math.floor(maxH /100);
@@ -57,8 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillStyle = "#007700";
         ctx.fillRect(xb * maxW, maxH, charW, -1 * charH);
         ctx.fillStyle = "#000000";
-        ctx.fillText("HI, I'm Willoh!", xa * maxW, maxH - 1 * charH - 40);
+        ctx.fillText("HI, I'm P.!", xa * maxW, maxH - 1 * charH - 40);
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
+        for ( var y = 0; y < 6; y++){
+            for ( var x = 0; x < 5; x++){
+                ctx.fillStyle = `hsl(${hues[y][x]}, 100%, 50%)`;
+                ctx.fillRect(xa * maxW + charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
+            }
+        }
+        
     }
 
     /********************************************************************
