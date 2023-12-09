@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Broken Game</title>
+        <link rel="stylesheet" href="game_1.css">
+        <script src="game_1.js"></script>
+    </head>
+    <body>
+        <header class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="../../about/about.html" id="about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdwn" onclick="toggleDropdown()">Projects</a>
+                        <ul class="dropdown-content" id="dropdownMenu">
+                            <li><a href="../projects.html" id="projhome">Overview</a></li>
+                            <li><a href="../paint/paint.html" id="paint">Paint</a></li></ul></li>
+                    <li><a href="../../contact/contact.html" id="contacts">Contact Us</a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Broken Game Simulation :P</h1>
+            <p>Click on the corresponding buttons to move the block characters. Alternatively, use 'wasd' for the red or the arrow keys to move the green!!!</p>
+            
+            <canvas id="canvas1"></canvas>
+            
+            <div id="mobile-controls">
+                <button id="left-button" onclick="handleKeyA()">Left</button>
+                <button id="right-button" onclick="handleKeyD()">Right</button>
+            </div>
+            <div id="phone-controls">
+                <button id="left-butt" onclick="handleLeftArrow()">Left</button>
+                <button id="right-butt" onclick="handleRightArrow()">Right</button>
+            </div>
+        </main> 
+</body>
+</html>
