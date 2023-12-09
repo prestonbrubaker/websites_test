@@ -26,19 +26,12 @@ for (let i = 0; i < grid; i++) {
     }
 }
 
-var blockSize = 5;
+
 
 var maxW = canvas.width;
 var maxH = canvas.height;
 
-if (maxW > maxH) {
-    blockSize = Math.floor(maxH / grid);
-} else {
-    blockSize = Math.floor(maxW / grid);
-}
-if (blockSize < 1) {
-    blockSize = 1;
-}
+var blockSize = maxW / grid;
 
 function drawCanvas(hues) {
     for (let i = 0; i < grid; i++) {
