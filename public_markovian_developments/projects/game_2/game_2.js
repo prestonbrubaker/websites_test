@@ -49,6 +49,7 @@ function drawCanvas() {
         ctx.fillRect(0,0,maxW,maxH);
         ctx.fillStyle = "#000000";
         ctx.fillText("LOCKED!!!, maxW / 2, maxH / 2);
+    }
 }
 
 canvas.addEventListener('click', function(event) {
