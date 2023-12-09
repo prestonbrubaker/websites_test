@@ -85,7 +85,9 @@ header {
 
 
 #canvas1 {
-  border: 10px solid transparent;
+  display: block;
+  margin: 1rem auto;
+  border: 5px solid transparent;
   border-image: linear-gradient(to right, red, green, red, green, red, green) 1 round;
 }
 
