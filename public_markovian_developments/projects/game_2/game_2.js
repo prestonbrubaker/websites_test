@@ -51,7 +51,7 @@ function drawCanvas() {
         ctx.fillStyle = "#000000";
         ctx.fillText("LOCKED!!!", maxW / 2, maxH / 2);
         ctx.fillText("Last Guess Numbified: " + numbify, maxW / 2, maxH / 2 + 30);
-        ctx.fillText("Last Guess Key: " + numbify, maxW / 2, maxH / 2 + 60);
+        ctx.fillText("Last Guess Key: " + key_g, maxW / 2, maxH / 2 + 60);
     }
 }
 
@@ -98,7 +98,7 @@ function stringToNumberHash(str) {
 function getValue() {
     var input_m = document.getElementById('input_message').value;
     numbify = stringToNumberHash(input_m);
-    key_g = Math.sin ( numbify / 100 )
+    key_g = Math.sin ( numbify / 100 );
     if (input_m.toLowerCase() === "scott") {
         unlocked = 1;
         drawCanvas();
