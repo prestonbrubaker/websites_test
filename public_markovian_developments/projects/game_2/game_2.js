@@ -12,7 +12,7 @@ window.onclick = function(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+
     var xa = .2;
     var xb = .8;
     
@@ -80,8 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         
         
-        
-    }
+    
 
 
 
