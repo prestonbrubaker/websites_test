@@ -45,8 +45,8 @@ var char_1_hues = [
     }
 
     function drawCanvas(hues) {
-        for (let i = 0; i < 37; i++) {
-            for (let j = 0; j < 65; j++) {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
                 ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
             }
@@ -63,8 +63,8 @@ var char_1_hues = [
         ctx.fillStyle = "#000000";
         ctx.fillText("HI, I'm P.!", xa * maxW, maxH - 1 * charH - 40);
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
-        for ( var y = 0; y < 6; y++){
-            for ( var x = 0; x < 5; x++){
+        for ( var y = 0; y < 37; y++){
+            for ( var x = 0; x < 65; x++){
                 ctx.fillStyle = `hsl(${char_1_hues[y][x]}, 100%, 50%)`;
                 ctx.fillRect(xa * maxW + x * charW / 5, maxH - y * charH / 6, charW / 5, -1 * charH / 6);
             }
