@@ -19,7 +19,7 @@ h1 {
   margin: 1rem auto;
 }
 
-header {
+h1 {
   display: flex;
   justify-content: flex-end;
   width: 100%;
