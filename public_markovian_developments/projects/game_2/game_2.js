@@ -18,23 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
-    var blockSize = 5;
+
     const grid = 10;
     let hues = [];
-
+    var blockSize = 5;
+    
     canvas.width = window.innerWidth * 0.9;
     canvas.height = window.innerHeight * 0.6;
 
     var maxW = canvas.width;
     var maxH = canvas.height;
-    var charW = maxW * 0.37 * 0.7;
-    var charH = maxH * 0.6 * 0.7;
 
+    
 
     if(maxW > maxH){
-        blockSize = Math.floor(maxH /100);
+        blockSize = Math.floor(maxH / grid);
     } else{
-        blockSize = Math.floor(maxW / 100);
+        blockSize = Math.floor(maxW / grid);
     }
     if(blockSize < 1){
         blockSize = 1;
