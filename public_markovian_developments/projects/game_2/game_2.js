@@ -84,8 +84,18 @@ function loadHues() {
         }).catch(error => console.error('Error:', error));
 }
 
+function stringToNumberHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0; // Convert to a 32bit integer
+    }
+    return hash;
+}
+
 function getValue() {
     var input_m = document.getElementById('input_message').value;
+    numbify = stringToNumberHash(input_m);
     if (input_m.toLowerCase() === "scott") {
         unlocked = 1;
         drawCanvas();
@@ -97,6 +107,10 @@ function getValue() {
         saveHues();
     }
 }
+
+
+
+
 
 loadHues();
 setInterval(loadHues, 2000);
