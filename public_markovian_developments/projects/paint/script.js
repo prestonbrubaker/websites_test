@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
-}
+    }
 
     loadHues();
     setInterval(loadHues, 2000);
