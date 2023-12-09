@@ -50,10 +50,10 @@ function drawCanvas() {
         ctx.fillStyle = "#777777";
         ctx.fillRect(0, 0, maxW, maxH);
         ctx.fillStyle = "#000000";
-        ctx.fillText("LOCKED!!!", maxW / 2, maxH / 2);
-        ctx.fillText("Last Guess Numbified: " + numbify, maxW / 2, maxH / 2 + 30);
-        ctx.fillText("Last Guess Key: " + key_g, maxW / 2, maxH / 2 + 60);
-        ctx.fillText("Correct Key: " + key_c, maxW / 2, maxH / 2 + 90);
+        ctx.fillText("LOCKED!!!", maxW / 2, maxH / 5);
+        ctx.fillText("Last Guess Numbified: " + numbify, maxW / 2, maxH / 5 + 30);
+        ctx.fillText("Last Guess Key: " + key_g, maxW / 2, maxH / 5 + 60);
+        ctx.fillText("Correct Key: " + key_c, maxW / 2, maxH / 5 + 90);
     }
 }
 
