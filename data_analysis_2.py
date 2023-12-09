@@ -15,7 +15,9 @@ def read_jsonl_and_process(file_path):
             ip = data['ip']
             timestamp = data['timestamp']
 
-            epoch_time = int(datetime.fromisoformat(timestamp).timestamp())
+            formatted_timestamp = timestamp.replace('Z', '+00:00')
+            epoch_time = int(datetime.fromisoformat(formatted_timestamp).timestamp())
+
             site_visits[hostname] += 1
             ip_site_visits[ip][hostname] += 1
             site_visits_over_time[hostname][epoch_time] += 1
