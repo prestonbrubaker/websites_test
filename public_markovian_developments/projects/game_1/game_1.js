@@ -62,10 +62,10 @@ var char_1_lightings = [[100, 100, 100, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99, 
         ctx.fillStyle = "#000000";
         ctx.fillText("HI, I'm P.!", xa * maxW, maxH - 1 * charH - 40);
         ctx.fillText("HI, I'm also Willoh!", xb * maxW, maxH - 1 * charH - 40);
-        for ( var y = 0; y < 65; y++){
+        for ( var y = 0; y < 60; y++){
             for ( var x = 0; x < 37; x++){
                 ctx.fillStyle = `hsl(${char_1_hues[y][x]}, ${char_1_saturations[y][x]}%, ${char_1_lightings[y][x]}%)`;
-                ctx.fillRect(xa * maxW + x * charW / 37, maxH - charH + y * charH / 65, charW / 37, 1 * charH / 65);
+                ctx.fillRect(xa * maxW + x * charW / 37, maxH - charH + y * charH / 60, charW / 37, 1 * charH / 60);
             }
         }
         
