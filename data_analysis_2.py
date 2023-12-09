@@ -1,54 +1,31 @@
 import json
 import csv
 from collections import defaultdict
-from datetime import datetime
-from dateutil import parser
 
-def read_jsonl_and_process(file_path):
-    site_visits = defaultdict(int)
-    ip_site_visits = defaultdict(lambda: defaultdict(int))
-    site_visits_over_time = defaultdict(lambda: defaultdict(int))
+# A dictionary to hold the count of visits per site per IP
+visits_per_site_per_ip = defaultdict(lambda: defaultdict(int))
 
-    with open(file_path, 'r') as file:
-        for line in file:
-            data = json.loads(line)
+file_path = 'visit_logs.jsonl'
 
-            # Check if 'hostname' key exists
-            if 'hostname' in data:
-                hostname = data['hostname']
-                ip = data['ip']
-                timestamp = data['timestamp']
+# Processing the .jsonl file and populating the visits dictionary
+with open(file_path, 'r') as file:
+    for line in file:
+        entry = json.loads(line)
+        ip = entry['ip']
+        site = entry['hostname']
+        # Increment the count of visits for this IP at this site
+        visits_per_site_per_ip[ip][site] += 1
 
-                # Convert timestamp to epoch time
-                epoch_time = int(parser.parse(timestamp).timestamp())
+output_csv_path = '/mnt/data/output.csv'
 
-                site_visits[hostname] += 1
-                ip_site_visits[ip][hostname] += 1
-                site_visits_over_time[hostname][epoch_time] += 1
-            else:
-                print(f"Missing 'hostname' in data: {data}")
+# Write the output to the CSV file
+with open(output_csv_path, 'w', newline='') as csvfile:
+    fieldnames = ['IP Address', 'Website', 'Total Visits']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-    return site_visits, ip_site_visits, site_visits_over_time
+    writer.writeheader()
+    for ip, sites in visits_per_site_per_ip.items():
+        for site, count in sites.items():
+            writer.writerow({'IP Address': ip, 'Website': site, 'Total Visits': count})
 
-
-
-def write_to_csv(site_visits, ip_site_visits, site_visits_over_time, output_file):
-    with open(output_file, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Site', 'Total Visits to Site', 'IP Address', 'Total Visits from IP', 'Epoch Time', 'Visits at Epoch Time'])
-
-        for site, total_visits in site_visits.items():
-            for ip, visits in ip_site_visits.items():
-                for epoch_time, count in site_visits_over_time[site].items():
-                    writer.writerow([
-                        site, 
-                        total_visits, 
-                        ip, 
-                        visits[site] if site in visits else 0, 
-                        epoch_time, 
-                        count
-                    ])
-
-site_visits, ip_site_visits, site_visits_over_time = read_jsonl_and_process('visit_logs.jsonl')
-
-write_to_csv(site_visits, ip_site_visits, site_visits_over_time, 'output.csv')
+print(f"CSV file created at {output_csv_path}")
