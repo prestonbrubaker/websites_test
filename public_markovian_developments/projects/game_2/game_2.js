@@ -53,7 +53,7 @@ function drawCanvas() {
         ctx.fillText("LOCKED!!!", maxW / 2, maxH / 2);
         ctx.fillText("Last Guess Numbified: " + numbify, maxW / 2, maxH / 2 + 30);
         ctx.fillText("Last Guess Key: " + key_g, maxW / 2, maxH / 2 + 60);
-        ctx.fillText("Correct Key: " + key_a, maxW / 2, maxH / 2 + 90);
+        ctx.fillText("Correct Key: " + key_c, maxW / 2, maxH / 2 + 90);
     }
 }
 
@@ -101,7 +101,7 @@ function getValue() {
     var input_m = document.getElementById('input_message').value;
     numbify = stringToNumberHash(input_m);
     key_g = Math.sin ( numbify / 100 );
-    if (key_g == -0.5460471316795027) {
+    if (key_g == key_c) {
         unlocked = 1;
         drawCanvas();
     } else if (unlocked == 1) {
