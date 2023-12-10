@@ -74,6 +74,13 @@
         }
         
         ctx2.fillRect(100,200,300,300);
+
+        if(time_epoch > 10000){
+            if(hues[0][1] < comp_fitness){
+                hues[0][1] = comp_fitness;
+                saveHues();
+            }
+        }
         
     }
 
