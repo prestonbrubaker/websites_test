@@ -3,6 +3,11 @@
     src: url("../../fonts/pixel.ttf") format('truetype');
 }
 
+::selection {
+  background-color: red;
+  color: white;
+}
+
 body {
   background-color: lightskyblue;
   font-family: "pixel";
