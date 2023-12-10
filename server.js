@@ -109,7 +109,7 @@ app.get('/get-game_1', (req, res) => {
     });
 });
 
-// Endpoint to save game_1 data
+// Endpoint to save game_2 data
 app.post('/save-game_2', (req, res) => {
     const canvasData = req.body;
     fs.writeFile(path.join(__dirname, 'data', 'game_2.json'), JSON.stringify(canvasData), (err) => {
@@ -122,12 +122,37 @@ app.post('/save-game_2', (req, res) => {
     });
 });
 
-// Endpoint to retrieve game_1 data
+// Endpoint to retrieve game_2 data
 app.get('/get-game_2', (req, res) => {
     fs.readFile(path.join(__dirname, 'data', 'game_2.json'), (err, data) => {
         if (err) {
             console.error('Error reading game_2 data:', err);
             res.status(500).send('Error retrieving game2 data');
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+// Endpoint to save game_3 data
+app.post('/save-game_3', (req, res) => {
+    const canvasData = req.body;
+    fs.writeFile(path.join(__dirname, 'data', 'game_3.json'), JSON.stringify(canvasData), (err) => {
+        if (err) {
+            console.error('Error writing game_3 data:', err);
+            res.status(500).send('Error saving game_3 data');
+        } else {
+            res.send('Canvas data saved successfully');
+        }
+    });
+});
+
+// Endpoint to retrieve game_3 data
+app.get('/get-game_3', (req, res) => {
+    fs.readFile(path.join(__dirname, 'data', 'game_3.json'), (err, data) => {
+        if (err) {
+            console.error('Error reading game_3 data:', err);
+            res.status(500).send('Error retrieving game 3 data');
         } else {
             res.send(data);
         }

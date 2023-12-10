@@ -3,27 +3,25 @@
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
     var blockSize = 5;
-    const grid = 100;
+    const grid = 3;
     let hues = [];
     var hue_sto = -1
 
-    canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.9;
+    canvas.width = 500
+    canvas.height = 500
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){
         canvas.width = canvas.height;
-        
-        blockSize = Math.floor(maxH /100);
+        maxW = canvas.width;
+        maxH = canvas.height;
+        blockSize = Math.floor(maxH / grid);
         
     } else{
         canvas.height = canvas.width;
-        
-        blockSize = Math.floor(maxW / 100);
-
-
-    
-    
+        maxW = canvas.width;
+        maxH = canvas.height;
+        blockSize = Math.floor(maxW / grid);
 
     }
     if(blockSize < 1){
@@ -55,7 +53,7 @@
     });
 
     function saveHues() {
-        fetch('/save-canvas', {
+        fetch('/save-game_3', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ hues: hues })
@@ -63,7 +61,7 @@
     }
 
     function loadHues() {
-        fetch('/get-canvas')
+        fetch('/get-game_3')
             .then(response => response.json())
             .then(data => {
                 hues = data.hues;
