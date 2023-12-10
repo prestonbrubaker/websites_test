@@ -62,7 +62,7 @@ app.use((req, res, next) => {
 // Endpoint to save canvas data
 app.post('/save-canvas', (req, res) => {
     const canvasData = req.body;
-    fs.writeFile(path.join(__dirname, 'canvasData.json'), JSON.stringify(canvasData), (err) => {
+    fs.writeFile(path.join(__dirname, 'data/canvasData.json'), JSON.stringify(canvasData), (err) => {
         if (err) {
             console.error('Error writing canvas data:', err);
             res.status(500).send('Error saving canvas data');
@@ -74,7 +74,7 @@ app.post('/save-canvas', (req, res) => {
 
 // Endpoint to retrieve canvas data
 app.get('/get-canvas', (req, res) => {
-    fs.readFile(path.join(__dirname, 'canvasData.json'), (err, data) => {
+    fs.readFile(path.join(__dirname, 'data/canvasData.json'), (err, data) => {
         if (err) {
             console.error('Error reading canvas data:', err);
             res.status(500).send('Error retrieving canvas data');
