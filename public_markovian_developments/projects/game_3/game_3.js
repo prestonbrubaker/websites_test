@@ -59,9 +59,11 @@
         sum_sq_time_lost += time_lost ** 2;
         comp_speed = sum_sq_time_lost / time_epoch
         ctx2.fillStyle = "#000000";
-        ctx2.fillText(time,10,10);
-        ctx2.fillText(time_epoch,10,30);
-        ctx2.fillText(time_lost,10,50);
+        ctx2.fillText("Game Time: " + time,10,10);
+        ctx2.fillText("Actual Time: " + time_epoch,10,30);
+        ctx2.fillText("Lost Time: " + time_lost,10,50);
+        ctx2.fillText("Sum Squared of Lost Time: " + sum_sq_time_lost,10,70);
+        ctx2.fillText("Computer Fittness: " + comp_speed,10,90);
         if(Date.now() % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
             ctx2.fillStyle = "#000000";
         } else{
