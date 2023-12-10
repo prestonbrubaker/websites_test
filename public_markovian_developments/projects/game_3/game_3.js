@@ -55,7 +55,7 @@
         ctx2.fillStyle = "#000000";
         ctx2.fillText(time,10,10);
         ctx2.fillText(time_epoch,10,30);
-        if(time_epoch % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
+        if(Date.now() % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
             ctx2.fillStyle = "#000000";
         } else{
             ctx2.fillStyle = "#FFFFFF";
