@@ -45,10 +45,10 @@ window.onclick = function(event) {
     }
 
     function drawCanvas(hues) {
-        for (let i = 0; i < grid; i++) {
-            for (let j = 0; j < grid; j++) {
+        for (let i = 0; i < grid / 2; i++) {
+            for (let j = 0; j < 2; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
-                ctx.fillRect(j * blockSize, i * blockSize, blockSize, blockSize);
+                ctx.fillRect(j * blockSize, i * blockSize, maxW / 2, blockSize);
             }
         }
         ctx.fillStyle = "#FFFFFF";
@@ -56,8 +56,8 @@ window.onclick = function(event) {
     }
 
     canvas.addEventListener('click', function(event) {
-        const x = Math.floor(event.offsetX / blockSize);
-        const y = Math.floor(event.offsetY / blockSize);
+        const x = Math.floor(event.offsetX / maxW * 2);
+        const y = Math.floor(event.offsetY / blockSize / 2);
         if(hue_sto == -1){
             hues[y][x] = Math.floor(Math.random() * 360); // Random hue
         } else {
