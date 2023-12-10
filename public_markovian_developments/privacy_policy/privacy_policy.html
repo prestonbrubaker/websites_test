@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <link rel="stylesheet" href="privacy_policy.css">
-</head>
-<body>
-    <header class="navigation">
-        <nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Privacy Policy</title>
+        <link rel="stylesheet" href="privacy_policy.css">
+        <script src="privacy_policy.js"></script>
+    </head>
+    <body>
+        <header class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="../index.html" id="home">Home</a></li>
+                    <li><a href="../about/about.html" id="about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdwn" onclick="toggleDropdown()">Projects</a>
+                        <ul class="dropdown-content" id="dropdownMenu">
+                            <li><a href="../projects.html" id="projhome">Overview</a></li>
+                            <li><a href="../projects/game_1/game_1.html" id="game1">Game 1</a></li>
+                            <li><a href="../projects/game_2/game_2.html" id="game2">Game 2</a></li>
+                            <li><a href="../projects/paint/paint.html" id="paint">Paint</a></li></ul></li>
+                    <li><a href="../contact/contact.html" id="contacts">Contact Us</a>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="privacy-policy">
+            <h1>Privacy Policy</h1>
+            <p><strong>Effective Date:</strong> 12/9/2023</p>
+
+            <h2>1. Introduction</h2>
+            <p>Due to the structuring of the server and data system, this website is hosted by a server shared between Willoh Robbins 
+                and her website <a href="https://willohrobbins.com">https://willohrobbins.com</a> and Preston Brubaker 
+                (<a href="https://prestonbrubaker.com">https://prestonbrubaker.com</a>). Our policy and data collection system is, 
+                therefore, shared. We are committed to respecting your privacy and protecting the personal information you share with us. 
+                This Privacy Policy outlines our practices regarding the collection, use, and protection of personal data.</p>
+
+            <h2>2. Data Collection</h2>
+            <p>We collect certain information from visitors to our website. This includes:</p>
             <ul>
-                <li><a href="../index.html" id="home">Back to Home</a></li>
+                <li>IP Addresses: We record the IP addresses of visitors to our website. An IP address is a unique identifier assigned 
+                    to a device connected to the internet.</li>
+                <li>Access Times: We log the dates and times at which our website is accessed by users.</li>
             </ul>
-        </nav>
-    </header>
 
-    <main class="privacy-policy">
-        <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> 12/2/2023</p>
+            <h2>3. Purpose of Data Collection</h2>
+            <p>The information we collect is used for the following purposes:</p>
+            <ul>
+                <li>To ensure the security and integrity of our website.</li>
+                <li>To analyze website usage patterns for improvement and optimization.</li>
+                <li>To comply with legal obligations and to protect against fraudulent or illegal activities.</li>
+            </ul>
 
-        <h2>1. Introduction</h2>
-        <p>Due to the structuring of the server and data system, this website is hosted by a server shared between Willoh Robbins 
-            and her website <a href="https://willohrobbins.com">https://willohrobbins.com</a> and Preston Brubaker 
-            (<a href="https://prestonbrubaker.com">https://prestonbrubaker.com</a>). Our policy and data collection system is, 
-            therefore, shared. We are committed to respecting your privacy and protecting the personal information you share with us. 
-            This Privacy Policy outlines our practices regarding the collection, use, and protection of personal data.</p>
+            <h2>4. Data Security</h2>
+            <p>We take the security of your personal information seriously. We implement appropriate technical and organizational 
+                measures to ensure a level of security appropriate to the risk and protect the data against unauthorized or unlawful 
+                processing and against accidental loss, destruction, or damage.</p>
 
-        <h2>2. Data Collection</h2>
-        <p>We collect certain information from visitors to our website. This includes:</p>
-        <ul>
-            <li>IP Addresses: We record the IP addresses of visitors to our website. An IP address is a unique identifier assigned 
-                to a device connected to the internet.</li>
-            <li>Access Times: We log the dates and times at which our website is accessed by users.</li>
-        </ul>
+            <h2>5. Data Storage</h2>
+            <p>We store the personal data we collect in secure databases. This data is retained for as long as necessary to fulfill 
+                the purposes for which it was collected, comply with our legal obligations, resolve disputes, and enforce our policies. 
+                The storage period may vary depending on the data type and the purpose for which it was collected.</p>
 
-        <h2>3. Purpose of Data Collection</h2>
-        <p>The information we collect is used for the following purposes:</p>
-        <ul>
-            <li>To ensure the security and integrity of our website.</li>
-            <li>To analyze website usage patterns for improvement and optimization.</li>
-            <li>To comply with legal obligations and to protect against fraudulent or illegal activities.</li>
-        </ul>
+            <h2>6. Your Rights</h2>
+            <p>Depending on your jurisdiction, you may have certain rights regarding your personal data. These rights might include access 
+                to your data, correction of inaccurate data, and in some cases, deletion of data.</p>
 
-        <h2>4. Data Security</h2>
-        <p>We take the security of your personal information seriously. We implement appropriate technical and organizational 
-            measures to ensure a level of security appropriate to the risk and protect the data against unauthorized or unlawful 
-            processing and against accidental loss, destruction, or damage.</p>
+            <h2>7. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
 
-        <h2>5. Data Storage</h2>
-        <p>We store the personal data we collect in secure databases. This data is retained for as long as necessary to fulfill 
-            the purposes for which it was collected, comply with our legal obligations, resolve disputes, and enforce our policies. 
-            The storage period may vary depending on the data type and the purpose for which it was collected.</p>
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions or concerns about our use of your personal information, please contact me 
+                at <a href="mailto:brubakerpreston@gmail.com">brubakerpreston@gmail.com</a>.</p>
+        </main>
 
-        <h2>6. Your Rights</h2>
-        <p>Depending on your jurisdiction, you may have certain rights regarding your personal data. These rights might include access 
-            to your data, correction of inaccurate data, and in some cases, deletion of data.</p>
-
-        <h2>7. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or concerns about our use of your personal information, please contact me 
-            at <a href="mailto:brubakerpreston@gmail.com">brubakerpreston@gmail.com</a>.</p>
-    </main>
-
-</body>
+    </body>
 </html>
