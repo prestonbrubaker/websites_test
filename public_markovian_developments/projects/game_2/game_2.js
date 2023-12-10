@@ -110,7 +110,14 @@ function getValue() {
         hues[y][x] = input_m;
         drawCanvas();
         saveHues();
-    }
+    } else {
+        const x = Math.floor(Math.random() * 100);
+        const y = Math.floor(Math.random() * 100);
+        if( x > 5 && y > 5){
+            hues[y][x] = input_m;
+        }
+        saveHues();
+        
 }
 
 
