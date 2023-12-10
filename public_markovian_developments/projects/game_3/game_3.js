@@ -15,7 +15,7 @@
     var sum_sq_time_lost = 0;
     var comp_speed = 0;
     var comp_fitness = 0;
-    var tickS = 0;
+    var tickS = 1;
     
 
     canvas.width = 500;
