@@ -7,8 +7,8 @@
     let hues = [];
     var hue_sto = -1
 
-    canvas.width = window.innerWidth * 0.9;
-    canvas.height = window.innerHeight * 0.9;
+    canvas.width = 500
+    canvas.height = 500
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){
