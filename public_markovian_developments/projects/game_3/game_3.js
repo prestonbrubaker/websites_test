@@ -14,12 +14,12 @@
     if(maxW > maxH){
         canvas.width = canvas.height;
         
-        blockSize = Math.floor(maxH /100);
+        blockSize = Math.floor(maxH / grid);
         
     } else{
         canvas.height = canvas.width;
         
-        blockSize = Math.floor(maxW / 100);
+        blockSize = Math.floor(maxW / grid);
 
 
     
