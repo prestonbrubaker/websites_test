@@ -8,12 +8,17 @@
     const grid = 3;
     let hues = [];
     var hue_sto = -1;
+    var time = 0;
+    var tickS = 50;
+    
 
     canvas.width = 500;
     canvas.height = 500;
 
     canvas2.width = 500;
     canvas2.height = 500;
+    
+    
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){
@@ -34,6 +39,7 @@
     }
 
     function drawCanvas(hues) {
+        ctx.clearRect(0,0,maxW,maxH);
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < grid; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
@@ -42,6 +48,10 @@
         }
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Hue: " + hue_sto, 10, 10);
+        ctx2.clearRect(0,0,maxW,maxH);
+        ctx2.fillRect(100,100,100,100);
+        ctx2.fillText(time,10,10);
+        
     }
 
     canvas.addEventListener('click', function(event) {
@@ -72,6 +82,7 @@
                 hues = data.hues;
                 drawCanvas(hues);
             });
+        time += tickS;
     }
 
     function getValue() {
@@ -79,4 +90,4 @@
     }
 
     loadHues();
-    setInterval(loadHues, 2000);
+    setInterval(loadHues, tickS);
