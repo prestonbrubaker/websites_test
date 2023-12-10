@@ -107,6 +107,10 @@ p {
   text-decoration: none;
 }
 
+.game:hover {
+  font-size: 125%;
+}
+
 footer {
     position: fixed;
     left: 0;
