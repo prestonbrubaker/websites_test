@@ -2,13 +2,18 @@
 
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
+    var canvas2 = document.getElementById('canvas2');
+    var ctx2 = canvas2.getContext('2d');
     var blockSize = 5;
     const grid = 3;
     let hues = [];
-    var hue_sto = -1
+    var hue_sto = -1;
 
-    canvas.width = 500
-    canvas.height = 500
+    canvas.width = 500;
+    canvas.height = 500;
+
+    canvas2.width = 500;
+    canvas2.height = 500;
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){

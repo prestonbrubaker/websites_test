@@ -94,6 +94,13 @@ header {
   border-image: linear-gradient(to right, red, green, red, green, red, green) 1 round;
 }
 
+#canvas2 {
+  display: block;
+  margin: 1rem auto;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, red, green, red, green, red, green) 1 round;
+}
+
 p {
   text-align: center;
   margin: 1rem 6rem;
