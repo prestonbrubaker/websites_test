@@ -13,17 +13,15 @@
     var maxH = canvas.height;
     if(maxW > maxH){
         canvas.width = canvas.height;
-        
+        maxW = canvas.width;
+        maxH = canvas.height;
         blockSize = Math.floor(maxH / grid);
         
     } else{
         canvas.height = canvas.width;
-        
+        maxW = canvas.width;
+        maxH = canvas.height;
         blockSize = Math.floor(maxW / grid);
-
-
-    
-    
 
     }
     if(blockSize < 1){
