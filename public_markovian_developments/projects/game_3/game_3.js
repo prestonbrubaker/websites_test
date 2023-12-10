@@ -54,7 +54,7 @@
         ctx2.fillRect(100,100,100,100);
         time_epoch = Date.now() - time_epoch_ref;
         ctx2.fillText(time,10,10);
-        ctx.fillText(time_epoch,10,30)
+        ctx2.fillText(time_epoch,10,30)
         
     }
 
