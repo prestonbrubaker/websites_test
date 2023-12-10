@@ -102,6 +102,11 @@ p {
   margin-left: 4rem;
 }
 
+.game, .game:visited {
+  color: red;
+  text-decoration: none;
+}
+
 footer {
     position: fixed;
     left: 0;
