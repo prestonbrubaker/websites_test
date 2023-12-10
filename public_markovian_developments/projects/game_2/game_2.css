@@ -17,8 +17,8 @@ body {
 
 h1 {
   font-size: 3rem;
-  text-shadow: -0.05rem 0.05rem gray;
-  margin: 2rem;
+  text-align: center;
+  text-shadow: -0.25rem 0.3rem grey;
 }
 
 header {
@@ -103,7 +103,7 @@ p {
 .hues {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
 .input-message {
