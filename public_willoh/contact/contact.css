@@ -42,13 +42,6 @@ body, html {
     overflow: hidden;
 }
   
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-  
 header {
     display: flex;
     justify-content: flex-end;
@@ -74,13 +67,8 @@ header {
 }
   
 .navigation nav ul li a:hover {
-    transform: scale(1.15); /* Enlarges text on hover */
-    transform-origin: center; /* Ensures scaling happens from the center */
-}
-  
-.contentgrid {
-    display: flex;
-    flex-direction: row;
+    transform: scale(1.15); 
+    transform-origin: center;
 }
   
 .introduction {
@@ -89,24 +77,20 @@ header {
     justify-content: center;
 }
   
-.name {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 0;
-}
-  
 .information {
     font-size: 1rem;
     text-align: center;
     margin-top: 0.5rem;
 }
-  
-.socials img{
+
+.socials {
     display: flex;
     flex-direction: row;
+}
+
+.socials img{
     justify-content: space-between;
-    padding: 1rem;
+    list-style: none;
 }
   
 .section {
@@ -132,3 +116,7 @@ footer {
     justify-content: center;
   }
   
+  footer a, footer a:visited {
+    text-decoration: none;
+    color: red;
+  }

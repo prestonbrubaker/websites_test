@@ -2,12 +2,12 @@
 /* Font import */
 @font-face {
     font-family: "elegant";
-    src: url("../fonts/type.ttf");
+    src: url("../fonts/didot.ttf");
 }
 
 /* Base Styles */
 body, html {
-    margin: 0;
+    margin: 0 2rem;
     padding: 0;
     font-family: 'elegant', serif;
     background-color: whitesmoke;
@@ -88,10 +88,20 @@ header {
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem; /* Margin between content and footer */
-}
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer a, footer a:visited {
+    text-decoration: none;
+    color: red;
+  }
 
 /* Additional Styles */
 canvas {
