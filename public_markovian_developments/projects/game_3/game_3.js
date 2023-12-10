@@ -11,6 +11,7 @@
     var time = 0;
     var time_epoch_ref = Date.now();
     var time_epoch = 0;
+    var time_lost = 0;
     var tickS = 50;
     
 
@@ -52,9 +53,11 @@
         ctx.fillText("Hue: " + hue_sto, 10, 10);
         ctx2.clearRect(0,0,maxW,maxH);
         time_epoch = Date.now() - time_epoch_ref;
+        time_lost = time_epoch - time;
         ctx2.fillStyle = "#000000";
         ctx2.fillText(time,10,10);
         ctx2.fillText(time_epoch,10,30);
+        ctx2.fillText(time_lost,10,50);
         if(Date.now() % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
             ctx2.fillStyle = "#000000";
         } else{
