@@ -14,6 +14,8 @@
 
     canvas2.width = 500;
     canvas2.height = 500;
+
+    ctx2.fillRect(100,100,100,100);
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){
