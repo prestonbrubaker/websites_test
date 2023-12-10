@@ -3,7 +3,7 @@
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
     var blockSize = 5;
-    const grid = 100;
+    const grid = 3;
     let hues = [];
     var hue_sto = -1
 
