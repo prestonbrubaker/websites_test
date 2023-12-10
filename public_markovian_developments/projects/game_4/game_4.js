@@ -45,10 +45,10 @@ window.onclick = function(event) {
     }
 
     function drawCanvas(hues) {
-        for (let i = 0; i < grid / 2; i++) {
+        for (let i = 0; i < grid; i++) {
             for (let j = 0; j < 2; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
-                ctx.fillRect(j * blockSize, i * blockSize, maxW / 2, blockSize);
+                ctx.fillRect(j * maxW / 2, i * blockSize, maxW / 2, blockSize);
             }
         }
         ctx.fillStyle = "#FFFFFF";
