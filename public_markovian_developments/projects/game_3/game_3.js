@@ -51,10 +51,17 @@
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Hue: " + hue_sto, 10, 10);
         ctx2.clearRect(0,0,maxW,maxH);
-        ctx2.fillRect(100,100,100,100);
         time_epoch = Date.now() - time_epoch_ref;
+        ctx2.fillStyle = "#000000";
         ctx2.fillText(time,10,10);
-        ctx2.fillText(time_epoch,10,30)
+        ctx2.fillText(time_epoch,10,30);
+        if(time_epoch % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
+            ctx2.fillStyle = "#000000";
+        } else{
+            ctx2.fillStyle = "#FFFFFF";
+        }
+        
+        ctx2.fillRect(100,100,300,300);
         
     }
 
