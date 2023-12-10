@@ -17,8 +17,8 @@
 
     canvas2.width = 500;
     canvas2.height = 500;
-
-    ctx2.fillRect(100,100,100,100);
+    
+    
     var maxW = canvas.width;
     var maxH = canvas.height;
     if(maxW > maxH){
@@ -47,6 +47,10 @@
         }
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Hue: " + hue_sto, 10, 10);
+
+        ctx2.fillRect(100,100,100,100);
+        ctx2.fillText(time,10,10);
+        
     }
 
     canvas.addEventListener('click', function(event) {
