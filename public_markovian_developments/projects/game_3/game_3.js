@@ -79,6 +79,7 @@ window.onclick = function(event) {
         ctx2.fillText("Lost Time: " + time_lost,10,70);
         ctx2.fillText("Sum Squared of Lost Time: " + sum_sq_time_lost,10,90);
         ctx2.fillText("Computer Fitness: " + comp_fitness,10,110);
+        ctx2.fillText("FITNESS RECORD (10 secs+ elapsed to count): " + hues[0][1],10, 130);
         if(Date.now() % Math.floor(hues[0][0]) < Math.floor(hues[0][0] / 2)){
             ctx2.fillStyle = "#000000";
         } else{
@@ -86,6 +87,13 @@ window.onclick = function(event) {
         }
         
         ctx2.fillRect(100,200,300,300);
+
+        if(time_epoch > 10000){
+            if(hues[0][1] < comp_fitness){
+                hues[0][1] = comp_fitness;
+                saveHues();
+            }
+        }
         
     }
 
