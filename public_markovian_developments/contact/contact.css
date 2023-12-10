@@ -1,23 +1,25 @@
 @font-face {
-    font-family: "pixel";
-    src: url("../fonts/pixel.ttf"), format('trueType');
+  font-family: "pixel";
+  src: url("../fonts/pixel.ttf"), format('trueType');
 }
 
 body {
-    background-color: lightskyblue;
-    text-align: center;
-    font-family: "pixel";
-    font-size: 1rem;
+  background-color: lightskyblue;
+  text-align: center;
+  font-family: "pixel";
+  font-size: 1rem;
 }
 
 h1 {
-    font-size: 3rem;
-    text-align: center;
+  font-size: 3rem;
+  text-shadow: -0.25rem 0.25rem gray;
+  text-align: center;
 }
 
 header {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .navigation nav ul {
@@ -73,15 +75,15 @@ header {
   display: none;
 }
 
-#home { background-color: royalblue;}
-#about { background-color: red;}
-.dropdwn { background-color: gold;}
-#projhome { background-color: royalblue;}
-#game1 { background-color: hotpink}
+#home { background-color: royalblue; }
+#about { background-color: red; }
+.dropdwn { background-color: gold; }
+#projhome { background-color: royalblue; }
+#game1 { background-color: hotpink; }
 #game2 { background-color: fuchsia; }
 #game3 { background-color: yellowgreen; }
-#paint { background-color: orange;}
-#contacts { background-color: lime;}
+#paint { background-color: orange; }
+#contacts { background-color: lime; }
 
 
 p {
