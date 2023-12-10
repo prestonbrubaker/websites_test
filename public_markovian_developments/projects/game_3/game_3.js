@@ -12,6 +12,8 @@
     var time_epoch_ref = Date.now();
     var time_epoch = 0;
     var time_lost = 0;
+    var sum_sq_time_lost = 0;
+    var comp_speed = 0;
     var tickS = 50;
     
 
@@ -53,7 +55,9 @@
         ctx.fillText("Hue: " + hue_sto, 10, 10);
         ctx2.clearRect(0,0,maxW,maxH);
         time_epoch = Date.now() - time_epoch_ref;
-        time_lost = time_epoch - time;
+        time_lost = time - time_epoch;
+        sum_sq_time_lost += time_lost ** 2;
+        comp_speed = sum_sq_time_lost / time_epoch
         ctx2.fillStyle = "#000000";
         ctx2.fillText(time,10,10);
         ctx2.fillText(time_epoch,10,30);
