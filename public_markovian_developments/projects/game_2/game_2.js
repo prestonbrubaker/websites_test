@@ -117,6 +117,7 @@ function getValue() {
             hues[y][x] = input_m;
         }
         saveHues();
+    }
         
 }
 
