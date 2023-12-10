@@ -71,7 +71,7 @@
             ctx2.fillStyle = "#FFFFFF";
         }
         
-        ctx2.fillRect(100,100,300,300);
+        ctx2.fillRect(100,200,300,300);
         
     }
 
