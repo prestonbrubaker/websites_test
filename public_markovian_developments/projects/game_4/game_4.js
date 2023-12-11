@@ -100,6 +100,8 @@ window.onclick = function(event) {
         for(var y = 0; y < grid; y++){
             if(hues[y][0] == hue_sto){
                 hues[y][1]++;
+                saveHues();
+                loadHues();
                 break;
             }
         }
