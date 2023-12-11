@@ -92,11 +92,13 @@ window.onclick = function(event) {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
+        hue_num = document.getElementById('input_you').value;
 
 
         for(var y = 0; y < grid; y++){
             if(typeof hues[y][0] === 'number'){
                 hues[y][0] = hue_sto;
+                hues[y][6] = hue_num;
                 saveHues();
                 loadHues();
                 break;
