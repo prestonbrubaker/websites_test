@@ -114,7 +114,7 @@ window.onclick = function(event) {
 
     function assignValue(){
         var r1 = Math.random();
-        if(hues[0][3] >= grid){
+        if(hues[0][2] >= grid){
             hues[0][2] = 1;
         }
         var y = hues[0][2];
