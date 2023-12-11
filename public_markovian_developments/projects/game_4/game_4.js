@@ -20,6 +20,7 @@ window.onclick = function(event) {
     const grid = 100;
     let hues = [];
     var hue_sto = 'Guest';
+    var hue_num = 0;
     var col_c = 7;
     var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation", "Luck Ratio", "Secret Number"];
     var off_y = 50;
@@ -92,7 +93,7 @@ window.onclick = function(event) {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
-        hue_num = document.getElementById('input_you').value;
+        hue_num = parseFloat(document.getElementById('input_you').value);
 
 
         for(var y = 0; y < grid; y++){
@@ -122,7 +123,6 @@ window.onclick = function(event) {
                 hues[y][3] ++;
                 hues[y][4] = r1;
                 hues[y][5] = hues[y][2] / hues[y][3];
-                hues[y][6] = hues[y][6];
                 saveHues();
                 loadHues();
                 break;
