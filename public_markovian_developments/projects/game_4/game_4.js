@@ -19,7 +19,7 @@ window.onclick = function(event) {
     var blockSize = 5;
     const grid = 100;
     let hues = [];
-    var hue_sto = -1;
+    var hue_sto = "Guest";
     var col_c = 5;
     var off_y = 50;
 
