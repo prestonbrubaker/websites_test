@@ -82,7 +82,9 @@ window.onclick = function(event) {
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
 
-        if (typeof hue_sto != 'number') {
+        if (typeof hue_sto === 'number') {
+            var ligma = 0;
+        }else{
             for(var y = 0; y < grid; y++){
                 if(typeof hues[y][0] === 'number'){
                     hues[y][0] = hue_sto;
