@@ -105,9 +105,10 @@ window.onclick = function(event) {
                 var r1 = Math.random();
                 if(hues[y][1] < r1){
                     hues[y][1] = r1;
-                    hues[y][2] = 1 / (1 - r1)
-                    hues[y][3] ++;
+                    
                 }
+                hues[y][2] = 1 / (1 - r1)
+                hues[y][3] ++;
                 saveHues();
                 loadHues();
                 break;
