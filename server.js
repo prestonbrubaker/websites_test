@@ -173,12 +173,12 @@ app.post('/save-game_4', (req, res) => {
 });
 
 
-// Endpoint to retrieve game_5 data
-app.get('/get-game_5', (req, res) => {
-    fs.readFile(path.join(__dirname, 'data', 'game_5.json'), (err, data) => {
+// Endpoint to retrieve game_4 data
+app.get('/get-game_4', (req, res) => {
+    fs.readFile(path.join(__dirname, 'data', 'game_4.json'), (err, data) => {
         if (err) {
-            console.error('Error reading game_5 data:', err);
-            res.status(500).send('Error retrieving game 5 data');
+            console.error('Error reading game_4 data:', err);
+            res.status(500).send('Error retrieving game 4 data');
         } else {
             res.send(data);
         }
@@ -198,12 +198,12 @@ app.post('/save-game_5', (req, res) => {
     });
 });
 
-// Endpoint to retrieve game_4 data
-app.get('/get-game_4', (req, res) => {
-    fs.readFile(path.join(__dirname, 'data', 'game_4.json'), (err, data) => {
+// Endpoint to retrieve game_5 data
+app.get('/get-game_5', (req, res) => {
+    fs.readFile(path.join(__dirname, 'data', 'game_5.json'), (err, data) => {
         if (err) {
-            console.error('Error reading game_4 data:', err);
-            res.status(500).send('Error retrieving game 4 data');
+            console.error('Error reading game_5 data:', err);
+            res.status(500).send('Error retrieving game 5 data');
         } else {
             res.send(data);
         }
