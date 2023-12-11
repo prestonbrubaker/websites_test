@@ -55,7 +55,7 @@ window.onclick = function(event) {
         if(hue_sto == -1){
             hues[y][x] = Math.floor(Math.random() * 360); // Random hue
         } else {
-            hues[y][x] = Math.floor(hue_sto);
+            hues[y][x] = hue_sto;
         }
 
         drawCanvas(hues);
