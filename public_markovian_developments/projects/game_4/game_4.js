@@ -101,7 +101,10 @@ window.onclick = function(event) {
     function assignValue(){
         for(var y = 0; y < grid; y++){
             if(hues[y][0] == hue_sto){
-                hues[y][1]++;
+                var r1 = Math.random();
+                if(hues[y][1] < r1){
+                    hues[y][1] = r1;
+                }
                 saveHues();
                 loadHues();
                 break;
