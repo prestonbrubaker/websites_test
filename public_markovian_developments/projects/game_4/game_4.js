@@ -53,7 +53,7 @@ window.onclick = function(event) {
         }
     
         ctx.fillStyle = "#FFFFFF";
-        ctx.fillText("Hue: " + hue_sto, 10, 10);
+        ctx.fillText("Logged in as: " + hue_sto, 10, 10);
     }
 
     canvas.addEventListener('click', function(event) {
