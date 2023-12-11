@@ -73,7 +73,7 @@ window.onclick = function(event) {
         ctx2.fillRect(0,0,maxW2,maxH2);
         for (var y = 0; y < grid; y++) {
             ctx2.fillStyle = "#000000";
-            ctx2.fillRect(y / grid * maxW2, maxH2 - hues[y][1] / 20, 5, 5);
+            ctx2.fillRect(y / grid * maxW2, maxH2 - hues[y][1] / 2, 5, 5);
         }
         
     }
