@@ -91,6 +91,10 @@ window.onclick = function(event) {
                 saveHues();
                 loadHues();
                 break;
+            }else{
+                if(hues[y][0] == hue_sto){
+                    break;
+                }
             }
         }
 
