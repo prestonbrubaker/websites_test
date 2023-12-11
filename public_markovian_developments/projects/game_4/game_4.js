@@ -77,4 +77,3 @@ window.onclick = function(event) {
 
     loadHues();
     setInterval(loadHues, 2000);
-
