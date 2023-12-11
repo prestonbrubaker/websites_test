@@ -114,10 +114,10 @@ window.onclick = function(event) {
 
     function assignValue(){
         var r1 = Math.random();
-        if(hues[0][3] >= grid){
+        if(hues[0][2] >= grid){
             hues[0][2] = 1;
         }
-        var y = hues[0][3];
+        var y = hues[0][2];
         hues[y][0] = y;
         hues[y][1] = hues[y - 1][1] * ( 1 + (r1 - 0.5) * 2 / 1000);
 
