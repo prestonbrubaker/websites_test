@@ -21,6 +21,7 @@ window.onclick = function(event) {
     let hues = [];
     var hue_sto = -1;
     var col_c = 5;
+    var off_y = 50;
 
     canvas.width = 800;
     canvas.height = 3000;
@@ -32,16 +33,19 @@ window.onclick = function(event) {
     }
 
     function drawCanvas(hues) {
+        ctx.clearRect(0,0,maxW,maxH);
+        ctx.fillStyle = "#777777";
+        ctx.fillRect(0,0,maxW,maxH);
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < col_c; j++) {
                 if (typeof hues[i][j] === 'number') {
                     ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
-                    ctx.fillRect(j * maxW / col_c, i * blockSize, maxW / 2, blockSize);
+                    ctx.fillRect(j * maxW / col_c, i * blockSize + off_y, maxW / 2, blockSize);
                     ctx.fillStyle = "#000000";
                     ctx.fillText(hues[i][j], j * maxW / col_c + blockSize / 2, i * blockSize + blockSize / 2);
                 } else {
                     ctx.fillStyle = (i + j) % 2 == 1 ? "#777777" : "#FFFFFF";
-                    ctx.fillRect(j * maxW / col_c, i * blockSize, maxW / 2, blockSize);
+                    ctx.fillRect(j * maxW / col_c, i * blockSize + off_y, maxW / 2, blockSize);
                     ctx.fillStyle = "#000000";
                     ctx.fillText(hues[i][j], j * maxW / 2 + blockSize / 2, i * blockSize + blockSize / 2);
                 }
