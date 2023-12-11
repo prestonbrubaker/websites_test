@@ -22,24 +22,10 @@ window.onclick = function(event) {
     var hue_sto = -1
 
     canvas.width = 500;
-    canvas.height = 500;
+    canvas.height = 3000;
     var maxW = canvas.width;
     var maxH = canvas.height;
-    if(maxW > maxH){
-        canvas.width = canvas.height;
-        
-        blockSize = Math.floor(maxH /100);
-        
-    } else{
-        canvas.height = canvas.width;
-        
-        blockSize = Math.floor(maxW / 100);
-
-
-    
-    
-
-    }
+    blockSize = maxH / grid
     if(blockSize < 1){
         blockSize = 1;
     }
