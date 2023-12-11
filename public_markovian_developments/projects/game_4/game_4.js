@@ -21,6 +21,7 @@ window.onclick = function(event) {
     let hues = [];
     var hue_sto = 'Guest';
     var col_c = 5;
+    var col_n = ["Name", "Number", "Luck-Implied Clicks", "Actual Clicks", "Last Generation");
     var off_y = 50;
 
     canvas.width = 800;
@@ -36,6 +37,11 @@ window.onclick = function(event) {
         ctx.clearRect(0,0,maxW,maxH);
         ctx.fillStyle = "#777777";
         ctx.fillRect(0,0,maxW,maxH);
+        ctx.fillStyle = "#000000";
+        for (var x = 0; x < col_c; x++){
+            ctx.fillText( col_n[x], x * maxW / col_c * x, off_y - 20);
+        }
+        
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < col_c; j++) {
                 if (typeof hues[i][j] === 'number') {
