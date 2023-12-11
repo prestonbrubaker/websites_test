@@ -27,9 +27,9 @@ window.onclick = function(event) {
     var col_n = ["Time", "Asset Price", "Current Index"];
     var off_y = 50;
 
-    canvas.width = 800;
+    canvas.width = 400;
     canvas.height = 3000;
-    canvas2.width = 800;
+    canvas2.width = 400;
     canvas2.height = 800;
     var maxW = canvas.width;
     var maxH = canvas.height;
