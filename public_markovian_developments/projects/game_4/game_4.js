@@ -58,7 +58,7 @@ window.onclick = function(event) {
 
     canvas.addEventListener('click', function(event) {
         const x = Math.floor(event.offsetX / maxW * col_c);
-        const y = Math.floor(event.offsetY / blockSize);
+        const y = Math.floor((event.offsetY - off_y) / blockSize);
         if(hue_sto == -1){
             hues[y][x] = 0;
         }
