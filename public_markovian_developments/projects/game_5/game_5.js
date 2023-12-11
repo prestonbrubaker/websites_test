@@ -23,7 +23,7 @@ window.onclick = function(event) {
     const grid = 100;
     let hues = [];
     var hue_sto = 'Guest';
-    var col_c = 7;
+    var col_c = 3;
     var col_n = ["Time", "Asset Price", "Current Index"];
     var off_y = 50;
 
