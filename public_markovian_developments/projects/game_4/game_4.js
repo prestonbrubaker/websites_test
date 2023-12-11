@@ -56,7 +56,7 @@ window.onclick = function(event) {
         const x = Math.floor(event.offsetX / maxW * col_c);
         const y = Math.floor(event.offsetY / blockSize);
         if(hue_sto == -1){
-            hues[y][x] = -1;
+            hues[y][x] = 0;
         }
 
         drawCanvas(hues);
@@ -105,6 +105,8 @@ window.onclick = function(event) {
                 var r1 = Math.random();
                 if(hues[y][1] < r1){
                     hues[y][1] = r1;
+                    hues[y][2] = 1 / (1 - r1)
+                    hues[y][3] ++;
                 }
                 saveHues();
                 loadHues();
