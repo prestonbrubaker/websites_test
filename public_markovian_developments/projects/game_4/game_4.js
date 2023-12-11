@@ -94,5 +94,13 @@ window.onclick = function(event) {
 
     }
 
+    function assignValue(){
+        for(var y = 0; y < grid; y++){
+            if(hues[y][0] == hue_sto){
+                hues[y][1]++;
+                break;
+        }
+    }
+
     loadHues();
     setInterval(loadHues, 2000);
