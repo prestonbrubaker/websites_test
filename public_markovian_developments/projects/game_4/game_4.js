@@ -21,7 +21,7 @@ window.onclick = function(event) {
     let hues = [];
     var hue_sto = 'Guest';
     var col_c = 5;
-    var col_n = ["Name", "Number", "Luck-Implied Clicks", "Actual Clicks", "Last Generation");
+    var col_n = ["Name", "Number", "Luck-Implied Clicks", "Actual Clicks", "Last Generation"];
     var off_y = 50;
 
     canvas.width = 800;
