@@ -24,7 +24,7 @@ window.onclick = function(event) {
     let hues = [];
     var hue_sto = 'Guest';
     var col_c = 7;
-    var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation", "Luck Ratio", "Secret Number"];
+    var col_n = ["Time", "Asset Price", "Current Index"];
     var off_y = 50;
 
     canvas.width = 800;
@@ -115,13 +115,13 @@ window.onclick = function(event) {
     function assignValue(){
         var r1 = Math.random();
         if(hues[0][3] >= grid){
-            hues[0][3] = 1;
+            hues[0][2] = 1;
         }
         var y = hues[0][3];
         hues[y][0] = y;
         hues[y][1] = hues[y - 1][1] * ( 1 + (r1 - 0.5) * 2 / 1000);
 
-        hues[0][3]++;
+        hues[0][2]++;
 
         saveHues();
         loadHues();
@@ -131,7 +131,7 @@ window.onclick = function(event) {
     }
 
     function reset() {
-        hues[0][3] = 1;
+        hues[0][2] = 1;
         hues[0][0] = 0;
         hues[0][1] = 1000;
         saveHues();
