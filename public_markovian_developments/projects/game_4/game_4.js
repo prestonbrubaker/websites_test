@@ -107,8 +107,8 @@ window.onclick = function(event) {
                     hues[y][1] = r1;
                     hues[y][2] = 1 / (1 - r1);
                 }
-                
                 hues[y][3] ++;
+                hues[y][4] = r1;
                 saveHues();
                 loadHues();
                 break;
