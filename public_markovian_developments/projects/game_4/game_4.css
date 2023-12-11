@@ -115,14 +115,47 @@ p {
 }
 
 #clickme {
-  background-image: linear-gradient(to right, red, white, red, white, red, white) 1 round;
-  color: red;
-  border-radius: 2rem;
-  border: 4px solid red;
-  padding: 3rem 6rem;
-  font-size: 400%;
-  font-family: 'pixel';
-  margin-bottom: 2rem;
+  background: linear-gradient(
+    45deg, 
+    #CC0000 25%, 
+    #FFFFFF 25%, 
+    #FFFFFF 50%, 
+    #CC0000 50%, 
+    #CC0000 75%, 
+    #FFFFFF 75%, 
+    #FFFFFF
+  );
+  border-color: #CC0000; /* Darker red on hover for a subtle effect */
+  color: #000000; /* Black color for text */
+  border: 2px solid #FF0000; /* Red border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 2rem 4rem; /* Padding for size */
+  font-family: "pixel1";
+  font-size: 300%;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Cursor changes to pointer */
+}
+
+#clickme:hover {
+  background: linear-gradient(
+    45deg, 
+    #008000 25%, 
+    #FFFFFF 25%, 
+    #FFFFFF 50%, 
+    #008000 50%, 
+    #008000 75%, 
+    #FFFFFF 75%, 
+    #FFFFFF
+  );
+  border-color: #008000; /* Darker red on hover for a subtle effect */
+}
+
+#clickme:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Less shadow on click */
+  transform: translateY(2px); /* Slight move down on click */
 }
 
 .hues {
