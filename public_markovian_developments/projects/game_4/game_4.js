@@ -43,8 +43,8 @@ window.onclick = function(event) {
                     ctx.fillText(hues[i][j], j * maxW / 2 + blockSize / 2, i * blockSize + blockSize / 2);
                 }
             }
-            }
         }
+    
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Hue: " + hue_sto, 10, 10);
     }
