@@ -19,7 +19,7 @@ window.onclick = function(event) {
     var blockSize = 5;
     const grid = 100;
     let hues = [];
-    var hue_sto = -1;
+    var hue_sto = 'Guest';
     var col_c = 5;
     var off_y = 50;
 
@@ -53,12 +53,12 @@ window.onclick = function(event) {
         }
     
         ctx.fillStyle = "#FFFFFF";
-        ctx.fillText("Hue: " + hue_sto, 10, 10);
+        ctx.fillText("Logged in as: " + hue_sto, 10, 10);
     }
 
     canvas.addEventListener('click', function(event) {
         const x = Math.floor(event.offsetX / maxW * col_c);
-        const y = Math.floor(event.offsetY / blockSize);
+        const y = Math.floor((event.offsetY - off_y) / blockSize);
         if(hue_sto == -1){
             hues[y][x] = 0;
         }
