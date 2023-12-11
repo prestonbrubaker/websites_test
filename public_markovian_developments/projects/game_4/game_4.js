@@ -20,7 +20,7 @@ window.onclick = function(event) {
     const grid = 100;
     let hues = [];
     var hue_sto = 'Guest';
-    var col_c = 5;
+    var col_c = 6;
     var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation"];
     var off_y = 50;
 
