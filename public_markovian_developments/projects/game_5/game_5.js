@@ -117,7 +117,7 @@ window.onclick = function(event) {
         if(hues[0][3] >= grid){
             hues[0][2] = 1;
         }
-        var y = hues[0][3];
+        var y = hues[0][2];
         hues[y][0] = y;
         hues[y][1] = hues[y - 1][1] * ( 1 + (r1 - 0.5) * 2 / 1000);
 
