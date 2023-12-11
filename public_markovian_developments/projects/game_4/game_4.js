@@ -20,7 +20,7 @@ window.onclick = function(event) {
     const grid = 100;
     let hues = [];
     var hue_sto = -1;
-    var col_c = 4;
+    var col_c = 5;
 
     canvas.width = 500;
     canvas.height = 3000;
