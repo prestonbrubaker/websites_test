@@ -107,6 +107,13 @@ header {
   border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
 }
 
+#canvas2 {
+  display: block;
+  margin: 1rem auto;
+  border: 10px solid transparent;
+  border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
+}
+
 p {
   text-align: center;
   margin: 1rem 6rem;
