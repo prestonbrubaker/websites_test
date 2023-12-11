@@ -22,7 +22,7 @@ window.onclick = function(event) {
     var hue_sto = -1;
     var col_c = 5;
 
-    canvas.width = 500;
+    canvas.width = 800;
     canvas.height = 3000;
     var maxW = canvas.width;
     var maxH = canvas.height;
