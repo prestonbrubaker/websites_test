@@ -9,9 +9,10 @@
 }
 
 body {
-  background-image: url("../../images/hohoho.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/hohoho.png");
   background-repeat: repeat;
   background-size: 500px 500px;
+  background-color: rgba(255, 255, 255, 0.3);
   font-family: "pixel";
   font-size: 1rem;
   display: flex;
@@ -24,12 +25,14 @@ h1 {
   font-size: 3rem;
   text-shadow: -0.25rem 0.25rem #FFF5E6;
   margin: 0;
+  z-index: 2;
 }
 
 header {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  z-index: 2;
 }
 
 .navigation nav ul {
