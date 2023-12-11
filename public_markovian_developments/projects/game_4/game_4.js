@@ -21,7 +21,7 @@ window.onclick = function(event) {
     let hues = [];
     var hue_sto = 'Guest';
     var col_c = 6;
-    var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation"];
+    var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation", "Luck Ratio"];
     var off_y = 50;
 
     canvas.width = 800;
@@ -119,6 +119,7 @@ window.onclick = function(event) {
                 }
                 hues[y][3] ++;
                 hues[y][4] = r1;
+                hues[y][5] = hues[y][2] / hues[y][3]
                 saveHues();
                 loadHues();
                 break;
