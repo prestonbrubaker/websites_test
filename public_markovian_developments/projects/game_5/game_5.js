@@ -16,6 +16,9 @@ window.onclick = function(event) {
 
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
+
+    var canvas2 = document.getElementById('canvas2');
+    var ctx2 = canvas2.getContext('2d');
     var blockSize = 5;
     const grid = 100;
     let hues = [];
@@ -28,6 +31,8 @@ window.onclick = function(event) {
     canvas.height = 3000;
     var maxW = canvas.width;
     var maxH = canvas.height;
+    var maxW2 = canvas.width;
+    var maxH2 = canvas.height;
     blockSize = maxH / grid
     if(blockSize < 1){
         blockSize = 1;
@@ -60,6 +65,14 @@ window.onclick = function(event) {
     
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Logged in as: " + hue_sto, 10, 10);
+
+        ctx2.clearRect(0,0,maxW2,maxH2);
+        ctx2.fillStyle = "#777777";
+        ctx2.fillRect(0,0,maxW2,maxH2);
+        for (var y = 0; y < grid; y++) {
+            ctx2.fillStyle = "#000000";
+            ctx2.fillRect(y / grid * maxW2, maxH2 - hues[y][1] / 100, 5, 5);
+        
     }
 
     canvas.addEventListener('click', function(event) {
