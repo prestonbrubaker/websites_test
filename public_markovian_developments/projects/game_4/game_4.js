@@ -81,12 +81,15 @@ window.onclick = function(event) {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
-        for(var y = 0; y < grid; y++){
-            if(typeof hues[y][0] === 'number'){
-                hues[y][0] = hue_sto;
-                saveHues();
-                loadHues();
-                break;
+
+        if (typeof hues[i][j] != 'number') {
+            for(var y = 0; y < grid; y++){
+                if(typeof hues[y][0] === 'number'){
+                    hues[y][0] = hue_sto;
+                    saveHues();
+                    loadHues();
+                    break;
+                }
             }
         }
 
