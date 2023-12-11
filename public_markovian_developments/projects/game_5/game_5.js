@@ -16,6 +16,9 @@ window.onclick = function(event) {
 
     var canvas = document.getElementById('canvas1');
     var ctx = canvas.getContext('2d');
+
+    var canvas2 = document.getElementById('canvas2');
+    var ctx2 = canvas2.getContext('2d');
     var blockSize = 5;
     const grid = 100;
     let hues = [];
@@ -26,8 +29,12 @@ window.onclick = function(event) {
 
     canvas.width = 800;
     canvas.height = 3000;
+    canvas2.width = 800;
+    canvas2.height = 800;
     var maxW = canvas.width;
     var maxH = canvas.height;
+    var maxW2 = canvas2.width;
+    var maxH2 = canvas2.height;
     blockSize = maxH / grid
     if(blockSize < 1){
         blockSize = 1;
@@ -60,6 +67,15 @@ window.onclick = function(event) {
     
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Logged in as: " + hue_sto, 10, 10);
+
+        ctx2.clearRect(0,0,maxW2,maxH2);
+        ctx2.fillStyle = "#777777";
+        ctx2.fillRect(0,0,maxW2,maxH2);
+        for (var y = 0; y < grid; y++) {
+            ctx2.fillStyle = "#000000";
+            ctx2.fillRect(y / grid * maxW2, maxH2 / 2 - (hues[y][1] - 1000) * 20, 5, 5);
+        }
+        
     }
 
     canvas.addEventListener('click', function(event) {
@@ -92,39 +108,34 @@ window.onclick = function(event) {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
-
-
-        for(var y = 0; y < grid; y++){
-            if(typeof hues[y][0] === 'number'){
-                hues[y][0] = hue_sto;
-                saveHues();
-                loadHues();
-                break;
-            }else{
-                if(hues[y][0] == hue_sto){
-                    break;
-                }
-            }
-        }
+        
 
     }
 
     function assignValue(){
-        for(var y = 0; y < grid; y++){
-            if(hues[y][0] == hue_sto){
-                var r1 = Math.random();
-                if(hues[y][1] < r1){
-                    hues[y][1] = r1;
-                    hues[y][2] = 1 / (1 - r1);
-                }
-                hues[y][3] ++;
-                hues[y][4] = r1;
-                hues[y][5] = hues[y][2] / hues[y][3]
-                saveHues();
-                loadHues();
-                break;
-            }
+        var r1 = Math.random();
+        if(hues[0][3] >= grid){
+            hues[0][3] = 1;
         }
+        var y = hues[0][3];
+        hues[y][0] = y;
+        hues[y][1] = hues[y - 1][1] * ( 1 + (r1 - 0.5) * 2 / 1000);
+
+        hues[0][3]++;
+
+        saveHues();
+        loadHues();
+
+        
+        
+    }
+
+    function reset() {
+        hues[0][3] = 1;
+        hues[0][0] = 0;
+        hues[0][1] = 1000;
+        saveHues();
+        loadHues();
     }
 
     loadHues();
