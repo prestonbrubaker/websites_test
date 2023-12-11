@@ -155,7 +155,7 @@ p {
 
 #clickme:active {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Less shadow on click */
-  transform: translateY(2px); /* Slight move down on click */
+  transform: translateY(4px); /* Slight move down on click */
 }
 
 .hues {
