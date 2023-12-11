@@ -101,6 +101,7 @@ window.onclick = function(event) {
             if(hues[y][0] == hue_sto){
                 hues[y][1]++;
                 break;
+            }
         }
     }
 
