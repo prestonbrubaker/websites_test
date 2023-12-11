@@ -94,6 +94,7 @@ window.onclick = function(event) {
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
         hue_num = parseFloat(document.getElementById('input_you').value);
+        
 
 
         for(var y = 0; y < grid; y++){
