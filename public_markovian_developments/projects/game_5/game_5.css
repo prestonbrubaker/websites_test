@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "pixel";
+    src: url("../../fonts/pixel.ttf"), format('trueType');
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #333;
+}
+
+body {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../../images/hohoho.png");
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "pixel";
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 0; 
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: -0.25rem 0.25rem #FFF5E6;
+  margin: 0;
+  z-index: 2;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  z-index: 2;
+}
+
+.navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation nav ul li {
+  display: inline-block;
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+  
+.navigation nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.navigation nav ul li a:hover {
+  transform: scale(1.15); 
+  transform-origin: center; 
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  z-index: 1;
+  text-align: center; 
+}
+
+.dropdown-content li {
+  margin: 0; 
+  padding: 0.5rem 0; 
+}
+
+#dropdownMenu {
+  display: none;
+}
+
+#home { background-color: red; }
+#about { background-color: green; }
+.dropdwn { background-color: red; }
+#projhome { background-color: green; }
+#paint { background-color: red; }
+#game1 { background-color: green; }
+#game2 { background-color: red; }
+#game3 { background-color: green; }
+#game4 { background-color: red; }
+#contacts { background-color: green; }
+
+
+#canvas1 {
+  display: block;
+  margin: 1rem auto;
+  border: 10px solid transparent;
+  border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
+}
+
+p {
+  text-align: center;
+  margin: 1rem 6rem;
+}
+
+#clickme {
+  background: linear-gradient(
+    45deg, 
+    #CC0000 25%, 
+    #FFFFFF 25%, 
+    #FFFFFF 50%, 
+    #CC0000 50%, 
+    #CC0000 75%, 
+    #FFFFFF 75%, 
+    #FFFFFF
+  );
+  border-color: #CC0000; /* Darker red on hover for a subtle effect */
+  color: #000000; /* Black color for text */
+  border: 2px solid #FF0000; /* Red border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 2rem 4rem; /* Padding for size */
+  font-family: "pixel";
+  font-size: 300%;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Cursor changes to pointer */
+}
+
+#clickme:hover {
+  background: linear-gradient(
+    45deg, 
+    #008000 25%, 
+    #FFFFFF 25%, 
+    #FFFFFF 50%, 
+    #008000 50%, 
+    #008000 75%, 
+    #FFFFFF 75%, 
+    #FFFFFF
+  );
+  border-color: #008000; /* Darker red on hover for a subtle effect */
+}
+
+#clickme:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Less shadow on click */
+  transform: translateY(8px); /* Slight move down on click */
+}
+
+.hues {
+  display: flex;
+  flex-direction: row;
+}
+
+.input_hue {
+  width: 225px;
+}

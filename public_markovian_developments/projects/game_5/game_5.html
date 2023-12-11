@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Game 5</title>
+        <link rel="icon" type="img/png" href="../../images/markov.png" sizes="24x24">
+        <link rel="stylesheet" href="game_5.css">
+        
+        
+    </head>
+    <body>
+        <header class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html" id="home">Home</a></li>
+                    <li><a href="../../about/about.html" id="about">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdwn" onclick="toggleDropdown()">Projects</a>
+                        <ul class="dropdown-content" id="dropdownMenu">
+                            <li><a href="../projects.html" id="projhome">Overview</a></li>
+                            <li><a href="../paint/paint.html" id="paint">Paint</a></li>
+                            <li><a href="../game_1/game_1.html" id="game1">Game 1</a></li>
+                            <li><a href="../game_2/game_2.html" id="game2">Game 2</a></li>
+                            <li><a href="../game_3/game_3.html" id="game3">Game 3</a></li>
+                            <li><a href="../game_4/game_4.html" id="game4">Game 4</a></li></ul></li>
+                    <li><a href="../../contact/contact.html" id="contacts">Contact Us</a>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>GAME 5</h1>
+        <p>Coming to a city near you soon!</p>
+
+        <button id="clickme" onclick="assignValue()">CLICK ME :)</button>
+
+        <div class="hues">
+            <input class="input_hue" autocomplete="off" placeholder="Input Name" />
+            <input class="input_hue" autocomplete="off" placeholder="Input Secret Number" />                
+            <button id="submit" onclick="getValue()">Submit</button>
+        </div>
+        <canvas id="canvas1"></canvas>
+        
+        <script src="game_5.js"></script>
+    </body>
+</html>
