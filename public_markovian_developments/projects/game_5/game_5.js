@@ -29,10 +29,12 @@ window.onclick = function(event) {
 
     canvas.width = 800;
     canvas.height = 3000;
+    canvas2.width = 800;
+    canvas2.height = 800;
     var maxW = canvas.width;
     var maxH = canvas.height;
-    var maxW2 = canvas.width;
-    var maxH2 = canvas.height;
+    var maxW2 = canvas2.width;
+    var maxH2 = canvas2.height;
     blockSize = maxH / grid
     if(blockSize < 1){
         blockSize = 1;
