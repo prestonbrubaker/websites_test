@@ -48,7 +48,7 @@ window.onclick = function(event) {
         for (let i = 0; i < grid; i++) {
             for (let j = 0; j < 2; j++) {
                 ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
-                ctx.fillRect(j * maxW / 4, i * blockSize, maxW / 4, blockSize);
+                ctx.fillRect(j * maxW / 2, i * blockSize, maxW / 2, blockSize);
             }
         }
         ctx.fillStyle = "#FFFFFF";
@@ -56,7 +56,7 @@ window.onclick = function(event) {
     }
 
     canvas.addEventListener('click', function(event) {
-        const x = Math.floor(event.offsetX / maxW * 4);
+        const x = Math.floor(event.offsetX / maxW * 2);
         const y = Math.floor(event.offsetY / blockSize);
         if(hue_sto == -1){
             hues[y][x] = Math.floor(Math.random() * 360); // Random hue
