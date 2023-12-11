@@ -92,39 +92,26 @@ window.onclick = function(event) {
 
     function getValue() {
         hue_sto = document.getElementById('input_hue').value;
-
-
-        for(var y = 0; y < grid; y++){
-            if(typeof hues[y][0] === 'number'){
-                hues[y][0] = hue_sto;
-                saveHues();
-                loadHues();
-                break;
-            }else{
-                if(hues[y][0] == hue_sto){
-                    break;
-                }
-            }
-        }
+        
 
     }
 
     function assignValue(){
-        for(var y = 0; y < grid; y++){
-            if(hues[y][0] == hue_sto){
-                var r1 = Math.random();
-                if(hues[y][1] < r1){
-                    hues[y][1] = r1;
-                    hues[y][2] = 1 / (1 - r1);
-                }
-                hues[y][3] ++;
-                hues[y][4] = r1;
-                hues[y][5] = hues[y][2] / hues[y][3]
-                saveHues();
-                loadHues();
-                break;
-            }
+        var r1 = Math.random();
+        if(hues[0][3] >= grid){
+            hues[0][3] = 1;
         }
+        var y = hues[0][3];
+        hues[y][0] = y;
+        hues[y][1] = hues[y - 1][1] * ( (r1 - 0.5) * 2 / 0.01);
+        
+        
+    }
+
+    function reset() {
+        hues[0][3] = 1;
+        hues[0][0] = 0;
+        hues[0][1] = 1000;
     }
 
     loadHues();
