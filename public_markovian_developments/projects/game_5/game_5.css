@@ -99,16 +99,19 @@ header {
 #game4 { background-color: red; }
 #contacts { background-color: green; }
 
+#canvasbox{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
 #canvas1 {
-  display: block;
   margin: 1rem auto;
   border: 10px solid transparent;
   border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
 }
 
 #canvas2 {
-  display: block;
   margin: 1rem auto;
   border: 10px solid transparent;
   border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
