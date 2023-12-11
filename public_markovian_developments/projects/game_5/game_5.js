@@ -103,10 +103,13 @@ window.onclick = function(event) {
         }
         var y = hues[0][3];
         hues[y][0] = y;
-        hues[y][1] = hues[y - 1][1] * ( (r1 - 0.5) * 2 / 0.01);
+        hues[y][1] = hues[y - 1][1] * ( 1 + (r1 - 0.5) * 2 / 1000);
+
+        hues[0][3]++;
 
         saveHues();
         loadHues();
+
         
         
     }
