@@ -36,6 +36,8 @@ window.onclick = function(event) {
                 if (typeof hues[i][j] === 'number') {
                     ctx.fillStyle = `hsl(${hues[i][j]}, 100%, 50%)`;
                     ctx.fillRect(j * maxW / 2, i * blockSize, maxW / 2, blockSize);
+                    ctx.fillStyle = "#000000";
+                    ctx.fillText(hues[i][j], j * maxW / 2 + blockSize / 2, i * blockSize + blockSize / 2);
                 } else {
                     ctx.fillStyle = (i + j) % 2 == 1 ? "#777777" : "#FFFFFF";
                     ctx.fillRect(j * maxW / 2, i * blockSize, maxW / 2, blockSize);
@@ -53,9 +55,7 @@ window.onclick = function(event) {
         const x = Math.floor(event.offsetX / maxW * 2);
         const y = Math.floor(event.offsetY / blockSize);
         if(hue_sto == -1){
-            hues[y][x] = Math.floor(Math.random() * 360); // Random hue
-        } else {
-            hues[y][x] = hue_sto;
+            hues[y][x] = -1;
         }
 
         drawCanvas(hues);
@@ -89,9 +89,27 @@ window.onclick = function(event) {
                 saveHues();
                 loadHues();
                 break;
+            }else{
+                if(hues[y][0] == hue_sto){
+                    break;
+                }
             }
         }
 
+    }
+
+    function assignValue(){
+        for(var y = 0; y < grid; y++){
+            if(hues[y][0] == hue_sto){
+                var r1 = Math.random();
+                if(hues[y][1] < r1){
+                    hues[y][1] = r1;
+                }
+                saveHues();
+                loadHues();
+                break;
+            }
+        }
     }
 
     loadHues();
