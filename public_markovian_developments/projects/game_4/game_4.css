@@ -161,6 +161,6 @@ p {
   flex-direction: row;
 }
 
-#input_hue {
-  width: 440px;
+.input_hue {
+  width: 225px;
 }
