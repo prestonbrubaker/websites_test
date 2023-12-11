@@ -39,7 +39,7 @@ window.onclick = function(event) {
         ctx.fillRect(0,0,maxW,maxH);
         ctx.fillStyle = "#000000";
         for (var x = 0; x < col_c; x++){
-            ctx.fillText( col_n[x], x * maxW / col_c * x, off_y - 20);
+            ctx.fillText( col_n[x], x * maxW / col_c, off_y - 20);
         }
         
         for (let i = 0; i < grid; i++) {
