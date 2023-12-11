@@ -104,8 +104,7 @@ header {
   display: block;
   margin: 1rem auto;
   border: 10px solid transparent;
-  background: repeating-linear-gradient(45deg, red, red 100px, white 100px, white 200px);
-  background-clip: content-box;
+  border-image: repeating-linear-gradient(45deg, red, white, red, white, red, white, red, white, red, white, red, white) 1 round;
 }
 
 p {
