@@ -100,7 +100,7 @@ function tick() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
-    for (var x = -3; x < 3; x += 0.01){
+    for (var x = -6; x < 6; x += 0.01){
         y = 0;
         for (var i = 0; i < freqs.length; i++){
             y += Math.sin(freqs[i] * x);
