@@ -149,6 +149,13 @@ function tick() {
     ctx.fillText("Iteration:  " + itC, 10, 10);
     ctx.fillText("Current Loss:  " + sse, 10, 30);
     ctx.fillText("Best Loss:  " + sse_c, 10, 50);
+
+    ctx.fillStyle = "#0000FF";
+    ctx.fillText("Function to be Guessed", 300, 10);
+    ctx.fillStyle = "#00FF00";
+    ctx.fillText("Best Guess for Parameters", 300, 30);
+    ctx.fillStyle = "#FF0000";
+    ctx.fillText("Current Trial for Guess", 300, 50);
 }
 
 function tick2() {
