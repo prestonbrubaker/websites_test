@@ -25,7 +25,7 @@ window.onclick = function(event) {
     
     const bgHue = "#000000";
     
-    var freqs = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    var freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
     var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     var freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
@@ -82,7 +82,7 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
-    freqs = [ Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
 
