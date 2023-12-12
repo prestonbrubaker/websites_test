@@ -168,7 +168,14 @@ function tick2() {
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     
+    
     ctx2.fillText("Simulation Window 2", maxW / 2 - 50, maxH / 10);
+
+    ctx2.fillText("Actual Parameters: " + freqs, maxW / 2 - 50, maxH / 10);
+
+    ctx2.fillText("Best Guess of Parameters: " + freqs_c, maxW / 2 - 50, maxH / 10);
+
+    ctx2.fillText("Current Guess of Parameters: " + freqs_g, maxW / 2 - 50, maxH / 10);
     
 }
 
