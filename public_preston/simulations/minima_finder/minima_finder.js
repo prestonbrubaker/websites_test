@@ -185,7 +185,7 @@ function tick2() {
     }
 
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillRect(itC / 1000 + 10, maxH - Math.log(sse_c) * 100 - 10,5,5);
+    ctx3.fillRect(itC / 1000 + 10, maxH - Math.log(sse_c) * 10 - 10,5,5);
     
 }
 
