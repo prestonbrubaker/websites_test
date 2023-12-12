@@ -183,6 +183,9 @@ function tick2() {
         ctx2.fillText(Math.floor(freqs_c[i] * 1000) / 1000, i * 50 + 200, 50);
         ctx2.fillText(Math.floor(freqs_g[i] * 1000) / 1000, i * 50 + 200, 70);
     }
+
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillRect(itC / 1000, sse_c / 2,5,5);
     
 }
 
