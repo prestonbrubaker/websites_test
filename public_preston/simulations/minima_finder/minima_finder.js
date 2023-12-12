@@ -84,6 +84,7 @@ function initialize() {
 
     freqs = [ Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
 
 }
 
@@ -134,10 +135,10 @@ function tick() {
     }
 
     for (var i = 0; i < freqs.length; i++){
-            freq_g[i] = freq_c[i];
+            freqs_g[i] = freqs_c[i];
         }
     ri = Math.floor(Math.random() * freqs.length);
-    freq_g[ri] += Math.random();
+    freqs_g[ri] += Math.random();
 
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
