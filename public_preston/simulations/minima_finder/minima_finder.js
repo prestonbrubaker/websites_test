@@ -26,8 +26,10 @@ window.onclick = function(event) {
     const bgHue = "#000000";
     
     var freqs = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
     var y = 0;
+    var y2 = 0;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -77,6 +79,7 @@ function initialize() {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     freqs = [ Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
 
 }
 
@@ -102,10 +105,15 @@ function tick() {
     ctx.fillStyle = "#FF0000";
     for (var x = -20; x < 20; x += 0.01){
         y = 0;
+        y2 = 0;
         for (var i = 0; i < freqs.length; i++){
             y += Math.sin(freqs[i] * x);
+            y2 += Math.sin(freqs_g[i] * x);
         }
+        ctx.fillStyle = "#0000FF";
         ctx.fillRect((x) * 10 + maxW / 2, (y + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect((x) * 10 + maxW / 2, (y2 + 1) * 20 + maxH / 2, 5,5);
     }
 
     // Write troubleshooting info
