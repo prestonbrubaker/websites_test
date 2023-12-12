@@ -179,9 +179,9 @@ function tick2() {
     ctx2.fillText("Current Guess of Parameters: ", 10, 70);
 
     for (var i = 0; i < freqs.length; i++){
-        ctx2.fillText(Math.floor(freqs[i] * 1000) / 1000, i * 50 + 50, 30);
-        ctx2.fillText(Math.floor(freqs_c[i] * 1000) / 1000, i * 50 + 50, 50);
-        ctx2.fillText(Math.floor(freqs_g[i] * 1000) / 1000, i * 50 + 50, 70);
+        ctx2.fillText(Math.floor(freqs[i] * 1000) / 1000, i * 50 + 200, 30);
+        ctx2.fillText(Math.floor(freqs_c[i] * 1000) / 1000, i * 50 + 200, 50);
+        ctx2.fillText(Math.floor(freqs_g[i] * 1000) / 1000, i * 50 + 200, 70);
     }
     
 }
