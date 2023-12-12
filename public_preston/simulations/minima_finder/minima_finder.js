@@ -137,6 +137,13 @@ function tick() {
     for (var i = 0; i < freqs.length; i++){
             freqs_g[i] = freqs_c[i];
         }
+
+    for (var i = 0; i < freqs.length; i++){
+            if(Math.random() < (1 / freqs.length){
+                ri = Math.floor(Math.random() * freqs.length);
+                freqs_g[i] += (Math.random() - 0.5) * 2 * rm;
+            }
+        }
     ri = Math.floor(Math.random() * freqs.length);
     rm = 10 ** (Math.floor(Math.random() * 10) - 9)
     freqs_g[ri] += Math.random() * rm;
