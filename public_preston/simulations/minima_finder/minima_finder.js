@@ -25,9 +25,9 @@ window.onclick = function(event) {
     
     const bgHue = "#000000";
     
-    var freqs = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()]
+    var freqs = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
-    
+    var y = 0;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -51,8 +51,6 @@ window.onclick = function(event) {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
-
-    var freqs = [ Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
 
 function initialize() {
@@ -103,11 +101,11 @@ function tick() {
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
     for (var x = -1; x < 1; x+ = 0.01){
-        var y = 0;
+        y = 0;
         for (var i = 0; i < freqs.length; i++){
             y += Math.sin(freqs[i] * x);
         }
-        ctx.fillRect((x + 2) * 50, (y + 2) * 50, 5,5)
+        ctx.fillRect((x + 2) * 50, (y + 2) * 50, 5,5);
     }
 
     // Write troubleshooting info
