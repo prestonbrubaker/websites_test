@@ -27,10 +27,13 @@ window.onclick = function(event) {
     
     var freqs = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    var freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
     var y = 0;
     var y2 = 0;
+    var y3 = 0;
     var sse = 0;
+    var sse_c = 1000000000000;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -108,16 +111,33 @@ function tick() {
     for (var x = -20; x < 20; x += 0.01){
         y = 0;
         y2 = 0;
+        y3 = 0;
         for (var i = 0; i < freqs.length; i++){
             y += Math.sin(freqs[i] * x);
             y2 += Math.sin(freqs_g[i] * x);
+            y3 += Math.sin(freqs_c[i] * x);
         }
         sse += (y2 - y) ** 2;
         ctx.fillStyle = "#0000FF";
         ctx.fillRect((x) * 10 + maxW / 2, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
         ctx.fillRect((x) * 10 + maxW / 2, (y2 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillStyle = "#00FF00";
+        ctx.fillRect((x) * 10 + maxW / 2, (y3 + 1) * 20 + maxH / 2, 5,5);
     }
+
+    if( sse < sse_c ){
+        for (var i = 0; i < freqs.length; i++){
+            freq_c[i] = freq_g[i];
+        }
+        sse_c = sse;
+    }
+
+    for (var i = 0; i < freqs.length; i++){
+            freq_g[i] = freq_c[i];
+        }
+    ri = Math.floor(Math.random() * freqs.length);
+    freq_g[ri] += 2 ** ((Math.random() - 1) * 5);
 
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
