@@ -105,7 +105,7 @@ function tick() {
         for (var i = 0; i < freqs.length; i++){
             y += Math.sin(freqs[i] * x);
         }
-        ctx.fillRect((x + 3) * 50, (y + 10) * 5, 5,5);
+        ctx.fillRect((x) * 50 + maxW / 2, (y + 1) * 5 + maxH / 2, 5,5);
     }
 
     // Write troubleshooting info
