@@ -129,7 +129,7 @@ function tick() {
 
     if( sse < sse_c ){
         for (var i = 0; i < freqs.length; i++){
-            freq_c[i] = freq_g[i];
+            freqs_c[i] = freqs_g[i];
         }
         sse_c = sse;
     }
