@@ -30,6 +30,7 @@ window.onclick = function(event) {
     
     var y = 0;
     var y2 = 0;
+    var sse = 0;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -103,6 +104,7 @@ function tick() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
+    sse = 0;
     for (var x = -20; x < 20; x += 0.01){
         y = 0;
         y2 = 0;
@@ -110,6 +112,7 @@ function tick() {
             y += Math.sin(freqs[i] * x);
             y2 += Math.sin(freqs_g[i] * x);
         }
+        sse += (y2 - y) ** 2;
         ctx.fillStyle = "#0000FF";
         ctx.fillRect((x) * 10 + maxW / 2, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
@@ -122,6 +125,7 @@ function tick() {
     ctx.fillText("Simulation Window 1", maxW / 2 - 50, maxH / 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
+    ctx.fillText("Iteration:  " + sse, 10, 30);
 }
 
 function tick2() {
