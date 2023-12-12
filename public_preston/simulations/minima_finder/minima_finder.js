@@ -167,15 +167,22 @@ function tick2() {
     
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
+
     
     
     ctx2.fillText("Simulation Window 2", maxW / 2 - 50, 10);
 
-    ctx2.fillText("Actual Parameters: " + freqs, 10, 30);
+    ctx2.fillText("Actual Parameters: ", 10, 30);
 
-    ctx2.fillText("Best Guess of Parameters: " + freqs_c, 10, 50);
+    ctx2.fillText("Best Guess of Parameters: ", 10, 50);
 
-    ctx2.fillText("Current Guess of Parameters: " + freqs_g, 10, 70);
+    ctx2.fillText("Current Guess of Parameters: ", 10, 70);
+
+    for (var i = 0; i < freqs.length; i++){
+        ctx2.fillText(Math.floor(freqs[i] * 1000) / 1000, i * 50 + 50, 30);
+        ctx2.fillText(Math.floor(freqs_c[i] * 1000) / 1000, i * 50 + 50, 50);
+        ctx2.fillText(Math.floor(freqs_g[i] * 1000) / 1000, i * 50 + 50, 70);
+    }
     
 }
 
