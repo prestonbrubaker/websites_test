@@ -146,7 +146,8 @@ function tick() {
     ctx.fillText("Simulation Window 1", maxW / 2 - 50, maxH / 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
-    ctx.fillText("Iteration:  " + sse, 10, 30);
+    ctx.fillText("Current Loss:  " + sse, 10, 30);
+    ctx.fillText("Best Loss:  " + sse_c, 10, 50);
 }
 
 function tick2() {
