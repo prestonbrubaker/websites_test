@@ -137,7 +137,7 @@ function tick() {
             freq_g[i] = freq_c[i];
         }
     ri = Math.floor(Math.random() * freqs.length);
-    freq_g[ri] += 2 ** ((Math.random() - 1) * 5);
+    freq_g[ri] += Math.random();
 
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
