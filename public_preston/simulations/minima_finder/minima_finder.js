@@ -164,9 +164,7 @@ function tick() {
                 }
             }
         }
-    ri = Math.floor(Math.random() * freqs.length);
-    rm = 10 ** (Math.floor(Math.random() * 10) - 9)
-    freqs_g[ri] += Math.random() * rm;
+
 
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
