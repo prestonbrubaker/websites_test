@@ -26,6 +26,9 @@ window.onclick = function(event) {
     const bgHue = "#000000";
     
     var freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
+    freqs.sort(function(a, b) {
+        return a - b;
+    });
     var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     var freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     
