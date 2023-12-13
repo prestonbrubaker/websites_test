@@ -128,11 +128,11 @@ function tick() {
         }
         sse += (y2 - y) ** 2;
         ctx.fillStyle = "#0000FF";
-        ctx.fillRect((x) * 4 + 10, (y + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 4 + 10, (y2 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5, (y2 + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#00FF00";
-        ctx.fillRect((x) * 4 + 10, (y3 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5, (y3 + 1) * 20 + maxH / 2, 5,5);
     }
 
     if( sse < sse_c ){
