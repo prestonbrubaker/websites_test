@@ -25,10 +25,18 @@ window.onclick = function(event) {
     
     const bgHue = "#000000";
     
-    var freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
+    var freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
+    freqs.sort(function(a, b) {
+        return a - b;
+    });
     var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     var freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
-    
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
     var y = 0;
     var y2 = 0;
     var y3 = 0;
@@ -57,6 +65,9 @@ window.onclick = function(event) {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 100, 10);
+
     
 
 function initialize() {
@@ -79,12 +90,28 @@ function initialize() {
     ctx2.fillStyle = "#333333";
     ctx2.fillRect(0, maxH - 100, maxW, 100);
 
+    ctx3.clearRect(0,0,maxW,maxH);
+    
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
-    freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
+    ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 100, 10);
+
+    freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
+    freqs.sort(function(a, b) {
+        return a - b;
+    });
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
+
+    sse_c = 1000000000000;
 
 }
 
@@ -95,7 +122,7 @@ function ticks() {
     tick2();
     itC++;
 
-    if(itC > 20000){
+    if(itC > 10000){
         initialize();
     }
     
@@ -109,7 +136,7 @@ function tick() {
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
     sse = 0;
-    for (var x = -20; x < 20; x += 0.01){
+    for (var x = 20; x < 100; x += 0.01){
         y = 0;
         y2 = 0;
         y3 = 0;
@@ -120,11 +147,11 @@ function tick() {
         }
         sse += (y2 - y) ** 2;
         ctx.fillStyle = "#0000FF";
-        ctx.fillRect((x) * 10 + maxW / 2, (y + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 10 + maxW / 2, (y2 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#00FF00";
-        ctx.fillRect((x) * 10 + maxW / 2, (y3 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 2, 5,5);
     }
 
     if( sse < sse_c ){
@@ -137,17 +164,27 @@ function tick() {
     for (var i = 0; i < freqs.length; i++){
             freqs_g[i] = freqs_c[i];
         }
-
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
+    rm = 10 ** Math.floor(Math.random() * -12 + 1);
     for (var i = 0; i < freqs.length; i++){
-            var r2 = Math.random()
+            var r2 = Math.random();
             if(r2 < (1 / freqs.length)){
-                rm = 10 ** Math.floor(Math.random() * -5);
                 freqs_g[i] += (Math.random() - 0.5) * 2 * rm;
+                if(freqs_g[i] < 0){
+                    freqs_g[i] *= -1;
+                }
+                if(freqs_g[i] > 1){
+                    freqs_g[i] = 1;
+                }
+                
             }
         }
-    ri = Math.floor(Math.random() * freqs.length);
-    rm = 10 ** (Math.floor(Math.random() * 10) - 9)
-    freqs_g[ri] += Math.random() * rm;
+
 
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
@@ -193,7 +230,7 @@ function tick2() {
     }
 
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - Math.log(sse_c) * 20 - 100,2,2);
+    ctx3.fillRect(itC / 10000 * maxW, maxH - Math.log(sse_c) * 20 - 200,2,2);
     
 }
 
