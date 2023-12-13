@@ -103,7 +103,7 @@ function ticks() {
     tick2();
     itC++;
 
-    if(itC > 20000){
+    if(itC > 10000){
         initialize();
     }
     
@@ -210,7 +210,7 @@ function tick2() {
     }
 
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillRect(itC / 20000 * maxW + 10, maxH - Math.log(sse_c) * 20 - 200,2,2);
+    ctx3.fillRect(itC / 10000 * maxW, maxH - Math.log(sse_c) * 20 - 200,2,2);
     
 }
 
