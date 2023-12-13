@@ -66,7 +66,7 @@ window.onclick = function(event) {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 50, 10);
+    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 100, 10);
 
     
 
@@ -96,7 +96,7 @@ function initialize() {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 50, 10);
+    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 100, 10);
 
     freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
     freqs.sort(function(a, b) {
