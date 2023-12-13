@@ -91,8 +91,17 @@ function initialize() {
     ctx3.fillRect(0, 0, maxW, maxH);
 
     freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
+    freqs.sort(function(a, b) {
+        return a - b;
+    });
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
 
     sse_c = 1000000000000;
 
