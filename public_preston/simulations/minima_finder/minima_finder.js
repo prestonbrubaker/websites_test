@@ -25,7 +25,7 @@ window.onclick = function(event) {
     
     const bgHue = "#000000";
     
-    var freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
+    var freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
     freqs.sort(function(a, b) {
         return a - b;
     });
@@ -90,7 +90,7 @@ function initialize() {
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
 
-    freqs = [Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100, Math.floor(Math.random() * 100) / 100];
+    freqs = [Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000, Math.floor(Math.random() * 1000) / 1000];
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
 
