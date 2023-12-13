@@ -155,7 +155,7 @@ function tick() {
         ctx.fillStyle = "#00FF00";
         ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 2, 5,5);
         ctx2.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 5 - 50, (se + 1) * 20 + maxH / 2, 5,5);
+        ctx2.fillRect((x) * 5 - 50, (se + 1) * 10 + maxH / 2, 5,5);
     }
 
     if( sse < sse_c ){
