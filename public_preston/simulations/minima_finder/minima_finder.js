@@ -109,7 +109,7 @@ function tick() {
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
     sse = 0;
-    for (var x = 20; x < 80; x += 0.01){
+    for (var x = 20; x < 100; x += 0.01){
         y = 0;
         y2 = 0;
         y3 = 0;
@@ -120,11 +120,11 @@ function tick() {
         }
         sse += (y2 - y) ** 2;
         ctx.fillStyle = "#0000FF";
-        ctx.fillRect((x) * 10 + maxW / 2 - 300, (y + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 6 + maxW / 2 - 300, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 10 + maxW / 2 - 300, (y2 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 6 + maxW / 2 - 300, (y2 + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#00FF00";
-        ctx.fillRect((x) * 10 + maxW / 2 - 300, (y3 + 1) * 20 + maxH / 2, 5,5);
+        ctx.fillRect((x) * 6 + maxW / 2 - 300, (y3 + 1) * 20 + maxH / 2, 5,5);
     }
 
     if( sse < sse_c ){
