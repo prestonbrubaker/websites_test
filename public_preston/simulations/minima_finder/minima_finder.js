@@ -203,6 +203,8 @@ function tick() {
     ctx.fillText("Best Guess for Parameters", 300, 30);
     ctx.fillStyle = "#FF0000";
     ctx.fillText("Current Trial for Guess", 300, 50);
+    ctx.fillStyle = "#FF00FF";
+    ctx.fillText("Square difference between actual and best guess", 200, 50);
 }
 
 function tick2() {
