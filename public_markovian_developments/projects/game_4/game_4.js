@@ -85,6 +85,9 @@
 
 
         for(var y = 0; y < grid; y++){
+            if(hues[y][0] == hue_sto && hues[y][6] != hue_num){
+                warning = "Invalid secret number!";
+            }
             if(typeof hues[y][0] === 'number'){
                 hues[y][0] = hue_sto;
                 hues[y][6] = hue_num;
