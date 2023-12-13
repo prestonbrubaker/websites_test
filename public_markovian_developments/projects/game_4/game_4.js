@@ -111,12 +111,12 @@
                 hues[y][3] ++;
                 hues[y][4] = r1;
                 hues[y][5] = hues[y][2] / hues[y][3];
-                message = "None";
+                warning = "None";
                 saveHues();
                 loadHues();
                 break;
             } else{
-                message = "Invalid Secret Number!";
+                warning = "Invalid Secret Number!";
                 loadHues();
             }
         }
