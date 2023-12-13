@@ -87,6 +87,8 @@
         for(var y = 0; y < grid; y++){
             if(hues[y][0] == hue_sto && hues[y][6] != hue_num){
                 warning = "Invalid secret number!";
+            } else if(hues[y][0] == hue_sto && hues[y][6] == hue_num) {
+                warning = "Successfully Logged In";
             }
             if(typeof hues[y][0] === 'number'){
                 hues[y][0] = hue_sto;
@@ -114,7 +116,7 @@
                 hues[y][3] ++;
                 hues[y][4] = r1;
                 hues[y][5] = hues[y][2] / hues[y][3];
-                warning = "None";
+                warning = "Click Successful!";
                 saveHues();
                 loadHues();
                 break;
