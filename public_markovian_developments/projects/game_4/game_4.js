@@ -7,7 +7,7 @@
     var hue_num = 0;
     var col_c = 7;
     var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation", "Luck Ratio", "Secret Number"];
-    var off_y = 50;
+    var off_y = 150;
 
     canvas.width = 800;
     canvas.height = 3000;
@@ -45,6 +45,7 @@
     
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Logged in as: " + hue_sto, 10, 10);
+        ctx.fillText("Secret Number being used: " + hue_num,10,30);
     }
 
     canvas.addEventListener('click', function(event) {
@@ -99,7 +100,7 @@
 
     function assignValue(){
         for(var y = 0; y < grid; y++){
-            if(hues[y][0] == hue_sto){
+            if(hues[y][0] == hue_sto && hues[y][6] == nue_num){
                 var r1 = Math.random();
                 if(hues[y][1] < r1){
                     hues[y][1] = r1;
