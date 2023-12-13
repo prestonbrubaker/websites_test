@@ -191,7 +191,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
 
-    ctx.fillText("Simulation Window 1", maxW / 2 - 50, maxH / 10);
+    ctx.fillText("Simulation Window 1", maxW / 2 - 80, 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
     ctx.fillText("Current Loss:  " + sse, 10, 30);
