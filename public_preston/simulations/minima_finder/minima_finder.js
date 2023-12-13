@@ -147,13 +147,13 @@ function tick() {
         se_c = (y3 - y) **2;
         sse += se
         ctx.fillStyle = "#0000FF";
-        ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 3, 3,3);
         ctx.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 3, 3,3);
         ctx.fillStyle = "#00FF00";
-        ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 3, 3,3);
         ctx.fillStyle = "#FF00FF";
-        ctx.fillRect((x) * 5 - 50, se_c * -4 + maxH * 5 / 6, 5,5);
+        ctx.fillRect((x) * 5 - 50, se_c * -4 + maxH * 5 / 6, 3,3);
     }
 
     if( sse < sse_c ){
