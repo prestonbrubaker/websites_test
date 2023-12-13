@@ -47,7 +47,7 @@
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Logged in as: " + hue_sto, 10, 10);
         ctx.fillText("Secret Number being used: " + hue_num,10,30);
-        ctx.fillText("Warning Message: " + warning, 10, 50);
+        ctx.fillText("Feedback Message: " + warning, 10, 50);
     }
 
     canvas.addEventListener('click', function(event) {
