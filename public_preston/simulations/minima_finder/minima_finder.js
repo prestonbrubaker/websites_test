@@ -31,7 +31,12 @@ window.onclick = function(event) {
     });
     var freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     var freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
-    
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
     var y = 0;
     var y2 = 0;
     var y3 = 0;
@@ -140,7 +145,12 @@ function tick() {
     for (var i = 0; i < freqs.length; i++){
             freqs_g[i] = freqs_c[i];
         }
-
+    freqs_g.sort(function(a, b) {
+        return a - b;
+    });
+    freqs_c.sort(function(a, b) {
+        return a - b;
+    });
     for (var i = 0; i < freqs.length; i++){
             var r2 = Math.random()
             if(r2 < (1 / freqs.length)){
