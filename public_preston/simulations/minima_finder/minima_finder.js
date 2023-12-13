@@ -147,13 +147,13 @@ function tick() {
         se_c = (y3 - y) **2;
         sse += se
         ctx.fillStyle = "#0000FF";
-        ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 3, 3,3);
         ctx.fillStyle = "#FF0000";
-        ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 3, 3,3);
         ctx.fillStyle = "#00FF00";
-        ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 3, 5,5);
-        ctx2.fillStyle = "#FF0000";
-        ctx2.fillRect((x) * 5 - 50, (se_c + 1) * 4 + maxH / 3, 5,5);
+        ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 3, 3,3);
+        ctx.fillStyle = "#FF00FF";
+        ctx.fillRect((x) * 5 - 50, se_c * -4 + maxH * 5 / 6, 3,3);
     }
 
     if( sse < sse_c ){
@@ -191,7 +191,7 @@ function tick() {
     // Write troubleshooting info
     ctx.fillStyle = "#FFFFFF";
 
-    ctx.fillText("Simulation Window 1", maxW / 2 - 50, maxH / 10);
+    ctx.fillText("Simulation Window 1", maxW / 2 - 80, 10);
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
     ctx.fillText("Current Loss:  " + sse, 10, 30);
@@ -203,6 +203,8 @@ function tick() {
     ctx.fillText("Best Guess for Parameters", 300, 30);
     ctx.fillStyle = "#FF0000";
     ctx.fillText("Current Trial for Guess", 300, 50);
+    ctx.fillStyle = "#FF00FF";
+    ctx.fillText("Square difference between actual and best guess", 200, 70);
 }
 
 function tick2() {
