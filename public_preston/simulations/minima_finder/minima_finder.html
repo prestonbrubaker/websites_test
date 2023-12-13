@@ -46,15 +46,15 @@
     <section class="simulation-explanation">
       <h1>Understanding the Minima Finder</h2>
       <p>
-        xyz:
+        To analyze and understand a minima finder algortithm, we must first find a set of functions that are especially suitable for understanding how effective a given approach is. Such a set of functions seeks to have the following qualities:
       </p>
       <ul>
-        <li><strong>ab:</strong> aaa.</li>
-        <li><strong>cd:</strong> aa.</li>
-        <li><strong>ef:</strong> acac.</li>
+        <li><strong>Easy to generate similar functions randomly:</strong> To make a minima finder that is suitable for a range of functions, we should be able to generate functions with similar qualities that are unlikely to have been previouslt encountered.</li>
+        <li><strong>Have a lot of local minima, and one or a few global minima:</strong> A decent minima finder should be able to tend towards a nearby local minima. A great minima finder should even be capable of breaking out of local minima in search for the elusive global minima. To differentiate such minima finding algorithms, we want to have most paths down gradient decent lead to local minima, but to have a global minima of known value.</li>
+        <li><strong>Continuous and differentiable within reasonable bounds:</strong> Navigating a smooth surface allows for a minima finding algorithm to showcase its ability. Rough or undefined space rids the parameter space searched of oppurtunities. Having a completely defined parameter space also allows for easier calculations of how effective a minima algorithm is in comparison with various methods of randoma and semi-random searches.</li>
       </ul>
       <p>
-        acacac.
+        My favorite function that satisfies these conditions is the integral of the squared difference of two sums of sine functions, where one set of summed sine function is initialized with frequency coefficients, and the other set is of the same length, but allowed to vary. The output of this integral is where I get the loss value, which can be said to represent how well the initialized summed set of sine functions is approximized by the set by the given parameters input. For example, the initialized set could be f(x) = sin(.3x) + sin(.6x) + sin(.9x) and this would mean the other set is g(x) = sin(Ax) + sin(Bx) + sin(Cx). The true funciton analyzed by the minima finder would be the integral of (f(x) - g(x,A,B,C))^2 from an arbitrary value such as x=5 to x=10. This generates 0 if f(x) is equal to g(x) providing a global minima. It is impossible for the output of this function to be negative with real inputs. It is A, B, and C in this example that would be altered in search for the local and global minimas.
       </p>
     </section>
     </div>
