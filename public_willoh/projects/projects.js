@@ -1,4 +1,4 @@
-const text = "Previous Projects";
+const text = "Involvement";
 let index = 0;
 let blinkIterations = 0;
 const maxBlinkIterations = 4; // Set to 4 or 5 as per your requirement
