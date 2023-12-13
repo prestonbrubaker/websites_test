@@ -140,7 +140,7 @@ function tick() {
 
     for (var i = 0; i < freqs.length; i++){
             if(Math.random() < (1 / freqs.length){
-                ri = Math.floor(Math.random() * freqs.length);
+                rm = 10 ** Math.floor(Math.random() * -5);
                 freqs_g[i] += (Math.random() - 0.5) * 2 * rm;
             }
         }
