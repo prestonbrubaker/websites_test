@@ -153,10 +153,10 @@ function tick() {
     freqs_c.sort(function(a, b) {
         return a - b;
     });
+    rm = 10 ** Math.floor(Math.random() * -12 + 1);
     for (var i = 0; i < freqs.length; i++){
-            var r2 = Math.random()
+            var r2 = Math.random();
             if(r2 < (1 / freqs.length)){
-                rm = 10 ** Math.floor(Math.random() * -12 + 1);
                 freqs_g[i] += (Math.random() - 0.5) * 2 * rm;
                 if(freqs_g[i] > 1){
                     freqs_g[i] = 1;
