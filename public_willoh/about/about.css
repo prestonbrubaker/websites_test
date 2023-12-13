@@ -59,7 +59,6 @@ header {
     white-space: pre;
     font-size: 3rem;
     text-align: left;
-    margin: 0 4rem;
 }
 
 #typing-effect::after {
@@ -76,12 +75,6 @@ header {
     animation: none;
     opacity: 0;
     content: none;
-}
-
-/* Main Content Styles */
-.content, .introduction, .information {
-    padding: 1rem;
-    margin: 0 4rem;
 }
 
 /* Footer Styles */
@@ -113,11 +106,6 @@ canvas {
     z-index: -1;
 }
 
-.section {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-}
 
 #about, #projects, #contact {
     padding: 0.5rem;
