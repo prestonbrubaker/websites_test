@@ -8,6 +8,7 @@
     var col_c = 7;
     var col_n = ["Name", "Number", "Luck Implied Clicks", "Actual Clicks", "Last Generation", "Luck Ratio", "Secret Number"];
     var off_y = 150;
+    var warning = "none";
 
     canvas.width = 800;
     canvas.height = 3000;
@@ -46,6 +47,7 @@
         ctx.fillStyle = "#FFFFFF";
         ctx.fillText("Logged in as: " + hue_sto, 10, 10);
         ctx.fillText("Secret Number being used: " + hue_num,10,30);
+        ctx.fillText("Warning Message: " + warning, 10, 50);
     }
 
     canvas.addEventListener('click', function(event) {
@@ -109,9 +111,13 @@
                 hues[y][3] ++;
                 hues[y][4] = r1;
                 hues[y][5] = hues[y][2] / hues[y][3];
+                message = "None";
                 saveHues();
                 loadHues();
                 break;
+            } else{
+                message = "Invalid Secret Number!";
+                loadHues();
             }
         }
     }
