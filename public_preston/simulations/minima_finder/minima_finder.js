@@ -109,7 +109,7 @@ function tick() {
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
     sse = 0;
-    for (var x = -20; x < 20; x += 0.01){
+    for (var x = 20; x < 40; x += 0.01){
         y = 0;
         y2 = 0;
         y3 = 0;
