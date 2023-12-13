@@ -136,6 +136,12 @@ function tick() {
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH - 100);
     ctx.fillStyle = "#FF0000";
+
+    // Clear and fill background
+    ctx2.clearRect(0, 0, maxW, maxH - 100);
+    ctx2.fillStyle = bgHue;
+    ctx2.fillRect(0, 0, maxW, maxH - 100);
+    
     sse = 0;
     for (var x = 20; x < 100; x += 0.01){
         y = 0;
@@ -208,10 +214,7 @@ function tick() {
 }
 
 function tick2() {
-    // Clear and fill background
-    ctx2.clearRect(0, 0, maxW, maxH - 100);
-    ctx2.fillStyle = bgHue;
-    ctx2.fillRect(0, 0, maxW, maxH - 100);
+    
     
     
     // Write troubleshooting info
