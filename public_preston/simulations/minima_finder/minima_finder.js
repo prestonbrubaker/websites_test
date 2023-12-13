@@ -222,6 +222,7 @@ function tick2() {
     }
 
     ctx3.fillStyle = "#FFFFFF";
+    ctx3.fillText("Graph of log of Loss Vs. Iteration Count", maxW / 2 - 50, 10);
     ctx3.fillRect(itC / 10000 * maxW, maxH - Math.log(sse_c) * 20 - 200,2,2);
     
 }
