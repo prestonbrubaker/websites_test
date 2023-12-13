@@ -42,6 +42,7 @@ window.onclick = function(event) {
     var y3 = 0;
     var sse = 0;
     var sse_c = 1000000000000;
+    var se = 0;
     
     ctx.fillStyle = bgHue;
     ctx.fillRect(0, 0, maxW, maxH);
@@ -145,13 +146,16 @@ function tick() {
             y2 += Math.sin(freqs_g[i] * x);
             y3 += Math.sin(freqs_c[i] * x);
         }
-        sse += (y2 - y) ** 2;
+        se = (y2 - y) ** 2;
+        sse += se
         ctx.fillStyle = "#0000FF";
         ctx.fillRect((x) * 5 - 50, (y + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#FF0000";
         ctx.fillRect((x) * 5 - 50, (y2 + 1) * 20 + maxH / 2, 5,5);
         ctx.fillStyle = "#00FF00";
         ctx.fillRect((x) * 5 - 50, (y3 + 1) * 20 + maxH / 2, 5,5);
+        ctx2.fillStyle = "#FF0000";
+        ctx.fillRect((x) * 5 - 50, (se + 1) * 20 + maxH / 2, 5,5);
     }
 
     if( sse < sse_c ){
