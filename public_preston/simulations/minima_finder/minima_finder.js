@@ -57,11 +57,6 @@ window.onclick = function(event) {
 
     var c3 = document.getElementById("canvas3");
     var ctx3 = c3.getContext("2d");
-
-    ctx.fillStyle = "#333333";
-    ctx.fillRect(0, maxH - 100, maxW, 100);
-    ctx2.fillStyle = "#333333";
-    ctx2.fillRect(0, maxH - 100, maxW, 100);
     
     ctx3.fillStyle = bgHue;
     ctx3.fillRect(0, 0, maxW, maxH);
@@ -85,11 +80,6 @@ function initialize() {
     ctx2.fillStyle = bgHue;
     ctx2.fillRect(0, 0, maxW, maxH);
 
-
-    ctx.fillStyle = "#333333";
-    ctx.fillRect(0, maxH - 100, maxW, 100);
-    ctx2.fillStyle = "#333333";
-    ctx2.fillRect(0, maxH - 100, maxW, 100);
 
     ctx3.clearRect(0,0,maxW,maxH);
     
@@ -132,15 +122,15 @@ function ticks() {
 
 function tick() {
     // Clear and fill background
-    ctx.clearRect(0, 0, maxW, maxH - 100);
+    ctx.clearRect(0, 0, maxW, maxH);
     ctx.fillStyle = bgHue;
-    ctx.fillRect(0, 0, maxW, maxH - 100);
+    ctx.fillRect(0, 0, maxW, maxH);
     ctx.fillStyle = "#FF0000";
 
     // Clear and fill background
-    ctx2.clearRect(0, 0, maxW, maxH - 100);
+    ctx2.clearRect(0, 0, maxW, maxH);
     ctx2.fillStyle = bgHue;
-    ctx2.fillRect(0, 0, maxW, maxH - 100);
+    ctx2.fillRect(0, 0, maxW, maxH);
     
     sse = 0;
     for (var x = 20; x < 100; x += 0.01){
