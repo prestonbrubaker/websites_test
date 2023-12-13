@@ -167,12 +167,13 @@ function tick() {
             var r2 = Math.random();
             if(r2 < (1 / freqs.length)){
                 freqs_g[i] += (Math.random() - 0.5) * 2 * rm;
+                if(freqs_g[i] < 0){
+                    freqs_g[i] *= -1;
+                }
                 if(freqs_g[i] > 1){
                     freqs_g[i] = 1;
                 }
-                if(freqs_g[i] < 0){
-                    freqs_g[i] = 0;
-                }
+                
             }
         }
 
