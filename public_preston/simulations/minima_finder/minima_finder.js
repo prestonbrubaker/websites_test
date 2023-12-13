@@ -94,6 +94,8 @@ function initialize() {
     freqs_g = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
     freqs_c = [Math.random(), Math.random(), Math.random(), Math.random(), Math.random()];
 
+    sse_c = 1000000000000;
+
 }
 
 
