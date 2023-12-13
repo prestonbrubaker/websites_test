@@ -77,6 +77,14 @@ header {
     content: none;
 }
 
+#isc {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+}
+
 /* Footer Styles */
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
