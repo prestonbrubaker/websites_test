@@ -58,13 +58,9 @@ header {
 
 #home { background-color: royalblue;}
 #about { background-color: red;}
-.dropdwn { background-color: gold;}
+.dropdwn { background-color:gold;}
+#markoin { background-color: goldenrod;}
 #contacts { background-color: lime;}
-
-#markoin {
-  background-image: url("images/markoin.png");
-
-}
 
 .introduction {
   display: flex;
