@@ -85,15 +85,12 @@ header {
   display: none;
 }
 
-#home { background-color: royalblue; }
-#about { background-color: red; }
-.dropdwn { background-color: gold; }
-#projhome { background-color: royalblue; }
-#game1 { background-color: hotpink; }
-#game2 { background-color: fuchsia; }
-#game3 { background-color: yellowgreen; }
-#paint { background-color: orange; }
-#contacts { background-color: lime; }
+#home { background-color: royalblue;}
+#about { background-color: red;}
+.dropdwn { background-color:gold;}
+#markoin { background-color: goldenrod;}
+#contacts { background-color: lime;}
+
 
 main {
     margin: 1rem 2rem;

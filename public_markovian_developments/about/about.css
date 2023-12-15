@@ -52,10 +52,11 @@ header {
   transform-origin: center; /* Ensures scaling happens from the center */
 }
   
-  #home { background-color: royalblue; }
-  #about { background-color: red; }
-  .dropdwn { background-color: gold; }
-  #contacts { background-color: lime; }
+#home { background-color: royalblue;}
+#about { background-color: red;}
+.dropdwn { background-color:gold;}
+#markoin { background-color: goldenrod;}
+#contacts { background-color: lime;}
 
   h1 {
     font-size: 3rem;
