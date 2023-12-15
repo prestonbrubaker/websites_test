@@ -105,7 +105,37 @@
 
     }
 
+    function sort_iteration() {
+        for(var y = 0; y < grid - 1; y++){
+            if(hues[y + 1][2] > hues[y][2]){
+                var temp_sto = [hues[y][0], hues[y][1], hues[y][2], hues[y][3], hues[y][4], hues[y][5], hues[y][6], hues[y][7]];
+                hues[y][0] = hues[y + 1][0];
+                hues[y][1] = hues[y + 1][1];
+                hues[y][2] = hues[y + 1][2];
+                hues[y][3] = hues[y + 1][3];
+                hues[y][4] = hues[y + 1][4];
+                hues[y][5] = hues[y + 1][5];
+                hues[y][6] = hues[y + 1][6];
+                hues[y][7] = hues[y + 1][7];
+
+                hues[y + 1][0] = temp_sto[0];
+                hues[y + 1][1] = temp_sto[1];
+                hues[y + 1][2] = temp_sto[2];
+                hues[y + 1][3] = temp_sto[3];
+                hues[y + 1][4] = temp_sto[4];
+                hues[y + 1][5] = temp_sto[5];
+                hues[y + 1][6] = temp_sto[6];
+                hues[y + 1][7] = temp_sto[7];
+            }
+        }
+    }
+
+
     function assignValue(){
+        var r1 = Math.random();
+        if(r1 < 0.1) {
+            sort_iteration();
+        }
         for(var y = 0; y < grid; y++){
             if(hues[y][0] == hue_sto && hues[y][6] == hue_num){
                 var r1 = Math.random();
@@ -125,6 +155,7 @@
                 loadHues();
             }
         }
+        
     }
 
     loadHues();
