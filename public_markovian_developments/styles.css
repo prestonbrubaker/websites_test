@@ -1,43 +1,43 @@
 @font-face {
-    font-family: "pixel";
-    src: url("fonts/pixel.ttf");
+  font-family: "pixel";
+  src: url("fonts/pixel.ttf");
 }
 
 ::selection {
-  background-color: red;
-  color: white;
+background-color: red;
+color: white;
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'pixel', sans-serif;
-    text-shadow: -0.05rem 0.05rem gray;
-    background-color: lightskyblue;
-    display: flex;
-    flex-direction: column;
-}
-  
-header {
+  margin: 0;
+  padding: 0;
+  font-family: 'pixel', sans-serif;
+  text-shadow: -0.05rem 0.05rem gray;
+  background-color: lightskyblue;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+}
+
+header {
+display: flex;
+justify-content: flex-end;
 }
 
 .navigation nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
 }
 
 .navigation nav ul li {
-  display: inline-block;
-  width: 8rem;
-  height: 3rem;
-  text-align: center;
-  padding: 0.5rem 1rem;
+display: inline-block;
+width: 8rem;
+height: 3rem;
+text-align: center;
+padding: 0.5rem 1rem;
 }
-  
+
 .navigation nav ul li a {
   display: block;
   text-decoration: none;
@@ -45,68 +45,98 @@ header {
   border: 0.2rem solid black;
   border-radius: 0.4rem;
   color: white;
+  position: relative; /* Added for coin animation */
+  overflow: hidden; /* Added for coin animation */
+}
+
+#markoin {
+    background-color: goldenrod; /* Regular background color */
+    transition: background-color 0.3s ease-out; /* Transition for background color */
+}
+
+#markoin::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0; 
+    transform: translateX(-50%) scale(0); 
+    width: 100%; 
+    height: 100%; /* Full height of the button */
+    background-image: url('images/markoin.png'); /* Coin image */
+    background-size: cover;
+    transition: transform 0.5s ease-out; /* Smooth transition for the coin pop effect */
+}
+
+#markoin:hover, #markoin:active {
+    background-color: transparent;
+    border: transparent;
+    color: transparent;
+    text-shadow: none;
+}
+
+#markoin:hover::after, #markoin:active::after {
+    transform: translateX(-50%) scale(1); /* Scale up to full size */
 }
 
 .navigation nav ul li a:hover {
-  transform: scale(1.15); 
-  transform-origin: center; 
+transform: scale(1.15);
+transform-origin: center; 
 }
 
 .navigation nav ul li a:active {
-  transform: translateY(8px);
+transform: translateY(8px);
 }
 
 #home { background-color: royalblue;}
 #about { background-color: red;}
-.dropdwn { background-color:gold;}
+.dropdwn { background-color: gold;}
 #markoin { background-color: goldenrod;}
 #contacts { background-color: lime;}
 
 .introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 }
 
 .name {
-  font-size: 5rem;
-  margin-left: 4rem;
-  text-shadow: -0.25rem 0.3rem grey;
-  margin-bottom: 0;
+font-size: 5rem;
+margin-left: 4rem;
+text-shadow: -0.25rem 0.3rem grey;
+margin-bottom: 0;
 }
-  
+
 .information {
-  font-size: 1.5rem;
-  margin-left: 4rem;
-  margin-top: 1rem;
+font-size: 1.5rem;
+margin-left: 4rem;
+margin-top: 1rem;
 }
 
 .contentgrid {
-  display: flex;
-  flex-direction: row;
+display: flex;
+flex-direction: row;
 }
 
 .socials {
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 .section {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
+display: flex;
+justify-content: space-between;
+padding: 1em;
 }
 
-
-
 footer {
-    font-size: 0.75rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
