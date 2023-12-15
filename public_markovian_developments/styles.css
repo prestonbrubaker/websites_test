@@ -52,10 +52,19 @@ header {
   transform-origin: center; 
 }
 
+.navigation nav ul li a:active {
+  transform: translateY(8px);
+}
+
 #home { background-color: royalblue;}
 #about { background-color: red;}
 .dropdwn { background-color: gold;}
 #contacts { background-color: lime;}
+
+#markoin {
+  background-image: url("images/markoin.png");
+
+}
 
 .introduction {
   display: flex;
