@@ -27,6 +27,7 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 0.5rem;
   display: flex;
 }
 
@@ -42,42 +43,45 @@ header {
   display: block;
   text-decoration: none;
   padding: 0.5rem;
-  border: 0.2rem solid black;
+  border-color: 0.1rem solid #333;
   border-radius: 0.4rem;
   color: white;
-  position: relative; /* Added for coin animation */
-  overflow: hidden; /* Added for coin animation */
+  position: relative; 
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #333;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #333;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #333;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#markoin {
-  background-color: goldenrod; /* Regular background color */
-  transition: background-color 0.3s ease-out; /* Transition for background color */
+.navigation nav ul li a:active{
+  top:10px;
+  background-color:#333;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
 
-#markoin::after {
-  content: '';
-  display: block;
+.navigation nav ul li a:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
   position: absolute;
-  left: 50%;
-  top: 50%; /* Center the coin vertically */
-  transform: translate(-50%, -50%) scale(0); /* Center the coin and set scale to 0 */
-  width: 100%; /* Set a specific size if necessary */
-  height: auto; /* Maintain the aspect ratio */
-  background-image: url('images/markoin.png');
-  background-size: contain; /* Ensure the entire image is visible */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  transition: transform 0.5s ease-out;
-}
-
-#markoin:hover, #markoin:active {
-  background-color: transparent;
-  border: transparent;
-  color: transparent;
-  text-shadow: none;
-}
-
-#markoin:hover::after, #markoin:active::after {
-  transform: translate(-50%, -50%) scale(1); /* Scale the image to its full size on hover */
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .navigation nav ul li a:hover {
