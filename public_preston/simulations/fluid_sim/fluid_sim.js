@@ -30,7 +30,7 @@ var maxH = c.height;
     
 var blockSize = 8;
     
-const bgHue = "#000000";
+const bgHue = "#eeeeee";
 
 //simulation data
 var px = [0, 0.1, 0.3, 0.4, 0.5];
@@ -125,7 +125,7 @@ function tick() {
         var x_draw = x * maxW;
         var y_draw = y * maxH;
 
-        ctx.fillStyle = "#FF0000";
+        ctx.fillStyle = "#4A90E2";
         ctx.fillRect(x_draw - 0.5 * ps, y_draw - 0.5 * ps, ps, ps);
     }
 
@@ -215,7 +215,7 @@ function tick() {
 
     
     // Write troubleshooting info
-    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#000000";
 
     ctx.fillText("Simulation Window 1", maxW / 2 - 80, 10);
 
@@ -224,7 +224,7 @@ function tick() {
     ctx.fillText("Iteration:  " + itC, 10, 10);
 
     // Write troubleshooting info
-    ctx2.fillStyle = "#FFFFFF";
+    ctx2.fillStyle = "#000000";
     ctx2.fillText("Simulation Window 2: Histogram", maxW / 2 - 50, 10);
     ctx2.fillText("Drag Co-efficient: " + drag_co, 10, 30);
     ctx2.fillText("Total Kinetic Energy (Temp): " + kinE, 10, 50)
