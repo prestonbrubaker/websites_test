@@ -41,18 +41,20 @@ var pvy = [0, 0, 0, 0, 0];
 
 var pSpeed = [0, 0, 0, 0, 0];
 
-var ps = 5;
+var ps = 2;
 
-var a = 0.0000000000000000001;
-var b = 0.0000000000000000001;
+var a = 0.00000000000000001;
+var b = 0.0000000000001;
 
 var dt = 0.01;
 
-var genC = 300;
+var genC = 1000;
 
-var maxS = 0.00005;
+var maxS = 0.0005;
 
-var maxf = 0.000001
+var maxf = 0.001
+
+var drag_co = 1;
 
 
 
@@ -142,9 +144,13 @@ function tick() {
             py[i] = 1;
             pvy[i] *= -1;
         }else if(y < 0){
-            px[i] = 0;
+            py[i] = 0;
             pvy[i] *= -1;
         }
+
+        // Introduce drag coefficient
+        pvx[i] *= drag_co;
+        pvy[i] *= drag_co;
 
         pSpeed[i] = (pvx[i] ** 2 + pvy[i] ** 2) ** 0.5;
 
@@ -208,16 +214,26 @@ function tick() {
 
     ctx.fillText("Simulation Window 1", maxW / 2 - 80, 10);
 
+    ctx.fillText("Drag Co-efficient: " + drag_co, 10, 30);
+
     ctx.fillText("Iteration:  " + itC, 10, 10);
 
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
-    ctx2.fillText("Simulation Window 2", maxW / 2 - 50, 10);
+    ctx2.fillText("Simulation Window 2: Histogram", maxW / 2 - 50, 10);
 
     itC++;
 
     if(itC > 100000){
         initialize();
+    }
+}
+
+function feedback(input){
+    if(input == 0){
+        drag_co -= 0.001;
+    }else if(input == 1){
+        drag_co += 0.001;
     }
 }
 

@@ -120,6 +120,13 @@
   .simulation-explanation {
     margin: 2rem;
   }
+
+  #buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: auto;
+  }
   
   .footer {
       left: 0;
