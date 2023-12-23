@@ -38,7 +38,7 @@ body, html {
     font-family: 'elegant', serif;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
 }
   
 canvas {
@@ -103,7 +103,6 @@ header {
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.75rem;
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -112,4 +111,9 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+footer a, footer a:visited {
+    text-decoration: none;
+    color: red;
+  }
   
