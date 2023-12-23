@@ -33,10 +33,9 @@
   }
 
 body, html {
-    margin: 0;
-    margin-left: 2rem;
+    margin: 0 2rem;
     padding: 0;
-    font-family: 'elegant';
+    font-family: 'elegant', serif;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -77,10 +76,12 @@ header {
     transform: scale(1.15); /* Enlarges text on hover */
     transform-origin: center; /* Ensures scaling happens from the center */
 }
-  
-.contentgrid {
-    display: flex;
-    flex-direction: row;
+
+#typing-effect {
+    font-family: 'elegant', monospace;
+    white-space: pre;
+    font-size: 3rem;
+    text-align: left;
 }
   
 .introduction {
@@ -88,29 +89,11 @@ header {
     flex-direction: column;
     justify-content: center;
 }
-  
-.name {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 0;
-}
-  
+
 .information {
     font-size: 1rem;
     text-align: center;
     margin-top: 0.5rem;
-}
-  
-.socials {
-    display: flex;
-    flex-direction: column;
-}
-  
-.section {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
 }
   
 #about, #skills, #projects {
