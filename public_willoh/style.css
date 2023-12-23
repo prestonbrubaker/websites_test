@@ -125,7 +125,7 @@ footer {
   justify-content: center;
 }
 
-footer a {
+footer a, footer a:visited {
   text-decoration: none;
   color: red;
 }
