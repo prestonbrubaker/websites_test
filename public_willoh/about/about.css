@@ -77,11 +77,32 @@ header {
     content: none;
 }
 
-#isc {
+.isc {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20%;
+    height: auto;
+}
+
+#box {
+    display: flex;
+    flex-direction: row;
+}
+
+.book {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 30%;
+    height: auto;
+}
+
+#crab {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
     height: auto;
 }
 
