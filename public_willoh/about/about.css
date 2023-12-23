@@ -104,16 +104,15 @@ header {
     margin-right: auto;
     width: 40%;
     height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 /* Footer Styles */
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.75rem;
-    position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
     margin: auto;
     text-align: center;
     display: flex;
@@ -132,14 +131,13 @@ footer {
 #languages ul, #software ul {
     font-size: 1.25rem;
     margin-left: 8rem;
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally in the flex container */
-    justify-content: center; /* Center items vertically in the flex container */
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* Adjustments for small screens or specific conditions */
 @media (max-width: 600px) {
-    /* Add your responsive styles here */
+    
 }
