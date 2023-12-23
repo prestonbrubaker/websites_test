@@ -113,7 +113,7 @@
   canvas {
       display: block; 
       margin: 1.25rem; 
-      border: 0.33rem solid #DDD;
+      border: 0.33rem solid #dddddd;
       /* Set the width and height if not set inline in the HTML */
   }
   
@@ -126,6 +126,18 @@
     flex-direction: row;
     gap: 1rem;
     margin: auto;
+    
+  }
+
+  button {
+    background-color: rgb(74, 144, 226);
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+    font-family: "pixel1";
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid black;
+    border-radius: 5px;
   }
   
   .footer {

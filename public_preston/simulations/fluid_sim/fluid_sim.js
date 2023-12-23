@@ -18,10 +18,11 @@ var ctx = c.getContext("2d");
 var c2 = document.getElementById("canvas2");
 var ctx2 = c2.getContext("2d");
 
-var c3 = document.getElementById("canvas3");
-var ctx3 = c3.getContext("2d");
-    
-    
+
+//var c3 = document.getElementById("canvas3");
+//var ctx3 = c3.getContext("2d");
+
+
 var itC = 0;
 const tickS = 10;
 var maxW = c.width;   
@@ -30,7 +31,6 @@ var maxH = c.height;
 var blockSize = 8;
     
 const bgHue = "#000000";
-
 
 //simulation data
 var px = [0, 0.1, 0.3, 0.4, 0.5];
@@ -52,9 +52,13 @@ var genC = 1000;
 
 var maxS = 0.0005;
 
-var maxf = 0.001
+var maxf = 0.0003;
 
 var drag_co = 1;
+
+var binC = 100;
+
+var kinE = 0;
 
 
 
@@ -89,13 +93,13 @@ function initialize() {
     ctx2.fillRect(0, 0, maxW, maxH);
 
 
-    ctx3.clearRect(0,0,maxW,maxH);
+    //ctx3.clearRect(0,0,maxW,maxH);
     
-    ctx3.fillStyle = bgHue;
-    ctx3.fillRect(0, 0, maxW, maxH);
+    //ctx3.fillStyle = bgHue;
+    //ctx3.fillRect(0, 0, maxW, maxH);
 
-    ctx3.fillStyle = "#FFFFFF";
-    ctx3.fillText("Graph of", maxW / 2 - 100, 10);
+    //ctx3.fillStyle = "#FFFFFF";
+    //ctx3.fillText("Graph of", maxW / 2 - 100, 10);
 
 }
 
@@ -125,7 +129,7 @@ function tick() {
         ctx.fillRect(x_draw - 0.5 * ps, y_draw - 0.5 * ps, ps, ps);
     }
 
-
+    kinE = 0;
     //Iterate physics
     for (var i = 0; i < px.length; i++){
         // Iterate positions from velocity and handle wall collisions (shoutout to Willoh for figuring out the theoretical math behind all this)
@@ -153,6 +157,7 @@ function tick() {
         pvy[i] *= drag_co;
 
         pSpeed[i] = (pvx[i] ** 2 + pvy[i] ** 2) ** 0.5;
+        kinE += 0.5 * pSpeed[i] ** 0.5
 
         // Match each particle up to every other particle. I must later find a more efficient way to skip particles far away from each other.
         for(var j = 0; j < px.length; j++){
@@ -186,7 +191,7 @@ function tick() {
     // Create and draw histogram
     var maxSpeed = Math.max(...pSpeed);
     var speeds = [];
-    var binC = 40
+    
     for(var i = 0; i < binC; i++){
         speeds.push(0);
     }
@@ -201,10 +206,10 @@ function tick() {
 
     for(var i = 0; i < binC; i++){
         ctx2.fillStyle = "#77FF77";
-        var sX = 0.5;
+        var sX = 0.7;
         var sY = 0.5;
-        var offX = 100;
-        var offY = 100;
+        var offX = 50;
+        var offY = 20;
         ctx2.fillRect(i / binC * maxW * sX + offX, maxH - offY, 1 / binC * maxW * sX, -1 * speeds[i] / binC * maxH * sY);
     }
 
@@ -214,13 +219,15 @@ function tick() {
 
     ctx.fillText("Simulation Window 1", maxW / 2 - 80, 10);
 
-    ctx.fillText("Drag Co-efficient: " + drag_co, 10, 30);
+    
 
     ctx.fillText("Iteration:  " + itC, 10, 10);
 
     // Write troubleshooting info
     ctx2.fillStyle = "#FFFFFF";
     ctx2.fillText("Simulation Window 2: Histogram", maxW / 2 - 50, 10);
+    ctx2.fillText("Drag Co-efficient: " + drag_co, 10, 30);
+    ctx2.fillText("Total Kinetic Energy (Temp): " + kinE, 10, 50)
 
     itC++;
 
