@@ -14,7 +14,7 @@
     font-family: 'elegant', serif;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
     background-color: whitesmoke;
   }
   
