@@ -78,6 +78,20 @@ header {
     text-align: center;
 }
 
+.socials nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.socials nav ul {
+   padding: 2rem 2rem;
+}
+
+.socials nav ul a {
+
+}
+
 footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 0.75rem;
