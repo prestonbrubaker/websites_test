@@ -51,11 +51,6 @@ header {
 
 .navigation nav ul li a:active{
   top:10px;
-  background-color:#333;
-  
-  -webkit-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 #253e8b;
-  -moz-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3pxpx 0 #253e8b;
-  box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 #253e8b;
 }
 
 .navigation nav ul li a:after{
@@ -83,9 +78,9 @@ header {
 
 #home { 
   background-color: royalblue;
-  -webkit-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 #3552a8;
-  -moz-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 #3552a8;
-  box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 #333;
+  -webkit-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
+  -moz-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
+  box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
@@ -101,9 +96,9 @@ header {
   top:10px;
   background-color:royalblue;
   
-  -webkit-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 #3552a8;
-  -moz-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3pxpx 0 #3552a8;
-  box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 #3552a8;
+  -webkit-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 rgb(57, 88, 181);
+  -moz-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3pxpx 0 rgb(57, 88, 181);
+  box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 rgb(57, 88, 181);
 }
 
 
@@ -132,6 +127,31 @@ header {
   box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #b30000;
 }
 
+#pi { 
+  background-color: orange;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#pi:active {
+  top:10px;
+  background-color: orange;
+  
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #ff7d00;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 #ff7d00;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #ff7d00;
+}
+
 .dropdwn { 
   background-color: gold;
   -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 goldenrod;
@@ -148,38 +168,13 @@ header {
   border-radius: 5px;
 }
 
-#dropdwn:active {
+.dropdwn:active {
   top:10px;
   background-color: gold;
   
-  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #b30000;
-  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 #b30000;
-  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #b30000;
-}
-
-#pi { 
-  background-color: #C51A4A;
-  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #931338;
-  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #931338;
-  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #931338;
-
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  text-shadow: 0px 1px 0px #000;
-  filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-  
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-#pi:active {
-  top:10px;
-  background-color: #C51A4A;
-  
-  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #931338;
-  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 #931338;
-  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #931338;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 goldenrod;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 goldenrod;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 goldenrod;
 }
 
 #contacts { 
