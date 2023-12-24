@@ -41,13 +41,6 @@ body, html {
     overflow: auto;
 }
   
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-  
 header {
     display: flex;
     justify-content: flex-end;
@@ -83,7 +76,11 @@ header {
     font-size: 3rem;
     text-align: left;
 }
-  
+
+#about, #skills, #involvement {
+    padding: 0.5rem;
+}  
+
 .introduction {
     display: flex;
     flex-direction: column;
@@ -94,10 +91,6 @@ header {
     font-size: 1rem;
     text-align: center;
     margin-top: 0.5rem;
-}
-  
-#about, #skills, #involvement {
-    padding: 0.5rem;
 }
 
 footer {

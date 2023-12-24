@@ -12,9 +12,8 @@
     font-family: 'elegant', monospace;
     white-space: pre;
     font-size: 3rem;
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 0;
+    text-align: left;
+    margin: 2rem;
   }
   
   #typing-effect::after {
@@ -32,16 +31,17 @@
     opacity: 0;
     content: none;
   }
-  
-body, html {
-    margin: 0;
+
+  body, html {
+    margin: 0 0;
     padding: 0;
     font-family: 'elegant', serif;
+    text-align: center;
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
-  
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -67,43 +67,15 @@ header {
 }
   
 .navigation nav ul li a:hover {
-    transform: scale(1.15); 
-    transform-origin: center;
+    transform: scale(1.15); /* Enlarges text on hover */
+    transform-origin: center; /* Ensures scaling happens from the center */
 }
-  
-.introduction {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-  
-.information {
-    font-size: 1rem;
+
+#typing-effect {
+    font-family: 'elegant', monospace;
+    white-space: pre;
+    font-size: 3rem;
     text-align: center;
-    margin-top: 0.5rem;
-}
-
-.socials {
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.socials img{
-    gap: 1rem;
-    list-style: none;
-    width: 30%;
-    height: auto;
-}
-  
-.section {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-}
-  
-#about, #skills, #involvement #contact{
-    padding: 0.5rem;
 }
 
 footer {
@@ -116,9 +88,10 @@ footer {
     text-align: center;
     display: flex;
     justify-content: center;
-  }
-  
-  footer a, footer a:visited {
+}
+
+footer a, footer a:visited {
     text-decoration: none;
     color: red;
   }
+  
