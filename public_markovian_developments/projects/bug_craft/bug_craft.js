@@ -1,7 +1,6 @@
 var c = document.getElementById("canvas1");
 var ctx = c.getContext("2d");
 var spriteSheet = new Image();
-spriteSheet.src = 'testpoop.png'; // Replace with the path to your sprite sheet
 var isFullscreen = false;
 
 var pCXW = 1000;      // count of pixels across the world
@@ -42,24 +41,6 @@ document.addEventListener('fullscreenchange', function() {
     resizeCanvas();
 });
 
-// Fullscreen Button Action
-document.getElementById("fullscreen").addEventListener("click", function() {
-    var fullscreenButton = document.getElementById("fullscreen");
-    if (fullscreenButton) {
-        fullscreenButton.addEventListener("click", function() {
-        var canvas = document.getElementById("canvas1");
-        if (canvas.requestFullscreen) {
-            canvas.requestFullscreen();
-        } else if (canvas.mozRequestFullScreen) { /* Firefox */
-            canvas.mozRequestFullScreen();
-        } else if (canvas.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            canvas.webkitRequestFullscreen();
-        } else if (canvas.msRequestFullscreen) { /* IE/Edge */
-            canvas.msRequestFullscreen();
-        }
-        });
-    };
-});
 
 // Animations/Spritesheet
 const frameWidth = 40; // Width of each frame in your sprite sheet
@@ -299,9 +280,6 @@ function tick() {
     }
 
     var sourceX = currentFrame * frameWidth;
-    ctx.drawImage(spriteSheet, sourceX, 0, frameWidth, frameHeight, 
-        player_off_x - frameWidth / 2, player_off_y - frameHeight, frameWidth, frameHeight);
-
     // Draw ref
     ctx.fillStyle = "#FF00FF";
     ctx.fillRect(player_off_x - 2 - player_w / 2, player_off_y - 2, 4, 4);
