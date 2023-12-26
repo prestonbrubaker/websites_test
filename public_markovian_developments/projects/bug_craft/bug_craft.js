@@ -89,7 +89,7 @@ var cave_iterations = 40;    // Cave-forming iterations
 var cave_spread_chance = 0.05;   // Chance of a cave spreading to neighbors during iteration
 
 // World elements 0 = air, 1 = mars soil, 2 = dark mars soil, 3 = plant, 4 = earth stone, 5 = water
-elHues = ["#000000", "#770000", "#440000", "#007700", "#333333", "#000077"];
+var elHues = ["#000000", "#770000", "#440000", "#007700", "#333333", "#000077"];
 
 
 function genWorld() {
