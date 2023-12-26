@@ -208,6 +208,11 @@
     text-shadow: -0.25rem 0.25rem gray;
   }
 
+#box {
+  display: flex;
+  justify-content: center;
+}
+
   canvas {
     border: 5px solid hotpink;
   }
