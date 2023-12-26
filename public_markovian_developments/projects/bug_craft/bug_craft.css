@@ -13,7 +13,7 @@
     padding: 0;
     font-family: 'pixel', sans-serif;
     text-shadow: -0.05rem 0.05rem gray;
-    background-color: lightskyblue;
+    background-color: #87cefa;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -237,5 +237,10 @@
   
   #policy, #policy:visited {
     text-decoration: underline;
-    color: red;
+    color: hsl(0, 100%, 50%);
+    color: hsl(0, 100%, 40%);
+    color: hsl(0, 100%, 65%);
+    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
   }
+

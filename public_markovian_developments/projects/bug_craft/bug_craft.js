@@ -2,8 +2,8 @@ var c = document.getElementById("canvas1");
 var ctx = c.getContext("2d");
 var isFullscreen = false;
 
-var pCXW = 1000;      // count of pixels across the world
-var pCYW = 800;       // count of pixels across the world
+var pCXW = 1000;      
+var pCYW = 800;       
 var itC = 0;
 const tickS = 50;
 const pixS = 10;
@@ -11,9 +11,9 @@ const minW = 0;
 const minH = 0;
 var maxW = c.width;   
 var maxH = c.height;   
-const bgHue = "#777777";
-var pCX = Math.floor(maxW / pixS);  // count of pixels across the screen
-var pCY = Math.floor(maxH / pixS);  // count of pixels across the screen
+const bgHue = "#87cefa";
+var pCX = Math.floor(maxW / pixS);  
+var pCY = Math.floor(maxH / pixS);  
 
 function resizeCanvas() {
     if (isFullscreen) {
@@ -89,7 +89,7 @@ var cave_iterations = 40;    // Cave-forming iterations
 var cave_spread_chance = 0.05;   // Chance of a cave spreading to neighbors during iteration
 
 // World elements 0 = air, 1 = mars soil, 2 = dark mars soil, 3 = plant, 4 = earth stone, 5 = water
-var elHues = ["#000000", "#770000", "#440000", "#007700", "#333333", "#000077"];
+var elHues = ["#000000", "#8b4513", "#a0522d", "#007700", "#808080", "#000077"];
 
 
 function genWorld() {
