@@ -21,43 +21,187 @@ body, html {
 header {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
 }
 
 .navigation nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 0.5rem;
   display: flex;
 }
 
 .navigation nav ul li {
   display: inline-block;
-  width: 8rem;
-  height: 3rem;
+  width: 10rem;
+  height: 4rem;
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
-  
+
 .navigation nav ul li a {
   display: block;
   text-decoration: none;
   padding: 0.5rem;
-  border: 0.2rem solid black;
+  border-color: 0.1rem solid #333;
   border-radius: 0.4rem;
   color: white;
+  position: relative; 
+}
+
+.navigation nav ul li a:active{
+  top:10px;
+}
+
+.navigation nav ul li a:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .navigation nav ul li a:hover {
-  transform: scale(1.15); 
+  transform: scale(1.15);
   transform-origin: center; 
 }
 
-#home { background-color: royalblue;}
-#about { background-color: red;}
-.dropdwn { background-color:gold;}
-#markoin { background-color: goldenrod;}
-#contacts { background-color: lime;}
+.navigation nav ul li a:active {
+  transform: translateY(8px);
+}
+
+#home { 
+  background-color: royalblue;
+  -webkit-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
+  -moz-box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
+  box-shadow:inset 0 1px 0 lightskyblue, 0 10px 0 rgb(57, 88, 181);
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#home:active {
+  top:10px;
+  background-color:royalblue;
+  
+  -webkit-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 rgb(57, 88, 181);
+  -moz-box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3pxpx 0 rgb(57, 88, 181);
+  box-shadow:inset 0 1px 0 lightskyblue, inset 0 -3px 0 rgb(57, 88, 181);
+}
+
+
+#about { 
+  background-color: red;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #b30000;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #b30000;
+  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #b30000;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#about:active {
+  top:10px;
+  background-color:red;
+  
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #b30000;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 #b30000;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #b30000;
+}
+
+#pi { 
+  background-color: orange;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 #ff7d00;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#pi:active {
+  top:10px;
+  background-color: orange;
+  
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #ff7d00;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 #ff7d00;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 #ff7d00;
+}
+
+.dropdwn { 
+  background-color: gold;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 goldenrod;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 goldenrod;
+  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 goldenrod;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.dropdwn:active {
+  top:10px;
+  background-color: gold;
+  
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 goldenrod;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 goldenrod;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 goldenrod;
+}
+
+#contacts { 
+  background-color: lime;
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 limegreen;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 limegreen;
+  box-shadow:inset 0 1px 0 #ffcccc, 0 10px 0 limegreen;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#contacts:active {
+  top:10px;
+  background-color: lime;
+  
+  -webkit-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 limegreen;
+  -moz-box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3pxpx 0 limegreen;
+  box-shadow:inset 0 1px 0 #ffcccc, inset 0 -3px 0 limegreen;
+}
+
 
 h1 {
   font-size: 3rem;
