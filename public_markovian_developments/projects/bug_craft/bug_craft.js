@@ -1,6 +1,5 @@
 var c = document.getElementById("canvas1");
 var ctx = c.getContext("2d");
-var spriteSheet = new Image();
 var isFullscreen = false;
 
 var pCXW = 1000;      // count of pixels across the world
