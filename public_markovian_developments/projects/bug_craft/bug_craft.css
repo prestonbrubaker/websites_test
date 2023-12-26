@@ -207,6 +207,10 @@
     font-size: 3rem;
     text-shadow: -0.25rem 0.25rem gray;
   }
+
+  canvas {
+    border: 5px solid hotpink;
+  }
   
   footer {
     font-size: 0.75rem;
