@@ -210,38 +210,7 @@ function tick() {
     }
 
     // Draw player
-
-    if(isMovingLeft) {
-        leftToggleCounter++;
-        if(leftToggleCounter >= leftToggleRate) {
-            if(currentFrame === 0) {
-                currentFrame = 1;
-            } 
-            else {
-                currentFrame = 0;
-            }
-            leftToggleCounter = 0;
-        }
-    }
     
-    if(isMovingRight) {
-        rightToggleCounter++;
-        if(rightToggleCounter >= rightToggleRate) {
-            if(currentFrame === 3) {
-                currentFrame = 4;
-            } 
-            else {
-                currentFrame = 3;
-            }
-            rightToggleCounter = 0;
-        }
-    }
-    
-    if (!isMovingLeft && !isMovingRight) {
-        currentFrame = 2;
-    }
-
-    var sourceX = currentFrame * frameWidth;
     // Draw ref
     ctx.fillStyle = "#FF00FF";
     ctx.fillRect(player_off_x - 2 - player_w / 2, player_off_y - 2, 4, 4);
