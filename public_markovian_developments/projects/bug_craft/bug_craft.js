@@ -15,47 +15,10 @@ const bgHue = "#87cefa";
 var pCX = Math.floor(maxW / pixS);  
 var pCY = Math.floor(maxH / pixS);  
 
-function resizeCanvas() {
-    if (isFullscreen) {
-        c.width = window.innerWidth;
-        c.height = window.innerHeight;
-    } else {
-        c.width = window.innerWidth * 0.8;
-        c.height = window.innerHeight * 0.8;
-    }
-    updateWorld();
-}
-
-function updateWorld() {
-    maxW = c.width;
-    maxH = c.height;
-    pCX = Math.floor(maxW / pixS);
-    pCY = Math.floor(maxH / pixS);
-}
-
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-document.addEventListener('fullscreenchange', function() {
-    isFullscreen = !!document.fullscreenElement;
-    resizeCanvas();
-});
-
-
-// Animations/Spritesheet
-const frameWidth = 40; // Width of each frame in your sprite sheet
-const frameHeight = 52; // Height of each frame in your sprite sheet
-const totalFrames = 5; // Total number of frames in the sprite sheet
-var currentFrame = 2; // Current frame to display
-
 var isMovingRight = false;
 var isMovingLeft = false;
 var isStill = false;
 
-var rightToggleCounter = 0;
-var leftToggleCounter = 0;
-
-var rightToggleRate = 2; // Frame toggle rate
-var leftToggleRate = 2; 
 
 var pA = new Array(pCY);
 
