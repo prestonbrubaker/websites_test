@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Markovian Developments</title>
-        <link rel="icon" type="img/png" href="images/markicon.png" sizes="24x24">
+        <link rel="icon" type="img/png" href="../../images/buggy.png" sizes="24x24">
         <link rel="stylesheet" href="bug_craft.css">
     </head>
     
@@ -23,33 +23,32 @@
 
         <main>
             <h1>Bug Craft</h1>
-            <!--<div id="bugbox">
-                <div id="login-overlay">
+            <div id="bugbox">
+                <div id="login-overlay" class="overlay">
                     <div class="login-container">
                         <h2>Login to Your Account:</h2>
                         <form id="login-form">
                             <input type="text" placeholder="Username" id="username" required>
                             <input type="password" placeholder="Personal Key Number" id="password" required>
                             <button type="submit">Login</button>
-                            <a id="newmembutton" href="">new crafter?</a>
+                            <button id="newmembutton" onclick="toggleDivs();">new crafter?</button>
                         </form>
                     </div>
                 </div>
-                <div id="new-login-overlay">
+                <div id="new-login-overlay" class="overlay" style="display: none;">
                     <div class="login-container">
-                        <h2>Login to Your Account:</h2>
+                        <h2>Create Account:</h2>
                         <form id="login-form">
                             <input type="text" placeholder="Username" id="username" required>
                             <input type="password" placeholder="Personal Key Number" id="password" required>
                             <input placeholder="Hue (Number between 0 and 100)" id="hue" required>
                             <button type="submit">Login</button>
-                            <a id="newmembutton" href="">new crafter?</a>
                         </form>
                     </div>
-                </div>-->
+                </div>
                 <div id="box"><canvas id="canvas1" height="500" width="500"></canvas></div>
                 <script src="bug_craft.js"></script>
-                <button id="reset" onclick=genWorld()>Reset Game</button>
+                <div id="reset"><button id="reset1" onclick="genWorld()">Reset Game</button></div>
             </div>
         </main>
 

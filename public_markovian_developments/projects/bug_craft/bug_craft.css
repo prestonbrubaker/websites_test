@@ -245,7 +245,27 @@
     display: block;
     border: 5px solid hotpink;
   }
+
+  #newmembutton, #newmembutton:hover {
+    font-family: "pixel";
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor:pointer;
+  }
+
+  #reset{
+    text-align: center;
+    justify-content: center;
+  }
   
+  #reset1 {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: red;
+    font-family: "pixel";
+    color:#000;
+  }
+
   footer {
     position: relative;
     left: 0;

@@ -54,6 +54,19 @@ var cave_spread_chance = 0.05;   // Chance of a cave spreading to neighbors duri
 // World elements 0 = air, 1 = mars soil, 2 = dark mars soil, 3 = plant, 4 = earth stone, 5 = water
 var elHues = ["#000000", "#8b4513", "#a0522d", "#007700", "#808080", "#000077"];
 
+function toggleDivs() {
+    var div1 = document.getElementById('login-overlay');
+    var div2 = document.getElementById('new-login-overlay');
+
+    // Check if the first div is visible
+    if (div1.style.display === 'none') {
+        div1.style.display = 'block';
+        div2.style.display = 'none';
+    } else {
+        div1.style.display = 'none';
+        div2.style.display = 'block';
+    }
+}
 
 function genWorld() {
     
