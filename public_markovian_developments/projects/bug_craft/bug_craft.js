@@ -426,7 +426,7 @@ c.addEventListener('click', function(event) {
         }
     }
 
-
+    saveWorld();
 
 });
 

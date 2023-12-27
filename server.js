@@ -6,7 +6,8 @@ const path = require('path');
 const app = express();
 
 // Middleware for parsing JSON bodies
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+
 
 // Logging Middleware
 app.use((req, res, next) => {
