@@ -23,18 +23,34 @@
 
         <main>
             <h1>Bug Craft</h1>
-
-            <div class="bug_craft">
-                <div class="login">
-                    <input id="username" autocomplete="off" placeholder="Username" />
-                    <input id="password" autocomplete="off" placeholder="Personal Key Number" />                
-                    <button id="submit" onclick="getValue()">Submit</button>
+            <!--<div id="bugbox">
+                <div id="login-overlay">
+                    <div class="login-container">
+                        <h2>Login to Your Account:</h2>
+                        <form id="login-form">
+                            <input type="text" placeholder="Username" id="username" required>
+                            <input type="password" placeholder="Personal Key Number" id="password" required>
+                            <button type="submit">Login</button>
+                            <a id="newmembutton" href="">new crafter?</a>
+                        </form>
+                    </div>
                 </div>
-
+                <div id="new-login-overlay">
+                    <div class="login-container">
+                        <h2>Login to Your Account:</h2>
+                        <form id="login-form">
+                            <input type="text" placeholder="Username" id="username" required>
+                            <input type="password" placeholder="Personal Key Number" id="password" required>
+                            <input placeholder="Hue (Number between 0 and 100)" id="hue" required>
+                            <button type="submit">Login</button>
+                            <a id="newmembutton" href="">new crafter?</a>
+                        </form>
+                    </div>
+                </div>-->
                 <div id="box"><canvas id="canvas1" height="500" width="500"></canvas></div>
                 <script src="bug_craft.js"></script>
+                <button id="reset" onclick=genWorld()>Reset Game</button>
             </div>
-
         </main>
 
         <footer>

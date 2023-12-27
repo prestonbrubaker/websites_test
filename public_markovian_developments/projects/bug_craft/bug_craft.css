@@ -214,8 +214,35 @@
   justify-content: center;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login-container input,
+.login-container button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 80%;
+}
+
   canvas {
-    display: inline-block;
+    display: block;
     border: 5px solid hotpink;
   }
   
