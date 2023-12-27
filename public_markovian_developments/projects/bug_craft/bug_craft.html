@@ -23,29 +23,7 @@
 
         <main>
             <h1>Bug Craft</h1>
-            <div id="bugbox">
-                <div id="login-overlay" class="overlay">
-                    <div class="login-container">
-                        <h2>Login to Your Account:</h2>
-                        <form id="login-form">
-                            <input type="text" placeholder="Username" id="username" required>
-                            <input type="password" placeholder="Personal Key Number" id="password" required>
-                            <button type="submit">Login</button>
-                            <button id="newmembutton" onclick="toggleDivs();">new crafter?</button>
-                        </form>
-                    </div>
-                </div>
-                <div id="new-login-overlay" class="overlay" style="display: none;">
-                    <div class="login-container">
-                        <h2>Create Account:</h2>
-                        <form id="login-form">
-                            <input type="text" placeholder="Username" id="username" required>
-                            <input type="password" placeholder="Personal Key Number" id="password" required>
-                            <input placeholder="Hue (Number between 0 and 100)" id="hue" required>
-                            <button type="submit">Login</button>
-                        </form>
-                    </div>
-                </div>
+            
                 <div id="box"><canvas id="canvas1" height="500" width="500"></canvas></div>
                 <script src="bug_craft.js"></script>
                 <div id="reset"><button id="reset1" onclick="genWorld()">Reset Game</button></div>
