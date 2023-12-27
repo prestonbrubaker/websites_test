@@ -186,7 +186,24 @@ function genWorld() {
             }
         }
     }
+    saveWorld();
+}
 
+function saveWorld(){
+    fetch('/save-bug_craft', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ hues: pA })
+        });
+}
+
+function loadWorld(){
+    fetch('/get-bug_craft')
+            .then(response => response.json())
+            .then(data => {
+                pA = data.hues;
+                
+            });
 }
 
 
@@ -485,7 +502,7 @@ document.addEventListener('DOMContentLoaded', setupMobileControls);
 
 
 // Initialize
-genWorld()
+loadWorld();
 
 
 
