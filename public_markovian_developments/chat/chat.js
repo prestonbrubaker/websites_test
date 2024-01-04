@@ -2,13 +2,12 @@ let canvas;
 
 function setup() {
     canvas = createCanvas(window.innerWidth * 0.8, window.innerHeight * 0.5); // Adjust size as needed
-
     canvas.parent('wave-simulation'); // Bind canvas to div
     attachSliderListeners();
 }
 
 function draw() {
-    background(200); // Clear with light grey background
+    background(100); // Clear with light grey background
     drawWave();
     updateSliderValues();
 }
