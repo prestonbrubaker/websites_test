@@ -25,9 +25,9 @@ function updateSliderValues() {
 }
 
 function drawWave() {
-    let amplitude = document.getElementById('amplitudeSlider').value;
-    let frequency = document.getElementById('frequencySlider').value;
-    let phaseShift = document.getElementById('phaseSlider').value;
+    let amplitude = parseFloat(document.getElementById('amplitudeSlider').value);
+    let frequency = parseFloat(document.getElementById('frequencySlider').value) * 0.1; // scale down
+    let phaseShift = parseFloat(document.getElementById('phaseSlider').value) * 0.1; // scale down
 
     beginShape();
     for (let x = 0; x < width; x++) {
