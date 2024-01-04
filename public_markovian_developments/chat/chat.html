@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preston's Website</title>
-    <link rel="stylesheet" href="chat.css">
-</head>
-<body>
-    <header class="navigation">
-        <nav>
-            <ul>
-                <li><a href="index.html" id="home">Home</a></li>
-                <li><a href="aboutMe/about.html" id="about">About Me</a></li>
-                <li><a href="projects/projects.html" id="projects">Projects</a></li>
-                <li><a href="skillsdoesn'texistyet" id="skills">Skills</a></li>
-                <li><a href="paint/paint.html" id="paint">Paint</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="contentgrid">
-        <h1 class="name">Markovian <br>Developments</h1>
-        <canvas id="iLoveYouPreston"></canvas>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Markovian Developments</title>
+        <link rel="icon" type="img/png" href="images/markicon.png" sizes="24x24">
+        <link rel="stylesheet" href="chat.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    </head>
+    <body>
+        <header class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="home">Home</a></li>
+                    <li><a href="about/about.html" id="about">About Us</a></li>
+                    <li><a href="projects/projects.html" class="dropdwn">Cloud Projects</a></li>
+                    <li><a href="projects/game_4/game_4.html" id="pi">Pi Projects</a></li>
+                    <li><a href="contact/contact.html" id="contacts">Contact Us</a>
+                </ul>
+            </nav>
+        </header>
+        <h1>A Challenge for You...</h1>
 
-    <div id="chatspace">
-        <ul id="messages"></ul>
-        <form id="form" action="">
-            <input id="input" autocomplete="off" placeholder="Type a message..." />                
-            <button>Send</button>
-        </form>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="chat.js"></script>
-</body>
-
-<footer>
-    <p>
-        2023 Markovian Developments. This website collects user information for a better user experience.<br> 
-        For more information, <a href="privacy_policy/privacy_policy.html">read our privacy policy.</a>
-    </p>
-</footer>
+        <p>Created 1/4/2024 for Preston Brubaker.</p>
+        <p>
+            Yay! You found me! I was hoping you may be so inclined as to actually put some effort into solving a puzzle I have created for you.
+            That said, it is really based on some cryptography research I've done, so I cannot take full credit. 
+        </p>
+        <div id="wave-simulation">
+            <canvas id="waveCanvas"></canvas>
+            <div>
+                <label>Amplitude: <input type="range" id="amplitudeSlider" min="0" max="200" value="100"><span id="amplitudeValue">100</span></label>
+                <label>Frequency: <input type="range" id="frequencySlider" min="0" max="0.05" step="0.001" value="0.01"><span id="frequencyValue">0.01</span></label>
+                <label>Phase Shift: <input type="range" id="phaseSlider" min="0" max="6.28" step="0.01" value="0"><span id="phaseValue">0</span></label>
+            </div>            
+        </div>
+        <script src="chat.js"></script>
+    </body>
+    <!--<footer>
+        <p>
+            2023 Markovian Developments. This website collects user information for a better user experience.<br> 
+            For more information, <a href="privacy_policy/privacy_policy.html">read our privacy policy.</a>
+        </p>
+    </footer>-->
 
 </html>

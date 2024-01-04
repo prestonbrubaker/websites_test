@@ -221,6 +221,10 @@ header {
   margin-top: 1rem;
 }
 
+#hiddenButton {
+  text-decoration: none;
+}
+
 .contentgrid {
   display: flex;
   flex-direction: row;
