@@ -32,7 +32,7 @@
     <section class="simulation-explanation">
       <h1>Objective/Overview</h2>
       <p>
-        My Goal in this project is to reliably and efficiently control a switch capable of high currents at a distance, with the ability to rapidly toggle the switch. I plan to do this using a Raspberry Pi 4, which contains a set of general purpose input output (GPIO) pins that will allow me to use Python Programs to send low-current signals to circuitry. There are three components to my approach in creating this switch.
+        My Goal in this project is to reliably and efficiently control a switch capable of high currents at a distance, with the ability to rapidly toggle the switch. I plan to do this using a Raspberry Pi 4, which contains a set of general purpose input output (GPIO) pins that will allow me to use Python Programs to send low-current signals to circuitry. There are four major components to my approach in creating this switch:
       </p>
       <ul>
         <li><strong>SSH Tunnel for Remote Access:</strong> 
@@ -41,6 +41,8 @@
           A signal will be provided to a driver that will allow for the application of a significant torque in the stepper motor. This torque will provide the work necessary to connect two surfaces of copper together and allow current to flow.</li>
         <li><strong>An Analog to Digital Converter to Test the Switch:</strong> 
           An analog to digital converter will be placed in series with a resistor in a circuit so that to voltage drop across the resistor can be measured, which in turn will allow for the determination of whether the circuit is open or closed. This can be used to collect data to find the reliability and maximum speed of the switch when it is toggled.</li>
+        <li><strong>A Python-Controlled Camera for Remote Monitoring:</strong> 
+          A camera was interfaced with the Pi so that the entire setup could be visually monitored remotely.</li>
       </ul>
     </section>
     <footer class="footer">
