@@ -101,7 +101,7 @@ section {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
 
-.circuitry-link {
+.circuit-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
