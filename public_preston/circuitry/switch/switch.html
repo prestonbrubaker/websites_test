@@ -55,7 +55,10 @@
         The switch mechanism uses a stepper motor to push a copper wire against a section of copper tubing, which remains fixed. A spring is used to allow for a gradual building of tension with respect to the rotation angle, allowing for the contact to be made more firm if necessary. Insufficient force of contact can result in no contact, or an unreliable contact. Alligator clips are used to carry the current to and from the copper contacts. A photo of the switch mechanism is shown below.
       </p>
       <img src="photos/switch_mechanism.png" alt="Photo of the Switch Mechanism">
-
+      <p>
+        The breadboard contains the circuit for the ADC, power supply, and the circuit to be used to supply a current through the switch. The ADC is powered with 3.3V, and provides 8-bit responses back to the Raspberry Pi corresponding to the fraction of the voltage at the analog input to that of the 3.3V power supply. This allows for the voltage to be measured at the analog input as long as it is under 3.3V, and that it has a precision of measurement of 3.3V / 256. For the purpose of monitoring the switch, the voltage will only be ~3.3V when the switch is open, and ~0V when the switch is closed. The breadboard setup is shown below.
+      </p>
+      <img src="photos/breadboard.png" alt="Photo of the Breadboard">
       
     </section>
     <footer class="footer">
