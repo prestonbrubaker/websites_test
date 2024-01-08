@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "pixel1";
+  src: url("../../fonts/tektur.ttf");
+}
+
+::selection {
+    color: rgb(74,144,226);
+    background-color: rgb(74,144,226, 0.2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'pixel1', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('../../pictures/img.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    min-height: 100vh;
+}
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+nav {
+    background-color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #4A90E2;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    padding: 5px 10px;
+}
+
+.dropdown-content li a {
+    color: #4A90E2;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.content {
+    text-align: center;
+}
+
+.word-art-container {
+    text-align: center; 
+    margin-top: 1.25rem; 
+}
+
+.word-art {
+    display: inline-block;
+    background-image: linear-gradient(to bottom, #cccccc, rgb(74,144,226));
+    font-family: 'pixel1', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9); 
+    padding: 10px 20px;
+    margin: 0;
+    border: 0.15rem solid black; 
+    border-radius: 0.33rem;
+    letter-spacing: 1px;
+    word-spacing: 0.1rem;
+    transform: perspective(32rem) rotateX(10deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    color: black;
+}
+
+canvas {
+    border: 0.33rem solid #DDD;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px auto;
+    flex-wrap: wrap; 
+}
+
+.machine_learning-explanation {
+  margin-left: 1rem;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(74,144,226, 00.6);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+#policy {
+  text-decoration: underline;
+  color: white;
+}
